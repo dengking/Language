@@ -1,0 +1,45 @@
+site_name:  automata-and-formal-language
+site_url: https://dengking.github.io/automata-and-formal-language
+site_description: Project documentation with Markdown.
+site_author: DengKing
+
+
+repo_url: https://github.com/dengking/automata-and-formal-language
+
+edit_uri: ""
+
+
+
+theme:
+    name: readthedocs
+    highlightjs: true
+    hljs_languages:
+        - yaml
+        - django
+        
+nav:
+- Home: index.md
+- introduction: introduction.md
+- ADT:
+  - wikipedia-Abstract-data-type: ADT/wikipedia-Abstract-data-type.md
+- data-structures:
+  - tree:
+    - application-of-tree: data-structure/tree/application-of-tree.md
+    - tree-and-recursion: data-structure/tree/tree-and-recursion.md
+    - tree-and-stack: data-structure/tree/tree-and-stack.md
+
+    
+extra_css:
+    - css/extra.css
+
+markdown_extensions:
+    - toc:
+        permalink: 
+    - admonition
+    - def_list
+    - mdx_gh_links:
+        user: mkdocs
+        repo: mkdocs
+        
+plugins:
+    - search

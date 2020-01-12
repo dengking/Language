@@ -1,0 +1,1 @@
+首先说明formal language，formal grammar，automata，Chomsky hierarchy等概念，然后按照Chomsky hierarchy的每一层进行说明，对Chomsky hierarchy的每一层的说明采用自底向上的方式。
