@@ -10,6 +10,14 @@
 
 上述两种**描述**本质上来说是一种[**语言**](https://en.wikipedia.org/wiki/Language)。科学需要具备严谨性、准确的表达方式，所以它使用的语言需要不同于人类说话时使用的[自然语言](https://en.wikipedia.org/wiki/Natural_language)，在科学中，往往使用的一种叫做[formal language](https://en.wikipedia.org/wiki/Well-formed_formula)的语言，这类语言有着诸多优良的特性，它是很多学科的基础。
 
+## 语言学中的描述方式
+
+在语言学中，通常使用[grammar](https://en.wikipedia.org/wiki/Grammar)来描述语言的结构，[formal language](https://en.wikipedia.org/wiki/Well-formed_formula)的grammar是[formal grammar](https://en.wikipedia.org/wiki/Formal_grammar)，比如[context free grammar](https://en.wikipedia.org/wiki/Context-free_grammar)。formal grammar常常采用的描述方式是产生式（[production](https://en.wikipedia.org/wiki/Production_(computer_science))），那production这种描述方式是语言吗？显然它是一种语言，因为它有固定的语法、语义。
+
+## compiler的描述方式
+
+在compiler中使用了多种[Intermediate representation](https://en.wikipedia.org/wiki/Intermediate_representation)
+
 # [Formal system](https://en.wikipedia.org/wiki/Formal_system) and [formal language](https://en.wikipedia.org/wiki/Formal_language)
 
 [Formal system](https://en.wikipedia.org/wiki/Formal_system)这篇文章向我们揭示了提供[formal language](https://en.wikipedia.org/wiki/Formal_language)，我们能够构建一套系统，这是我们使用[formal language](https://en.wikipedia.org/wiki/Formal_language)的终极目标所在。
@@ -20,7 +28,7 @@
 
 # 所有的描述都是语言？
 
-在语言学中，通常使用[grammar](https://en.wikipedia.org/wiki/Grammar)来描述语言的结构，[formal language](https://en.wikipedia.org/wiki/Well-formed_formula)的grammar是[formal grammar](https://en.wikipedia.org/wiki/Formal_grammar)，比如[context free grammar](https://en.wikipedia.org/wiki/Context-free_grammar)。formal grammar常常采用的描述方式是产生式（[production](https://en.wikipedia.org/wiki/Production_(computer_science))），那production这种描述方式是语言吗？显然它是一种语言，因为它有固定的语法、语义。
+
 
 那能否说：所有的描述都是语言？
 
