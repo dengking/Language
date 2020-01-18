@@ -128,3 +128,10 @@ meta的概念，现在想想meta的概念其实是存在递归性质的
 
 
 
+# [The Python Language Specification](https://realpython.com/cpython-source-code-guide/#the-python-language-specification)
+
+> Contained within the CPython source code is the definition of the Python language. This is the reference specification used by all the Python interpreters.
+>
+> The specification is in both **human-readable** and **machine-readable** format. Inside the documentation is a detailed explanation of the Python language, what is allowed, and how each statement should behave.
+
+不同的描述有不同的优势。
