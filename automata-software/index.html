@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="DengKing">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Automata software - automata-and-formal-language</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link href="../css/extra.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Automata software";
+    var mkdocs_page_input_path = "automata-software.md";
+    var mkdocs_page_url = "/automata-and-formal-language/automata-software/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/django.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> automata-and-formal-language</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Introduction</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Introduction/index.md">Introduction</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Theory-framework</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Theory-framework/index.md">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Formal-language</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Theory-framework/Formal-language/index.md">Introduction</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Theory-framework/Formal-language/Description-and-language.md">Description-and-language</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Theory-framework/Formal-language/wikipedia-Formal-language.md">Formal-language</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Theory-framework/Formal-language/wikipedia-Formal-system.md">Formal-system</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <span class="caption-text">Formal-grammar</span>
+    <ul class="subnav">
+                <li class="toctree-l4">
+                    
+    <a class="" href="../Theory-framework/Formal-language/Formal-grammar/wikipedia-Formal-grammar.md">Formal-grammar</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../Theory-framework/Formal-language/Formal-grammar/wikipedia-Production(computer-science).md">Production</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../Theory-framework/Formal-language/Formal-grammar/wikipedia-Backus-Naur-form/">BNF</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">automata-and-formal-language</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Automata software</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <div class="toc">
+<ul>
+<li><a href="#python">python</a><ul>
+<li><a href="#python-statemachine">python-statemachine</a></li>
+<li><a href="#automata_python">automata python</a></li>
+<li><a href="#automata-from-regex">automata-from-regex</a></li>
+<li><a href="#pywonderland">pywonderland</a></li>
+</ul>
+</li>
+<li><a href="#cloujr">cloujr</a><ul>
+<li><a href="#automat">automat</a></li>
+</ul>
+</li>
+<li><a href="#java">java</a><ul>
+<li><a href="#stateless4j">stateless4j</a></li>
+</ul>
+</li>
+<li><a href="#c">C++</a><ul>
+<li><a href="#state">state</a></li>
+<li><a href="#how_to_code_a_state_machine_in_c_or_c">How to Code a State Machine in C or C++</a></li>
+<li><a href="#state_machine_design_in_c">State Machine Design in C++</a></li>
+<li><a href="#expressive_code_for_state_machines_in_c">Expressive Code for State Machines in C++</a></li>
+<li><a href="#c_code_for_state_machine">C++ code for state machine</a></li>
+</ul>
+</li>
+<li><a href="#rust">RUST</a><ul>
+<li><a href="#regex-automata">regex-automata</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="python">python<a class="headerlink" href="#python" title="Permanent link">#</a></h2>
+<h3 id="python-statemachine"><a href="https://github.com/fgmacedo/python-statemachine">python-statemachine</a><a class="headerlink" href="#python-statemachine" title="Permanent link">#</a></h3>
+<h3 id="automata_python"><a href="https://github.com/caleb531/automata">automata</a> python<a class="headerlink" href="#automata_python" title="Permanent link">#</a></h3>
+<h3 id="automata-from-regex"><a href="https://github.com/sdht0/automata-from-regex">automata-from-regex</a><a class="headerlink" href="#automata-from-regex" title="Permanent link">#</a></h3>
+<h3 id="pywonderland"><a href="https://github.com/neozhaoliang/pywonderland">pywonderland</a><a class="headerlink" href="#pywonderland" title="Permanent link">#</a></h3>
+<h2 id="cloujr">cloujr<a class="headerlink" href="#cloujr" title="Permanent link">#</a></h2>
+<h3 id="automat"><a href="https://github.com/ztellman/automat">automat</a><a class="headerlink" href="#automat" title="Permanent link">#</a></h3>
+<h2 id="java">java<a class="headerlink" href="#java" title="Permanent link">#</a></h2>
+<h3 id="stateless4j"><a href="https://github.com/stateless4j/stateless4j">stateless4j</a><a class="headerlink" href="#stateless4j" title="Permanent link">#</a></h3>
+<h2 id="c">C++<a class="headerlink" href="#c" title="Permanent link">#</a></h2>
+<h3 id="state"><a href="https://gameprogrammingpatterns.com/state.html">state</a><a class="headerlink" href="#state" title="Permanent link">#</a></h3>
+<h3 id="how_to_code_a_state_machine_in_c_or_c"><a href="https://barrgroup.com/Embedded-Systems/How-To/Coding-State-Machines">How to Code a State Machine in C or C++</a><a class="headerlink" href="#how_to_code_a_state_machine_in_c_or_c" title="Permanent link">#</a></h3>
+<h3 id="state_machine_design_in_c"><a href="http://www.drdobbs.com/cpp/state-machine-design-in-c/184401236">State Machine Design in C++</a><a class="headerlink" href="#state_machine_design_in_c" title="Permanent link">#</a></h3>
+<h3 id="expressive_code_for_state_machines_in_c"><a href="https://www.fluentcpp.com/2019/09/24/expressive-code-for-state-machines-in-cpp/">Expressive Code for State Machines in C++</a><a class="headerlink" href="#expressive_code_for_state_machines_in_c" title="Permanent link">#</a></h3>
+<h3 id="c_code_for_state_machine"><a href="https://stackoverflow.com/questions/14676709/c-code-for-state-machine">C++ code for state machine</a><a class="headerlink" href="#c_code_for_state_machine" title="Permanent link">#</a></h3>
+<h2 id="rust">RUST<a class="headerlink" href="#rust" title="Permanent link">#</a></h2>
+<h3 id="regex-automata"><a href="https://github.com/BurntSushi/regex-automata">regex-automata</a><a class="headerlink" href="#regex-automata" title="Permanent link">#</a></h3>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/dengking/automata-and-formal-language" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>
