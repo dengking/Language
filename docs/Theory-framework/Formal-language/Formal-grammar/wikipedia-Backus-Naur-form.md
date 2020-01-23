@@ -7,16 +7,5 @@ Context-free grammar](https://en.wikipedia.org/wiki/Context-free_grammar)。BNF�
 
 context free grammar有对应的parse tree；
 
-# English
-terminology  术语
 
-solely 独自
-
-spill over 溢出
-
-The following chart contains all 128 ASCII decimal (dec), octal (oct), hexadecimal (hex) and character (ch) codes.下图包含所有128位ASCII十进制（dec），八进制（oct），十六进制（hex）和字符（ch）代码。
-
-directive 命令，指示
-
-Trivially 平凡地
 

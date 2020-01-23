@@ -1,0 +1,38 @@
+site_name:  automata-and-formal-language
+site_url: https://dengking.github.io/automata-and-formal-language
+site_description: Project documentation with Markdown.
+site_author: DengKing
+
+
+repo_url: https://github.com/dengking/automata-and-formal-language
+
+edit_uri: ""
+
+
+
+theme:
+    name: readthedocs
+    highlightjs: true
+    hljs_languages:
+        - yaml
+        - django
+        
+nav: None
+
+    
+extra_css:
+    - css/extra.css
+
+markdown_extensions:
+    - toc:
+        baselevel: 2
+        permalink: '#'
+        separator: _
+    - admonition
+    - def_list
+    - mdx_gh_links:
+        user: mkdocs
+        repo: mkdocs
+        
+plugins:
+    - search

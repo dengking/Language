@@ -1,3 +1,4 @@
-docs:
-    - Introduction: index.md
-    - introduction
+nav:
+    - Home: index.md
+    - Introduction: Introduction
+    - Theory-framework: Theory-framework

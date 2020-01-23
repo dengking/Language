@@ -38,7 +38,7 @@ human-readable、machine-readable
 
 human-readable、machine-readable
 
-
+- [YAML](https://en.wikipedia.org/wiki/YAML)
 
 ### [Data modeling languages](https://en.wikipedia.org/wiki/Category:Data_modeling_languages)
 

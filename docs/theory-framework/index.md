@@ -1,3 +1,5 @@
+# 前言
+
 首先说明formal language，formal grammar，automata，Chomsky hierarchy等基本概念，建立理论框架。
 
 然后按照Chomsky hierarchy的每一层进行说明，对Chomsky hierarchy的每一层的说明采用如下顺序，即：
