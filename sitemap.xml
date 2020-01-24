@@ -2,12 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://dengking.github.io/automata-and-formal-language/</loc>
-     <lastmod>2020-01-23</lastmod>
+     <lastmod>2020-01-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>https://dengking.github.io/automata-and-formal-language/Introduction/</loc>
+     <lastmod>2020-01-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
@@ -47,7 +47,7 @@
     </url>
     <url>
      <loc>https://dengking.github.io/automata-and-formal-language/Theory-framework/Formal-language/Formal-grammar/wikipedia-Backus-Naur-form/</loc>
-     <lastmod>2020-01-23</lastmod>
+     <lastmod>2020-01-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>

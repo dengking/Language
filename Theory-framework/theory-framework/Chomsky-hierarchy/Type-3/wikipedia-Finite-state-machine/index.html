@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="DengKing">
+  <link rel="shortcut icon" href="../../../../../img/favicon.ico">
+  <title>wikipedia Finite state machine - automata-and-formal-language</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link href="../../../../../css/extra.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "wikipedia Finite state machine";
+    var mkdocs_page_input_path = "Theory-framework/theory-framework/Chomsky-hierarchy/Type-3/wikipedia-Finite-state-machine.md";
+    var mkdocs_page_url = "/automata-and-formal-language/Theory-framework/theory-framework/Chomsky-hierarchy/Type-3/wikipedia-Finite-state-machine/";
+  </script>
+  
+  <script src="../../../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/django.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../../../.." class="icon icon-home"> automata-and-formal-language</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../../../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Introduction</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../../../Introduction/">Introduction</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Theory-framework</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../../index.md">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Formal-language</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../../Formal-language/index.md">Introduction</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../../Formal-language/Description-and-language.md">Description-and-language</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../../Formal-language/wikipedia-Formal-language.md">Formal-language</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../../Formal-language/wikipedia-Formal-system.md">Formal-system</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <span class="caption-text">Formal-grammar</span>
+    <ul class="subnav">
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../../../Formal-language/Formal-grammar/wikipedia-Formal-grammar.md">Formal-grammar</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../../../Formal-language/Formal-grammar/wikipedia-Production(computer-science).md">Production</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../../../Formal-language/Formal-grammar/wikipedia-Backus-Naur-form/">BNF</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../..">automata-and-formal-language</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>wikipedia Finite state machine</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <div class="toc">
+<ul>
+<li><a href="#finite-state_machine">Finite-state machine</a><ul>
+<li><a href="#concepts_and_terminology">Concepts and terminology</a></li>
+<li><a href="#representations">Representations</a></li>
+<li><a href="#classification">Classification</a><ul>
+<li><a href="#acceptors_recognizers">Acceptors (recognizers)</a></li>
+<li><a href="#classifiers">Classifiers</a></li>
+<li><a href="#determinism">Determinism</a></li>
+</ul>
+</li>
+<li><a href="#mathematical_model">Mathematical model</a></li>
+<li><a href="#optimization">Optimization</a></li>
+<li><a href="#usage">Usage</a><ul>
+<li><a href="#software_applications">Software applications</a></li>
+<li><a href="#finite_state_machines_and_compilers">Finite state machines and compilers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="finite-state_machine"><a href="https://en.wikipedia.org/wiki/Finite-state_machine">Finite-state machine</a><a class="headerlink" href="#finite-state_machine" title="Permanent link">#</a></h2>
+<blockquote>
+<p>TIPS: In Chinese, <a href="https://en.wikipedia.org/wiki/Finite-state_machine">Finite-state machine</a> means 有穷自动机</p>
+</blockquote>
+<p>A <strong>finite-state machine</strong> (<strong>FSM</strong>) or <strong>finite-state automaton</strong> (<strong>FSA</strong>, plural: <em>automata</em>), <strong>finite automaton</strong>, or simply a <strong>state machine</strong>, is a mathematical <a href="https://en.wikipedia.org/wiki/Model_of_computation">model of computation</a>. It is an <a href="https://en.wikipedia.org/wiki/Abstract_machine">abstract machine</a> that can be in exactly one of a finite number of <em>states</em> at any given time. The FSM can change from one state to another in response to some external <a href="https://en.wikipedia.org/wiki/Input_(computer_science)">inputs</a> and/or a condition is satisfied; the change from one state to another is called a <em>transition</em>.[<a href="https://en.wikipedia.org/wiki/Finite-state_machine#cite_note-1">1]</a> An FSM is defined by a list of its states, its initial state, and the conditions for each transition. Finite state machines are of two types:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Deterministic_finite_automaton">deterministic finite state machines</a> </li>
+<li><a href="https://en.wikipedia.org/wiki/Nondeterministic_finite_automaton">non-deterministic finite state machines</a>.[<a href="https://en.wikipedia.org/wiki/Finite-state_machine#cite_note-2">2]</a> </li>
+</ul>
+<p>A deterministic finite-state machine can be constructed equivalent to any non-deterministic one.</p>
+<p>The behavior of state machines can be observed in many devices in modern society that perform a predetermined sequence of actions depending on a sequence of events with which they are presented. Simple examples are <a href="https://en.wikipedia.org/wiki/Vending_machine">vending machines</a>, which dispense products when the proper combination of coins is deposited, <a href="https://en.wikipedia.org/wiki/Elevator">elevators</a>, whose sequence of stops is determined by the floors requested by riders, <a href="https://en.wikipedia.org/wiki/Traffic_light">traffic lights</a>, which change sequence when cars are waiting, and <a href="https://en.wikipedia.org/wiki/Combination_lock">combination locks</a>, which require the input of a sequence of numbers in the proper order.</p>
+<blockquote>
+<p>TIPS: The state machine can do much more, see <a href="#Usage">Usage</a> for more detail.</p>
+</blockquote>
+<p>The <strong>finite state machine</strong> has less computational power than some other models of computation such as the <a href="https://en.wikipedia.org/wiki/Turing_machine">Turing machine</a>.[<a href="https://en.wikipedia.org/wiki/Finite-state_machine#cite_note-Belzer-3">3]</a> The computational power distinction means there are computational tasks that a Turing machine can do but a FSM cannot. This is because a FSM's <a href="https://en.wikipedia.org/wiki/Computer_memory">memory</a> is limited by the number of states it has. FSMs are studied in the more general field of <a href="https://en.wikipedia.org/wiki/Automata_theory">automata theory</a>.</p>
+<blockquote>
+<p>TIPS:  <a href="https://en.wikipedia.org/wiki/Turing_machine">Turing machine</a> operates on an infinite memory.</p>
+<p>TIPS: There is an incomplete hierarchy in terms of powers of different types of abstract machines in page <a href="https://en.wikipedia.org/wiki/Automata_theory">automata theory</a></p>
+</blockquote>
+<h3 id="concepts_and_terminology">Concepts and terminology<a class="headerlink" href="#concepts_and_terminology" title="Permanent link">#</a></h3>
+<p>A <em>state</em> is a description of the status of a system that is waiting to execute a <em>transition</em>. A transition is a set of actions to be executed when a condition is fulfilled or when an <strong>event</strong> is received. For example, when using an audio system to listen to the radio (the system is in the "radio" state), receiving a "next" stimulus results in moving to the next station. When the system is in the "CD" state, the "next" stimulus results in moving to the next track. Identical stimuli trigger different actions depending on the current state.</p>
+<p>In some finite-state machine representations, it is also possible to associate actions with a state:</p>
+<ul>
+<li>an entry action: performed <em>when entering</em> the state, and</li>
+<li>an exit action: performed <em>when exiting</em> the state.</li>
+</ul>
+<h3 id="representations">Representations<a class="headerlink" href="#representations" title="Permanent link">#</a></h3>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/State_transition_table">state transition table</a>  </li>
+<li><a href="https://en.wikipedia.org/wiki/UML_state_machine">UML state machines</a>  </li>
+<li><a href="https://en.wikipedia.org/wiki/Specification_and_Description_Language">SDL state machines</a></li>
+<li><a href="https://en.wikipedia.org/wiki/State_diagram">State diagram</a></li>
+</ul>
+<h3 id="classification">Classification<a class="headerlink" href="#classification" title="Permanent link">#</a></h3>
+<p><strong>Finite state machines</strong> can be subdivided into </p>
+<ul>
+<li>transducers（转换器）</li>
+<li>acceptors</li>
+<li>classifiers</li>
+<li>sequencers.[<a href="https://en.wikipedia.org/wiki/Finite-state_machine#cite_note-6">6]</a> </li>
+</ul>
+<h4 id="acceptors_recognizers">Acceptors (recognizers)<a class="headerlink" href="#acceptors_recognizers" title="Permanent link">#</a></h4>
+<p><strong>Acceptors</strong> (also called <strong>recognizers</strong> and <strong>sequence detectors</strong>), produce <strong>binary output</strong>, indicating whether or not the received input is accepted. Each state of an FSM is either "accepting" or "not accepting". Once all input has been received, if the current state is an <strong>accepting state</strong>, the input is accepted; otherwise it is rejected. As a rule, input is a <a href="https://en.wikipedia.org/wiki/String_(computer_science)">sequence of symbols</a> (characters); actions are not used. The example in figure 4 shows a finite state machine that accepts the string "nice". In this FSM, the only <strong>accepting state</strong> is state 7.</p>
+<blockquote>
+<p>TIPS: In machine learning terms, it's a dichotomy.</p>
+</blockquote>
+<p><img alt="img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Fsm_parsing_word_nice.svg/220px-Fsm_parsing_word_nice.svg.png" /></p>
+<p>Fig. 4 Acceptor FSM: parsing the string "nice" </p>
+<p>A (possibly infinite) set of symbol sequences, aka. formal language, is called a <a href="https://en.wikipedia.org/wiki/Regular_language">regular language</a> if there is some <strong>Finite State Machine</strong> that accepts exactly that set. For example, the set of binary strings with an even number of zeroes is a <strong>regular language</strong> (cf. Fig. 5), while the set of all strings whose length is a prime number is not.</p>
+<p><img alt="img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/DFAexample.svg/220px-DFAexample.svg.png" /></p>
+<p>Fig. 5: Representation of a finite-state machine; this example shows one that determines whether a binary number has an even number of 0s, where <em>S</em>1 is an <strong>accepting state</strong>. </p>
+<p>A machine could also be described as defining a language, that would contain every string accepted by the machine but none of the rejected ones; that language is "accepted" by the machine. By definition, the languages accepted by FSMs are the <a href="https://en.wikipedia.org/wiki/Regular_language">regular languages</a>—; a language is regular if there is some FSM that accepts it.</p>
+<p>The problem of determining the language accepted by a given <strong>finite state acceptor</strong> is an instance of the <a href="https://en.wikipedia.org/w/index.php?title=Algebraic_path_problem&amp;action=edit&amp;redlink=1">algebraic path problem</a>—itself a generalization of the <a href="https://en.wikipedia.org/wiki/Shortest_path_problem">shortest path problem</a> to graphs with edges weighted by the elements of an (arbitrary) <a href="https://en.wikipedia.org/wiki/Semiring">semiring</a>.</p>
+<blockquote>
+<p>TIPS:  This passage reminds me of <a href="https://en.wikipedia.org/wiki/Regular_expression">regular expression</a>.</p>
+</blockquote>
+<p>The start state can also be an accepting state, in which case the automaton accepts the empty string.</p>
+<p>An example of an accepting state appears in Fig.5: a <a href="https://en.wikipedia.org/wiki/Deterministic_finite_automaton">deterministic finite automaton</a> (DFA) that detects whether the <a href="https://en.wikipedia.org/wiki/Binary_numeral_system">binary</a> input string contains an even number of 0s.</p>
+<p><em>S</em>1 (which is also the start state) indicates the state at which an even number of 0s has been input. S1 is therefore an <strong>accepting state</strong>. This machine will finish in an <strong>accept state</strong>, if the binary string contains an even number of 0s (including any binary string containing no 0s). Examples of strings accepted by this DFA are <a href="https://en.wikipedia.org/wiki/Ε">ε</a> (the <a href="https://en.wikipedia.org/wiki/Empty_string">empty string</a>), 1, 11, 11…, 00, 010, 1010, 10110, etc.</p>
+<h4 id="classifiers">Classifiers<a class="headerlink" href="#classifiers" title="Permanent link">#</a></h4>
+<p>A <strong>classifier</strong> is a generalization of a finite state machine that, similar to an acceptor, produces a single output on termination but has more than two terminal states. </p>
+<blockquote>
+<p>TIPS: In machine learning terms, it's a multi-class classifier.</p>
+</blockquote>
+<h4 id="determinism">Determinism<a class="headerlink" href="#determinism" title="Permanent link">#</a></h4>
+<p>A further distinction is between <strong>deterministic</strong> (<a href="https://en.wikipedia.org/wiki/Deterministic_finite_automaton">DFA</a>) and <strong>non-deterministic</strong> (<a href="https://en.wikipedia.org/wiki/Nondeterministic_finite_automaton">NFA</a>, <a href="https://en.wikipedia.org/wiki/GNFA">GNFA</a>) automata. In a deterministic automaton, every state has exactly one transition for each possible input. In a non-deterministic automaton, an input can lead to one, more than one, or no transition for a given state. The <a href="https://en.wikipedia.org/wiki/Powerset_construction">powerset construction</a> algorithm can transform any <strong>nondeterministic automaton</strong> into a (usually more complex) <strong>deterministic automaton</strong> with identical functionality.</p>
+<p>A finite state machine with only one state is called a "combinatorial FSM". It only allows actions upon transition <em>into</em> a state. This concept is useful in cases where a number of finite state machines are required to work together, and when it is convenient to consider a purely combinatorial part as a form of FSM to suit the design tools.[<a href="https://en.wikipedia.org/wiki/Finite-state_machine#cite_note-10">10]</a></p>
+<h3 id="mathematical_model">Mathematical model<a class="headerlink" href="#mathematical_model" title="Permanent link">#</a></h3>
+<p>In accordance with the general classification, the following formal definitions are found: </p>
+<ul>
+<li>A <em>deterministic finite state machine</em> or <em>acceptor deterministic finite state machine</em> is a <a href="https://en.wikipedia.org/wiki/Tuple">quintuple</a> $ (\Sigma ,S,s_{0},\delta ,F) $, where: </li>
+<li>$ \Sigma $ is the input <a href="https://en.wikipedia.org/wiki/Alphabet_(computer_science)">alphabet</a> (a finite, non-empty set of symbols). </li>
+<li>$ S $ is a finite, non-empty set of states. </li>
+<li>$ s_{0} $ is an initial state, an element of $ S $. </li>
+<li>$ \delta $ is the state-transition function: $ \delta :S\times \Sigma \rightarrow S $ (in a <a href="https://en.wikipedia.org/wiki/Nondeterministic_finite_automaton">nondeterministic finite automaton</a> it would be $ \delta :S\times \Sigma \rightarrow {\mathcal {P}}(S) $, i.e., $ \delta $ would return a set of states). </li>
+<li>$ F $ is the set of final states, a (possibly empty) subset of $ S $. </li>
+</ul>
+<p>For both deterministic and non-deterministic FSMs, it is conventional to allow $ \delta $ to be a <a href="https://en.wikipedia.org/wiki/Partial_function">partial function</a>, i.e. $ \delta (q,x) $ does not have to be defined for every combination of $ q\in S $ and $ x\in \Sigma $. If an FSM $ M $ is in a state $ q $, the next symbol is $ x $ and $ \delta (q,x) $ is not defined, then $ M $ can announce an error (i.e. reject the input). This is useful in definitions of general state machines, but less useful when transforming the machine. Some algorithms in their default form may require <strong>total functions</strong>.</p>
+<p>A <strong>finite state machine</strong> has the same computational power as a <a href="https://en.wikipedia.org/wiki/Turing_machine">Turing machine</a> that is restricted such that its head may only perform "read" operations, and always has to move from left to right. That is, each formal language accepted by a finite state machine is accepted by such a kind of restricted Turing machine, and vice versa.[<a href="https://en.wikipedia.org/wiki/Finite-state_machine#cite_note-15">15]</a></p>
+<blockquote>
+<p>TIPS: We can conclude that <a href="https://en.wikipedia.org/wiki/Turing_machine">Turing machine</a> is an generalization of <strong>finite state machine</strong> or <strong>finite state machine</strong> is a restrictive version of  <a href="https://en.wikipedia.org/wiki/Turing_machine">Turing machine</a>.</p>
+</blockquote>
+<h3 id="optimization">Optimization<a class="headerlink" href="#optimization" title="Permanent link">#</a></h3>
+<p><em>Main article:</em> <a href="https://en.wikipedia.org/wiki/DFA_minimization">DFA minimization</a> </p>
+<p>Optimizing an FSM means finding a machine with the minimum number of states that performs the same function. The fastest known algorithm doing this is the <a href="https://en.wikipedia.org/wiki/DFA_minimization#Hopcroft's_algorithm">Hopcroft minimization algorithm</a>.[<a href="https://en.wikipedia.org/wiki/Finite-state_machine#cite_note-17">17]</a>[<a href="https://en.wikipedia.org/wiki/Finite-state_machine#cite_note-18">18]</a> Other techniques include using an <a href="https://en.wikipedia.org/wiki/Implication_table">implication table</a>, or the <a href="https://en.wikipedia.org/wiki/Moore_reduction_procedure">Moore reduction procedure</a>. Additionally, acyclic FSAs can be minimized in linear time.[<a href="https://en.wikipedia.org/wiki/Finite-state_machine#cite_note-19">19]</a> </p>
+<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">#</a></h3>
+<p>In addition to their use in modeling <strong>reactive systems</strong> presented here, <strong>finite state machines</strong> are significant in many different areas, including <a href="https://en.wikipedia.org/wiki/Electrical_engineering">electrical engineering</a>, <a href="https://en.wikipedia.org/wiki/Linguistics">linguistics</a>, <a href="https://en.wikipedia.org/wiki/Computer_science">computer science</a>, <a href="https://en.wikipedia.org/wiki/Philosophy">philosophy</a>, <a href="https://en.wikipedia.org/wiki/Biology">biology</a>, <a href="https://en.wikipedia.org/wiki/Mathematic">mathematics</a>, and <a href="https://en.wikipedia.org/wiki/Logic">logic</a>. Finite state machines are a class of automata studied in <a href="https://en.wikipedia.org/wiki/Automata_theory">automata theory</a> and the <a href="https://en.wikipedia.org/wiki/Theory_of_computation">theory of computation</a>. In computer science, finite state machines are widely used in modeling of application behavior, design of <a href="https://en.wikipedia.org/wiki/Digital_electronics">hardware digital systems</a>, <a href="https://en.wikipedia.org/wiki/Software_engineering">software engineering</a>, <a href="https://en.wikipedia.org/wiki/Compiler">compilers</a>, <a href="https://en.wikipedia.org/wiki/Network_protocol">network protocols</a>, and the study of computation and languages. </p>
+<h4 id="software_applications">Software applications<a class="headerlink" href="#software_applications" title="Permanent link">#</a></h4>
+<p>The following concepts are commonly used to build software applications with finite state machines: </p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Automata-based_programming">Automata-based programming</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Event-driven_finite-state_machine">Event-driven finite-state machine</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Virtual_finite-state_machine">Virtual finite-state machine</a></li>
+<li><a href="https://en.wikipedia.org/wiki/State_pattern">State design pattern</a></li>
+<li><a href="https://en.wikipedia.org/wiki/State_machine_replication">State machine replication</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Regular_expression">Regular expression</a></li>
+</ul>
+<h4 id="finite_state_machines_and_compilers">Finite state machines and compilers<a class="headerlink" href="#finite_state_machines_and_compilers" title="Permanent link">#</a></h4>
+<p>Finite automata are often used in the <a href="https://en.wikipedia.org/wiki/Compilers#Front_end">frontend</a> of programming language compilers. Such a frontend may comprise several finite state machines that implement a <a href="https://en.wikipedia.org/wiki/Lexical_analysis">lexical analyzer</a> and a parser. Starting from a sequence of characters, the lexical analyzer builds a sequence of language tokens (such as reserved words, literals, and identifiers) from which the parser builds a syntax tree. The lexical analyzer and the parser handle the regular and context-free parts of the programming language's grammar.[<a href="https://en.wikipedia.org/wiki/Finite-state_machine#cite_note-22">22]</a> </p>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/dengking/automata-and-formal-language" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../../../../..';</script>
+    <script src="../../../../../js/theme.js" defer></script>
+      <script src="../../../../../search/main.js" defer></script>
+
+</body>
+</html>

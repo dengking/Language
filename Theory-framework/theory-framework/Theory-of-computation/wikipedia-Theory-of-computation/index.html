@@ -8,7 +8,7 @@
   
   <meta name="author" content="DengKing">
   <link rel="shortcut icon" href="../../../../img/favicon.ico">
-  <title>BNF - automata-and-formal-language</title>
+  <title>[Theory of computation](https://en.wikipedia.org/wiki/Theory_of_computation) - automata-and-formal-language</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../../../css/theme.css" type="text/css" />
@@ -18,9 +18,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "BNF";
-    var mkdocs_page_input_path = "Theory-framework/Formal-language/Formal-grammar/wikipedia-Backus-Naur-form.md";
-    var mkdocs_page_url = "/automata-and-formal-language/Theory-framework/Formal-language/Formal-grammar/wikipedia-Backus-Naur-form/";
+    var mkdocs_page_name = "[Theory of computation](https://en.wikipedia.org/wiki/Theory_of_computation)";
+    var mkdocs_page_input_path = "Theory-framework/theory-framework/Theory-of-computation/wikipedia-Theory-of-computation.md";
+    var mkdocs_page_url = "/automata-and-formal-language/Theory-framework/theory-framework/Theory-of-computation/wikipedia-Theory-of-computation/";
   </script>
   
   <script src="../../../../js/jquery-2.1.1.min.js" defer></script>
@@ -75,47 +75,41 @@
                     
     <a class="" href="../../../index.md">Introduction</a>
                 </li>
-                <li class=" current">
+                <li class="">
                     
     <span class="caption-text">Formal-language</span>
     <ul class="subnav">
                 <li class="toctree-l3">
                     
-    <a class="" href="../../index.md">Introduction</a>
+    <a class="" href="../../../Formal-language/index.md">Introduction</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../Description-and-language.md">Description-and-language</a>
+    <a class="" href="../../../Formal-language/Description-and-language.md">Description-and-language</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../wikipedia-Formal-language.md">Formal-language</a>
+    <a class="" href="../../../Formal-language/wikipedia-Formal-language.md">Formal-language</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../wikipedia-Formal-system.md">Formal-system</a>
+    <a class="" href="../../../Formal-language/wikipedia-Formal-system.md">Formal-system</a>
                 </li>
-                <li class="toctree-l3 current">
+                <li class="toctree-l3">
                     
     <span class="caption-text">Formal-grammar</span>
     <ul class="subnav">
                 <li class="toctree-l4">
                     
-    <a class="" href="../wikipedia-Formal-grammar.md">Formal-grammar</a>
+    <a class="" href="../../../Formal-language/Formal-grammar/wikipedia-Formal-grammar.md">Formal-grammar</a>
                 </li>
                 <li class="toctree-l4">
                     
-    <a class="" href="../wikipedia-Production(computer-science).md">Production</a>
+    <a class="" href="../../../Formal-language/Formal-grammar/wikipedia-Production(computer-science).md">Production</a>
                 </li>
-                <li class="toctree-l4 current">
+                <li class="toctree-l4">
                     
-    <a class="current" href="./">BNF</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l5"><a href="#backusnaur_form">Backus–Naur form</a></li>
-    
-
-    </ul>
+    <a class="" href="../../../Formal-language/Formal-grammar/wikipedia-Backus-Naur-form/">BNF</a>
                 </li>
     </ul>
                 </li>
@@ -145,20 +139,8 @@
     <li><a href="../../../..">Docs</a> &raquo;</li>
     
       
-        
-          <li>Formal-grammar &raquo;</li>
-        
-      
-        
-          <li>Formal-language &raquo;</li>
-        
-      
-        
-          <li>Theory-framework &raquo;</li>
-        
-      
     
-    <li>BNF</li>
+    <li>[Theory of computation](https://en.wikipedia.org/wiki/Theory_of_computation)</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -168,26 +150,19 @@
           <div role="main">
             <div class="section">
               
-                <div class="toc">
+                <h2 id="theory_of_computation"><a href="https://en.wikipedia.org/wiki/Theory_of_computation">Theory of computation</a><a class="headerlink" href="#theory_of_computation" title="Permanent link">#</a></h2>
+<p>In <a href="https://en.wikipedia.org/wiki/Theoretical_computer_science">theoretical computer science</a> and <a href="https://en.wikipedia.org/wiki/Mathematics">mathematics</a>, the <strong>theory of computation</strong> is the branch that deals with how efficiently problems can be solved on a <a href="https://en.wikipedia.org/wiki/Model_of_computation">model of computation</a>, using an <a href="https://en.wikipedia.org/wiki/Algorithm">algorithm</a>. The field is divided into three major branches: </p>
 <ul>
-<li><a href="#backusnaur_form">Backus–Naur form</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Automata_theory">automata theory</a> and <a href="https://en.wikipedia.org/wiki/Formal_language">formal languages</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Computability_theory">computability theory</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Computational_complexity_theory">computational complexity theory</a>, </li>
 </ul>
-</div>
-<h2 id="backusnaur_form"><a href="https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form">Backus–Naur form</a><a class="headerlink" href="#backusnaur_form" title="Permanent link">#</a></h2>
-<p>要想理解BNF，就需要理解<a href="https://en.wikipedia.org/wiki/Context-free_grammar">
-Context-free grammar</a>。BNF本质来说是一种用来表示Context-free grammar的<a href="https://en.wikipedia.org/wiki/Metasyntax">notation technique</a>。</p>
-<p>context free grammar有对应的parse tree；</p>
+<p>which are linked by the question: <em>"What are the fundamental capabilities and limitations of computers?".</em></p>
+<p>In order to perform a rigorous study of computation, computer scientists work with a <strong>mathematical abstraction</strong> of computers called a <a href="https://en.wikipedia.org/wiki/Model_of_computation">model of computation</a>. There are several models in use, but the most commonly examined is the <a href="https://en.wikipedia.org/wiki/Turing_machine">Turing machine</a>. Computer scientists study the Turing machine because it is simple to formulate, can be analyzed and used to prove results, and because it represents what many consider the most powerful possible "reasonable" model of computation (see <a href="https://en.wikipedia.org/wiki/Church–Turing_thesis">Church–Turing thesis</a>). It might seem that the potentially infinite memory capacity is an unrealizable attribute, but any <a href="https://en.wikipedia.org/wiki/Decidability_(logic)">decidable</a> problem solved by a Turing machine will always require only a finite amount of memory. So in principle, any problem that can be solved (decided) by a Turing machine can be solved by a computer that has a finite amount of memory.</p>
               
             </div>
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-      
-        <a href="../../../../Introduction/" class="btn btn-neutral" title="Introduction"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>
@@ -212,8 +187,6 @@ Context-free grammar</a>。BNF本质来说是一种用来表示Context-free gram
       
           <a href="https://github.com/dengking/automata-and-formal-language" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
-      
-        <span><a href="../../../../Introduction/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
     </span>
