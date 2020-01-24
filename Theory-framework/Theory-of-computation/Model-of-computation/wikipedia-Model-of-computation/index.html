@@ -8,7 +8,7 @@
   
   <meta name="author" content="DengKing">
   <link rel="shortcut icon" href="../../../../img/favicon.ico">
-  <title>BNF - automata-and-formal-language</title>
+  <title>[Model of computation](https://en.wikipedia.org/wiki/Model_of_computation) - automata-and-formal-language</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../../../css/theme.css" type="text/css" />
@@ -18,9 +18,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "BNF";
-    var mkdocs_page_input_path = "Theory-framework/Formal-language/Formal-grammar/wikipedia-Backus-Naur-form.md";
-    var mkdocs_page_url = "/automata-and-formal-language/Theory-framework/Formal-language/Formal-grammar/wikipedia-Backus-Naur-form/";
+    var mkdocs_page_name = "[Model of computation](https://en.wikipedia.org/wiki/Model_of_computation)";
+    var mkdocs_page_input_path = "Theory-framework/Theory-of-computation/Model-of-computation/wikipedia-Model-of-computation.md";
+    var mkdocs_page_url = "/automata-and-formal-language/Theory-framework/Theory-of-computation/Model-of-computation/wikipedia-Model-of-computation/";
   </script>
   
   <script src="../../../../js/jquery-2.1.1.min.js" defer></script>
@@ -75,47 +75,41 @@
                     
     <a class="" href="../../../">Introduction</a>
                 </li>
-                <li class=" current">
+                <li class="">
                     
     <span class="caption-text">Formal-language</span>
     <ul class="subnav">
                 <li class="toctree-l3">
                     
-    <a class="" href="../../">Introduction</a>
+    <a class="" href="../../../Formal-language/">Introduction</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../Description-and-language.md">Description-and-language</a>
+    <a class="" href="../../../Formal-language/Description-and-language.md">Description-and-language</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../wikipedia-Formal-language/">Formal-language</a>
+    <a class="" href="../../../Formal-language/wikipedia-Formal-language/">Formal-language</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../wikipedia-Formal-system/">Formal-system</a>
+    <a class="" href="../../../Formal-language/wikipedia-Formal-system/">Formal-system</a>
                 </li>
-                <li class="toctree-l3 current">
+                <li class="toctree-l3">
                     
     <span class="caption-text">Formal-grammar</span>
     <ul class="subnav">
                 <li class="toctree-l4">
                     
-    <a class="" href="../wikipedia-Formal-grammar/">Formal-grammar</a>
+    <a class="" href="../../../Formal-language/Formal-grammar/wikipedia-Formal-grammar/">Formal-grammar</a>
                 </li>
                 <li class="toctree-l4">
                     
-    <a class="" href="../wikipedia-Production(computer-science)/">Production</a>
+    <a class="" href="../../../Formal-language/Formal-grammar/wikipedia-Production(computer-science)/">Production</a>
                 </li>
-                <li class="toctree-l4 current">
+                <li class="toctree-l4">
                     
-    <a class="current" href="./">BNF</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l5"><a href="#backusnaur_form">Backus–Naur form</a></li>
-    
-
-    </ul>
+    <a class="" href="../../../Formal-language/Formal-grammar/wikipedia-Backus-Naur-form/">BNF</a>
                 </li>
     </ul>
                 </li>
@@ -145,20 +139,8 @@
     <li><a href="../../../..">Docs</a> &raquo;</li>
     
       
-        
-          <li>Formal-grammar &raquo;</li>
-        
-      
-        
-          <li>Formal-language &raquo;</li>
-        
-      
-        
-          <li>Theory-framework &raquo;</li>
-        
-      
     
-    <li>BNF</li>
+    <li>[Model of computation](https://en.wikipedia.org/wiki/Model_of_computation)</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -168,26 +150,43 @@
           <div role="main">
             <div class="section">
               
-                <div class="toc">
+                <h2 id="model_of_computation"><a href="https://en.wikipedia.org/wiki/Model_of_computation">Model of computation</a><a class="headerlink" href="#model_of_computation" title="Permanent link">#</a></h2>
+<p>In <a href="https://en.wikipedia.org/wiki/Computer_science">computer science</a>, and more specifically in <a href="https://en.wikipedia.org/wiki/Computability_theory_(computer_science)">computability theory</a> and <a href="https://en.wikipedia.org/wiki/Computational_complexity_theory">computational complexity theory</a>, a <strong>model of computation</strong> is a model which describes how an output of a <a href="https://en.wikipedia.org/wiki/Function_(mathematics)">mathematical function</a> is computed given an input. A model describes how units of computations, memories, and communications are organized. The <a href="https://en.wikipedia.org/wiki/Computational_complexity">computational complexity</a> of an <a href="https://en.wikipedia.org/wiki/Algorithm">algorithm</a> can be measured given a model of computation. Using a model allows studying the performance of algorithms independently of the variations that are specific to particular <a href="https://en.wikipedia.org/wiki/Implementation">implementations</a> and specific technology.</p>
+<h3 id="models">Models<a class="headerlink" href="#models" title="Permanent link">#</a></h3>
+<p>Models of computation can be classified in three categories: sequential models, functional models, and concurrent models.</p>
+<p>Sequential models include:</p>
 <ul>
-<li><a href="#backusnaur_form">Backus–Naur form</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Finite_state_machine">Finite state machines</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Pushdown_automata">Pushdown automata</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Turing_machine">Turing machine</a></li>
 </ul>
-</div>
-<h2 id="backusnaur_form"><a href="https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form">Backus–Naur form</a><a class="headerlink" href="#backusnaur_form" title="Permanent link">#</a></h2>
-<p>要想理解BNF，就需要理解<a href="https://en.wikipedia.org/wiki/Context-free_grammar">
-Context-free grammar</a>。BNF本质来说是一种用来表示Context-free grammar的<a href="https://en.wikipedia.org/wiki/Metasyntax">notation technique</a>。</p>
-<p>context free grammar有对应的parse tree；</p>
+<p>Functional models include:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Lambda_calculus">Lambda calculus</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Μ-recursive_function">Recursive functions</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Combinatory_logic">Combinatory logic</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Abstract_rewriting_system">Abstract rewriting systems</a></li>
+</ul>
+<p>Concurrent models include:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Cellular_automaton">Cellular automaton</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Kahn_process_networks">Kahn process networks</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Petri_nets">Petri nets</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Synchronous_Data_Flow">Synchronous Data Flow</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Interaction_nets">Interaction nets</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Actor_model">Actor model</a></li>
+</ul>
+<p>Models differ in their <strong>expressive power</strong>; for example, each function that can be computed by a <em>Finite state machine</em> can also be computed by a <em>Turing machine</em>, but not vice versa.</p>
+<h3 id="categories">Categories<a class="headerlink" href="#categories" title="Permanent link">#</a></h3>
+<p>There are many models of computation, differing in the set of admissible operations and their computations cost. They fall into the following broad categories:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Abstract_machine">Abstract machine</a> and models equivalent to it (e.g. <a href="https://en.wikipedia.org/wiki/Lambda_calculus">lambda calculus</a> is equivalent to the <a href="https://en.wikipedia.org/wiki/Turing_machine">Turing machine</a>) - used in proofs of computability and upper bounds on <strong>computational complexity of algorithms</strong>.</li>
+<li><a href="https://en.wikipedia.org/wiki/Decision_tree_model">Decision tree models</a> - used in proofs of lower bounds on computational complexity of algorithmic problems.</li>
+</ul>
               
             </div>
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-      
-        <a href="../wikipedia-Production(computer-science)/" class="btn btn-neutral" title="Production"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>
@@ -212,8 +211,6 @@ Context-free grammar</a>。BNF本质来说是一种用来表示Context-free gram
       
           <a href="https://github.com/dengking/automata-and-formal-language" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
-      
-        <span><a href="../wikipedia-Production(computer-science)/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
     </span>

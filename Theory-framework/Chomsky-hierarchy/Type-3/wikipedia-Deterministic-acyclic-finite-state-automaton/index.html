@@ -8,7 +8,7 @@
   
   <meta name="author" content="DengKing">
   <link rel="shortcut icon" href="../../../../img/favicon.ico">
-  <title>BNF - automata-and-formal-language</title>
+  <title>wikipedia Deterministic acyclic finite state automaton - automata-and-formal-language</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../../../css/theme.css" type="text/css" />
@@ -18,9 +18,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "BNF";
-    var mkdocs_page_input_path = "Theory-framework/Formal-language/Formal-grammar/wikipedia-Backus-Naur-form.md";
-    var mkdocs_page_url = "/automata-and-formal-language/Theory-framework/Formal-language/Formal-grammar/wikipedia-Backus-Naur-form/";
+    var mkdocs_page_name = "wikipedia Deterministic acyclic finite state automaton";
+    var mkdocs_page_input_path = "Theory-framework/Chomsky-hierarchy/Type-3/wikipedia-Deterministic-acyclic-finite-state-automaton.md";
+    var mkdocs_page_url = "/automata-and-formal-language/Theory-framework/Chomsky-hierarchy/Type-3/wikipedia-Deterministic-acyclic-finite-state-automaton/";
   </script>
   
   <script src="../../../../js/jquery-2.1.1.min.js" defer></script>
@@ -75,47 +75,41 @@
                     
     <a class="" href="../../../">Introduction</a>
                 </li>
-                <li class=" current">
+                <li class="">
                     
     <span class="caption-text">Formal-language</span>
     <ul class="subnav">
                 <li class="toctree-l3">
                     
-    <a class="" href="../../">Introduction</a>
+    <a class="" href="../../../Formal-language/">Introduction</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../Description-and-language.md">Description-and-language</a>
+    <a class="" href="../../../Formal-language/Description-and-language.md">Description-and-language</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../wikipedia-Formal-language/">Formal-language</a>
+    <a class="" href="../../../Formal-language/wikipedia-Formal-language/">Formal-language</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../wikipedia-Formal-system/">Formal-system</a>
+    <a class="" href="../../../Formal-language/wikipedia-Formal-system/">Formal-system</a>
                 </li>
-                <li class="toctree-l3 current">
+                <li class="toctree-l3">
                     
     <span class="caption-text">Formal-grammar</span>
     <ul class="subnav">
                 <li class="toctree-l4">
                     
-    <a class="" href="../wikipedia-Formal-grammar/">Formal-grammar</a>
+    <a class="" href="../../../Formal-language/Formal-grammar/wikipedia-Formal-grammar/">Formal-grammar</a>
                 </li>
                 <li class="toctree-l4">
                     
-    <a class="" href="../wikipedia-Production(computer-science)/">Production</a>
+    <a class="" href="../../../Formal-language/Formal-grammar/wikipedia-Production(computer-science)/">Production</a>
                 </li>
-                <li class="toctree-l4 current">
+                <li class="toctree-l4">
                     
-    <a class="current" href="./">BNF</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l5"><a href="#backusnaur_form">Backus–Naur form</a></li>
-    
-
-    </ul>
+    <a class="" href="../../../Formal-language/Formal-grammar/wikipedia-Backus-Naur-form/">BNF</a>
                 </li>
     </ul>
                 </li>
@@ -145,20 +139,8 @@
     <li><a href="../../../..">Docs</a> &raquo;</li>
     
       
-        
-          <li>Formal-grammar &raquo;</li>
-        
-      
-        
-          <li>Formal-language &raquo;</li>
-        
-      
-        
-          <li>Theory-framework &raquo;</li>
-        
-      
     
-    <li>BNF</li>
+    <li>wikipedia Deterministic acyclic finite state automaton</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -170,24 +152,25 @@
               
                 <div class="toc">
 <ul>
-<li><a href="#backusnaur_form">Backus–Naur form</a></li>
+<li><a href="#deterministic_acyclic_finite_state_automaton">Deterministic acyclic finite state automaton</a><ul>
+<li><a href="#application">application</a></li>
+</ul>
+</li>
 </ul>
 </div>
-<h2 id="backusnaur_form"><a href="https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form">Backus–Naur form</a><a class="headerlink" href="#backusnaur_form" title="Permanent link">#</a></h2>
-<p>要想理解BNF，就需要理解<a href="https://en.wikipedia.org/wiki/Context-free_grammar">
-Context-free grammar</a>。BNF本质来说是一种用来表示Context-free grammar的<a href="https://en.wikipedia.org/wiki/Metasyntax">notation technique</a>。</p>
-<p>context free grammar有对应的parse tree；</p>
+<h2 id="deterministic_acyclic_finite_state_automaton"><a href="https://en.wikipedia.org/wiki/Deterministic_acyclic_finite_state_automaton">Deterministic acyclic finite state automaton</a><a class="headerlink" href="#deterministic_acyclic_finite_state_automaton" title="Permanent link">#</a></h2>
+<p>In <a href="https://en.wikipedia.org/wiki/Computer_science">computer science</a>, a <strong>deterministic acyclic finite state automaton</strong> (<strong>DAFSA</strong>),[<a href="https://en.wikipedia.org/wiki/Deterministic_acyclic_finite_state_automaton#cite_note-daciuk-1">1]</a> also called a <strong>directed acyclic word graph</strong> (<strong>DAWG</strong>; though that name also refers to a <a href="https://en.wikipedia.org/wiki/Suffix_automaton">related data structure</a> that functions as a suffix index[<a href="https://en.wikipedia.org/wiki/Deterministic_acyclic_finite_state_automaton#cite_note-2">2]</a>) is a <a href="https://en.wikipedia.org/wiki/Data_structure">data structure</a> that represents a set of <a href="https://en.wikipedia.org/wiki/String_(computer_science)">strings</a>, and allows for a query operation that tests whether a given string belongs to the set in time proportional to its length. Algorithms exist to construct and maintain such automata,[<em><a href="https://en.wikipedia.org/wiki/Wikipedia:Citation_needed">citation needed</a></em>] while keeping them <a href="https://en.wikipedia.org/wiki/DFA_minimization">minimal</a>.</p>
+<p>A DAFSA is a special case of a <a href="https://en.wikipedia.org/wiki/Finite_state_recognizer">finite state recognizer</a> that takes the form of a <a href="https://en.wikipedia.org/wiki/Directed_acyclic_graph">directed acyclic graph</a> with a single source vertex (a vertex with no incoming edges), in which each edge of the graph is labeled by a letter or symbol, and in which each vertex has at most one outgoing edge for each possible letter or symbol. The strings represented by the DAFSA are formed by the symbols on paths in the graph from the source vertex to any sink vertex (a vertex with no outgoing edges). In fact, a <a href="https://en.wikipedia.org/wiki/Deterministic_finite_state_automaton">deterministic finite state automaton</a> is acyclic <a href="https://en.wikipedia.org/wiki/If_and_only_if">if and only if</a> it recognizes a <a href="https://en.wikipedia.org/wiki/Finite_language">finite set of strings</a>.[<a href="https://en.wikipedia.org/wiki/Deterministic_acyclic_finite_state_automaton#cite_note-daciuk-1">1]</a></p>
+<h3 id="application">application<a class="headerlink" href="#application" title="Permanent link">#</a></h3>
+<ul>
+<li><a href="https://github.com/fxsjy/jieba">jieba</a></li>
+<li><a href="https://blog.csdn.net/yuanlisky/article/details/55050071">jieba分词算法源码解析</a></li>
+<li><a href="https://www.cnblogs.com/echo-cheng/p/7967221.html">jieba分词的原理</a></li>
+</ul>
               
             </div>
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-      
-        <a href="../wikipedia-Production(computer-science)/" class="btn btn-neutral" title="Production"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>
@@ -212,8 +195,6 @@ Context-free grammar</a>。BNF本质来说是一种用来表示Context-free gram
       
           <a href="https://github.com/dengking/automata-and-formal-language" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
-      
-        <span><a href="../wikipedia-Production(computer-science)/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
     </span>

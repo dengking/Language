@@ -8,7 +8,7 @@
   
   <meta name="author" content="DengKing">
   <link rel="shortcut icon" href="../../../../img/favicon.ico">
-  <title>BNF - automata-and-formal-language</title>
+  <title>[Recursively Enumerable Set](http://mathworld.wolfram.com/RecursivelyEnumerableSet.html) - automata-and-formal-language</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../../../css/theme.css" type="text/css" />
@@ -18,9 +18,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "BNF";
-    var mkdocs_page_input_path = "Theory-framework/Formal-language/Formal-grammar/wikipedia-Backus-Naur-form.md";
-    var mkdocs_page_url = "/automata-and-formal-language/Theory-framework/Formal-language/Formal-grammar/wikipedia-Backus-Naur-form/";
+    var mkdocs_page_name = "[Recursively Enumerable Set](http://mathworld.wolfram.com/RecursivelyEnumerableSet.html)";
+    var mkdocs_page_input_path = "Theory-framework/Chomsky-hierarchy/Type-0/recursively-enumerable-sets.md";
+    var mkdocs_page_url = "/automata-and-formal-language/Theory-framework/Chomsky-hierarchy/Type-0/recursively-enumerable-sets/";
   </script>
   
   <script src="../../../../js/jquery-2.1.1.min.js" defer></script>
@@ -75,47 +75,41 @@
                     
     <a class="" href="../../../">Introduction</a>
                 </li>
-                <li class=" current">
+                <li class="">
                     
     <span class="caption-text">Formal-language</span>
     <ul class="subnav">
                 <li class="toctree-l3">
                     
-    <a class="" href="../../">Introduction</a>
+    <a class="" href="../../../Formal-language/">Introduction</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../Description-and-language.md">Description-and-language</a>
+    <a class="" href="../../../Formal-language/Description-and-language.md">Description-and-language</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../wikipedia-Formal-language/">Formal-language</a>
+    <a class="" href="../../../Formal-language/wikipedia-Formal-language/">Formal-language</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../wikipedia-Formal-system/">Formal-system</a>
+    <a class="" href="../../../Formal-language/wikipedia-Formal-system/">Formal-system</a>
                 </li>
-                <li class="toctree-l3 current">
+                <li class="toctree-l3">
                     
     <span class="caption-text">Formal-grammar</span>
     <ul class="subnav">
                 <li class="toctree-l4">
                     
-    <a class="" href="../wikipedia-Formal-grammar/">Formal-grammar</a>
+    <a class="" href="../../../Formal-language/Formal-grammar/wikipedia-Formal-grammar/">Formal-grammar</a>
                 </li>
                 <li class="toctree-l4">
                     
-    <a class="" href="../wikipedia-Production(computer-science)/">Production</a>
+    <a class="" href="../../../Formal-language/Formal-grammar/wikipedia-Production(computer-science)/">Production</a>
                 </li>
-                <li class="toctree-l4 current">
+                <li class="toctree-l4">
                     
-    <a class="current" href="./">BNF</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l5"><a href="#backusnaur_form">Backus–Naur form</a></li>
-    
-
-    </ul>
+    <a class="" href="../../../Formal-language/Formal-grammar/wikipedia-Backus-Naur-form/">BNF</a>
                 </li>
     </ul>
                 </li>
@@ -145,20 +139,8 @@
     <li><a href="../../../..">Docs</a> &raquo;</li>
     
       
-        
-          <li>Formal-grammar &raquo;</li>
-        
-      
-        
-          <li>Formal-language &raquo;</li>
-        
-      
-        
-          <li>Theory-framework &raquo;</li>
-        
-      
     
-    <li>BNF</li>
+    <li>[Recursively Enumerable Set](http://mathworld.wolfram.com/RecursivelyEnumerableSet.html)</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -168,26 +150,17 @@
           <div role="main">
             <div class="section">
               
-                <div class="toc">
-<ul>
-<li><a href="#backusnaur_form">Backus–Naur form</a></li>
-</ul>
-</div>
-<h2 id="backusnaur_form"><a href="https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form">Backus–Naur form</a><a class="headerlink" href="#backusnaur_form" title="Permanent link">#</a></h2>
-<p>要想理解BNF，就需要理解<a href="https://en.wikipedia.org/wiki/Context-free_grammar">
-Context-free grammar</a>。BNF本质来说是一种用来表示Context-free grammar的<a href="https://en.wikipedia.org/wiki/Metasyntax">notation technique</a>。</p>
-<p>context free grammar有对应的parse tree；</p>
+                <h2 id="recursively_enumerable_set"><a href="http://mathworld.wolfram.com/RecursivelyEnumerableSet.html">Recursively Enumerable Set</a><a class="headerlink" href="#recursively_enumerable_set" title="Permanent link">#</a></h2>
+<p>A <a href="http://mathworld.wolfram.com/Set.html">set</a> <img alt="T" src="http://mathworld.wolfram.com/images/equations/RecursivelyEnumerableSet/Inline1.gif" /> of integers is said to be <strong>recursively enumerable</strong> if it constitutes the range of a <a href="http://mathworld.wolfram.com/RecursiveFunction.html">recursive function</a>, i.e., if there exists a <a href="http://mathworld.wolfram.com/RecursiveFunction.html">recursive function</a> that can eventually generate any element in <img alt="T" src="http://mathworld.wolfram.com/images/equations/RecursivelyEnumerableSet/Inline2.gif" /> (Wolfram 2002, p. <a href="http://www.wolframscience.com/nksonline/page-1138d-text">1138</a>). Any <a href="http://mathworld.wolfram.com/RecursiveSet.html">recursive set</a> is also recursively enumerable.</p>
+<blockquote>
+<p>NOTE: range的含义是值域</p>
+</blockquote>
+<p><a href="http://mathworld.wolfram.com/RecursivelyUndecidable.html">Recursively undecidable</a> problems give examples of <strong>recursively enumerable sets</strong> that are not recursive. For example, convergence of <img alt="phi_x(x)" src="http://mathworld.wolfram.com/images/equations/RecursivelyEnumerableSet/Inline3.gif" /> is known to be recursively undecidable, where <img alt="phi_x" src="http://mathworld.wolfram.com/images/equations/RecursivelyEnumerableSet/Inline4.gif" /> denotes the <a href="http://mathworld.wolfram.com/TuringMachine.html">Turing machine</a> with <a href="http://mathworld.wolfram.com/GoedelNumber.html">Gödel number</a> <img alt="x" src="http://mathworld.wolfram.com/images/equations/RecursivelyEnumerableSet/Inline5.gif" />. Hence the set of all <img alt="x" src="http://mathworld.wolfram.com/images/equations/RecursivelyEnumerableSet/Inline6.gif" /> for which <img alt="phi_x(x)" src="http://mathworld.wolfram.com/images/equations/RecursivelyEnumerableSet/Inline7.gif" /> is convergent is not <a href="http://mathworld.wolfram.com/RecursiveSet.html">recursive</a>. However, this set is recursively enumerable because it is the range of <img alt="f" src="http://mathworld.wolfram.com/images/equations/RecursivelyEnumerableSet/Inline8.gif" /> defined as follows:</p>
+<h2 id="what_are_recursively_enumerable_sets"><a href="https://stackoverflow.com/questions/920074/what-are-recursively-enumerable-sets">What are recursively enumerable sets?</a><a class="headerlink" href="#what_are_recursively_enumerable_sets" title="Permanent link">#</a></h2>
               
             </div>
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-      
-        <a href="../wikipedia-Production(computer-science)/" class="btn btn-neutral" title="Production"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>
@@ -212,8 +185,6 @@ Context-free grammar</a>。BNF本质来说是一种用来表示Context-free gram
       
           <a href="https://github.com/dengking/automata-and-formal-language" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
-      
-        <span><a href="../wikipedia-Production(computer-science)/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
     </span>

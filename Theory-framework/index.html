@@ -8,7 +8,7 @@
   
   <meta name="author" content="DengKing">
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Formal Languages&Grammars&Automata thinking - automata-and-formal-language</title>
+  <title>Introduction - automata-and-formal-language</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -18,9 +18,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Formal Languages&Grammars&Automata thinking";
-    var mkdocs_page_input_path = "Formal-Languages&Grammars&Automata-thinking.md";
-    var mkdocs_page_url = "/automata-and-formal-language/Formal-Languages&Grammars&Automata-thinking/";
+    var mkdocs_page_name = "Introduction";
+    var mkdocs_page_input_path = "Theory-framework/index.md";
+    var mkdocs_page_url = "/automata-and-formal-language/Theory-framework/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
@@ -71,9 +71,15 @@
 		
     <span class="caption-text">Theory-framework</span>
     <ul class="subnav">
-                <li class="">
+                <li class=" current">
                     
-    <a class="" href="../Theory-framework/">Introduction</a>
+    <a class="current" href="./">Introduction</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#_1">前言</a></li>
+    
+
+    </ul>
                 </li>
                 <li class="">
                     
@@ -81,19 +87,19 @@
     <ul class="subnav">
                 <li class="toctree-l3">
                     
-    <a class="" href="../Theory-framework/Formal-language/">Introduction</a>
+    <a class="" href="Formal-language/">Introduction</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../Theory-framework/Formal-language/Description-and-language.md">Description-and-language</a>
+    <a class="" href="Formal-language/Description-and-language.md">Description-and-language</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../Theory-framework/Formal-language/wikipedia-Formal-language/">Formal-language</a>
+    <a class="" href="Formal-language/wikipedia-Formal-language/">Formal-language</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../Theory-framework/Formal-language/wikipedia-Formal-system/">Formal-system</a>
+    <a class="" href="Formal-language/wikipedia-Formal-system/">Formal-system</a>
                 </li>
                 <li class="toctree-l3">
                     
@@ -101,15 +107,15 @@
     <ul class="subnav">
                 <li class="toctree-l4">
                     
-    <a class="" href="../Theory-framework/Formal-language/Formal-grammar/wikipedia-Formal-grammar/">Formal-grammar</a>
+    <a class="" href="Formal-language/Formal-grammar/wikipedia-Formal-grammar/">Formal-grammar</a>
                 </li>
                 <li class="toctree-l4">
                     
-    <a class="" href="../Theory-framework/Formal-language/Formal-grammar/wikipedia-Production(computer-science)/">Production</a>
+    <a class="" href="Formal-language/Formal-grammar/wikipedia-Production(computer-science)/">Production</a>
                 </li>
                 <li class="toctree-l4">
                     
-    <a class="" href="../Theory-framework/Formal-language/Formal-grammar/wikipedia-Backus-Naur-form/">BNF</a>
+    <a class="" href="Formal-language/Formal-grammar/wikipedia-Backus-Naur-form/">BNF</a>
                 </li>
     </ul>
                 </li>
@@ -139,8 +145,12 @@
     <li><a href="..">Docs</a> &raquo;</li>
     
       
+        
+          <li>Theory-framework &raquo;</li>
+        
+      
     
-    <li>Formal Languages&Grammars&Automata thinking</li>
+    <li>Introduction</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -150,39 +160,30 @@
           <div role="main">
             <div class="section">
               
-                <div class="toc">
+                <h2 id="_1">前言<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<p>首先说明formal language，formal grammar，automata，Chomsky hierarchy等基本概念，建立理论框架。</p>
+<p>然后按照Chomsky hierarchy的每一层进行说明，对Chomsky hierarchy的每一层的说明采用如下顺序，即：</p>
 <ul>
-<li><a href="#application_of_state_machine">application of state machine</a><ul>
-<li><a href="#uses_for_state_machines_closed93">[uses for state machines closed]</a></li>
-<li><a href="#the_rise_of_the_state_machines">The Rise Of The State Machines</a></li>
-<li><a href="#understanding_state_machines">Understanding State Machines</a></li>
+<li>Type-3 grammars: <a href="https://en.wikipedia.org/wiki/Regular_grammar">Regular grammar</a></li>
+<li>Type-2 grammars: <a href="https://en.wikipedia.org/wiki/Context-free_grammar">Context-free grammar</a></li>
+<li>Type-1 grammars: <a href="https://en.wikipedia.org/wiki/Context-sensitive_grammar">Context-sensitive grammar</a></li>
+<li>Type-0 grammars: <a href="https://en.wikipedia.org/wiki/Unrestricted_grammar">Unrestricted grammar</a></li>
 </ul>
-</li>
-<li><a href="#finite-state_machine">Finite-state machine</a></li>
-<li><a href="#regex_engine_and_automata">regex engine and automata</a><ul>
-<li><a href="#regex-directed_engines_vs_syntax-directed_translation">regex-directed engines vs Syntax-directed translation</a></li>
-</ul>
-</li>
-<li><a href="#state_machine_vs_automata">state machine vs automata</a></li>
-</ul>
-</div>
-<h2 id="application_of_state_machine">application of state machine<a class="headerlink" href="#application_of_state_machine" title="Permanent link">#</a></h2>
-<h3 id="uses_for_state_machines_closed93">[uses for state machines <a href="https://stackoverflow.com/questions/255797/uses-for-state-machines">closed]</a><a class="headerlink" href="#uses_for_state_machines_closed93" title="Permanent link">#</a></h3>
-<h3 id="the_rise_of_the_state_machines"><a href="https://www.smashingmagazine.com/2018/01/rise-state-machines/">The Rise Of The State Machines</a><a class="headerlink" href="#the_rise_of_the_state_machines" title="Permanent link">#</a></h3>
-<h3 id="understanding_state_machines"><a href="https://www.freecodecamp.org/news/state-machines-basics-of-computer-science-d42855debc66/">Understanding State Machines</a><a class="headerlink" href="#understanding_state_machines" title="Permanent link">#</a></h3>
-<h2 id="finite-state_machine"><a href="https://en.wikipedia.org/wiki/Finite-state_machine">Finite-state machine</a><a class="headerlink" href="#finite-state_machine" title="Permanent link">#</a></h2>
-<h2 id="regex_engine_and_automata">regex engine and automata<a class="headerlink" href="#regex_engine_and_automata" title="Permanent link">#</a></h2>
-<p>https://www.regular-expressions.info/engine.html:</p>
-<blockquote>
-<p>While there are many implementations of regular expressions that differ sometimes slightly and sometimes significantly in syntax and behavior, there are basically only two kinds of regular expression engines: text-directed engines, and regex-directed engines. Nearly all modern regex flavors are based on regex-directed engines. This is because certain very useful features, such as lazy quantifiers and backreferences, can only be implemented in regex-directed engines.</p>
-</blockquote>
-<h3 id="regex-directed_engines_vs_syntax-directed_translation">regex-directed engines vs Syntax-directed translation<a class="headerlink" href="#regex-directed_engines_vs_syntax-directed_translation" title="Permanent link">#</a></h3>
-<h2 id="state_machine_vs_automata">state machine vs automata<a class="headerlink" href="#state_machine_vs_automata" title="Permanent link">#</a></h2>
-<p>state machine是一种automata</p>
+<p>这是因为从Type-3 grammars到Type-0 grammars，grammar越来越抽象，越来越难理解，这样由易到难会比较符合认知规律。</p>
+<p>在了解了这些之后，我们不能够仅仅局限于此，而是应该走向更加宽广的理论：<a href="https://en.wikipedia.org/wiki/Theory_of_computation">Theory of computation</a>，因为按照2012 <a href="https://en.wikipedia.org/wiki/ACM_Computing_Classification_System">ACM Computing Classification System</a>，前面所讨论的<a href="https://en.wikipedia.org/wiki/Formal_language">formal language</a>，<a href="https://en.wikipedia.org/wiki/Automata_theory">automata theory</a>都属于此范轴。</p>
               
             </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Formal-language/" class="btn btn-neutral float-right" title="Introduction">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Introduction/" class="btn btn-neutral" title="Introduction"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -208,6 +209,10 @@
           <a href="https://github.com/dengking/automata-and-formal-language" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
+        <span><a href="../Introduction/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="Formal-language/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

@@ -8,7 +8,7 @@
   
   <meta name="author" content="DengKing">
   <link rel="shortcut icon" href="../../../../img/favicon.ico">
-  <title>BNF - automata-and-formal-language</title>
+  <title>Production - automata-and-formal-language</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../../../css/theme.css" type="text/css" />
@@ -18,9 +18,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "BNF";
-    var mkdocs_page_input_path = "Theory-framework/Formal-language/Formal-grammar/wikipedia-Backus-Naur-form.md";
-    var mkdocs_page_url = "/automata-and-formal-language/Theory-framework/Formal-language/Formal-grammar/wikipedia-Backus-Naur-form/";
+    var mkdocs_page_name = "Production";
+    var mkdocs_page_input_path = "Theory-framework/Formal-language/Formal-grammar/wikipedia-Production(computer-science).md";
+    var mkdocs_page_url = "/automata-and-formal-language/Theory-framework/Formal-language/Formal-grammar/wikipedia-Production(computer-science)/";
   </script>
   
   <script src="../../../../js/jquery-2.1.1.min.js" defer></script>
@@ -103,19 +103,30 @@
                     
     <a class="" href="../wikipedia-Formal-grammar/">Formal-grammar</a>
                 </li>
-                <li class="toctree-l4">
-                    
-    <a class="" href="../wikipedia-Production(computer-science)/">Production</a>
-                </li>
                 <li class="toctree-l4 current">
                     
-    <a class="current" href="./">BNF</a>
+    <a class="current" href="./">Production</a>
     <ul class="subnav">
             
-    <li class="toctree-l5"><a href="#backusnaur_form">Backus–Naur form</a></li>
+    <li class="toctree-l5"><a href="#production_computer_science">Production (computer science)</a></li>
+    
+
+    <li class="toctree-l5"><a href="#_1">产生式</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l6" href="#vs">产生式VS推导式</a></li>
+        
+            <li><a class="toctree-l6" href="#vs_1">递归公式VS产生式</a></li>
+        
+        </ul>
     
 
     </ul>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../wikipedia-Backus-Naur-form/">BNF</a>
                 </li>
     </ul>
                 </li>
@@ -158,7 +169,7 @@
         
       
     
-    <li>BNF</li>
+    <li>Production</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -170,13 +181,28 @@
               
                 <div class="toc">
 <ul>
-<li><a href="#backusnaur_form">Backus–Naur form</a></li>
+<li><a href="#production_computer_science">Production (computer science)</a></li>
+<li><a href="#_1">产生式</a><ul>
+<li><a href="#vs">产生式VS推导式</a></li>
+<li><a href="#vs_1">递归公式VS产生式</a></li>
+</ul>
+</li>
 </ul>
 </div>
-<h2 id="backusnaur_form"><a href="https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form">Backus–Naur form</a><a class="headerlink" href="#backusnaur_form" title="Permanent link">#</a></h2>
-<p>要想理解BNF，就需要理解<a href="https://en.wikipedia.org/wiki/Context-free_grammar">
-Context-free grammar</a>。BNF本质来说是一种用来表示Context-free grammar的<a href="https://en.wikipedia.org/wiki/Metasyntax">notation technique</a>。</p>
-<p>context free grammar有对应的parse tree；</p>
+<h2 id="production_computer_science"><a href="https://en.wikipedia.org/wiki/Production_(computer_science)">Production (computer science)</a><a class="headerlink" href="#production_computer_science" title="Permanent link">#</a></h2>
+<p>production是否是</p>
+<h2 id="_1">产生式<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<h3 id="vs">产生式VS推导式<a class="headerlink" href="#vs" title="Permanent link">#</a></h3>
+<p>TODO: 从<a href="https://en.wikipedia.org/wiki/Formation_rule">Formation rule</a>的角度来看待production，则它是一种推导。</p>
+<p>如果从推导的角度来看待产生式的话，则关于自顶向下parsing无法处理左递归的情况就非常任意理解了。这个需要尽快地补充。</p>
+<h3 id="vs_1">递归公式VS产生式<a class="headerlink" href="#vs_1" title="Permanent link">#</a></h3>
+<p>数学中的递归公式（<a href="https://en.wikipedia.org/wiki/Recurrence_relation">recurrence relation</a>），语言学中的产生式，两者其实有着共同之处：递归。</p>
+<p>production可以用来描述所有的具有hierarchy结构的数据，这样的结构是允许具备递归性的。这种hierarchy结构对应着一棵树。</p>
+<blockquote>
+<p>NOTE: formal grammar是描述具有hierarchy structure的一个非常好的工具</p>
+</blockquote>
+<p>递归公式则描述了问题求解过程的递归性，它并不是像产生式那样描述的是具体实际的结构。但是，如果从计算机程序实现递归公式的角度来看，由于计算机执行过程中使用的是stack，每次函数调用都会new一个栈帧对象，通过以适当的方式将栈帧给摆放起来的话，可以对应一棵树。</p>
+<p>从本质上来说，program是对各种描述的计算机实现。</p>
               
             </div>
           </div>
@@ -184,8 +210,10 @@ Context-free grammar</a>。BNF本质来说是一种用来表示Context-free gram
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="../wikipedia-Backus-Naur-form/" class="btn btn-neutral float-right" title="BNF">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-        <a href="../wikipedia-Production(computer-science)/" class="btn btn-neutral" title="Production"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+        <a href="../wikipedia-Formal-grammar/" class="btn btn-neutral" title="Formal-grammar"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -213,8 +241,10 @@ Context-free grammar</a>。BNF本质来说是一种用来表示Context-free gram
           <a href="https://github.com/dengking/automata-and-formal-language" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../wikipedia-Production(computer-science)/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../wikipedia-Formal-grammar/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
+      
+        <span style="margin-left: 15px"><a href="../wikipedia-Backus-Naur-form/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

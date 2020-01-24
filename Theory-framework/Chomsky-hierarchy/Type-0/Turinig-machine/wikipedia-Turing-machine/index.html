@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="DengKing">
+  <link rel="shortcut icon" href="../../../../../img/favicon.ico">
+  <title>[Turing machine](https://en.wikipedia.org/wiki/Turing_machine) - automata-and-formal-language</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link href="../../../../../css/extra.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "[Turing machine](https://en.wikipedia.org/wiki/Turing_machine)";
+    var mkdocs_page_input_path = "Theory-framework/Chomsky-hierarchy/Type-0/Turinig-machine/wikipedia-Turing-machine.md";
+    var mkdocs_page_url = "/automata-and-formal-language/Theory-framework/Chomsky-hierarchy/Type-0/Turinig-machine/wikipedia-Turing-machine/";
+  </script>
+  
+  <script src="../../../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/django.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../../../.." class="icon icon-home"> automata-and-formal-language</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../../../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Introduction</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../../../Introduction/">Introduction</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Theory-framework</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../../">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Formal-language</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../../Formal-language/">Introduction</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../../Formal-language/Description-and-language.md">Description-and-language</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../../Formal-language/wikipedia-Formal-language/">Formal-language</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../../Formal-language/wikipedia-Formal-system/">Formal-system</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <span class="caption-text">Formal-grammar</span>
+    <ul class="subnav">
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../../../Formal-language/Formal-grammar/wikipedia-Formal-grammar/">Formal-grammar</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../../../Formal-language/Formal-grammar/wikipedia-Production(computer-science)/">Production</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../../../Formal-language/Formal-grammar/wikipedia-Backus-Naur-form/">BNF</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../..">automata-and-formal-language</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>[Turing machine](https://en.wikipedia.org/wiki/Turing_machine)</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="turing_machine"><a href="https://en.wikipedia.org/wiki/Turing_machine">Turing machine</a><a class="headerlink" href="#turing_machine" title="Permanent link">#</a></h2>
+<p>A <strong>Turing machine</strong> is a <a href="https://en.wikipedia.org/wiki/Mathematical_model_of_computation">mathematical model of computation</a> that defines an <a href="https://en.wikipedia.org/wiki/Abstract_machine">abstract machine</a>, which manipulates <strong>symbols</strong> on a strip of tape according to a <strong>table of rules</strong>. Despite the model's simplicity, given any <a href="https://en.wikipedia.org/wiki/Computer_algorithm">computer algorithm</a>, a Turing machine capable of simulating that algorithm's logic can be constructed.</p>
+<p>The machine operates on an <strong>infinite memory tape</strong> divided into <a href="https://en.wikipedia.org/wiki/Discrete_mathematics">discrete</a> "cells". The machine positions its "head" over a cell and "reads" or "scans" the symbol there. Then, as per the symbol and its present place in a "finite table" of user-specified instructions, the machine (i) writes a symbol (e.g., a digit or a letter from a finite alphabet) in the cell (some models allow symbol erasure or no writing), then (ii) either moves the <strong>tape</strong> one cell left or right (some models allow no motion, some models move the head), then (iii) (as determined by the observed symbol and the machine's place in the table) either proceeds to a subsequent instruction or halts the computation.</p>
+<blockquote>
+<p>NOTE: 上面这段话已经总结了Turing machine的组成和运行机制</p>
+</blockquote>
+<p>The Turing machine was invented in 1936 by <a href="https://en.wikipedia.org/wiki/Alan_Turing">Alan Turing</a>. With this model, Turing was able to answer two questions in the negative: </p>
+<p>(1) Does a machine exist that can determine whether any arbitrary machine on its tape is "circular" (e.g., freezes, or fails to continue its computational task)</p>
+<p>(2) does a machine exist that can determine whether any arbitrary machine on its tape ever prints a given symbol</p>
+<blockquote>
+<p>Note: 上面两句中，that引导的定从是修饰machine的</p>
+</blockquote>
+<p>Thus by providing a mathematical description of a very simple device capable of arbitrary computations, he was able to prove properties of computation in general—and in particular, the <a href="https://en.wikipedia.org/wiki/Computability">uncomputability</a> of the <em><a href="https://en.wikipedia.org/wiki/Entscheidungsproblem">Entscheidungsproblem</a></em> ('decision problem').</p>
+<blockquote>
+<p>NOTE: 关于Turing提及的两个问题，并没有搞清楚这些问题到底是什么。</p>
+</blockquote>
+<p>Thus, Turing machines prove <strong>fundamental limitations</strong> on the power of <strong>mechanical computation</strong>. While they can express arbitrary computations, their minimalist design makes them unsuitable for computation in practice: real-world <a href="https://en.wikipedia.org/wiki/Computer">computers</a> are based on different designs that, unlike Turing machines, use <a href="https://en.wikipedia.org/wiki/Random-access_memory">random-access memory</a>.</p>
+<blockquote>
+<p>NOTE: 上面的一段话其实说明了Turing machine的价值所在：理论上证明 <strong>mechanical computation</strong>的限制所在，这对于通用计算机的诞生是具有非常重要的意义的。</p>
+<p>NOTE: 需要注意的是，虽然real-world <a href="https://en.wikipedia.org/wiki/Computer">computers</a> 没有采纳Turing machine的设计，但是Turing machine启发了real-world <a href="https://en.wikipedia.org/wiki/Computer">computers</a> 的设计。一个real-world <a href="https://en.wikipedia.org/wiki/Computer">computers</a> ，应该能够提供和Turing machine相同的 power of <strong>mechanical computation</strong>。关于Turing machine和现代computer之间的关联，可以参看下面的overview章节，当然在学习计算机组成原理的时候，还是会讨论Turing machine和<a href="https://en.wikipedia.org/wiki/Von_Neumann_architecture">Von Neumann architecture</a>、 <a href="https://en.wikipedia.org/wiki/Stored-program_computer">stored-program computer</a>。</p>
+<p>除此之外，Turing machine theory of computation</p>
+</blockquote>
+<p><a href="https://en.wikipedia.org/wiki/Turing_completeness">Turing completeness</a> is the ability for a system of instructions to simulate a Turing machine. A programming language that is Turing complete is theoretically capable of expressing all tasks accomplishable by computers; nearly all programming languages are Turing complete if the limitations of finite memory are ignored.</p>
+<p><img alt="Automata theory.svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Automata_theory.svg/300px-Automata_theory.svg.png" /></p>
+<blockquote>
+<p>Classes of automata</p>
+</blockquote>
+<h3 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h3>
+<p>A Turing machine is a general example of a <a href="https://en.wikipedia.org/wiki/Central_processing_unit">central processing unit</a> (CPU) that controls all data manipulation done by a computer, with the canonical machine using sequential memory to store data. More specifically, it is a machine (<a href="https://en.wikipedia.org/wiki/Automaton">automaton</a>) capable of <a href="https://en.wikipedia.org/wiki/Enumeration">enumerating</a> some arbitrary subset of valid strings of an <a href="https://en.wikipedia.org/wiki/Alphabet_(formal_languages)">alphabet</a>; these strings are part of a <a href="https://en.wikipedia.org/wiki/Recursively_enumerable_set">recursively enumerable set</a>. A Turing machine has a tape of infinite length on which it can perform read and write operations.</p>
+<p>Assuming a <a href="https://en.wikipedia.org/wiki/Black_box">black box</a>, the Turing machine cannot know whether it will eventually enumerate any one specific string of the subset with a given program. This is due to the fact that the <a href="https://en.wikipedia.org/wiki/Halting_problem">halting problem</a> is unsolvable, which has major implications for the theoretical limits of computing.</p>
+<p>The Turing machine is capable of processing an <a href="https://en.wikipedia.org/wiki/Unrestricted_grammar">unrestricted grammar</a>, which further implies that it is capable of robustly evaluating first-order logic in an infinite number of ways. This is famously demonstrated through <a href="https://en.wikipedia.org/wiki/Lambda_calculus">lambda calculus</a>.</p>
+<p>A Turing machine that is able to simulate any other Turing machine is called a <a href="https://en.wikipedia.org/wiki/Universal_Turing_machine">universal Turing machine</a> (UTM, or simply a universal machine). A more mathematically oriented definition with a similar "universal" nature was introduced by <a href="https://en.wikipedia.org/wiki/Alonzo_Church">Alonzo Church</a>, whose work on lambda calculus intertwined with Turing's in a formal theory of <a href="https://en.wikipedia.org/wiki/Computation">computation</a> known as the <a href="https://en.wikipedia.org/wiki/Church–Turing_thesis">Church–Turing thesis</a>. The thesis states that Turing machines indeed capture the informal notion of <a href="https://en.wikipedia.org/wiki/Effective_method">effective methods</a> in <a href="https://en.wikipedia.org/wiki/Logic">logic</a> and <a href="https://en.wikipedia.org/wiki/Mathematics">mathematics</a>, and provide a precise definition of an <a href="https://en.wikipedia.org/wiki/Algorithm">algorithm</a> or "mechanical procedure". Studying their <a href="https://en.wikipedia.org/wiki/Abstract_machine">abstract properties</a> yields many insights into <a href="https://en.wikipedia.org/wiki/Computer_science">computer science</a> and <a href="https://en.wikipedia.org/wiki/Computational_complexity_theory">complexity theory</a>.</p>
+<blockquote>
+<p>NOTE:  <a href="https://en.wikipedia.org/wiki/Lambda_calculus">lambda calculus</a> 不理解</p>
+</blockquote>
+<h3 id="visualizations_of_turing_machines">visualizations of Turing machines<a class="headerlink" href="#visualizations_of_turing_machines" title="Permanent link">#</a></h3>
+<p>see <a href="https://en.wikipedia.org/wiki/Turing_machine_gallery">Turing machine gallery</a>.</p>
+<h3 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h3>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/dengking/automata-and-formal-language" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../../../../..';</script>
+    <script src="../../../../../js/theme.js" defer></script>
+      <script src="../../../../../search/main.js" defer></script>
+
+</body>
+</html>
