@@ -115,9 +115,7 @@ see also：
 
 ## ASDL
 
-## python ASDL
-
-python使用ASDL来描述自己的AST
+cpython 使用ASDL来描述自己的AST
 
 https://www.usenix.org/legacy/publications/library/proceedings/dsl97/full_papers/wang/wang.pdf
 
@@ -141,3 +139,8 @@ https://en.wikipedia.org/wiki/Abstract_syntax
 
 
 
+
+
+# 描述的递归性
+
+向CFG就具备递归性，有[recursive grammar](https://en.wikipedia.org/wiki/Recursive_grammar)的概念。
