@@ -3,7 +3,7 @@ extra_css:
 - css/extra.css
 markdown_extensions:
 - toc:
-    baselevel: 2
+    baselevel: 6
     permalink: '#'
     separator: _
 - admonition
@@ -25,7 +25,27 @@ nav:
     - Formal-grammar:
       - Formal-grammar: Theory-framework/Formal-language/Formal-grammar/wikipedia-Formal-grammar.md
       - Production: Theory-framework/Formal-language/Formal-grammar/wikipedia-Production(computer-science).md
-      - BNF: Theory-framework/Formal-language/Formal-grammar/wikipedia-Backus-Naur-form.md
+      - Chomsky-hierarchy:
+        - Chomsky-hierarchy: Theory-framework/Formal-language/Formal-grammar/Chomsky-hierarchy/wikipedia-Chomsky-hierarchy.md
+        - Type-0:
+          - Recursively-enumerable-language: Theory-framework/Formal-language/Formal-grammar/Chomsky-hierarchy/Type-0/wikipedia-Recursively-enumerable-language.md
+          - Turinig-machine:
+            - Introduction: Theory-framework/Formal-language/Formal-grammar/Chomsky-hierarchy/Type-0/Turinig-machine/index.md
+            - What-is-a-Turing-machine: Theory-framework/Formal-language/Formal-grammar/Chomsky-hierarchy/Type-0/Turinig-machine/What-is-a-Turing-machine.md
+            - Turing-machine: Theory-framework/Formal-language/Formal-grammar/Chomsky-hierarchy/Type-0/Turinig-machine/Turing-machine.md
+            - wikipedia-Turing-machine: Theory-framework/Formal-language/Formal-grammar/Chomsky-hierarchy/Type-0/Turinig-machine/wikipedia-Turing-machine.md
+        - Type-1:
+          - Context-sensitive-language: Theory-framework/Formal-language/Formal-grammar/Chomsky-hierarchy/Type-1/wikipedia-Context-sensitive-language.md
+        - Type-2:
+          - Context-free-language: Theory-framework/Formal-language/Formal-grammar/Chomsky-hierarchy/Type-2/wikipedia-Context-free-language.md
+          - Automaton: Theory-framework/Formal-language/Formal-grammar/Chomsky-hierarchy/Type-2/Automaton.md
+        - Type-3:
+          - Regular-language: Theory-framework/Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/Regular-language.md
+          - Automaton: Theory-framework/Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/Automaton.md
+          - Regular-expression:
+            - Regular-expression: Theory-framework/Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/Regular-expression/wikipedia-Regular-expression.md
+            - Thompson's-construction: Theory-framework/Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/Regular-expression/wikipedia-Thompson's-construction.md
+            - Regex-Engine: Theory-framework/Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/Regular-expression/Regex-Engine.md
 plugins:
 - search
 repo_url: https://github.com/dengking/automata-and-formal-language
