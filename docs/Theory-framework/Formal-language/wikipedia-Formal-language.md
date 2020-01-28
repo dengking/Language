@@ -140,9 +140,11 @@ The study of interpretations of formal languages is called [formal semantics](ht
 
 下面这段摘自[Formal systems](https://en.wikipedia.org/wiki/Formation_rule#Formal_systems)
 
-> A *formal system* (also called a *logical calculus*, or a *logical system*) consists of a formal language together with a [deductive apparatus](https://en.wikipedia.org/wiki/Deductive_apparatus) (also called a *deductive system*). The deductive apparatus may consist of a set of [transformation rules](https://en.wikipedia.org/wiki/Transformation_rule) (also called *inference rules*) or a set of [axioms](https://en.wikipedia.org/wiki/Axiom), or have both. A formal system is used to [derive](https://en.wikipedia.org/wiki/Proof_theory) one expression from one or more other expressions. Propositional and predicate calculi are examples of formal systems.
+> A *formal system* (also called a *logical calculus*, or a *logical system*) consists of a formal language together with a [deductive apparatus](https://en.wikipedia.org/wiki/Deductive_apparatus) (also called a *deductive system*). The deductive apparatus may consist of a set of [transformation rules](https://en.wikipedia.org/wiki/Transformation_rule) (also called *inference rules*) or a set of [axioms](https://en.wikipedia.org/wiki/Axiom), or have both. A formal system is used to [derive](https://en.wikipedia.org/wiki/Proof_theory)(推导) one expression from one or more other expressions. Propositional and predicate calculi are examples of formal systems.
 
 [Formal grammars](https://en.wikipedia.org/wiki/Formal_grammar)相当于 [deductive apparatus](https://en.wikipedia.org/wiki/Deductive_apparatus)。
+
+
 
 ## 从[Mathematical logic](https://en.wikipedia.org/wiki/Mathematical_logic)的角度来看[Formal grammars](https://en.wikipedia.org/wiki/Formal_grammar)
 
@@ -156,11 +158,13 @@ The study of interpretations of formal languages is called [formal semantics](ht
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [Production rule](https://en.wikipedia.org/wiki/Production_(computer_science)) | [Formation rule](https://en.wikipedia.org/wiki/Formation_rule)、[Rule of inference](https://en.wikipedia.org/wiki/Rule_of_inference)、[Rewriting](https://en.wikipedia.org/wiki/Rewriting) |
 
+上述对应关系的含义是：如果从[Mathematical logic](https://en.wikipedia.org/wiki/Mathematical_logic)来看待[Production rule](https://en.wikipedia.org/wiki/Production_(computer_science))的话，它就相当于是[Formation rule](https://en.wikipedia.org/wiki/Formation_rule)、[Rule of inference](https://en.wikipedia.org/wiki/Rule_of_inference)、[Rewriting](https://en.wikipedia.org/wiki/Rewriting)。
+
 按照公式进行推导从另外一个角度来看其实是重写，不断地进行替换，感觉数理逻辑本质上就是这个东西。从这个角度来看，parsing的过程其实就是不断的推导的过程，不断的重写的过程。由于可能的推导格式是非常多的，所以需要不断地进行尝试，这个过程其实就是[search](https://en.wikipedia.org/wiki/Search_algorithm)、[backtracking](https://en.wikipedia.org/wiki/Backtracking)，所以从这个角度来看，[parsing](https://en.wikipedia.org/wiki/Parsing)所做的工作其实就是推导加search。自顶向下其实所对应的是正向推导，自底向上其实所对应的就是方向推导。
 
 > NOTE: 在龙书的4.2.3 Derivations有这样的描述：
 >
-> The construction of a parse tree can b e made precise by taking a **derivational view**, in which productions are treated as **rewriting rules**. Beginning with the start symbol, each rewriting step replaces a nonterminal by the body of one of its productions. This derivational view corresponds to the top-down construction of a parse tree, but the precision afforded by derivations will be especially helpful when bottom-up parsing is discussed. As we shall see, bottom-up parsing is related to a class of derivations known as "rightmost" derivations, in which the rightmost nonterminal is rewritten at each step.
+> The construction of a parse tree can be made precise by taking a **derivational view**, in which productions are treated as **rewriting rules**. Beginning with the start symbol, each rewriting step replaces a nonterminal by the body of one of its productions. This derivational view corresponds to the top-down construction of a parse tree, but the precision afforded by derivations will be especially helpful when bottom-up parsing is discussed. As we shall see, bottom-up parsing is related to a class of derivations known as "rightmost" derivations, in which the rightmost nonterminal is rewritten at each step.
 
 上面的这些内容给我的启发是：不同的学科对同一事物的命名可能不同，但是它们本质上所描述的是同一事物。
 
@@ -185,4 +189,4 @@ The study of interpretations of formal languages is called [formal semantics](ht
 除此之外，下面文章也是值得阅读的：
 
 - [Automated theorem proving](https://en.wikipedia.org/wiki/Automated_theorem_proving)
-- [Formal methods](https://en.wikipedia.org/wiki/Formal_methods)
+- [Formal methods](https://en.wikipedia.org/wiki/Formal_methods) 

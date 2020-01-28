@@ -97,18 +97,6 @@ see also：
 
 本章所要研究的就是[formal language](https://en.wikipedia.org/wiki/Well-formed_formula)。
 
-
-
-
-
-
-
-
-
-
-
-
-
 # 描述抽象结构
 
 
@@ -143,4 +131,4 @@ https://en.wikipedia.org/wiki/Abstract_syntax
 
 # 描述的递归性
 
-向CFG就具备递归性，有[recursive grammar](https://en.wikipedia.org/wiki/Recursive_grammar)的概念。
+像CFG就具备递归性，有[recursive grammar](https://en.wikipedia.org/wiki/Recursive_grammar)的概念。关于描述的递归性在[Production(computer-science)](./Formal-grammar/wikipedia-Production(computer-science).md)、[Chomsky-hierarchy](./Formal-grammar/Chomsky-hierarchy/wikipedia-Chomsky-hierarchy.md)中有专门的描述。

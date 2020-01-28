@@ -1,3 +1,7 @@
+# [Recursively enumerable language](https://en.wikipedia.org/wiki/Recursively_enumerable_language)
+
+
+
 # [Unrestricted grammar](https://en.wikipedia.org/wiki/Unrestricted_grammar)
 
 In [automata theory](https://en.wikipedia.org/wiki/Automata_theory), the class of **unrestricted grammars** (also called **semi-Thue**, **type-0** or **phrase structure grammars**) is the most general class of grammars in the [Chomsky hierarchy](https://en.wikipedia.org/wiki/Chomsky_hierarchy). No restrictions are made on the productions of an unrestricted grammar, other than each of their left-hand sides being non-empty. This grammar class can generate arbitrary [recursively enumerable languages](https://en.wikipedia.org/wiki/Recursively_enumerable_language).

@@ -1,0 +1,5 @@
+nav:
+    - Introduction: index.md
+    - What-is-a-Turing-machine: What-is-a-Turing-machine.md
+    - Turing-machine: Turing-machine.md
+    - wikipedia-Turing-machine: wikipedia-Turing-machine.md

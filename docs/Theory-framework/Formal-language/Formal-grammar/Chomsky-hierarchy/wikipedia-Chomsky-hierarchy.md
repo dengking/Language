@@ -71,21 +71,23 @@ Type-0 grammars又叫做[unrestricted grammar](https://en.wikipedia.org/wiki/Unr
 
 > No restrictions are made on the productions of an unrestricted grammar
 
-那其它grammar（[Context-sensitive grammar](https://en.wikipedia.org/wiki/Context-sensitive_grammar)、 [Context-free grammar](https://en.wikipedia.org/wiki/Context-free_grammar) 、[Regular grammar](https://en.wikipedia.org/wiki/Regular_grammar) ），对各自的production的restriction是什么呢？下面从这个角度对这几种grammar进行对比分析。
+那其它grammar（Type-1 grammars [Context-sensitive grammar](https://en.wikipedia.org/wiki/Context-sensitive_grammar)、Type-2 grammars [Context-free grammar](https://en.wikipedia.org/wiki/Context-free_grammar) 、Type-3 grammars [Regular grammar](https://en.wikipedia.org/wiki/Regular_grammar) ），对各自的production的restriction是什么呢？下面从这个角度对这几种grammar进行对比分析， 由上述Chomsky hierarchy所描述的层级可以看出，从Type 0 grammars到Type 3 grammars逐级增加restriction，所以在进行对比分析的时候，每个grammar只需要和它的升一级grammar进行对比即可。
 
 
 
-## [Unrestricted grammar formal definition](https://en.wikipedia.org/wiki/Unrestricted_grammar#Formal_definition)
+## Type-0 grammars:[Unrestricted grammar formal definition](https://en.wikipedia.org/wiki/Unrestricted_grammar#Formal_definition)
 
 An **unrestricted grammar** is a [formal grammar](https://en.wikipedia.org/wiki/Formal_grammar) $ G=(N,\Sigma ,P,S) $, where $ N $ is a set of nonterminal symbols, $ \Sigma $ is a set of [terminal symbols](https://en.wikipedia.org/wiki/Terminal_symbol), $ N $ and $ \Sigma $ are disjoint,  $ P $ is a set of [production rules](https://en.wikipedia.org/wiki/Production_(computer_science)) of the form $ \alpha \to \beta $ where $ \alpha $ and $ \beta $ are strings of symbols in $ N\cup \Sigma $ and $ \alpha $ is not the **empty string**, and $ S\in N $ is a specially designated start symbol. As the name implies, there are no real restrictions on the types of production rules that unrestricted grammars can have.
 
-NOTE: 和其他的grammar production相比，它的unrestriction体现在：
+### 对比分析
+
+和其他的grammar production相比，它的unrestriction体现在：
 
 - $\alpha$可以为terminal、non-terminal
 
 - $\beta$可以为empty string
 
-## [Context-sensitive grammar formal definition](https://en.wikipedia.org/wiki/Context-sensitive_grammar#Formal_definition)
+## Type-1 grammars:[Context-sensitive grammar formal definition](https://en.wikipedia.org/wiki/Context-sensitive_grammar#Formal_definition)
 
 A [formal grammar](https://en.wikipedia.org/wiki/Formal_grammar) *G* = (*N*, Σ, *P*, *S*), where *N* is a set of nonterminal symbols, Σ is a set of terminal symbols, *P* is a set of production rules, and *S* is the [start symbol](https://en.wikipedia.org/wiki/Start_symbol_(formal_languages)), is **context-sensitive** if all rules in *P* are of the form
 
@@ -95,22 +97,34 @@ where *A* ∈ *N*, α,β ∈ (*N*∪Σ)*  and γ ∈ (*N*∪Σ)+.
 
 上述`*`和`+`都是使用的正则表达式的概念。
 
+### 对比分析
+
  和[unrestricted grammar](https://en.wikipedia.org/wiki/Unrestricted_grammar) production相比，它的restriction在于：
 
 - γ不可为empty string
-- A必须是non-terminal
+- A（在产生式的左部）必须是non-terminal
+
+上述两个restriction在Type-0 grammar中都不存在。
 
 
 
-## [Context-free grammar formal definitions](https://en.wikipedia.org/wiki/Context-free_grammar#Formal_definitions)
+## Type-2 grammars:[Context-free grammar formal definitions](https://en.wikipedia.org/wiki/Context-free_grammar#Formal_definitions)
 
 A context-free grammar *G* is defined by the 4-[tuple](https://en.wikipedia.org/wiki/Tuple): 
 
 $ G=(V,\Sigma ,R,S) $ where
 
 1. *V* is a finite set; each element $ v\in V $ is called *a nonterminal character* or a *variable*. Each variable represents a different type of phrase or clause in the sentence. Variables are also sometimes called syntactic categories. Each variable defines a sub-language of the language defined by *G*.
+
 2. Σ is a finite set of *terminal*s, disjoint from *V*, which make up the actual content of the sentence. The set of terminals is the alphabet of the language defined by the grammar *G*.
-3. *R* is a finite relation from *V* to $ (V\cup \Sigma )^{*} $, where the asterisk represents the [Kleene star](https://en.wikipedia.org/wiki/Kleene_star) operation. The members of *R* are called the *(rewrite) rule*s or *production*s of the grammar. (also commonly symbolized by a *P*)
+
+3. *R* is a finite **relation** from *V* to $ (V\cup \Sigma )^{*} $, where the asterisk represents the [Kleene star](https://en.wikipedia.org/wiki/Kleene_star) operation. The members of *R* are called the *(rewrite) rule*s or *production*s of the grammar. (also commonly symbolized by a *P*)
+
+   > NOTE: See also
+   >
+   > -  [production rule](https://en.wikipedia.org/wiki/Formal_grammar#The_syntax_of_grammars) 
+   > - [rewriting](https://en.wikipedia.org/wiki/Rewriting)
+
 4. *S* is the start variable (or start symbol), used to represent the whole sentence (or program). It must be an element of *V*.
 
 
@@ -141,9 +155,51 @@ A language *L* is said to be a context-free language (CFL), if there exists a CF
 
 [Non-deterministic pushdown automata](https://en.wikipedia.org/wiki/Pushdown_automaton#PDA_and_context-free_languages) recognize exactly the context-free languages.
 
+### 对比分析
+
 [Context-free grammar](https://en.wikipedia.org/wiki/Context-free_grammar) 的restriction在于
 
 > The left-hand side of the production rule is always **a** [nonterminal](https://en.wikipedia.org/wiki/Nonterminal) symbol. This means that the symbol does not appear in the resulting formal language. 
 
+在type 1 grammar中，对产生式的左部中[nonterminal](https://en.wikipedia.org/wiki/Nonterminal) symbol的个数并没有限制。
 
 
+
+## Type-3 grammars:[Regular grammar formal definition](https://en.wikipedia.org/wiki/Regular_grammar#Strictly_regular_grammars)
+
+A **right regular grammar** (also called [right linear grammar](https://en.wikipedia.org/wiki/Linear_Grammar#Right-Linear_Grammars)) is a [formal grammar](https://en.wikipedia.org/wiki/Formal_grammar) (*N*, Σ, *P*, *S*) such that all the [production rules](https://en.wikipedia.org/wiki/Production_(computer_science)) in *P* are of one of the following forms:
+
+1. *A* → *a*, where *A* is a [non-terminal](https://en.wikipedia.org/wiki/Terminal_and_nonterminal_symbols) in *N* and *a* is a terminal in Σ
+2. *A* → *aB*, where *A* and *B* are non-terminals in *N* and *a* is in Σ
+3. *A* → ε, where *A* is in *N* and ε denotes the [empty string](https://en.wikipedia.org/wiki/Empty_string), i.e. the string of length 0.
+
+In a **left regular grammar** (also called [left linear grammar](https://en.wikipedia.org/wiki/Linear_Grammar#Left-Linear_Grammars)), all rules obey the forms
+
+1. *A* → *a*, where *A* is a non-terminal in *N* and *a* is a terminal in Σ
+2. *A* → *Ba*, where *A* and *B* are in *N* and *a* is in Σ
+3. *A* → ε, where *A* is in *N* and ε is the empty string.
+
+A **regular grammar** is a left **or** right regular grammar.
+
+Some textbooks and articles disallow empty production rules, and assume that the empty string is not present in languages.
+
+### 对比分析
+
+与Type-2 grammars相比，Type-3 grammars的限制在于产生式右侧的non-terminal：
+
+-  产生式的右侧最多只能够有一个non-terminal
+- 产生式右侧的non-terminal只能够在最左侧或最右侧
+
+显然，与Type-2 grammars相比，由于Type-3 grammar的production的右侧只能够有一个non-terminal，所以在按照它的production进行rewrite（扩展）的时候，只能够向一个方向进行扩展，所以最终的扩展结果只能够是一个线性的结构，所以它是[linear grammar](https://en.wikipedia.org/wiki/Linear_grammar)。而Type-2 grammar的production的右侧可以有多个non-terminal，所以在按照它的production进行rewrite（扩展）的时候，能够向多个方向进行扩展，所以最终的扩展结果是一个树形的结构，所以它不是[linear grammar](https://en.wikipedia.org/wiki/Linear_grammar)。
+
+> NOTE: 描述的结构
+
+## 总结
+
+上述所有grammar的production都可以支持递归，即都可以是[recursive grammar](https://en.wikipedia.org/wiki/Recursive_grammar)。
+
+> NOTE: 描述的递归性
+
+在[Recursively enumerable language](https://en.wikipedia.org/wiki/Recursively_enumerable_language)中有这样的描述：
+
+> All [regular](https://en.wikipedia.org/wiki/Regular_language), [context-free](https://en.wikipedia.org/wiki/Context-free_language), [context-sensitive](https://en.wikipedia.org/wiki/Context-sensitive_language) and [recursive](https://en.wikipedia.org/wiki/Recursive_language) languages are recursively enumerable.

@@ -29,3 +29,5 @@ Put together: Given an input symbol, current state, and stack symbol, the automa
 
 > A diagram of a pushdown automaton
 
+# [Deterministic pushdown automaton](https://en.wikipedia.org/wiki/Deterministic_pushdown_automaton)
+
