@@ -40,7 +40,7 @@ nav:
           - Context-free-language: Theory-framework/Formal-language/Formal-grammar/Chomsky-hierarchy/Type-2/wikipedia-Context-free-language.md
           - Automaton: Theory-framework/Formal-language/Formal-grammar/Chomsky-hierarchy/Type-2/Automaton.md
         - Type-3:
-          - Regular-language: Theory-framework/Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/Regular-language.md
+          - Regular-language: Theory-framework/Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/wikipedia-Regular-language.md
           - Automaton: Theory-framework/Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/Automaton.md
           - Regular-expression:
             - Regular-expression: Theory-framework/Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/Regular-expression/wikipedia-Regular-expression.md
