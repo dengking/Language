@@ -31,6 +31,10 @@ https://dictionary.cambridge.org/example/english/formal-description
 
 ## 什么是formal？
 
+关于formal的直觉是：
+
+- 有固定的规则
+
 ### 从词源说起
 
 https://simple.wikipedia.org/wiki/Formal
@@ -48,3 +52,4 @@ https://www.yourdictionary.com/formal
 这三个学科中的formal是密切相关的。
 
 文章[Formalism (philosophy of mathematics)](https://en.wikipedia.org/wiki/Formalism_(philosophy_of_mathematics))将formal描述为一种科学的思想，显然它从更高的哲学的角度来概括formal，我觉得以它作为掌握formal的入口是非常好的，因为科学总数遵循相同的哲学思想，或者说哲学指导着科学。
+
