@@ -1,6 +1,6 @@
 # 如何来进行描述？
 
-各种学科，在进行研究的时候，往往是使用简洁的公式/表达式来**描述**/**表示**复杂的问题，以达到简化的目的。其实是一种[抽象](https://en.wikipedia.org/wiki/Abstraction)，抽象的过程对于任何学科都是至关重要的，因为抽象的过程是对本质的靠近的过程。
+各种学科，在进行研究的时候，往往是使用简洁的公式/表达式来**描述**/**表示**复杂的问题，以达到简化的目的，其实是一种[抽象](https://en.wikipedia.org/wiki/Abstraction)，抽象的过程对于任何学科都是至关重要的，因为抽象的过程是对本质的靠近的过程。
 
 下面总结了在各个学科中都非常常见的描述/表示方式：
 
@@ -62,7 +62,8 @@ human-readable、machine-readable
 在我的工程[data-structure](https://github.com/dengking/data-structure)给出了各种数据结构的描述方式，下面给出链接：
 
 - https://github.com/dengking/data-structure/blob/master/docs/tree/representing-trees.md
-- 
+
+
 
 ## compiler中的描述
 
@@ -96,6 +97,8 @@ see also：
 可以认为描述的本质是[**语言**](https://en.wikipedia.org/wiki/Language)。科学需要严谨的、准确的描述方式，所以它使用的语言需要不同于人类说话时使用的[自然语言](https://en.wikipedia.org/wiki/Natural_language)，在科学中，往往使用的一种叫做[formal language](https://en.wikipedia.org/wiki/Well-formed_formula)的语言，这类语言有着诸多优良的特性，它是很多学科的基础。
 
 本章所要研究的就是[formal language](https://en.wikipedia.org/wiki/Well-formed_formula)。
+
+
 
 # 描述抽象结构
 
@@ -132,3 +135,11 @@ https://en.wikipedia.org/wiki/Abstract_syntax
 # 描述的递归性
 
 像CFG就具备递归性，有[recursive grammar](https://en.wikipedia.org/wiki/Recursive_grammar)的概念。关于描述的递归性在[Production(computer-science)](./Formal-grammar/wikipedia-Production(computer-science).md)、[Chomsky-hierarchy](./Formal-grammar/Chomsky-hierarchy/wikipedia-Chomsky-hierarchy.md)中有专门的描述。
+
+
+
+# Formal definition
+
+形式化描述的优势在于严谨、可以进行推导。
+
+需要对比形式化描述和自然语言描述，优势何在。

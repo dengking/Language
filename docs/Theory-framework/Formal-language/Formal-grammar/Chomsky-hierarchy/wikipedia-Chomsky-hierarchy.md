@@ -194,6 +194,10 @@ Some textbooks and articles disallow empty production rules, and assume that the
 
 > NOTE: 描述的结构
 
+
+
+
+
 ## 总结
 
 上述所有grammar的production都可以支持递归，即都可以是[recursive grammar](https://en.wikipedia.org/wiki/Recursive_grammar)。
@@ -203,3 +207,9 @@ Some textbooks and articles disallow empty production rules, and assume that the
 在[Recursively enumerable language](https://en.wikipedia.org/wiki/Recursively_enumerable_language)中有这样的描述：
 
 > All [regular](https://en.wikipedia.org/wiki/Regular_language), [context-free](https://en.wikipedia.org/wiki/Context-free_language), [context-sensitive](https://en.wikipedia.org/wiki/Context-sensitive_language) and [recursive](https://en.wikipedia.org/wiki/Recursive_language) languages are recursively enumerable.
+
+
+
+# 对比分析By automaton
+
+CFG的 automaton是pushdown automaton，我们知道pushdown automaton本质上来说就是stack，CFG本质上来说表示的是hierarchy结构/树形结构。
