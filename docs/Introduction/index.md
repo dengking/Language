@@ -1,4 +1,6 @@
-# introduction
+[TOC]
+
+# Introduction
 
 入门读物推荐：
 

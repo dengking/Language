@@ -1,3 +1,7 @@
+[TOC]
+
+
+
 # 前言
 
 首先说明formal language，formal grammar，automata，Chomsky hierarchy等基本概念，建立理论框架。

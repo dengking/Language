@@ -1,3 +1,5 @@
+[TOC]
+
 # 前言
 
 出于如下原因我创建了这个项目：
@@ -77,3 +79,11 @@ Each category of languages, except those marked by a `*`, is a [proper subset](h
 
 - introduction：入门
 - theory-framework：理论框架
+
+
+
+# Cinderella Book VS Dragon Book
+
+[Introduction to Automata and Language Theory(aka ***Cinderella Book***)](http://infolab.stanford.edu/~ullman/ialc.html)是该领域的经典书籍。
+
+[Introduction to Automata and Language Theory(aka ***Cinderella Book***)](http://infolab.stanford.edu/~ullman/ialc.html)和[Compilers: Principles, Techniques, and Tools (aka "***Dragon Book***")](http://en.wikipedia.org/wiki/Compilers:_Principles,_Techniques,_and_Tools)中的内容其实是紧密关联的，这不仅仅是因为Jeffrey D.Ullman参与了这两本书的编写，而是因为programming language是一种formal language，而Cinderella Book和Dragon Book其实都是在讲述和formal language相关的内容，当然，这些内容仅仅书中的一部分。Cinderella Book专注于讲述automata and language theory，而dragon book的内容则可以分为两个部分front end和back end，显然front end所讲述的内容就和automata and language theory紧密相关了。

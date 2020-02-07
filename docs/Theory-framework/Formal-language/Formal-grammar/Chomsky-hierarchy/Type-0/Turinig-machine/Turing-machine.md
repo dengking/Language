@@ -1,3 +1,5 @@
+[TOC]
+
 # [Turing machine](https://www.euston96.com/en/turing-machine/)
 
 The **Turing machine** is a **computer device** which consists of a **read** and **write header**, what we know best today as a **scanner** and a paper ribbon that passes through the machine. This tape was divided into **squares**, and each of them had a **symbol** at the same time. It was responsible for the **storage** of the machine and was a kind of vehicle for **entry** and **exit**, as well as working memory to store the results of the intermediate steps of the calculation.

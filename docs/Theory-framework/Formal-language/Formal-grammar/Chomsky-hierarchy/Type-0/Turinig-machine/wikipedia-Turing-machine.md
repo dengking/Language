@@ -1,3 +1,5 @@
+[TOC]
+
 # [Turing machine](https://en.wikipedia.org/wiki/Turing_machine)
 
 A **Turing machine** is a [mathematical model of computation](https://en.wikipedia.org/wiki/Mathematical_model_of_computation) that defines an [abstract machine](https://en.wikipedia.org/wiki/Abstract_machine), which manipulates **symbols** on a strip of tape according to a **table of rules**. Despite the model's simplicity, given any [computer algorithm](https://en.wikipedia.org/wiki/Computer_algorithm), a Turing machine capable of simulating that algorithm's logic can be constructed.

@@ -1,3 +1,5 @@
+[TOC]
+
 # [Context-free language](https://en.wikipedia.org/wiki/Context-free_language)
 
 $ S\to SS~|~(S)~|~\varepsilon $.

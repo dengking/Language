@@ -1,3 +1,5 @@
+[TOC]
+
 # 前言
 
 本章节，首先以[description-and-language](./description-and-language.md)这篇文章作为开头，引出[Formal language](https://en.wikipedia.org/wiki/Formal_language)， 然后对它进行详细的分析。维基百科的[Formal language](https://en.wikipedia.org/wiki/Formal_language)内容是非常好的（全面，深入浅出），需要仔细阅读。

@@ -1,3 +1,5 @@
+[TOC]
+
 # [Formal system](https://en.wikipedia.org/wiki/Formal_system)
 
 A **formal system** is used for inferring **theorems** from **axioms** according to a set of **rules**. These rules, which are used for carrying out the inference of theorems from axioms, are the **logical calculus** of the formal system. A formal system is essentially an "[axiomatic system](https://en.wikipedia.org/wiki/Axiomatic_system)". In 1921, David Hilbert proposed to use such system as the foundation for the knowledge in [mathematics](https://en.wikipedia.org/wiki/Mathematics). A formal system may represent a well-defined [system of abstract thought](https://en.wikipedia.org/wiki/Abstraction).
