@@ -230,7 +230,7 @@
       
 
   <li class="toctree-l7 current with-children">
-    <a href="#what_is_a_turing_machine">
+    <a href="#what-is-a-turing-machine">
       What is a Turing machine?
       <span class="toctree-expand"></span>
     </a>
@@ -238,49 +238,31 @@
 
 
 
+  <li class="toctree-l7 current">
+    <ul class="subnav-l7 current">
+    
       
-
-  <li class="toctree-l7">
-    <a href="#a_simple_demonstration">
-      A simple demonstration
-      <span class="toctree-expand"></span>
-    </a>
-  </li>
-
-
-
+        <li class="toctree-l8">
+          <a class="toctree-l9" href="#a-simple-demonstration">A simple demonstration</a>
+        </li>
+    
       
-
-  <li class="toctree-l7">
-    <a href="#a_simple_program">
-      A simple program
-      <span class="toctree-expand"></span>
-    </a>
-  </li>
-
-
-
+        <li class="toctree-l8">
+          <a class="toctree-l9" href="#a-simple-program">A simple program</a>
+        </li>
+    
       
-
-  <li class="toctree-l7">
-    <a href="#the_machine_state">
-      The machine state
-      <span class="toctree-expand"></span>
-    </a>
-  </li>
-
-
-
+        <li class="toctree-l8">
+          <a class="toctree-l9" href="#the-machine-state">The machine state</a>
+        </li>
+    
       
-
-  <li class="toctree-l7">
-    <a href="#finite_state_machines">
-      Finite state machines
-      <span class="toctree-expand"></span>
-    </a>
+        <li class="toctree-l8">
+          <a class="toctree-l9" href="#finite-state-machines">Finite state machines</a>
+        </li>
+    
+    </ul>
   </li>
-
-
 
 
   
@@ -485,7 +467,7 @@
           <div role="main">
             <div class="section">
               
-                <h6 id="what_is_a_turing_machine"><a href="https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/turing-machine/one.html">What is a Turing machine?</a><a class="headerlink" href="#what_is_a_turing_machine" title="Permanent link">#</a></h6>
+                <h1 id="what-is-a-turing-machine"><a href="https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/turing-machine/one.html">What is a Turing machine?</a><a class="headerlink" href="#what-is-a-turing-machine" title="Permanent link">#</a></h1>
 <p>A Turing machine is a hypothetical machine thought of by the mathematician Alan Turing in 1936. Despite its simplicity, the machine can simulate ANY computer algorithm, no matter how complicated it is!</p>
 <p><img alt="example Turing machine" src="https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/turing-machine/example_turing_tape.jpg" /></p>
 <p>Above is a very simple representation of a <strong>Turing machine</strong>. It consists of an infinitely-long tape which acts like the memory in a typical computer, or any other form of data storage. The squares on the tape are usually blank at the start and can be written with symbols. In this case, the machine can only process the symbols 0 and 1 and " " (blank), and is thus said to be a <strong>3-symbol Turing machine</strong>.</p>
@@ -498,7 +480,7 @@
 <blockquote>
 <p>NOTE: 在任何时刻，head只能够置于tape的众多square中的一个square之上</p>
 </blockquote>
-<h6 id="a_simple_demonstration">A simple demonstration<a class="headerlink" href="#a_simple_demonstration" title="Permanent link">#</a></h6>
+<h2 id="a-simple-demonstration">A simple demonstration<a class="headerlink" href="#a-simple-demonstration" title="Permanent link">#</a></h2>
 <p>As a trivial example to demonstrate these operations, let's try printing the symbols "<code>1 1 0</code>" on an initially blank tape:</p>
 <p><img alt="initially blank tape" src="https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/turing-machine/demo_one.jpg" /></p>
 <p>First, we write a 1 on the square under the head:</p>
@@ -511,7 +493,7 @@
 <p><img alt="move tape left again" src="https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/turing-machine/demo_five.jpg" /></p>
 <p>Finally, write a 0 and that's it!</p>
 <p><img alt="write a 0 on new square" src="https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/turing-machine/demo_six.jpg" /></p>
-<h6 id="a_simple_program">A simple program<a class="headerlink" href="#a_simple_program" title="Permanent link">#</a></h6>
+<h2 id="a-simple-program">A simple program<a class="headerlink" href="#a-simple-program" title="Permanent link">#</a></h2>
 <p>With the symbols "<code>1 1 0</code>" printed on the tape, let's attempt to convert the <code>1</code>s to <code>0</code>s and vice versa. This is called <strong>bit inversion</strong>, since <code>1</code>s and <code>0</code>s are bits in binary. This can be done by passing the following <strong>instructions</strong> to the <strong>Turing machine</strong>, utilising the machine's reading capabilities to decide its subsequent operations on its own. These instructions make up a simple program.</p>
 <table>
 <thead>
@@ -550,7 +532,7 @@
 <p><img alt="img" src="https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/turing-machine/program_four.jpg" /></p>
 <p>Finally, a 'blank' symbol is read, so the machine does nothing apart from read the blank symbol continuously since we have instructed it to repeat the <strong>read-write-move</strong> sequence without stopping.</p>
 <p>In fact, the program is <strong>incomplete</strong>. How does the machine repeat the sequence endlessly, and how does the machine stop running the program? The program tells it to with the concept of a <strong>machine state</strong>.</p>
-<h6 id="the_machine_state">The machine state<a class="headerlink" href="#the_machine_state" title="Permanent link">#</a></h6>
+<h2 id="the-machine-state">The machine state<a class="headerlink" href="#the-machine-state" title="Permanent link">#</a></h2>
 <p>To complete the program, the state changes during the execution of the program on the machine must be considered. The following changes, marked in <em>italics</em>, must be added to our table which can now be called a <strong>state table</strong>:</p>
 <table>
 <thead>
@@ -591,7 +573,7 @@
 <blockquote>
 <p>NOTE: machine state相当于label，transition to a machine state相当于<code>goto</code> label</p>
 </blockquote>
-<h6 id="finite_state_machines">Finite state machines<a class="headerlink" href="#finite_state_machines" title="Permanent link">#</a></h6>
+<h2 id="finite-state-machines">Finite state machines<a class="headerlink" href="#finite-state-machines" title="Permanent link">#</a></h2>
 <p>Even though it seems silly to do so, let's now add an additional state to our program that reverts the already inverted bits "<code>1 1 0</code>" back from "<code>0 0 1</code>" to "<code>1 1 0</code>". Below is the updated table, with changes listed in <em>italics</em>. The Turing machine now acts like a <strong>finite state machine</strong> with two states—these are called three-symbol, two-state Turing machines.</p>
 <table>
 <thead>

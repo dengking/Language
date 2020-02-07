@@ -296,7 +296,7 @@
       
 
   <li class="toctree-l6 current with-children">
-    <a href="#pushdown_automaton">
+    <a href="#pushdown-automaton">
       Pushdown automaton
       <span class="toctree-expand"></span>
     </a>
@@ -304,21 +304,21 @@
 
 
 
+  <li class="toctree-l6 current">
+    <ul class="subnav-l6 current">
+    
       
-
-  <li class="toctree-l6">
-    <a href="#informal_description">
-      Informal description
-      <span class="toctree-expand"></span>
-    </a>
+        <li class="toctree-l7">
+          <a class="toctree-l8" href="#informal-description">Informal description</a>
+        </li>
+    
+    </ul>
   </li>
 
-
-
       
 
   <li class="toctree-l6">
-    <a href="#deterministic_pushdown_automaton">
+    <a href="#deterministic-pushdown-automaton">
       Deterministic pushdown automaton
       <span class="toctree-expand"></span>
     </a>
@@ -461,16 +461,18 @@
               
                 <div class="toc">
 <ul>
-<li><a href="#pushdown_automaton">Pushdown automaton</a></li>
-<li><a href="#informal_description">Informal description</a></li>
-<li><a href="#deterministic_pushdown_automaton">Deterministic pushdown automaton</a></li>
+<li><a href="#pushdown-automaton">Pushdown automaton</a><ul>
+<li><a href="#informal-description">Informal description</a></li>
+</ul>
+</li>
+<li><a href="#deterministic-pushdown-automaton">Deterministic pushdown automaton</a></li>
 </ul>
 </div>
-<h6 id="pushdown_automaton"><a href="https://en.wikipedia.org/wiki/Pushdown_automaton">Pushdown automaton</a><a class="headerlink" href="#pushdown_automaton" title="Permanent link">#</a></h6>
+<h1 id="pushdown-automaton"><a href="https://en.wikipedia.org/wiki/Pushdown_automaton">Pushdown automaton</a><a class="headerlink" href="#pushdown-automaton" title="Permanent link">#</a></h1>
 <p>In the <a href="https://en.wikipedia.org/wiki/Theory_of_computation">theory of computation</a>, a branch of <a href="https://en.wikipedia.org/wiki/Theoretical_computer_science">theoretical computer science</a>, a <strong>pushdown automaton</strong> (<strong>PDA</strong>) is a type of <a href="https://en.wikipedia.org/wiki/Automata_theory">automaton</a> that employs a <a href="https://en.wikipedia.org/wiki/Stack_(data_structure)">stack</a>.</p>
 <p><strong>Pushdown automata</strong> are used in theories about what can be computed by machines. They are more capable than <a href="https://en.wikipedia.org/wiki/Finite-state_machine">finite-state machines</a> but less capable than <a href="https://en.wikipedia.org/wiki/Turing_machine">Turing machines</a>. <a href="https://en.wikipedia.org/wiki/Deterministic_pushdown_automata">Deterministic pushdown automata</a> can recognize all <a href="https://en.wikipedia.org/wiki/Deterministic_context-free_language">deterministic context-free languages</a> while nondeterministic ones can recognize all <a href="https://en.wikipedia.org/wiki/Context-free_language">context-free languages</a>, with the former often used in <a href="https://en.wikipedia.org/wiki/Parser">parser</a> design.</p>
 <p>The term "pushdown" refers to the fact that the <a href="https://en.wikipedia.org/wiki/Stack_(abstract_data_type)">stack</a> can be regarded as being "pushed down" like a tray dispenser at a cafeteria, since the operations never work on elements other than the top element. A <strong>stack automaton</strong>, by contrast, does allow access to and operations on deeper elements. Stack automata can recognize a strictly larger set of languages than pushdown automata.[<a href="https://en.wikipedia.org/wiki/Pushdown_automaton#cite_note-Hopcroft.Ullman.1967-1">1]</a> A <a href="https://en.wikipedia.org/wiki/Nested_stack_automaton">nested stack automaton</a> allows full access, and also allows stacked values to be entire sub-stacks rather than just single finite symbols.</p>
-<h6 id="informal_description">Informal description<a class="headerlink" href="#informal_description" title="Permanent link">#</a></h6>
+<h2 id="informal-description">Informal description<a class="headerlink" href="#informal-description" title="Permanent link">#</a></h2>
 <p>A <a href="https://en.wikipedia.org/wiki/Finite_state_machine">finite state machine</a> just looks at the <strong>input signal</strong> and the <strong>current state</strong>: it has no stack to work with. It chooses a new state, the result of following the transition. A <strong>pushdown automaton (PDA)</strong> differs from a finite state machine in two ways:</p>
 <ol>
 <li>It can use the top of the stack to decide which transition to take.</li>
@@ -485,7 +487,7 @@
 <blockquote>
 <p>A diagram of a pushdown automaton</p>
 </blockquote>
-<h6 id="deterministic_pushdown_automaton"><a href="https://en.wikipedia.org/wiki/Deterministic_pushdown_automaton">Deterministic pushdown automaton</a><a class="headerlink" href="#deterministic_pushdown_automaton" title="Permanent link">#</a></h6>
+<h1 id="deterministic-pushdown-automaton"><a href="https://en.wikipedia.org/wiki/Deterministic_pushdown_automaton">Deterministic pushdown automaton</a><a class="headerlink" href="#deterministic-pushdown-automaton" title="Permanent link">#</a></h1>
               
             </div>
           </div>

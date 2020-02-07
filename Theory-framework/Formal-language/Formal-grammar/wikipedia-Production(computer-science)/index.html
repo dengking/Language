@@ -169,7 +169,7 @@
       
 
   <li class="toctree-l4 current with-children">
-    <a href="#production_computer_science">
+    <a href="#production-computer-science">
       Production (computer science)
       <span class="toctree-expand"></span>
     </a>
@@ -177,9 +177,13 @@
 
 
 
+  <li class="toctree-l4 current">
+    <ul class="subnav-l4 current">
+    
       
+          
 
-  <li class="toctree-l4">
+  <li class="toctree-l5 current with-children">
     <a href="#_1">
       产生式的递归性
       <span class="toctree-expand"></span>
@@ -188,32 +192,31 @@
 
 
 
+  <li class="toctree-l5 current">
+    <ul class="subnav-l5 current">
+    
       
-
-  <li class="toctree-l4">
-    <a href="#vs">
-      递归公式VS产生式
-      <span class="toctree-expand"></span>
-    </a>
+        <li class="toctree-l6">
+          <a class="toctree-l7" href="#vs">递归公式VS产生式</a>
+        </li>
+    
+    </ul>
   </li>
 
-
-
       
-
-  <li class="toctree-l4">
-    <a href="#mathematical_logicformal_grammars">
-      从Mathematical logic的角度来看Formal grammars
-      <span class="toctree-expand"></span>
-    </a>
+    
+      
+        <li class="toctree-l5">
+          <a class="toctree-l6" href="#mathematical-logicformal-grammars">从Mathematical logic的角度来看Formal grammars</a>
+        </li>
+    
+    </ul>
   </li>
 
-
-
       
 
   <li class="toctree-l4">
-    <a href="#backusnaur_form">
+    <a href="#backusnaur-form">
       Backus–Naur form
       <span class="toctree-expand"></span>
     </a>
@@ -475,24 +478,28 @@
               
                 <div class="toc">
 <ul>
-<li><a href="#production_computer_science">Production (computer science)</a></li>
-<li><a href="#_1">产生式的递归性</a></li>
+<li><a href="#production-computer-science">Production (computer science)</a><ul>
+<li><a href="#_1">产生式的递归性</a><ul>
 <li><a href="#vs">递归公式VS产生式</a></li>
-<li><a href="#mathematical_logicformal_grammars">从Mathematical logic的角度来看Formal grammars</a></li>
-<li><a href="#backusnaur_form">Backus–Naur form</a></li>
+</ul>
+</li>
+<li><a href="#mathematical-logicformal-grammars">从Mathematical logic的角度来看Formal grammars</a></li>
+</ul>
+</li>
+<li><a href="#backusnaur-form">Backus–Naur form</a></li>
 </ul>
 </div>
-<h6 id="production_computer_science"><a href="https://en.wikipedia.org/wiki/Production_(computer_science)">Production (computer science)</a><a class="headerlink" href="#production_computer_science" title="Permanent link">#</a></h6>
+<h1 id="production-computer-science"><a href="https://en.wikipedia.org/wiki/Production_(computer_science)">Production (computer science)</a><a class="headerlink" href="#production-computer-science" title="Permanent link">#</a></h1>
 <p>基本上所有的formal grammar都是使用的production来进行描述，所以对production进行分析是有一定必要的。</p>
-<h6 id="_1">产生式的递归性<a class="headerlink" href="#_1" title="Permanent link">#</a></h6>
+<h2 id="_1">产生式的递归性<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
 <p>当产生式体中包含产生式头部中的non-terminal的时，该产生式就是<a href="https://en.wikipedia.org/wiki/Recursion_(computer_science)">recursive</a>，它所描述的grammar就是<a href="https://en.wikipedia.org/wiki/Recursive_grammar">recursive grammar</a>。</p>
 <p>与产生式的递归性相关的另外一个概念是<a href="https://en.wikipedia.org/wiki/Left_recursion">left recursion</a>。</p>
-<h6 id="vs">递归公式VS产生式<a class="headerlink" href="#vs" title="Permanent link">#</a></h6>
+<h3 id="vs">递归公式VS产生式<a class="headerlink" href="#vs" title="Permanent link">#</a></h3>
 <p>数学中的递归公式（<a href="https://en.wikipedia.org/wiki/Recurrence_relation">recurrence relation</a>），语言学中的产生式，两者其实有着共同之处：递归。</p>
-<h6 id="mathematical_logicformal_grammars">从<a href="https://en.wikipedia.org/wiki/Mathematical_logic">Mathematical logic</a>的角度来看<a href="https://en.wikipedia.org/wiki/Formal_grammar">Formal grammars</a><a class="headerlink" href="#mathematical_logicformal_grammars" title="Permanent link">#</a></h6>
+<h2 id="mathematical-logicformal-grammars">从<a href="https://en.wikipedia.org/wiki/Mathematical_logic">Mathematical logic</a>的角度来看<a href="https://en.wikipedia.org/wiki/Formal_grammar">Formal grammars</a><a class="headerlink" href="#mathematical-logicformal-grammars" title="Permanent link">#</a></h2>
 <p>在<a href="../../wikipedia-Formal-language/">Formal-language</a>的《从<a href="https://en.wikipedia.org/wiki/Mathematical_logic">Mathematical logic</a>的角度来看<a href="https://en.wikipedia.org/wiki/Formal_grammar">Formal grammars</a>》章节就从<a href="https://en.wikipedia.org/wiki/Mathematical_logic">Mathematical logic</a>的角度分析了<a href="https://en.wikipedia.org/wiki/Formal_grammar">Formal grammars</a>，其实这是对production的分析。</p>
 <p>从<a href="https://en.wikipedia.org/wiki/Formation_rule">Formation rule</a>的角度来看待production，则它是一种推导。如果从推导的角度来看待产生式的话，则关于自顶向下parsing无法处理左递归的情况就非常任意理解了</p>
-<h6 id="backusnaur_form"><a href="https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form">Backus–Naur form</a><a class="headerlink" href="#backusnaur_form" title="Permanent link">#</a></h6>
+<h1 id="backusnaur-form"><a href="https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form">Backus–Naur form</a><a class="headerlink" href="#backusnaur-form" title="Permanent link">#</a></h1>
 <p>BNF本质上也是一种产生式</p>
               
             </div>
