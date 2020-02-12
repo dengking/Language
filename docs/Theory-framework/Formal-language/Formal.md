@@ -1,4 +1,4 @@
-[TOC]
+
 
 # Formal，计算机科学的基石
 
@@ -53,5 +53,10 @@ https://www.yourdictionary.com/formal
 
 这三个学科中的formal是密切相关的。
 
-文章[Formalism (philosophy of mathematics)](https://en.wikipedia.org/wiki/Formalism_(philosophy_of_mathematics))将formal描述为一种科学的思想，显然它从更高的哲学的角度来概括formal，我觉得以它作为掌握formal的入口是非常好的，因为科学总数遵循相同的哲学思想，或者说哲学指导着科学。
+文章[Formalism (philosophy)](https://en.wikipedia.org/wiki/Formalism_(philosophy)), [Formalism (philosophy of mathematics)](https://en.wikipedia.org/wiki/Formalism_(philosophy_of_mathematics))将formal描述为一种科学的思想，显然它从更高的哲学的角度来概括formal，我觉得以它作为掌握formal的入口是非常好的，因为科学总数遵循相同的哲学思想，或者说哲学指导着科学。
 
+
+
+## 思考：描述与人工智能
+
+deep learning book的chapter one
