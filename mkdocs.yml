@@ -3,49 +3,45 @@ extra_css:
 - css/extra.css
 markdown_extensions:
 - toc:
-    baselevel: 6
     permalink: '#'
     separator: _
-- admonition
-- def_list
-- mdx_gh_links:
-    repo: mkdocs
-    user: mkdocs
 nav:
 - Home: index.md
-- Introduction:
-  - Introduction: Introduction/index.md
-- Theory-framework:
-  - Introduction: Theory-framework/index.md
-  - Formal-language:
-    - Introduction: Theory-framework/Formal-language/index.md
-    - Description-and-language: Theory-framework/Formal-language/Description-and-language.md
-    - Formal-language: Theory-framework/Formal-language/wikipedia-Formal-language.md
-    - Formal-system: Theory-framework/Formal-language/wikipedia-Formal-system.md
-    - Formal-grammar:
-      - Formal-grammar: Theory-framework/Formal-language/Formal-grammar/wikipedia-Formal-grammar.md
-      - Production: Theory-framework/Formal-language/Formal-grammar/wikipedia-Production(computer-science).md
-      - Chomsky-hierarchy:
-        - Chomsky-hierarchy: Theory-framework/Formal-language/Formal-grammar/Chomsky-hierarchy/wikipedia-Chomsky-hierarchy.md
-        - Type-0:
-          - Recursively-enumerable-language: Theory-framework/Formal-language/Formal-grammar/Chomsky-hierarchy/Type-0/wikipedia-Recursively-enumerable-language.md
-          - Turinig-machine:
-            - Introduction: Theory-framework/Formal-language/Formal-grammar/Chomsky-hierarchy/Type-0/Turinig-machine/index.md
-            - What-is-a-Turing-machine: Theory-framework/Formal-language/Formal-grammar/Chomsky-hierarchy/Type-0/Turinig-machine/What-is-a-Turing-machine.md
-            - Turing-machine: Theory-framework/Formal-language/Formal-grammar/Chomsky-hierarchy/Type-0/Turinig-machine/Turing-machine.md
-            - wikipedia-Turing-machine: Theory-framework/Formal-language/Formal-grammar/Chomsky-hierarchy/Type-0/Turinig-machine/wikipedia-Turing-machine.md
-        - Type-1:
-          - Context-sensitive-language: Theory-framework/Formal-language/Formal-grammar/Chomsky-hierarchy/Type-1/wikipedia-Context-sensitive-language.md
-        - Type-2:
-          - Context-free-language: Theory-framework/Formal-language/Formal-grammar/Chomsky-hierarchy/Type-2/wikipedia-Context-free-language.md
-          - Automaton: Theory-framework/Formal-language/Formal-grammar/Chomsky-hierarchy/Type-2/Automaton.md
-        - Type-3:
-          - Regular-language: Theory-framework/Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/wikipedia-Regular-language.md
-          - Automaton: Theory-framework/Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/Automaton.md
-          - Regular-expression:
-            - Regular-expression: Theory-framework/Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/Regular-expression/wikipedia-Regular-expression.md
-            - Thompson's-construction: Theory-framework/Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/Regular-expression/wikipedia-Thompson's-construction.md
-            - Regex-Engine: Theory-framework/Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/Regular-expression/Regex-Engine.md
+- Primer: Primer.md
+- Formal-language:
+  - Introduction: Formal-language/index.md
+  - Description-and-language: Formal-language/Description-and-language.md
+  - Formal-and-formal-langugae: Formal-language/Formal-and-formal-langugae.md
+  - Language: Formal-language/wikipedia-Language.md
+  - Formal-language: Formal-language/wikipedia-Formal-language.md
+  - Formal-system: Formal-language/wikipedia-Formal-system.md
+  - Formal-grammar:
+    - Formal-grammar: Formal-language/Formal-grammar/wikipedia-Formal-grammar.md
+    - Production: Formal-language/Formal-grammar/wikipedia-Production(computer-science).md
+    - Chomsky-hierarchy:
+      - Chomsky-hierarchy: Formal-language/Formal-grammar/Chomsky-hierarchy/wikipedia-Chomsky-hierarchy.md
+      - Type-0:
+        - Recursively-enumerable-language: Formal-language/Formal-grammar/Chomsky-hierarchy/Type-0/wikipedia-Recursively-enumerable-language.md
+        - Turinig-machine:
+          - Introduction: Formal-language/Formal-grammar/Chomsky-hierarchy/Type-0/Turinig-machine/index.md
+          - What-is-a-Turing-machine: Formal-language/Formal-grammar/Chomsky-hierarchy/Type-0/Turinig-machine/What-is-a-Turing-machine.md
+          - Turing-machine: Formal-language/Formal-grammar/Chomsky-hierarchy/Type-0/Turinig-machine/Turing-machine.md
+          - wikipedia-Turing-machine: Formal-language/Formal-grammar/Chomsky-hierarchy/Type-0/Turinig-machine/wikipedia-Turing-machine.md
+      - Type-1:
+        - Context-sensitive-language: Formal-language/Formal-grammar/Chomsky-hierarchy/Type-1/wikipedia-Context-sensitive-language.md
+      - Type-2:
+        - Context-free-language: Formal-language/Formal-grammar/Chomsky-hierarchy/Type-2/wikipedia-Context-free-language.md
+        - Automaton: Formal-language/Formal-grammar/Chomsky-hierarchy/Type-2/Automaton.md
+      - Type-3:
+        - Regular-language: Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/wikipedia-Regular-language.md
+        - Automaton: Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/Automaton.md
+        - Regular-expression:
+          - Regular-expression: Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/Regular-expression/wikipedia-Regular-expression.md
+          - Thompson's-construction: Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/Regular-expression/wikipedia-Thompson's-construction.md
+          - Regex-Engine: Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/Regular-expression/Regex-Engine.md
+- Theory-of-computation:
+  - index: Theory-of-computation/index.md
+  - Theory-of-computation: Theory-of-computation/wikipedia-Theory-of-computation.md
 plugins:
 - search
 repo_url: https://github.com/dengking/automata-and-formal-language
@@ -54,8 +50,4 @@ site_description: Project documentation with Markdown.
 site_name: automata-and-formal-language
 site_url: https://dengking.github.io/automata-and-formal-language
 theme:
-  highlightjs: true
-  hljs_languages:
-  - yaml
-  - django
-  name: readthedocs
+  name: material
