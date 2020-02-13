@@ -1,0 +1,1045 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Project documentation with Markdown.">
+      
+      
+        <link rel="canonical" href="https://dengking.github.io/automata-and-formal-language/Theory-of-computation/Automata-theory/wikipedia-Automata-theory/">
+      
+      
+        <meta name="author" content="DengKing">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>wikipedia Automata theory - automata-and-formal-language</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.1b62728e.css">
+      
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#automata_theory" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://dengking.github.io/automata-and-formal-language" title="automata-and-formal-language" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              automata-and-formal-language
+            </span>
+            <span class="md-header-nav__topic">
+              
+                wikipedia Automata theory
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/dengking/automata-and-formal-language" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://dengking.github.io/automata-and-formal-language" title="automata-and-formal-language" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    automata-and-formal-language
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/dengking/automata-and-formal-language" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../Primer/" title="Primer" class="md-nav__link">
+      Primer
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Formal-language
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Formal-language
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Formal-language/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Formal-language/Description-and-language/" title="Description-and-language" class="md-nav__link">
+      Description-and-language
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Formal-language/Formal-and-formal-langugae/" title="Formal-and-formal-langugae" class="md-nav__link">
+      Formal-and-formal-langugae
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Formal-language/wikipedia-Language/" title="Language" class="md-nav__link">
+      Language
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Formal-language/wikipedia-Formal-language/" title="Formal-language" class="md-nav__link">
+      Formal-language
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Formal-language/wikipedia-Formal-system/" title="Formal-system" class="md-nav__link">
+      Formal-system
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7" type="checkbox" id="nav-3-7">
+    
+    <label class="md-nav__link" for="nav-3-7">
+      Formal-grammar
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-7">
+        Formal-grammar
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Formal-language/Formal-grammar/wikipedia-Formal-grammar/" title="Formal-grammar" class="md-nav__link">
+      Formal-grammar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Formal-language/Formal-grammar/wikipedia-Production(computer-science)/" title="Production" class="md-nav__link">
+      Production
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7-3" type="checkbox" id="nav-3-7-3">
+    
+    <label class="md-nav__link" for="nav-3-7-3">
+      Chomsky-hierarchy
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-7-3">
+        Chomsky-hierarchy
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Formal-language/Formal-grammar/Chomsky-hierarchy/wikipedia-Chomsky-hierarchy/" title="Chomsky-hierarchy" class="md-nav__link">
+      Chomsky-hierarchy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7-3-2" type="checkbox" id="nav-3-7-3-2">
+    
+    <label class="md-nav__link" for="nav-3-7-3-2">
+      Type-0
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-3-7-3-2">
+        Type-0
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Formal-language/Formal-grammar/Chomsky-hierarchy/Type-0/wikipedia-Recursively-enumerable-language/" title="Recursively-enumerable-language" class="md-nav__link">
+      Recursively-enumerable-language
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7-3-2-2" type="checkbox" id="nav-3-7-3-2-2">
+    
+    <label class="md-nav__link" for="nav-3-7-3-2-2">
+      Turinig-machine
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-3-7-3-2-2">
+        Turinig-machine
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Formal-language/Formal-grammar/Chomsky-hierarchy/Type-0/Turinig-machine/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Formal-language/Formal-grammar/Chomsky-hierarchy/Type-0/Turinig-machine/What-is-a-Turing-machine/" title="What-is-a-Turing-machine" class="md-nav__link">
+      What-is-a-Turing-machine
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Formal-language/Formal-grammar/Chomsky-hierarchy/Type-0/Turinig-machine/Turing-machine/" title="Turing-machine" class="md-nav__link">
+      Turing-machine
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Formal-language/Formal-grammar/Chomsky-hierarchy/Type-0/Turinig-machine/wikipedia-Turing-machine/" title="wikipedia-Turing-machine" class="md-nav__link">
+      wikipedia-Turing-machine
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7-3-3" type="checkbox" id="nav-3-7-3-3">
+    
+    <label class="md-nav__link" for="nav-3-7-3-3">
+      Type-1
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-3-7-3-3">
+        Type-1
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Formal-language/Formal-grammar/Chomsky-hierarchy/Type-1/wikipedia-Context-sensitive-language/" title="Context-sensitive-language" class="md-nav__link">
+      Context-sensitive-language
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7-3-4" type="checkbox" id="nav-3-7-3-4">
+    
+    <label class="md-nav__link" for="nav-3-7-3-4">
+      Type-2
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-3-7-3-4">
+        Type-2
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Formal-language/Formal-grammar/Chomsky-hierarchy/Type-2/wikipedia-Context-free-language/" title="Context-free-language" class="md-nav__link">
+      Context-free-language
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Formal-language/Formal-grammar/Chomsky-hierarchy/Type-2/Automaton/" title="Automaton" class="md-nav__link">
+      Automaton
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7-3-5" type="checkbox" id="nav-3-7-3-5">
+    
+    <label class="md-nav__link" for="nav-3-7-3-5">
+      Type-3
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-3-7-3-5">
+        Type-3
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/wikipedia-Regular-language/" title="Regular-language" class="md-nav__link">
+      Regular-language
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/Automaton/" title="Automaton" class="md-nav__link">
+      Automaton
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7-3-5-3" type="checkbox" id="nav-3-7-3-5-3">
+    
+    <label class="md-nav__link" for="nav-3-7-3-5-3">
+      Regular-expression
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-3-7-3-5-3">
+        Regular-expression
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/Regular-expression/wikipedia-Regular-expression/" title="Regular-expression" class="md-nav__link">
+      Regular-expression
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/Regular-expression/wikipedia-Thompson's-construction/" title="Thompson's-construction" class="md-nav__link">
+      Thompson's-construction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/Regular-expression/Regex-Engine/" title="Regex-Engine" class="md-nav__link">
+      Regex-Engine
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Theory-of-computation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Theory-of-computation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../" title="index" class="md-nav__link">
+      index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wikipedia-Theory-of-computation.md" title="Theory-of-computation" class="md-nav__link">
+      Theory-of-computation
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#automata" class="md-nav__link">
+    Automata
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#informal_description" class="md-nav__link">
+    Informal description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formal_definition" class="md-nav__link">
+    Formal definition
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes_of_automata" class="md-nav__link">
+    Classes of automata
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discrete_continuous_and_hybrid_automata" class="md-nav__link">
+    Discrete, continuous, and hybrid automata
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hierarchy_in_terms_of_powers" class="md-nav__link">
+    Hierarchy in terms of powers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applications" class="md-nav__link">
+    Applications
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automata_simulators" class="md-nav__link">
+    Automata simulators
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <div class="toc">
+<ul>
+<li><a href="#automata_theory">Automata theory</a><ul>
+<li><a href="#automata">Automata</a><ul>
+<li><a href="#informal_description">Informal description</a></li>
+<li><a href="#formal_definition">Formal definition</a></li>
+</ul>
+</li>
+<li><a href="#classes_of_automata">Classes of automata</a><ul>
+<li><a href="#discrete_continuous_and_hybrid_automata">Discrete, continuous, and hybrid automata</a></li>
+</ul>
+</li>
+<li><a href="#hierarchy_in_terms_of_powers">Hierarchy in terms of powers</a></li>
+<li><a href="#applications">Applications</a></li>
+<li><a href="#automata_simulators">Automata simulators</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h1 id="automata_theory"><a href="https://en.wikipedia.org/wiki/Automata_theory">Automata theory</a><a class="headerlink" href="#automata_theory" title="Permanent link">#</a></h1>
+<blockquote>
+<p>TIPS: In Chinese, <a href="https://en.wikipedia.org/wiki/Automata_theory">Automata theory</a> means 自动机理论.</p>
+</blockquote>
+<p><strong>Automata theory</strong> is the study of <a href="https://en.wikipedia.org/wiki/Abstract_machine">abstract machines</a> and <a href="https://en.wikipedia.org/wiki/Automaton">automata</a>, as well as the <a href="https://en.wikipedia.org/wiki/Computational_problem">computational problems</a> that can be solved using them. It is a theory in <a href="https://en.wikipedia.org/wiki/Theoretical_computer_science">theoretical computer science</a> and <a href="https://en.wikipedia.org/wiki/Discrete_mathematics">discrete mathematics</a> (a subject of study in both <a href="https://en.wikipedia.org/wiki/Mathematics">mathematics</a> and <a href="https://en.wikipedia.org/wiki/Computer_science">computer science</a>). The word <em>automata</em> (the plural of <em>automaton</em>) comes from the Greek word αὐτόματα, which means "self-making".</p>
+<p>The figure at right illustrates a <a href="https://en.wikipedia.org/wiki/Finite-state_machine">finite-state machine</a>, which belongs to a well-known type of automaton. This automaton（自动机） consists of <a href="https://en.wikipedia.org/wiki/State_(computer_science)">states</a> (represented in the figure by circles) and transitions (represented by arrows). As the automaton sees a symbol of input, it makes a transition (or jump) to another state, according to its <a href="https://en.wikipedia.org/wiki/Transition_system">transition function</a>, which takes the current state and the recent symbol as its inputs.</p>
+<p><strong>Automata theory</strong> is closely related to <a href="https://en.wikipedia.org/wiki/Formal_language">formal language</a> theory. An automaton is a <strong>finite representation</strong> of a formal language that may be an <strong>infinite set</strong>. <strong>Automata</strong> are often classified by the class of <strong>formal languages</strong> they can recognize, typically illustrated by the <a href="https://en.wikipedia.org/wiki/Chomsky_hierarchy">Chomsky hierarchy</a>, which describes the relations between various languages and kinds of formalized logics.</p>
+<blockquote>
+<p>TIPS: It is obvious that automata theory is an important tool for research formal language.</p>
+</blockquote>
+<p>Automata play a major role in <a href="https://en.wikipedia.org/wiki/Theory_of_computation">theory of computation</a>, <a href="https://en.wikipedia.org/wiki/Compiler_construction">compiler construction</a>（编译器的构建）, <a href="https://en.wikipedia.org/wiki/Artificial_intelligence">artificial intelligence</a>, <a href="https://en.wikipedia.org/wiki/Parsing">parsing</a> and <a href="https://en.wikipedia.org/wiki/Formal_verification">formal verification</a>.</p>
+<p>Classes of automata:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Turing_machine">Turing machine</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Pushdown_automaton">Pushdown automaton</a><ul>
+<li><a href="https://en.wikipedia.org/wiki/Finite-state_machine">Finite-state machine</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Combinational_logic">Combinational logic</a></li>
+</ul>
+</li>
+</ul>
+<p><a href="https://en.wikipedia.org/wiki/File:DFAexample.svg"><img alt="img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/DFAexample.svg/300px-DFAexample.svg.png" /></a></p>
+<p>The study of the mathematical properties of such automata is automata theory. The picture is a visualization of an automaton that recognizes strings containing an even number of <em>0</em>s. The automaton starts in state <em>S1</em>, and transitions to the non-accepting state <em>S2</em> upon reading the symbol <em>0</em>. Reading another <em>0</em> causes the automaton to transition back to the accepting state <em>S1</em>. In both states the symbol <em>1</em> is ignored by making a transition to the current state. </p>
+<blockquote>
+<p>TIPS: The diagram above is called a <a href="https://en.wikipedia.org/wiki/State_diagram">state diagram</a>.</p>
+</blockquote>
+<h2 id="automata">Automata<a class="headerlink" href="#automata" title="Permanent link">#</a></h2>
+<p>Following is an introductory definition of one type of automaton, which attempts to help one grasp the essential concepts involved in automata theory/theories. </p>
+<h3 id="informal_description">Informal description<a class="headerlink" href="#informal_description" title="Permanent link">#</a></h3>
+<p>An automaton <em>runs</em> when it is given some sequence of <em>inputs</em> in discrete (individual) <em>time steps</em> or steps. </p>
+<p>An automaton processes <strong>one input</strong> picked from a set of <em><a href="https://en.wikipedia.org/wiki/Symbol_(formal)">symbols</a></em> or <em>letters</em>, which is called an <em><a href="https://en.wikipedia.org/wiki/Alphabet_(computer_science)">alphabet</a></em>. </p>
+<p>The symbols received by the automaton as input at any step are a finite sequence of symbols called <em>words</em>. </p>
+<p>An automaton has a finite set of <em>states</em>. At each moment during a run of the automaton, the automaton is <em>in</em> one of its states. When the automaton receives new input it moves to another state (or transitions) based on a <strong>function</strong> that takes the <strong>current state</strong> and <strong>symbol</strong> as parameters. This function is called the <em>transition function</em>. </p>
+<p>The automaton reads the symbols of the input word one after another and transitions from state to state according to the <strong>transition function</strong> until the word is read completely. Once the input word has been read, the automaton is said to have stopped. The state at which the automaton stops is called the <em>final state</em>. </p>
+<p>Depending on the <strong>final state</strong>, it's said that the automaton either <em>accepts</em> or <em>rejects</em> an input word. There is a subset of states of the automaton, which is defined as the set of <em>accepting states</em>. If the <strong>final state</strong> is an <strong>accepting state</strong>, then the automaton <em>accepts</em> the word. Otherwise, the word is <em>rejected</em>. The set of all the words accepted by an automaton is called the <em><a href="https://en.wikipedia.org/wiki/Formal_language">language</a> recognized by the automaton</em>.</p>
+<p>In short, an automaton is a <a href="https://en.wikipedia.org/wiki/Mathematical_object">mathematical object</a> that takes a word as input and decides whether to accept it or reject it. Since all computational problems are reducible into the accept/reject question on inputs, (all problem instances can be represented in a finite length of symbols), automata theory plays a crucial role in <a href="https://en.wikipedia.org/wiki/Computational_theory">computational theory</a>.</p>
+<blockquote>
+<p>TIPS: In formal language, automata act as recognizer or matcher consuming <strong>characters</strong> or <strong>tokens</strong>. The graph above is a good example of automaton. Automata can be used not only in formal language,  it has many application in computer science, such as:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Event-driven_finite-state_machine">Event-driven finite-state machine</a></li>
+<li><a href="https://en.wikipedia.org/wiki/State_machine_replication">State machine replication</a></li>
+</ul>
+<p>In these applications, what automaton consume can be event. See <a href="https://en.wikipedia.org/wiki/Finite-state_machine#Software_applications">Finite-state machine</a> for more detail.</p>
+</blockquote>
+<h3 id="formal_definition">Formal definition<a class="headerlink" href="#formal_definition" title="Permanent link">#</a></h3>
+<p><strong>Automaton</strong> </p>
+<h2 id="classes_of_automata">Classes of automata<a class="headerlink" href="#classes_of_automata" title="Permanent link">#</a></h2>
+<p>The following is an incomplete list of types of automata. </p>
+<table>
+<thead>
+<tr>
+<th align="center">Automaton</th>
+<th align="center">Recognizable language</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><a href="https://en.wikipedia.org/wiki/Finite_state_machine">Nondeterministic/Deterministic Finite state machine</a> (FSM)</td>
+<td align="center"><a href="https://en.wikipedia.org/wiki/Regular_language">regular languages</a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://en.wikipedia.org/wiki/Deterministic_pushdown_automaton">Deterministic pushdown automaton</a> (DPDA)</td>
+<td align="center"><a href="https://en.wikipedia.org/wiki/Deterministic_context-free_language">deterministic context-free languages</a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://en.wikipedia.org/wiki/Pushdown_automaton">Pushdown automaton</a> (PDA)</td>
+<td align="center"><a href="https://en.wikipedia.org/wiki/Context-free_language">context-free languages</a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://en.wikipedia.org/wiki/Linear_bounded_automaton">Linear bounded automaton</a> (LBA)</td>
+<td align="center"><a href="https://en.wikipedia.org/wiki/Context-sensitive_language">context-sensitive languages</a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://en.wikipedia.org/wiki/Turing_machine">Turing machine</a></td>
+<td align="center"><a href="https://en.wikipedia.org/wiki/Recursively_enumerable_language">recursively enumerable languages</a></td>
+</tr>
+<tr>
+<td align="center">Deterministic <a href="https://en.wikipedia.org/wiki/Büchi_automaton">Büchi automaton</a></td>
+<td align="center"><a href="https://en.wikipedia.org/wiki/Omega_language#Operations">ω-limit languages</a></td>
+</tr>
+<tr>
+<td align="center">Nondeterministic Büchi automaton</td>
+<td align="center"><a href="https://en.wikipedia.org/wiki/Omega-regular_language">ω-regular languages</a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://en.wikipedia.org/wiki/Rabin_automaton">Rabin automaton</a>, <a href="https://en.wikipedia.org/wiki/Streett_automaton">Streett automaton</a>, <a href="https://en.wikipedia.org/wiki/Parity_automaton">Parity automaton</a>, <a href="https://en.wikipedia.org/wiki/Muller_automaton">Muller automaton</a></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="discrete_continuous_and_hybrid_automata">Discrete, continuous, and hybrid automata<a class="headerlink" href="#discrete_continuous_and_hybrid_automata" title="Permanent link">#</a></h3>
+<p>Normally automata theory describes the states of abstract machines but there are <a href="https://en.wikipedia.org/wiki/Analog_automata">analog automata</a> or <a href="https://en.wikipedia.org/w/index.php?title=Continuous_automata&amp;action=edit&amp;redlink=1">continuous automata</a> or <a href="https://en.wikipedia.org/wiki/Hybrid_automaton">hybrid discrete-continuous automata</a>, which use analog data, continuous time, or both. </p>
+<h2 id="hierarchy_in_terms_of_powers">Hierarchy in terms of powers<a class="headerlink" href="#hierarchy_in_terms_of_powers" title="Permanent link">#</a></h2>
+<p>The following is an incomplete hierarchy in terms of powers of different types of virtual machines. The hierarchy reflects the nested categories of languages the machines are able to accept.[<a href="https://en.wikipedia.org/wiki/Automata_theory#cite_note-Aaniya_B-1">1]</a> </p>
+<table>
+<thead>
+<tr>
+<th align="center">Automaton</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><a href="https://en.wikipedia.org/wiki/Deterministic_Finite_Automaton">Deterministic Finite Automaton</a> (DFA) -- Lowest Power <br/>(same power)   $</td>
+</tr>
+</tbody>
+</table>
+<h2 id="applications">Applications<a class="headerlink" href="#applications" title="Permanent link">#</a></h2>
+<p>Each model in automata theory plays important roles in several applied areas. <a href="https://en.wikipedia.org/wiki/Finite_automata">Finite automata</a> are used in text processing, compilers, and hardware design. <a href="https://en.wikipedia.org/wiki/Context-free_grammar">Context-free grammar</a> (CFGs) are used in programming languages and artificial intelligence. Originally, CFGs were used in the study of the human languages. <a href="https://en.wikipedia.org/wiki/Cellular_automata">Cellular automata</a> are used in the field of biology, the most common example being <a href="https://en.wikipedia.org/wiki/John_Horton_Conway">John Conway</a>'s <a href="https://en.wikipedia.org/wiki/Conway's_Game_of_Life">Game of Life</a>. Some other examples which could be explained using automata theory in biology include mollusk and pine cones growth and pigmentation patterns. Going further, a theory suggesting that the whole universe is computed by some sort of a discrete automaton, is advocated by some scientists. The idea originated in the work of <a href="https://en.wikipedia.org/wiki/Konrad_Zuse">Konrad Zuse</a>, and was popularized in America by <a href="https://en.wikipedia.org/wiki/Edward_Fredkin">Edward Fredkin</a>. Automata also appear in the theory of finite fields: the set of irreducible polynomials which can be written as composition of degree two polynomials is in fact a regular language.[<a href="https://en.wikipedia.org/wiki/Automata_theory#cite_note-2">2]</a> </p>
+<h2 id="automata_simulators">Automata simulators<a class="headerlink" href="#automata_simulators" title="Permanent link">#</a></h2>
+<p>Automata simulators are pedagogical tools used to teach, learn and research automata theory. An automata simulator takes as input the description of an automaton and then simulates its working for an arbitrary input string. The description of the automaton can be entered in several ways. An automaton can be defined in a <a href="https://en.wikipedia.org/wiki/Symbolic_language_(programming)">symbolic language</a> or its specification may be entered in a predesigned form or its transition diagram may be drawn by clicking and dragging the mouse. Well known automata simulators include Turing's World, JFLAP, VAS, TAGS and SimStudio.[<a href="https://en.wikipedia.org/wiki/Automata_theory#cite_note-3">3]</a> </p>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.808e90bb.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1242 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Project documentation with Markdown.">
+      
+      
+        <link rel="canonical" href="https://dengking.github.io/automata-and-formal-language/Formal-language/wikipedia-Formal-language/">
+      
+      
+        <meta name="author" content="DengKing">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>Formal-language - automata-and-formal-language</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
+      
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#formal_language" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://dengking.github.io/automata-and-formal-language" title="automata-and-formal-language" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              automata-and-formal-language
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Formal-language
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/dengking/automata-and-formal-language" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://dengking.github.io/automata-and-formal-language" title="automata-and-formal-language" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    automata-and-formal-language
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/dengking/automata-and-formal-language" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Primer/" title="Primer" class="md-nav__link">
+      Primer
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Formal-language
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Formal-language
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Description-and-language/" title="Description-and-language" class="md-nav__link">
+      Description-and-language
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Formal-and-formal-langugae/" title="Formal-and-formal-langugae" class="md-nav__link">
+      Formal-and-formal-langugae
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../wikipedia-Language/" title="Language" class="md-nav__link">
+      Language
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Formal-language
+      </label>
+    
+    <a href="./" title="Formal-language" class="md-nav__link md-nav__link--active">
+      Formal-language
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#words_over_an_alphabet" class="md-nav__link">
+    Words over an alphabet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    Definition
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructions" class="md-nav__link">
+    Constructions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#language-specification_formalisms" class="md-nav__link">
+    Language-specification formalisms
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operations_on_languages" class="md-nav__link">
+    Operations on languages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applications" class="md-nav__link">
+    Applications
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#programming_languages" class="md-nav__link">
+    Programming languages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formal_theories_systems_and_proofs" class="md-nav__link">
+    Formal theories, systems, and proofs
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interpretations_and_models" class="md-nav__link">
+    Interpretations and models
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../wikipedia-Formal-system/" title="Formal-system" class="md-nav__link">
+      Formal-system
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7" type="checkbox" id="nav-3-7">
+    
+    <label class="md-nav__link" for="nav-3-7">
+      Formal-grammar
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-7">
+        Formal-grammar
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Formal-grammar/wikipedia-Formal-grammar/" title="Formal-grammar" class="md-nav__link">
+      Formal-grammar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Formal-grammar/wikipedia-Production(computer-science)/" title="Production" class="md-nav__link">
+      Production
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7-3" type="checkbox" id="nav-3-7-3">
+    
+    <label class="md-nav__link" for="nav-3-7-3">
+      Chomsky-hierarchy
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-7-3">
+        Chomsky-hierarchy
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Formal-grammar/Chomsky-hierarchy/wikipedia-Chomsky-hierarchy/" title="Chomsky-hierarchy" class="md-nav__link">
+      Chomsky-hierarchy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7-3-2" type="checkbox" id="nav-3-7-3-2">
+    
+    <label class="md-nav__link" for="nav-3-7-3-2">
+      Type-0
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-3-7-3-2">
+        Type-0
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Formal-grammar/Chomsky-hierarchy/Type-0/wikipedia-Recursively-enumerable-language/" title="Recursively-enumerable-language" class="md-nav__link">
+      Recursively-enumerable-language
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7-3-2-2" type="checkbox" id="nav-3-7-3-2-2">
+    
+    <label class="md-nav__link" for="nav-3-7-3-2-2">
+      Turinig-machine
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-3-7-3-2-2">
+        Turinig-machine
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Formal-grammar/Chomsky-hierarchy/Type-0/Turinig-machine/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Formal-grammar/Chomsky-hierarchy/Type-0/Turinig-machine/What-is-a-Turing-machine/" title="What-is-a-Turing-machine" class="md-nav__link">
+      What-is-a-Turing-machine
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Formal-grammar/Chomsky-hierarchy/Type-0/Turinig-machine/Turing-machine/" title="Turing-machine" class="md-nav__link">
+      Turing-machine
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Formal-grammar/Chomsky-hierarchy/Type-0/Turinig-machine/wikipedia-Turing-machine/" title="wikipedia-Turing-machine" class="md-nav__link">
+      wikipedia-Turing-machine
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7-3-3" type="checkbox" id="nav-3-7-3-3">
+    
+    <label class="md-nav__link" for="nav-3-7-3-3">
+      Type-1
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-3-7-3-3">
+        Type-1
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Formal-grammar/Chomsky-hierarchy/Type-1/wikipedia-Context-sensitive-language/" title="Context-sensitive-language" class="md-nav__link">
+      Context-sensitive-language
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7-3-4" type="checkbox" id="nav-3-7-3-4">
+    
+    <label class="md-nav__link" for="nav-3-7-3-4">
+      Type-2
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-3-7-3-4">
+        Type-2
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Formal-grammar/Chomsky-hierarchy/Type-2/wikipedia-Context-free-language/" title="Context-free-language" class="md-nav__link">
+      Context-free-language
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Formal-grammar/Chomsky-hierarchy/Type-2/Automaton/" title="Automaton" class="md-nav__link">
+      Automaton
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7-3-5" type="checkbox" id="nav-3-7-3-5">
+    
+    <label class="md-nav__link" for="nav-3-7-3-5">
+      Type-3
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-3-7-3-5">
+        Type-3
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Formal-grammar/Chomsky-hierarchy/Type-3/wikipedia-Regular-language/" title="Regular-language" class="md-nav__link">
+      Regular-language
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Formal-grammar/Chomsky-hierarchy/Type-3/Automaton/" title="Automaton" class="md-nav__link">
+      Automaton
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7-3-5-3" type="checkbox" id="nav-3-7-3-5-3">
+    
+    <label class="md-nav__link" for="nav-3-7-3-5-3">
+      Regular-expression
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-3-7-3-5-3">
+        Regular-expression
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Formal-grammar/Chomsky-hierarchy/Type-3/Regular-expression/wikipedia-Regular-expression/" title="Regular-expression" class="md-nav__link">
+      Regular-expression
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Formal-grammar/Chomsky-hierarchy/Type-3/Regular-expression/wikipedia-Thompson's-construction/" title="Thompson's-construction" class="md-nav__link">
+      Thompson's-construction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Formal-grammar/Chomsky-hierarchy/Type-3/Regular-expression/Regex-Engine/" title="Regex-Engine" class="md-nav__link">
+      Regex-Engine
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Theory-of-computation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Theory-of-computation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Theory-of-computation/" title="index" class="md-nav__link">
+      index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Theory-of-computation/wikipedia-Theory-of-computation.md" title="Theory-of-computation" class="md-nav__link">
+      Theory-of-computation
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#words_over_an_alphabet" class="md-nav__link">
+    Words over an alphabet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    Definition
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructions" class="md-nav__link">
+    Constructions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#language-specification_formalisms" class="md-nav__link">
+    Language-specification formalisms
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operations_on_languages" class="md-nav__link">
+    Operations on languages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applications" class="md-nav__link">
+    Applications
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#programming_languages" class="md-nav__link">
+    Programming languages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formal_theories_systems_and_proofs" class="md-nav__link">
+    Formal theories, systems, and proofs
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interpretations_and_models" class="md-nav__link">
+    Interpretations and models
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <div class="toc">
+<ul>
+<li><a href="#formal_language">Formal language</a><ul>
+<li><a href="#words_over_an_alphabet">Words over an alphabet</a></li>
+<li><a href="#definition">Definition</a><ul>
+<li><a href="#constructions">Constructions</a></li>
+</ul>
+</li>
+<li><a href="#language-specification_formalisms">Language-specification formalisms</a></li>
+<li><a href="#operations_on_languages">Operations on languages</a></li>
+<li><a href="#applications">Applications</a><ul>
+<li><a href="#programming_languages">Programming languages</a></li>
+<li><a href="#formal_theories_systems_and_proofs">Formal theories, systems, and proofs</a><ul>
+<li><a href="#interpretations_and_models">Interpretations and models</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_1">梳理</a><ul>
+<li><a href="#formal_system_and_formal_language">Formal system and formal language</a></li>
+<li><a href="#mathematical_logicformal_grammars">从Mathematical logic的角度来看Formal grammars</a></li>
+<li><a href="#automata_theoryformal_language">Automata theory和Formal language</a></li>
+<li><a href="#turing_machine_and_mathematical_logic">Turing machine and Mathematical logic</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h1 id="formal_language"><a href="https://en.wikipedia.org/wiki/Formal_language">Formal language</a><a class="headerlink" href="#formal_language" title="Permanent link">#</a></h1>
+<p>In <a href="https://en.wikipedia.org/wiki/Mathematics">mathematics</a>, <a href="https://en.wikipedia.org/wiki/Computer_science">computer science</a>, and <a href="https://en.wikipedia.org/wiki/Linguistics">linguistics</a>, a <strong>formal language</strong> consists of <a href="https://en.wikipedia.org/wiki/String_(computer_science)">words</a> whose <a href="https://en.wikipedia.org/wiki/Symbol_(formal)">letters</a> are taken from an <a href="https://en.wikipedia.org/wiki/Alphabet_(computer_science)">alphabet</a> and are <a href="https://en.wikipedia.org/wiki/Well-formedness">well-formed</a> according to a specific set of rules. </p>
+<p>The <a href="https://en.wikipedia.org/wiki/Alphabet_(computer_science)">alphabet</a> of a formal language consist of symbols, letters, or tokens that concatenate into strings of the language. Each string concatenated from symbols of this alphabet is called a <strong>word</strong>, and the words that belong to a particular formal language are sometimes called <em>well-formed words</em> or <em><a href="https://en.wikipedia.org/wiki/Well-formed_formula">well-formed formulas</a></em>. A formal language is often defined by means of a <a href="https://en.wikipedia.org/wiki/Formal_grammar">formal grammar</a> such as a <a href="https://en.wikipedia.org/wiki/Regular_grammar">regular grammar</a> or <a href="https://en.wikipedia.org/wiki/Context-free_grammar">context-free grammar</a>, which consists of its <a href="https://en.wikipedia.org/wiki/Formation_rule">formation rules</a>. </p>
+<p>The field of <strong>formal language theory</strong> studies primarily the purely <a href="https://en.wikipedia.org/wiki/Syntax">syntactical</a>（语法） aspects of such languages—that is, their <strong>internal structural patterns</strong>. <strong>Formal language theory</strong> sprang out of linguistics, as a way of understanding the syntactic regularities（规律） of <a href="https://en.wikipedia.org/wiki/Natural_language">natural languages</a>. </p>
+<p>In computer science, <strong>formal languages</strong> are used among others as the basis for defining the <strong>grammar</strong> of <a href="https://en.wikipedia.org/wiki/Programming_language">programming languages</a> and formalized versions of subsets of natural languages in which the words of the language represent concepts that are associated with particular meanings or <a href="https://en.wikipedia.org/wiki/Semantics">semantics</a>（语义）. </p>
+<p>In <a href="https://en.wikipedia.org/wiki/Computational_complexity_theory">computational complexity theory</a>, <a href="https://en.wikipedia.org/wiki/Decision_problem">decision problems</a> are typically defined as <strong>formal languages</strong>, and <a href="https://en.wikipedia.org/wiki/Complexity_class">complexity classes</a> are defined as the sets of the formal languages that can be <a href="https://en.wikipedia.org/wiki/Parser">parsed by machines</a> with limited computational power. </p>
+<p>In <a href="https://en.wikipedia.org/wiki/Logic">logic</a> and the <a href="https://en.wikipedia.org/wiki/Foundations_of_mathematics">foundations of mathematics</a>, formal languages are used to represent the syntax of <a href="https://en.wikipedia.org/wiki/Axiomatic_system">axiomatic systems</a>, and <a href="https://en.wikipedia.org/wiki/Formalism_(mathematics)">mathematical formalism</a> is the philosophy that all of mathematics can be reduced to the syntactic manipulation of formal languages in this way. </p>
+<blockquote>
+<p>NOTE: 上面这段话的第一句话揭示了<strong>formal language</strong>和 <a href="https://en.wikipedia.org/wiki/Logic">logic</a> 之间的关系。</p>
+<p>NOTE: 最后一段话的意思是：<a href="https://en.wikipedia.org/wiki/Formalism_(mathematics)">mathematical formalism</a>的思想是：所有的数学都可以通过这种方式简化为formal language的syntactic manipulation。浏览了一下这篇文章，发现<a href="https://en.wikipedia.org/wiki/Theory_of_computation">theory of computation</a>中的很多课题都源于这个思想，比如<a href="https://en.wikipedia.org/wiki/Turing_machine">Turing machine</a>。</p>
+</blockquote>
+<h2 id="words_over_an_alphabet">Words over an alphabet<a class="headerlink" href="#words_over_an_alphabet" title="Permanent link">#</a></h2>
+<p>An <strong>alphabet</strong>, in the context of formal languages, can be any <a href="https://en.wikipedia.org/wiki/Set_(mathematics)">set</a>, although it often makes sense to use an <a href="https://en.wikipedia.org/wiki/Alphabet">alphabet</a> in the usual sense of the word, or more generally a <a href="https://en.wikipedia.org/wiki/Character_set">character set</a> such as <a href="https://en.wikipedia.org/wiki/ASCII">ASCII</a> or <a href="https://en.wikipedia.org/wiki/Unicode">Unicode</a>. The elements of an alphabet are called its <strong>letters</strong>. An alphabet may contain an <a href="https://en.wikipedia.org/wiki/Countable_set">infinite</a> number of elements; however, most definitions in formal language theory specify alphabets with a finite number of elements, and most results apply only to them.</p>
+<p>A <strong>word</strong> over an alphabet can be any finite sequence (i.e., <a href="https://en.wikipedia.org/wiki/String_(computer_science)">string</a>) of letters. The set of all words over an alphabet Σ is usually denoted by Σ<em> (using the <a href="https://en.wikipedia.org/wiki/Kleene_star">Kleene star</a>). The length of a word is the number of letters it is composed of. For any alphabet, there is only one word of length 0, the </em>empty word*, which is often denoted by e, ε, λ or even Λ. By <a href="https://en.wikipedia.org/wiki/Concatenation">concatenation</a> one can combine two words to form a new word, whose length is the sum of the lengths of the original words. The result of concatenating a word with the empty word is the original word.</p>
+<p>In some applications, especially in <a href="https://en.wikipedia.org/wiki/Logic">logic</a>, the alphabet is also known as the <em>vocabulary</em> and words are known as <em>formulas</em> or <em>sentences</em>; this breaks the letter/word metaphor and replaces it by a word/sentence metaphor.</p>
+<blockquote>
+<p>NOTE: 在formal language理论中，<strong>alphabet</strong>、 <a href="https://en.wikipedia.org/wiki/Character_set">character set</a>  、vocabulary可以认为是同义词。</p>
+</blockquote>
+<h2 id="definition">Definition<a class="headerlink" href="#definition" title="Permanent link">#</a></h2>
+<p>A <strong>formal language</strong> <em>L</em> over an alphabet Σ is a <a href="https://en.wikipedia.org/wiki/Subset">subset</a> of Σ*, that is, a set of <a href="https://en.wikipedia.org/wiki/Formal_language#Words_over_an_alphabet">words</a> over that alphabet. Sometimes the sets of words are grouped into expressions, whereas rules and constraints may be formulated for the creation of 'well-formed expressions'.</p>
+<blockquote>
+<p>NOTE: 所谓的rules其实就是grammar。</p>
+</blockquote>
+<p>In computer science and mathematics, which do not usually deal with <a href="https://en.wikipedia.org/wiki/Natural_language">natural languages</a>, the adjective "formal" is often omitted as redundant.</p>
+<blockquote>
+<p>NOTE: 按照这个说法，programming language的更加严谨的说法是：programming formal language。</p>
+</blockquote>
+<p>While formal language theory usually concerns itself with formal languages that are described by some syntactical rules, the actual definition of the concept "formal language" is only as above: a (possibly infinite) set of finite-length strings composed from a given alphabet, no more and no less. In practice, there are many languages that can be described by <strong>rules</strong>, such as <a href="https://en.wikipedia.org/wiki/Regular_language">regular languages</a> or <a href="https://en.wikipedia.org/wiki/Context-free_language">context-free languages</a>. The notion of a <a href="https://en.wikipedia.org/wiki/Formal_grammar">formal grammar</a> may be closer to the intuitive concept of a "language," one described by syntactic rules. By an abuse of the definition, a particular formal language is often thought of as being equipped with a <strong>formal grammar</strong> that describes it.</p>
+<blockquote>
+<p>NOTE: 上面这段话所强调的是formal language的准确定义中是不包含rules（grammar）的。但是实际中，要想准确的定义一门语言是离不开rules的。以programming language为例的话，它需要词法和语法才能够正确地描述该语言。</p>
+</blockquote>
+<h3 id="constructions">Constructions<a class="headerlink" href="#constructions" title="Permanent link">#</a></h3>
+<p>For finite languages, one can explicitly <strong>enumerate</strong> all well-formed words. For example, we can describe a language <em>L</em> as just <em>L</em> = {a, b, ab, cba}. The <a href="https://en.wikipedia.org/wiki/Degeneracy_(mathematics)">degenerate</a> case of this construction is the <strong>empty language</strong>, which contains no words at all (<em>L</em> = <a href="https://en.wikipedia.org/wiki/∅">∅</a>).</p>
+<p>However, even over a finite (non-empty) alphabet such as Σ = {a, b} there are an infinite number of finite-length words that can potentially be expressed: "a", "abb", "ababba", "aaababbbbaab", .... Therefore, formal languages are typically infinite, and describing an infinite formal language is not as simple as writing <em>L</em> = {a, b, ab, cba}. Here are some examples of formal languages:</p>
+<ul>
+<li><em>L</em> = Σ<em>, the set of </em>all* words over Σ;</li>
+<li>$L = {a}^<em> = {a^n}$, where </em>n<em> ranges over the natural numbers and "$a^n$" means "a" repeated </em>n* times (this is the set of words consisting only of the symbol "a");</li>
+<li>the set of syntactically correct programs in a given programming language (the syntax of which is usually defined by a <a href="https://en.wikipedia.org/wiki/Context-free_grammar">context-free grammar</a>);</li>
+<li>the set of inputs upon which a certain <a href="https://en.wikipedia.org/wiki/Turing_machine">Turing machine</a> halts; or</li>
+<li>the set of maximal strings of <a href="https://en.wikipedia.org/wiki/Alphanumeric">alphanumeric</a> <a href="https://en.wikipedia.org/wiki/ASCII">ASCII</a> characters on this line, i.e.,
+  the set {the, set, of, maximal, strings, alphanumeric, ASCII, characters, on, this, line, i, e}.</li>
+</ul>
+<h2 id="language-specification_formalisms">Language-specification formalisms<a class="headerlink" href="#language-specification_formalisms" title="Permanent link">#</a></h2>
+<p>Formal languages are used as tools in multiple disciplines. However, <strong>formal language theory</strong> rarely concerns itself with particular languages (except as examples), but is mainly concerned with the study of various types of <strong>formalisms</strong> to describe languages. For instance, a language can be given as</p>
+<ul>
+<li>those strings generated by some <a href="https://en.wikipedia.org/wiki/Formal_grammar">formal grammar</a>;</li>
+<li>those strings described or matched by a particular <a href="https://en.wikipedia.org/wiki/Regular_expression">regular expression</a>;</li>
+<li>those strings accepted by some <a href="https://en.wikipedia.org/wiki/Automata_theory">automaton</a>, such as a <a href="https://en.wikipedia.org/wiki/Turing_machine">Turing machine</a> or <a href="https://en.wikipedia.org/wiki/Finite-state_machine">finite-state automaton</a>;</li>
+<li>those strings for which some <a href="https://en.wikipedia.org/wiki/Decision_problem">decision procedure</a> (an <a href="https://en.wikipedia.org/wiki/Algorithm">algorithm</a> that asks a sequence of related YES/NO questions) produces the answer YES.</li>
+</ul>
+<p>Typical questions asked about such <strong>formalisms</strong> include:</p>
+<ul>
+<li>What is their expressive power? (Can formalism <em>X</em> describe every language that formalism <em>Y</em> can describe? Can it describe other languages?)</li>
+<li>What is their recognizability? (How difficult is it to decide whether a given word belongs to a language described by formalism <em>X</em>?)</li>
+<li>What is their comparability? (How difficult is it to decide whether two languages, one described in formalism <em>X</em> and one in formalism <em>Y</em>, or in <em>X</em> again, are actually the same language?).</li>
+</ul>
+<p>Surprisingly often, the answer to these decision problems is "it cannot be done at all", or "it is extremely expensive" (with a characterization of how expensive). Therefore, formal language theory is a major application area of <a href="https://en.wikipedia.org/wiki/Computability_theory_(computer_science)">computability theory</a> and <a href="https://en.wikipedia.org/wiki/Computational_complexity_theory">complexity theory</a>. Formal languages may be classified in the <a href="https://en.wikipedia.org/wiki/Chomsky_hierarchy">Chomsky hierarchy</a> based on the expressive power of their <strong>generative grammar</strong> as well as the complexity of their recognizing <a href="https://en.wikipedia.org/wiki/Automata_theory">automaton</a>. <a href="https://en.wikipedia.org/wiki/Context-free_grammar">Context-free grammars</a> and <a href="https://en.wikipedia.org/wiki/Regular_grammar">regular grammars</a> provide a good compromise between expressivity and ease of <a href="https://en.wikipedia.org/wiki/Parsing">parsing</a>, and are widely used in practical applications.</p>
+<h2 id="operations_on_languages">Operations on languages<a class="headerlink" href="#operations_on_languages" title="Permanent link">#</a></h2>
+<p>Certain operations on languages are common. This includes the standard set operations, such as union, intersection, and complement. Another class of operation is the element-wise application of string operations.</p>
+<p>Examples: suppose $ L_{1} $ and $ L_{2} $ are languages over some common alphabet $ \Sigma $.</p>
+<ul>
+<li>The <em><a href="https://en.wikipedia.org/wiki/Concatenation">concatenation</a></em> $ L_{1}\cdot L_{2} $ consists of all strings of the form $ vw $ where $ v $ is a string from $ L_{1} $ and $ w $ is a string from $ L_{2} $.</li>
+<li>The <em>intersection</em> $ L_{1}\cap L_{2} $ of $ L_{1} $ and $ L_{2} $ consists of all strings that are contained in both languages</li>
+<li>The <em>complement</em> $ \neg L_{1} $ of $ L_{1} $ with respect to $ \Sigma $ consists of all strings over $ \Sigma $ that are not in $ L_{1} $.</li>
+<li>The <a href="https://en.wikipedia.org/wiki/Kleene_star">Kleene star</a>: the language consisting of all words that are concatenations of zero or more words in the original language;</li>
+<li>Reversal:</li>
+<li>Let <em>ε</em> be the empty word, then $ \varepsilon ^{R}=\varepsilon $, and</li>
+<li>for each non-empty word $ w=\sigma <em>{1}\cdots \sigma </em>{n} $ (where $ \sigma <em>{1},\ldots ,\sigma </em>{n} $are elements of some alphabet), let $ w^{R}=\sigma <em>{n}\cdots \sigma </em>{1} $,</li>
+<li>then for a formal language $ L $, $ L^{R}={w^{R}\mid w\in L} $.</li>
+<li><a href="https://en.wikipedia.org/wiki/String_homomorphism">String homomorphism</a></li>
+</ul>
+<p>Such <a href="https://en.wikipedia.org/wiki/String_operations">string operations</a> are used to investigate <a href="https://en.wikipedia.org/wiki/Closure_(mathematics)">closure properties</a> of classes of languages. A class of languages is closed under a particular operation when the operation, applied to languages in the class, always produces a language in the same class again. For instance, the <a href="https://en.wikipedia.org/wiki/Context-free_language">context-free languages</a> are known to be closed under union, concatenation, and intersection with <a href="https://en.wikipedia.org/wiki/Regular_language">regular languages</a>, but not closed under intersection or complement. The theory of <a href="https://en.wikipedia.org/wiki/Cone_(formal_languages)">trios</a> and <a href="https://en.wikipedia.org/wiki/Abstract_family_of_languages">abstract families of languages</a> studies the most common closure properties of language families in their own right.</p>
+<h2 id="applications">Applications<a class="headerlink" href="#applications" title="Permanent link">#</a></h2>
+<h3 id="programming_languages">Programming languages<a class="headerlink" href="#programming_languages" title="Permanent link">#</a></h3>
+<p><em>Main articles:</em> <a href="https://en.wikipedia.org/wiki/Compiler_compiler">Compiler compiler</a> and <a href="https://en.wikipedia.org/wiki/Syntax_(programming_languages)">Syntax (programming languages)</a></p>
+<h3 id="formal_theories_systems_and_proofs">Formal theories, systems, and proofs<a class="headerlink" href="#formal_theories_systems_and_proofs" title="Permanent link">#</a></h3>
+<p><em>Main articles:</em> <a href="https://en.wikipedia.org/wiki/Theory_(mathematical_logic)">Theory (mathematical logic)</a> and <a href="https://en.wikipedia.org/wiki/Formal_system">Formal system</a></p>
+<p>In <a href="https://en.wikipedia.org/wiki/Mathematical_logic">mathematical logic</a>, a <em>formal theory</em> is a set of <a href="https://en.wikipedia.org/wiki/Sentence_(mathematical_logic)">sentences</a> expressed in a <strong>formal language</strong>.</p>
+<p>A <em>formal system</em> (also called a <em>logical calculus</em>, or a <em>logical system</em>) consists of a <strong>formal language</strong> together with a <a href="https://en.wikipedia.org/wiki/Deductive_apparatus">deductive apparatus</a> (also called a <em>deductive system</em>). The deductive apparatus may consist of a set of <a href="https://en.wikipedia.org/wiki/Transformation_rule">transformation rules</a>, which may be interpreted as valid rules of inference, or a set of <a href="https://en.wikipedia.org/wiki/Axiom">axioms</a>, or have both. A formal system is used to <a href="https://en.wikipedia.org/wiki/Proof_theory">derive</a> one expression from one or more other expressions. Although a formal language can be identified with its formulas, a formal system cannot be likewise identified by its theorems. Two formal systems $ {\mathcal {FS}} $ and $ {\mathcal {FS'}} $ may have all the same theorems and yet differ in some significant proof-theoretic way (a formula A may be a syntactic consequence of a formula B in one but not another for instance).</p>
+<p>A <em>formal proof</em> or <em>derivation</em> is a finite sequence of well-formed formulas (which may be interpreted as sentences, or <a href="https://en.wikipedia.org/wiki/Proposition">propositions</a>) each of which is an axiom or follows from the preceding formulas in the sequence by a <a href="https://en.wikipedia.org/wiki/Rule_of_inference">rule of inference</a>. The last sentence in the sequence is a theorem of a formal system. Formal proofs are useful because their theorems can be interpreted as true propositions.</p>
+<h4 id="interpretations_and_models">Interpretations and models<a class="headerlink" href="#interpretations_and_models" title="Permanent link">#</a></h4>
+<p><em>Main articles:</em> <a href="https://en.wikipedia.org/wiki/Formal_semantics_(logic)">Formal semantics (logic)</a>, <a href="https://en.wikipedia.org/wiki/Interpretation_(logic)">Interpretation (logic)</a> and <a href="https://en.wikipedia.org/wiki/Model_theory">Model theory</a></p>
+<p>Formal languages are entirely syntactic in nature but may be given <a href="https://en.wikipedia.org/wiki/Semantics">semantics</a> that give meaning to the elements of the language. For instance, in mathematical <a href="https://en.wikipedia.org/wiki/Logic">logic</a>, the set of possible formulas of a particular logic is a formal language, and an <a href="https://en.wikipedia.org/wiki/Interpretation_(logic)">interpretation</a> assigns a meaning to each of the formulas—usually, a <a href="https://en.wikipedia.org/wiki/Truth_value">truth value</a>.</p>
+<p>The study of interpretations of formal languages is called <a href="https://en.wikipedia.org/wiki/Formal_semantics_(logic)">formal semantics</a>. In mathematical logic, this is often done in terms of <a href="https://en.wikipedia.org/wiki/Model_theory">model theory</a>. In model theory, the terms that occur in a formula are interpreted as objects within <a href="https://en.wikipedia.org/wiki/Structure_(mathematical_logic)">mathematical structures</a>, and fixed compositional interpretation rules determine how the truth value of the formula can be derived from the interpretation of its terms; a <em>model</em> for a formula is an interpretation of terms such that the formula becomes true.</p>
+<blockquote>
+<p><img alt="img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Formal_languages.svg/300px-Formal_languages.svg.png" /></p>
+<p>This diagram shows the <a href="https://en.wikipedia.org/wiki/Syntax_(logic)">syntactic</a> divisions within a <a href="https://en.wikipedia.org/wiki/Formal_system">formal system</a>. <a href="https://en.wikipedia.org/wiki/String_(computer_science)">Strings of symbols</a> may be broadly divided into nonsense and <a href="https://en.wikipedia.org/wiki/Well-formed_formula">well-formed formulas</a>. The set of well-formed formulas is divided into <a href="https://en.wikipedia.org/wiki/Theorem">theorems</a> and non-theorems.</p>
+</blockquote>
+<h1 id="_1">梳理<a class="headerlink" href="#_1" title="Permanent link">#</a></h1>
+<h2 id="formal_system_and_formal_language"><a href="https://en.wikipedia.org/wiki/Formal_system">Formal system</a> and formal language<a class="headerlink" href="#formal_system_and_formal_language" title="Permanent link">#</a></h2>
+<p>下面这段摘自<a href="https://en.wikipedia.org/wiki/Formation_rule#Formal_systems">Formal systems</a></p>
+<blockquote>
+<p>A <em>formal system</em> (also called a <em>logical calculus</em>, or a <em>logical system</em>) consists of a formal language together with a <a href="https://en.wikipedia.org/wiki/Deductive_apparatus">deductive apparatus</a> (also called a <em>deductive system</em>). The deductive apparatus may consist of a set of <a href="https://en.wikipedia.org/wiki/Transformation_rule">transformation rules</a> (also called <em>inference rules</em>) or a set of <a href="https://en.wikipedia.org/wiki/Axiom">axioms</a>, or have both. A formal system is used to <a href="https://en.wikipedia.org/wiki/Proof_theory">derive</a>(推导) one expression from one or more other expressions. Propositional and predicate calculi are examples of formal systems.</p>
+</blockquote>
+<p><a href="https://en.wikipedia.org/wiki/Formal_grammar">Formal grammars</a>相当于 <a href="https://en.wikipedia.org/wiki/Deductive_apparatus">deductive apparatus</a>。</p>
+<h2 id="mathematical_logicformal_grammars">从<a href="https://en.wikipedia.org/wiki/Mathematical_logic">Mathematical logic</a>的角度来看<a href="https://en.wikipedia.org/wiki/Formal_grammar">Formal grammars</a><a class="headerlink" href="#mathematical_logicformal_grammars" title="Permanent link">#</a></h2>
+<p>如果从<a href="https://en.wikipedia.org/wiki/Mathematical_logic">Mathematical logic</a>的逻辑推导的角度来看待<a href="https://en.wikipedia.org/wiki/Formal_grammar">Formal grammars</a>的话，<a href="https://en.wikipedia.org/wiki/Formal_grammar">formal grammars</a>的很多内容就变得非常容易理解：</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Formal_grammar">formal grammars</a>本质上就是<a href="https://en.wikipedia.org/wiki/Formation_rule">推导规则</a></li>
+</ul>
+<p>下面总结了formal grammar中的一些概念和mathematical logic中的一些概念之间的对应关系，如下：</p>
+<table>
+<thead>
+<tr>
+<th><a href="https://en.wikipedia.org/wiki/Formal_grammar">Formal grammar</a></th>
+<th><a href="https://en.wikipedia.org/wiki/Mathematical_logic">Mathematical logic</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://en.wikipedia.org/wiki/Production_(computer_science)">Production rule</a></td>
+<td><a href="https://en.wikipedia.org/wiki/Formation_rule">Formation rule</a>、<a href="https://en.wikipedia.org/wiki/Rule_of_inference">Rule of inference</a>、<a href="https://en.wikipedia.org/wiki/Rewriting">Rewriting</a></td>
+</tr>
+</tbody>
+</table>
+<p>上述对应关系的含义是：如果从<a href="https://en.wikipedia.org/wiki/Mathematical_logic">Mathematical logic</a>来看待<a href="https://en.wikipedia.org/wiki/Production_(computer_science)">Production rule</a>的话，它就相当于是<a href="https://en.wikipedia.org/wiki/Formation_rule">Formation rule</a>、<a href="https://en.wikipedia.org/wiki/Rule_of_inference">Rule of inference</a>、<a href="https://en.wikipedia.org/wiki/Rewriting">Rewriting</a>。</p>
+<p>按照公式进行推导从另外一个角度来看其实是重写，不断地进行替换，感觉数理逻辑本质上就是这个东西。从这个角度来看，parsing的过程其实就是不断的推导的过程，不断的重写的过程。由于可能的推导格式是非常多的，所以需要不断地进行尝试，这个过程其实就是<a href="https://en.wikipedia.org/wiki/Search_algorithm">search</a>、<a href="https://en.wikipedia.org/wiki/Backtracking">backtracking</a>，所以从这个角度来看，<a href="https://en.wikipedia.org/wiki/Parsing">parsing</a>所做的工作其实就是推导加search。自顶向下其实所对应的是正向推导，自底向上其实所对应的就是方向推导。</p>
+<blockquote>
+<p>NOTE: 在龙书的4.2.3 Derivations有这样的描述：</p>
+<p>The construction of a parse tree can be made precise by taking a <strong>derivational view</strong>, in which productions are treated as <strong>rewriting rules</strong>. Beginning with the start symbol, each rewriting step replaces a nonterminal by the body of one of its productions. This derivational view corresponds to the top-down construction of a parse tree, but the precision afforded by derivations will be especially helpful when bottom-up parsing is discussed. As we shall see, bottom-up parsing is related to a class of derivations known as "rightmost" derivations, in which the rightmost nonterminal is rewritten at each step.</p>
+</blockquote>
+<p>上面的这些内容给我的启发是：不同的学科对同一事物的命名可能不同，但是它们本质上所描述的是同一事物。</p>
+<p>其实上述所有这些讨论，本质上都是属于<a href="https://en.wikipedia.org/wiki/Logic">Logic</a>学的范轴，推导（<a href="https://en.wikipedia.org/wiki/Inference">inference</a>）就属于逻辑学的范轴。</p>
+<p><a href="https://en.wikipedia.org/wiki/Set_theory">Set theory</a>是数学的基石所在，很多其他数学学科都是建立在它的基础之上。</p>
+<h2 id="automata_theoryformal_language"><a href="https://en.wikipedia.org/wiki/Automata_theory">Automata theory</a>和<a href="https://en.wikipedia.org/wiki/Formal_language">Formal language</a><a class="headerlink" href="#automata_theoryformal_language" title="Permanent link">#</a></h2>
+<p>在上述<a href="#Language-specification formalisms">Language-specification formalisms</a>章节就对<a href="https://en.wikipedia.org/wiki/Automata_theory">Automata theory</a>和<a href="https://en.wikipedia.org/wiki/Formal_language">Formal language</a>之间的关系进行了分析。</p>
+<p><a href="https://en.wikipedia.org/wiki/Chomsky_hierarchy">Chomsky hierarchy</a>将<a href="https://en.wikipedia.org/wiki/Automata_theory">Automata theory</a>和<a href="https://en.wikipedia.org/wiki/Formal_language">formal language</a>进行了关联和对应。需要注意的是，<a href="https://en.wikipedia.org/wiki/Automata_theory">Automata theory</a>在其他领域有着非常广泛的应用。</p>
+<h2 id="turing_machine_and_mathematical_logic"><a href="https://en.wikipedia.org/wiki/Turing_machine">Turing machine</a> and <a href="https://en.wikipedia.org/wiki/Mathematical_logic">Mathematical logic</a><a class="headerlink" href="#turing_machine_and_mathematical_logic" title="Permanent link">#</a></h2>
+<p>在第一段的NOTE中就对两者进行了分析。</p>
+<p>除此之外，下面文章也是值得阅读的：</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Automated_theorem_proving">Automated theorem proving</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Formal_methods">Formal methods</a> </li>
+</ul>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../wikipedia-Language/" title="Language" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Language
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../wikipedia-Formal-system/" title="Formal-system" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Formal-system
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.808e90bb.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>

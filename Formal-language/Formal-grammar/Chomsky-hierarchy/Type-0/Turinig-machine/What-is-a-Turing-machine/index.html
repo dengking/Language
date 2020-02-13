@@ -1,0 +1,1165 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Project documentation with Markdown.">
+      
+      
+        <link rel="canonical" href="https://dengking.github.io/automata-and-formal-language/Formal-language/Formal-grammar/Chomsky-hierarchy/Type-0/Turinig-machine/What-is-a-Turing-machine/">
+      
+      
+        <meta name="author" content="DengKing">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>What-is-a-Turing-machine - automata-and-formal-language</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/application.1b62728e.css">
+      
+      
+    
+    
+      <script src="../../../../../../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../../../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../../../../../css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#what_is_a_turing_machine" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://dengking.github.io/automata-and-formal-language" title="automata-and-formal-language" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              automata-and-formal-language
+            </span>
+            <span class="md-header-nav__topic">
+              
+                What-is-a-Turing-machine
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/dengking/automata-and-formal-language" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://dengking.github.io/automata-and-formal-language" title="automata-and-formal-language" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    automata-and-formal-language
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/dengking/automata-and-formal-language" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../Primer/" title="Primer" class="md-nav__link">
+      Primer
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Formal-language
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Formal-language
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../Description-and-language/" title="Description-and-language" class="md-nav__link">
+      Description-and-language
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../Formal-and-formal-langugae/" title="Formal-and-formal-langugae" class="md-nav__link">
+      Formal-and-formal-langugae
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../wikipedia-Language/" title="Language" class="md-nav__link">
+      Language
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../wikipedia-Formal-language/" title="Formal-language" class="md-nav__link">
+      Formal-language
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../wikipedia-Formal-system/" title="Formal-system" class="md-nav__link">
+      Formal-system
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7" type="checkbox" id="nav-3-7" checked>
+    
+    <label class="md-nav__link" for="nav-3-7">
+      Formal-grammar
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-7">
+        Formal-grammar
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../wikipedia-Formal-grammar/" title="Formal-grammar" class="md-nav__link">
+      Formal-grammar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../wikipedia-Production(computer-science)/" title="Production" class="md-nav__link">
+      Production
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7-3" type="checkbox" id="nav-3-7-3" checked>
+    
+    <label class="md-nav__link" for="nav-3-7-3">
+      Chomsky-hierarchy
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-7-3">
+        Chomsky-hierarchy
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../wikipedia-Chomsky-hierarchy/" title="Chomsky-hierarchy" class="md-nav__link">
+      Chomsky-hierarchy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7-3-2" type="checkbox" id="nav-3-7-3-2" checked>
+    
+    <label class="md-nav__link" for="nav-3-7-3-2">
+      Type-0
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-3-7-3-2">
+        Type-0
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wikipedia-Recursively-enumerable-language/" title="Recursively-enumerable-language" class="md-nav__link">
+      Recursively-enumerable-language
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7-3-2-2" type="checkbox" id="nav-3-7-3-2-2" checked>
+    
+    <label class="md-nav__link" for="nav-3-7-3-2-2">
+      Turinig-machine
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-3-7-3-2-2">
+        Turinig-machine
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        What-is-a-Turing-machine
+      </label>
+    
+    <a href="./" title="What-is-a-Turing-machine" class="md-nav__link md-nav__link--active">
+      What-is-a-Turing-machine
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a_simple_demonstration" class="md-nav__link">
+    A simple demonstration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a_simple_program" class="md-nav__link">
+    A simple program
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the_machine_state" class="md-nav__link">
+    The machine state
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finite_state_machines" class="md-nav__link">
+    Finite state machines
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Turing-machine/" title="Turing-machine" class="md-nav__link">
+      Turing-machine
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../wikipedia-Turing-machine/" title="wikipedia-Turing-machine" class="md-nav__link">
+      wikipedia-Turing-machine
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7-3-3" type="checkbox" id="nav-3-7-3-3">
+    
+    <label class="md-nav__link" for="nav-3-7-3-3">
+      Type-1
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-3-7-3-3">
+        Type-1
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Type-1/wikipedia-Context-sensitive-language/" title="Context-sensitive-language" class="md-nav__link">
+      Context-sensitive-language
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7-3-4" type="checkbox" id="nav-3-7-3-4">
+    
+    <label class="md-nav__link" for="nav-3-7-3-4">
+      Type-2
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-3-7-3-4">
+        Type-2
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Type-2/wikipedia-Context-free-language/" title="Context-free-language" class="md-nav__link">
+      Context-free-language
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Type-2/Automaton/" title="Automaton" class="md-nav__link">
+      Automaton
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7-3-5" type="checkbox" id="nav-3-7-3-5">
+    
+    <label class="md-nav__link" for="nav-3-7-3-5">
+      Type-3
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-3-7-3-5">
+        Type-3
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Type-3/wikipedia-Regular-language/" title="Regular-language" class="md-nav__link">
+      Regular-language
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Type-3/Automaton/" title="Automaton" class="md-nav__link">
+      Automaton
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7-3-5-3" type="checkbox" id="nav-3-7-3-5-3">
+    
+    <label class="md-nav__link" for="nav-3-7-3-5-3">
+      Regular-expression
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-3-7-3-5-3">
+        Regular-expression
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Type-3/Regular-expression/wikipedia-Regular-expression/" title="Regular-expression" class="md-nav__link">
+      Regular-expression
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Type-3/Regular-expression/wikipedia-Thompson's-construction/" title="Thompson's-construction" class="md-nav__link">
+      Thompson's-construction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Type-3/Regular-expression/Regex-Engine/" title="Regex-Engine" class="md-nav__link">
+      Regex-Engine
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Theory-of-computation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Theory-of-computation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../Theory-of-computation/" title="index" class="md-nav__link">
+      index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../Theory-of-computation/wikipedia-Theory-of-computation.md" title="Theory-of-computation" class="md-nav__link">
+      Theory-of-computation
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a_simple_demonstration" class="md-nav__link">
+    A simple demonstration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a_simple_program" class="md-nav__link">
+    A simple program
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the_machine_state" class="md-nav__link">
+    The machine state
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finite_state_machines" class="md-nav__link">
+    Finite state machines
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <div class="toc">
+<ul>
+<li><a href="#what_is_a_turing_machine">What is a Turing machine?</a><ul>
+<li><a href="#a_simple_demonstration">A simple demonstration</a></li>
+<li><a href="#a_simple_program">A simple program</a></li>
+<li><a href="#the_machine_state">The machine state</a></li>
+<li><a href="#finite_state_machines">Finite state machines</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h1 id="what_is_a_turing_machine"><a href="https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/turing-machine/one.html">What is a Turing machine?</a><a class="headerlink" href="#what_is_a_turing_machine" title="Permanent link">#</a></h1>
+<p>A Turing machine is a hypothetical machine thought of by the mathematician Alan Turing in 1936. Despite its simplicity, the machine can simulate ANY computer algorithm, no matter how complicated it is!</p>
+<p><img alt="example Turing machine" src="https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/turing-machine/example_turing_tape.jpg" /></p>
+<p>Above is a very simple representation of a <strong>Turing machine</strong>. It consists of an infinitely-long tape which acts like the memory in a typical computer, or any other form of data storage. The squares on the tape are usually blank at the start and can be written with symbols. In this case, the machine can only process the symbols 0 and 1 and " " (blank), and is thus said to be a <strong>3-symbol Turing machine</strong>.</p>
+<p>At any one time, the machine has a <strong>head</strong> which is positioned over one of the squares on the tape. With this <strong>head</strong>, the machine can perform three very basic operations:</p>
+<ol>
+<li>Read the symbol on the square under the head(<strong>read</strong>).</li>
+<li>Edit the symbol by writing a new symbol or erasing it(<strong>write</strong>).</li>
+<li>Move the tape left of right by one square so that the machine can read and edit the symbol on a neighbouring square(<strong>move</strong>).</li>
+</ol>
+<blockquote>
+<p>NOTE: 在任何时刻，head只能够置于tape的众多square中的一个square之上</p>
+</blockquote>
+<h2 id="a_simple_demonstration">A simple demonstration<a class="headerlink" href="#a_simple_demonstration" title="Permanent link">#</a></h2>
+<p>As a trivial example to demonstrate these operations, let's try printing the symbols "<code>1 1 0</code>" on an initially blank tape:</p>
+<p><img alt="initially blank tape" src="https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/turing-machine/demo_one.jpg" /></p>
+<p>First, we write a 1 on the square under the head:</p>
+<p><img alt="write 1 on the square" src="https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/turing-machine/demo_two.jpg" /></p>
+<p>Next, we move the tape left by one square:</p>
+<p><img alt="move tape left" src="https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/turing-machine/demo_three.jpg" /></p>
+<p>Now, write a 1 on the new square under the head:</p>
+<p><img alt="write 1 on new square" src="https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/turing-machine/demo_four.jpg" /></p>
+<p>We then move the tape left by one square again:</p>
+<p><img alt="move tape left again" src="https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/turing-machine/demo_five.jpg" /></p>
+<p>Finally, write a 0 and that's it!</p>
+<p><img alt="write a 0 on new square" src="https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/turing-machine/demo_six.jpg" /></p>
+<h2 id="a_simple_program">A simple program<a class="headerlink" href="#a_simple_program" title="Permanent link">#</a></h2>
+<p>With the symbols "<code>1 1 0</code>" printed on the tape, let's attempt to convert the <code>1</code>s to <code>0</code>s and vice versa. This is called <strong>bit inversion</strong>, since <code>1</code>s and <code>0</code>s are bits in binary. This can be done by passing the following <strong>instructions</strong> to the <strong>Turing machine</strong>, utilising the machine's reading capabilities to decide its subsequent operations on its own. These instructions make up a simple program.</p>
+<table>
+<thead>
+<tr>
+<th>Symbol read</th>
+<th>Write instruction</th>
+<th>Move instruction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Blank</td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr>
+<td>0</td>
+<td>Write 1</td>
+<td>Move tape to the right</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Write 0</td>
+<td>Move tape to the right</td>
+</tr>
+</tbody>
+</table>
+<p>The machine will first read the symbol under the head, write a new symbol accordingly, then move the tape left or right as instructed, before repeating the <strong>read-write-move</strong> sequence again.</p>
+<p>Let's see what this program does to our tape from the previous end point of the instructions:</p>
+<p><img alt="img" src="https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/turing-machine/program_one.jpg" /></p>
+<p>The current symbol under the head is <code>0</code>, so we write a <code>1</code> and move the tape right by one square.</p>
+<p><img alt="img" src="https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/turing-machine/program_two.jpg" /></p>
+<p>The symbol being read is now <code>1,</code> so we write a <code>0</code> and move the tape right by one square:</p>
+<p><img alt="img" src="https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/turing-machine/program_three.jpg" /></p>
+<p>Similarly, the symbol read is a <code>1</code>, so we repeat the same instructions.</p>
+<p><img alt="img" src="https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/turing-machine/program_four.jpg" /></p>
+<p>Finally, a 'blank' symbol is read, so the machine does nothing apart from read the blank symbol continuously since we have instructed it to repeat the <strong>read-write-move</strong> sequence without stopping.</p>
+<p>In fact, the program is <strong>incomplete</strong>. How does the machine repeat the sequence endlessly, and how does the machine stop running the program? The program tells it to with the concept of a <strong>machine state</strong>.</p>
+<h2 id="the_machine_state">The machine state<a class="headerlink" href="#the_machine_state" title="Permanent link">#</a></h2>
+<p>To complete the program, the state changes during the execution of the program on the machine must be considered. The following changes, marked in <em>italics</em>, must be added to our table which can now be called a <strong>state table</strong>:</p>
+<table>
+<thead>
+<tr>
+<th><em>State</em></th>
+<th>Symbol read</th>
+<th>Write instruction</th>
+<th>Move instruction</th>
+<th><em>Next state</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>State 0</em></td>
+<td>Blank</td>
+<td>None</td>
+<td>None</td>
+<td><em>Stop state</em></td>
+</tr>
+<tr>
+<td></td>
+<td>0</td>
+<td>Write 1</td>
+<td>Move the tape to the right</td>
+<td><em>State 0</em></td>
+</tr>
+<tr>
+<td></td>
+<td>1</td>
+<td>Write 0</td>
+<td>Move the tape to the right</td>
+<td><em>State 0</em></td>
+</tr>
+</tbody>
+</table>
+<p>We allocate the previous set of instructions to a <strong>machine state</strong>, so that the machine will perform those instructions when it is in the specified state.</p>
+<p>After every instruction, we also specify a state for the machine to transition to. In the example, the machine is redirected back to its original state, State <code>0</code>, to repeat the <strong>read-write-move sequence</strong>, unless a blank symbol is read. When the machine reads a blank symbol, the machine is directed to a <strong>stop state</strong> and the program terminates.</p>
+<blockquote>
+<p>NOTE: machine state相当于label，transition to a machine state相当于<code>goto</code> label</p>
+</blockquote>
+<h2 id="finite_state_machines">Finite state machines<a class="headerlink" href="#finite_state_machines" title="Permanent link">#</a></h2>
+<p>Even though it seems silly to do so, let's now add an additional state to our program that reverts the already inverted bits "<code>1 1 0</code>" back from "<code>0 0 1</code>" to "<code>1 1 0</code>". Below is the updated table, with changes listed in <em>italics</em>. The Turing machine now acts like a <strong>finite state machine</strong> with two states—these are called three-symbol, two-state Turing machines.</p>
+<table>
+<thead>
+<tr>
+<th>State</th>
+<th>Symbol read</th>
+<th>Write instruction</th>
+<th>Move instruction</th>
+<th>Next state</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>State 0</td>
+<td>Blank</td>
+<td><em>Write blank</em></td>
+<td><em>Move the tape to the left</em></td>
+<td><em>State 1</em></td>
+</tr>
+<tr>
+<td></td>
+<td>0</td>
+<td>Write 1</td>
+<td>Move the tape to the right</td>
+<td>State 0</td>
+</tr>
+<tr>
+<td></td>
+<td>1</td>
+<td>Write 0</td>
+<td>Move the tape to the right</td>
+<td>State 0</td>
+</tr>
+<tr>
+<td>State 1</td>
+<td>Blank</td>
+<td>Write blank</td>
+<td>Move the tape to the right</td>
+<td>Stop state</td>
+</tr>
+<tr>
+<td></td>
+<td>0</td>
+<td>Write 1</td>
+<td>Move the tape to the left</td>
+<td>State 1</td>
+</tr>
+<tr>
+<td></td>
+<td>1</td>
+<td>Write 0</td>
+<td>Move the tape to the left</td>
+<td>State 1</td>
+</tr>
+</tbody>
+</table>
+<p>For the write instruction, "None" has been changed to "Write blank" for uniformity's sake (so that only the machine's symbols are referred to), and it should be noted that they are equivalent.</p>
+<p>Instead of a state table, the program can also be represented with a state diagram:</p>
+<p><img alt="finite state machine" src="https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/turing-machine/fsm0.jpg" /></p>
+<p>From where the program was previously, instead of doing nothing and stopping after the machine encounters a blank symbol, we instruct it to move the tape left before transitioning to State 1 where it reverses the bit inversion process.</p>
+<p><img alt="more Turing tape" src="https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/turing-machine/fsm1.jpg" /></p>
+<p>Next, we invert the bits again, this time moving the tape left instead of right.</p>
+<p><img alt="even more Turing tape" src="https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/turing-machine/fsm2.jpg" /></p>
+<p>Finally, a blank symbol is read, so we move the tape right to get back to where we started, and stop the program.</p>
+<p><img alt="end of Turing tape" src="https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/turing-machine/fsm3.jpg" /></p>
+<p>With the introduction of more states to our program, we can instruct the Turing machine to perform more complex functions and hence run any algorithm that a modern day computer can.</p>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../" title="Introduction" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Introduction
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../Turing-machine/" title="Turing-machine" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Turing-machine
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../../../assets/javascripts/application.808e90bb.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../../../../.."}})</script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1225 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Project documentation with Markdown.">
+      
+      
+        <link rel="canonical" href="https://dengking.github.io/automata-and-formal-language/Formal-language/Formal-grammar/Chomsky-hierarchy/wikipedia-Chomsky-hierarchy/">
+      
+      
+        <meta name="author" content="DengKing">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>Chomsky-hierarchy - automata-and-formal-language</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/application.1b62728e.css">
+      
+      
+    
+    
+      <script src="../../../../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../../../css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#chomsky_hierarchy" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://dengking.github.io/automata-and-formal-language" title="automata-and-formal-language" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              automata-and-formal-language
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Chomsky-hierarchy
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/dengking/automata-and-formal-language" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://dengking.github.io/automata-and-formal-language" title="automata-and-formal-language" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    automata-and-formal-language
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/dengking/automata-and-formal-language" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Primer/" title="Primer" class="md-nav__link">
+      Primer
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Formal-language
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Formal-language
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Description-and-language/" title="Description-and-language" class="md-nav__link">
+      Description-and-language
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Formal-and-formal-langugae/" title="Formal-and-formal-langugae" class="md-nav__link">
+      Formal-and-formal-langugae
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../wikipedia-Language/" title="Language" class="md-nav__link">
+      Language
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../wikipedia-Formal-language/" title="Formal-language" class="md-nav__link">
+      Formal-language
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../wikipedia-Formal-system/" title="Formal-system" class="md-nav__link">
+      Formal-system
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7" type="checkbox" id="nav-3-7" checked>
+    
+    <label class="md-nav__link" for="nav-3-7">
+      Formal-grammar
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-7">
+        Formal-grammar
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wikipedia-Formal-grammar/" title="Formal-grammar" class="md-nav__link">
+      Formal-grammar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wikipedia-Production(computer-science)/" title="Production" class="md-nav__link">
+      Production
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7-3" type="checkbox" id="nav-3-7-3" checked>
+    
+    <label class="md-nav__link" for="nav-3-7-3">
+      Chomsky-hierarchy
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-7-3">
+        Chomsky-hierarchy
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Chomsky-hierarchy
+      </label>
+    
+    <a href="./" title="Chomsky-hierarchy" class="md-nav__link md-nav__link--active">
+      Chomsky-hierarchy
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the_hierarchy" class="md-nav__link">
+    The hierarchy
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type-0_grammars" class="md-nav__link">
+    Type-0 grammars
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type-1_grammars" class="md-nav__link">
+    Type-1 grammars
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type-2_grammars" class="md-nav__link">
+    Type-2 grammars
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type-3_grammars" class="md-nav__link">
+    Type-3 grammars
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7-3-2" type="checkbox" id="nav-3-7-3-2">
+    
+    <label class="md-nav__link" for="nav-3-7-3-2">
+      Type-0
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-3-7-3-2">
+        Type-0
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Type-0/wikipedia-Recursively-enumerable-language/" title="Recursively-enumerable-language" class="md-nav__link">
+      Recursively-enumerable-language
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7-3-2-2" type="checkbox" id="nav-3-7-3-2-2">
+    
+    <label class="md-nav__link" for="nav-3-7-3-2-2">
+      Turinig-machine
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-3-7-3-2-2">
+        Turinig-machine
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Type-0/Turinig-machine/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Type-0/Turinig-machine/What-is-a-Turing-machine/" title="What-is-a-Turing-machine" class="md-nav__link">
+      What-is-a-Turing-machine
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Type-0/Turinig-machine/Turing-machine/" title="Turing-machine" class="md-nav__link">
+      Turing-machine
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Type-0/Turinig-machine/wikipedia-Turing-machine/" title="wikipedia-Turing-machine" class="md-nav__link">
+      wikipedia-Turing-machine
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7-3-3" type="checkbox" id="nav-3-7-3-3">
+    
+    <label class="md-nav__link" for="nav-3-7-3-3">
+      Type-1
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-3-7-3-3">
+        Type-1
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Type-1/wikipedia-Context-sensitive-language/" title="Context-sensitive-language" class="md-nav__link">
+      Context-sensitive-language
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7-3-4" type="checkbox" id="nav-3-7-3-4">
+    
+    <label class="md-nav__link" for="nav-3-7-3-4">
+      Type-2
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-3-7-3-4">
+        Type-2
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Type-2/wikipedia-Context-free-language/" title="Context-free-language" class="md-nav__link">
+      Context-free-language
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Type-2/Automaton/" title="Automaton" class="md-nav__link">
+      Automaton
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7-3-5" type="checkbox" id="nav-3-7-3-5">
+    
+    <label class="md-nav__link" for="nav-3-7-3-5">
+      Type-3
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-3-7-3-5">
+        Type-3
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Type-3/wikipedia-Regular-language/" title="Regular-language" class="md-nav__link">
+      Regular-language
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Type-3/Automaton/" title="Automaton" class="md-nav__link">
+      Automaton
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7-3-5-3" type="checkbox" id="nav-3-7-3-5-3">
+    
+    <label class="md-nav__link" for="nav-3-7-3-5-3">
+      Regular-expression
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-3-7-3-5-3">
+        Regular-expression
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Type-3/Regular-expression/wikipedia-Regular-expression/" title="Regular-expression" class="md-nav__link">
+      Regular-expression
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Type-3/Regular-expression/wikipedia-Thompson's-construction/" title="Thompson's-construction" class="md-nav__link">
+      Thompson's-construction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Type-3/Regular-expression/Regex-Engine/" title="Regex-Engine" class="md-nav__link">
+      Regex-Engine
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Theory-of-computation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Theory-of-computation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Theory-of-computation/" title="index" class="md-nav__link">
+      index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Theory-of-computation/wikipedia-Theory-of-computation.md" title="Theory-of-computation" class="md-nav__link">
+      Theory-of-computation
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the_hierarchy" class="md-nav__link">
+    The hierarchy
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type-0_grammars" class="md-nav__link">
+    Type-0 grammars
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type-1_grammars" class="md-nav__link">
+    Type-1 grammars
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type-2_grammars" class="md-nav__link">
+    Type-2 grammars
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type-3_grammars" class="md-nav__link">
+    Type-3 grammars
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <div class="toc">
+<ul>
+<li><a href="#chomsky_hierarchy">Chomsky hierarchy</a><ul>
+<li><a href="#the_hierarchy">The hierarchy</a><ul>
+<li><a href="#type-0_grammars">Type-0 grammars</a></li>
+<li><a href="#type-1_grammars">Type-1 grammars</a></li>
+<li><a href="#type-2_grammars">Type-2 grammars</a></li>
+<li><a href="#type-3_grammars">Type-3 grammars</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_1">对比分析</a><ul>
+<li><a href="#type-0_grammarsunrestricted_grammar_formal_definition">Type-0 grammars:Unrestricted grammar formal definition</a><ul>
+<li><a href="#_2">对比分析</a></li>
+</ul>
+</li>
+<li><a href="#type-1_grammarscontext-sensitive_grammar_formal_definition">Type-1 grammars:Context-sensitive grammar formal definition</a><ul>
+<li><a href="#_3">对比分析</a></li>
+</ul>
+</li>
+<li><a href="#type-2_grammarscontext-free_grammar_formal_definitions">Type-2 grammars:Context-free grammar formal definitions</a><ul>
+<li><a href="#production_rule_notation">Production rule notation</a></li>
+<li><a href="#rule_application">Rule application</a></li>
+<li><a href="#repetitive_rule_application">Repetitive rule application</a></li>
+<li><a href="#context-free_language">Context-free language</a></li>
+<li><a href="#_4">对比分析</a></li>
+</ul>
+</li>
+<li><a href="#type-3_grammarsregular_grammar_formal_definition">Type-3 grammars:Regular grammar formal definition</a><ul>
+<li><a href="#_5">对比分析</a></li>
+</ul>
+</li>
+<li><a href="#_6">总结</a></li>
+</ul>
+</li>
+<li><a href="#by_automaton">对比分析By automaton</a></li>
+</ul>
+</div>
+<h1 id="chomsky_hierarchy"><a href="https://en.wikipedia.org/wiki/Chomsky_hierarchy">Chomsky hierarchy</a><a class="headerlink" href="#chomsky_hierarchy" title="Permanent link">#</a></h1>
+<p>In the <a href="https://en.wikipedia.org/wiki/Formal_language">formal languages</a> of <a href="https://en.wikipedia.org/wiki/Computer_science">computer science</a> and <a href="https://en.wikipedia.org/wiki/Linguistics">linguistics</a>, the <strong>Chomsky hierarchy</strong> (occasionally referred to as the <strong>Chomsky–Schützenberger hierarchy</strong>) is a <a href="https://en.wikipedia.org/wiki/Containment_hierarchy">containment hierarchy</a> of classes of <a href="https://en.wikipedia.org/wiki/Formal_grammar">formal grammars</a>.</p>
+<p>This hierarchy of grammars was described by <a href="https://en.wikipedia.org/wiki/Noam_Chomsky">Noam Chomsky</a> in 1956. It is also named after <a href="https://en.wikipedia.org/wiki/Marcel-Paul_Schützenberger">Marcel-Paul Schützenberger</a>, who played a crucial role in the development of the theory of <a href="https://en.wikipedia.org/wiki/Formal_language">formal languages</a>.</p>
+<h2 id="the_hierarchy">The hierarchy<a class="headerlink" href="#the_hierarchy" title="Permanent link">#</a></h2>
+<p>The following table summarizes each of Chomsky's four types of grammars, the class of language it generates, the type of automaton that recognizes it, and the form its rules must have. </p>
+<table>
+<thead>
+<tr>
+<th align="center">Grammar</th>
+<th align="center">Languages</th>
+<th align="center">Automaton</th>
+<th align="center">Production rules (constraints)*</th>
+<th align="center">Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Type-0</td>
+<td align="center"><a href="https://en.wikipedia.org/wiki/Recursively_enumerable_language">Recursively enumerable</a></td>
+<td align="center"><a href="https://en.wikipedia.org/wiki/Turing_machine">Turing machine</a></td>
+<td align="center">$ \alpha A\beta \rightarrow \delta $ (no constraints)</td>
+<td align="center">$ L={w</td>
+</tr>
+<tr>
+<td align="center">Type-1</td>
+<td align="center"><a href="https://en.wikipedia.org/wiki/Context-sensitive_grammar">Context-sensitive</a></td>
+<td align="center"><a href="https://en.wikipedia.org/wiki/Linear_bounded_automaton">Linear-bounded non-deterministic Turing machine</a></td>
+<td align="center">$ \alpha A\beta \rightarrow \alpha \gamma \beta $</td>
+<td align="center">$ L={a^{n}b^{n}c^{n}</td>
+</tr>
+<tr>
+<td align="center">Type-2</td>
+<td align="center"><a href="https://en.wikipedia.org/wiki/Context-free_grammar">Context-free</a></td>
+<td align="center">Non-deterministic <a href="https://en.wikipedia.org/wiki/Pushdown_automaton">pushdown automaton</a></td>
+<td align="center">$ A\rightarrow \alpha $</td>
+<td align="center">$ L={a^{n}b^{n}</td>
+</tr>
+<tr>
+<td align="center">Type-3</td>
+<td align="center"><a href="https://en.wikipedia.org/wiki/Regular_grammar">Regular</a></td>
+<td align="center"><a href="https://en.wikipedia.org/wiki/Finite_state_automaton">Finite state automaton</a></td>
+<td align="center">$ A\rightarrow {\text{a}} $ and $ A\rightarrow {\text{a}}B $</td>
+<td align="center">$ L={a^{n}</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Meaning of symbols: </p>
+<ul>
+<li>$ {\text{a}} $ = terminal</li>
+<li>$ A $, $ B $ = non-terminal</li>
+<li>$ \alpha $, $ \beta $, $ \gamma $, $ \delta $ = string of terminals and/or non-terminals<ul>
+<li>$ \alpha $, $ \beta $, $ \delta $ = maybe empty </li>
+<li>$ \gamma $ = never empty </li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p><a href="https://en.wikipedia.org/wiki/File:Chomsky-hierarchy.svg"><img alt="The Chomsky hierarchy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Chomsky-hierarchy.svg/200px-Chomsky-hierarchy.svg.png" /></a></p>
+<p>Set inclusions described by the Chomsky hierarchy </p>
+<p>Note that the set of grammars corresponding to <a href="https://en.wikipedia.org/wiki/Recursive_language">recursive languages</a> is not a member of this hierarchy; these would be properly between Type-0 and Type-1.</p>
+<p>Every regular language is context-free, every context-free language is context-sensitive, every context-sensitive language is <strong>recursive</strong> and every <strong>recursive language</strong> is <strong>recursively enumerable</strong>. These are all <strong>proper inclusions</strong>, meaning that there exist recursively enumerable languages that are not context-sensitive, context-sensitive languages that are not context-free and context-free languages that are not regular.</p>
+<h3 id="type-0_grammars">Type-0 grammars<a class="headerlink" href="#type-0_grammars" title="Permanent link">#</a></h3>
+<p><em>Main article:</em> <a href="https://en.wikipedia.org/wiki/Unrestricted_grammar">Unrestricted grammar</a> </p>
+<p>Type-0 grammars include all formal grammars. They generate exactly all languages that can be recognized by a <a href="https://en.wikipedia.org/wiki/Turing_machine">Turing machine</a>. These languages are also known as the <a href="https://en.wikipedia.org/wiki/Recursively_enumerable_language"><em>recursively enumerable</em></a> or <em>Turing-recognizable</em> languages. Note that this is different from the <a href="https://en.wikipedia.org/wiki/Recursive_language">recursive languages</a>, which can be <em>decided</em> by an <a href="https://en.wikipedia.org/wiki/Machine_that_always_halts">always-halting Turing machine</a>. </p>
+<h3 id="type-1_grammars">Type-1 grammars<a class="headerlink" href="#type-1_grammars" title="Permanent link">#</a></h3>
+<p><em>Main article:</em> <a href="https://en.wikipedia.org/wiki/Context-sensitive_grammar">Context-sensitive grammar</a> </p>
+<p>Type-1 grammars generate <a href="https://en.wikipedia.org/wiki/Context-sensitive_language">context-sensitive languages</a>. These grammars have rules of the form $ \alpha A\beta \rightarrow \alpha \gamma \beta $ with $ A $ a nonterminal and $ \alpha $, $ \beta $ and $ \gamma $ strings of terminals and/or nonterminals. The strings $ \alpha $ and $ \beta $ may be empty, but $ \gamma $ must be nonempty. The rule $ S\rightarrow \epsilon $ is allowed if $ S $ does not appear on the right side of any rule. The languages described by these grammars are exactly all languages that can be recognized by a <a href="https://en.wikipedia.org/wiki/Linear_bounded_automaton">linear bounded automaton</a> (a nondeterministic Turing machine whose tape is bounded by a constant times the length of the input.) </p>
+<h3 id="type-2_grammars">Type-2 grammars<a class="headerlink" href="#type-2_grammars" title="Permanent link">#</a></h3>
+<p><em>Main article:</em> <a href="https://en.wikipedia.org/wiki/Context-free_grammar">Context-free grammar</a> </p>
+<p>Type-2 grammars generate the <a href="https://en.wikipedia.org/wiki/Context-free_language">context-free languages</a>. These are defined by rules of the form $ A\rightarrow \alpha $ with $ A $ being a nonterminal and $ \alpha $ being a string of terminals and/or nonterminals. These languages are exactly all languages that can be recognized by a non-deterministic <a href="https://en.wikipedia.org/wiki/Pushdown_automaton">pushdown automaton</a>. Context-free languages—or rather its subset of <a href="https://en.wikipedia.org/wiki/Deterministic_context-free_language">deterministic context-free language</a>—are the theoretical basis for the phrase structure of most <a href="https://en.wikipedia.org/wiki/Programming_language">programming languages</a>, though their syntax also includes context-sensitive name resolution due to declarations and <a href="https://en.wikipedia.org/wiki/Scope_(computer_science)">scope</a>. Often a subset of grammars is used to make parsing easier, such as by an <a href="https://en.wikipedia.org/wiki/LL_parser">LL parser</a>. </p>
+<h3 id="type-3_grammars">Type-3 grammars<a class="headerlink" href="#type-3_grammars" title="Permanent link">#</a></h3>
+<p><em>Main article:</em> <a href="https://en.wikipedia.org/wiki/Regular_grammar">Regular grammar</a> </p>
+<p>Type-3 grammars generate the <a href="https://en.wikipedia.org/wiki/Regular_language">regular languages</a>. Such a grammar restricts its rules to a single nonterminal on the left-hand side and a right-hand side consisting of a single terminal, possibly followed by a single nonterminal (right regular). Alternatively, the right-hand side of the grammar can consist of a single terminal, possibly preceded by a single nonterminal (left regular). These generate the same languages. However, if left-regular rules and right-regular rules are combined, the language need no longer be regular. The rule $ S\rightarrow \epsilon $ is also allowed here if $ S $ does not appear on the right side of any rule. These languages are exactly all languages that can be decided by a <a href="https://en.wikipedia.org/wiki/Finite_state_automaton">finite state automaton</a>. Additionally, this family of formal languages can be obtained by <a href="https://en.wikipedia.org/wiki/Regular_expression">regular expressions</a>. Regular languages are commonly used to define search patterns and the lexical structure of programming languages. </p>
+<h1 id="_1">对比分析<a class="headerlink" href="#_1" title="Permanent link">#</a></h1>
+<p>Type-0 grammars又叫做<a href="https://en.wikipedia.org/wiki/Unrestricted_grammar">unrestricted grammar</a>，从它的名字可以看出，它是unrestricted的，即</p>
+<blockquote>
+<p>No restrictions are made on the productions of an unrestricted grammar</p>
+</blockquote>
+<p>那其它grammar（Type-1 grammars <a href="https://en.wikipedia.org/wiki/Context-sensitive_grammar">Context-sensitive grammar</a>、Type-2 grammars <a href="https://en.wikipedia.org/wiki/Context-free_grammar">Context-free grammar</a> 、Type-3 grammars <a href="https://en.wikipedia.org/wiki/Regular_grammar">Regular grammar</a> ），对各自的production的restriction是什么呢？下面从这个角度对这几种grammar进行对比分析， 由上述Chomsky hierarchy所描述的层级可以看出，从Type 0 grammars到Type 3 grammars逐级增加restriction，所以在进行对比分析的时候，每个grammar只需要和它的升一级grammar进行对比即可。</p>
+<h2 id="type-0_grammarsunrestricted_grammar_formal_definition">Type-0 grammars:<a href="https://en.wikipedia.org/wiki/Unrestricted_grammar#Formal_definition">Unrestricted grammar formal definition</a><a class="headerlink" href="#type-0_grammarsunrestricted_grammar_formal_definition" title="Permanent link">#</a></h2>
+<p>An <strong>unrestricted grammar</strong> is a <a href="https://en.wikipedia.org/wiki/Formal_grammar">formal grammar</a> $ G=(N,\Sigma ,P,S) $, where $ N $ is a set of nonterminal symbols, $ \Sigma $ is a set of <a href="https://en.wikipedia.org/wiki/Terminal_symbol">terminal symbols</a>, $ N $ and $ \Sigma $ are disjoint,  $ P $ is a set of <a href="https://en.wikipedia.org/wiki/Production_(computer_science)">production rules</a> of the form $ \alpha \to \beta $ where $ \alpha $ and $ \beta $ are strings of symbols in $ N\cup \Sigma $ and $ \alpha $ is not the <strong>empty string</strong>, and $ S\in N $ is a specially designated start symbol. As the name implies, there are no real restrictions on the types of production rules that unrestricted grammars can have.</p>
+<h3 id="_2">对比分析<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
+<p>和其他的grammar production相比，它的unrestriction体现在：</p>
+<ul>
+<li>
+<p>$\alpha$可以为terminal、non-terminal</p>
+</li>
+<li>
+<p>$\beta$可以为empty string</p>
+</li>
+</ul>
+<h2 id="type-1_grammarscontext-sensitive_grammar_formal_definition">Type-1 grammars:<a href="https://en.wikipedia.org/wiki/Context-sensitive_grammar#Formal_definition">Context-sensitive grammar formal definition</a><a class="headerlink" href="#type-1_grammarscontext-sensitive_grammar_formal_definition" title="Permanent link">#</a></h2>
+<p>A <a href="https://en.wikipedia.org/wiki/Formal_grammar">formal grammar</a> <em>G</em> = (<em>N</em>, Σ, <em>P</em>, <em>S</em>), where <em>N</em> is a set of nonterminal symbols, Σ is a set of terminal symbols, <em>P</em> is a set of production rules, and <em>S</em> is the <a href="https://en.wikipedia.org/wiki/Start_symbol_(formal_languages)">start symbol</a>, is <strong>context-sensitive</strong> if all rules in <em>P</em> are of the form</p>
+<p>α<em>A</em>β → αγβ</p>
+<p>where <em>A</em> ∈ <em>N</em>, α,β ∈ (<em>N</em>∪Σ)<em>  and γ ∈ (</em>N*∪Σ)+. </p>
+<p>上述<code>*</code>和<code>+</code>都是使用的正则表达式的概念。</p>
+<h3 id="_3">对比分析<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
+<p>和<a href="https://en.wikipedia.org/wiki/Unrestricted_grammar">unrestricted grammar</a> production相比，它的restriction在于：</p>
+<ul>
+<li>γ不可为empty string</li>
+<li>A（在产生式的左部）必须是non-terminal</li>
+</ul>
+<p>上述两个restriction在Type-0 grammar中都不存在。</p>
+<h2 id="type-2_grammarscontext-free_grammar_formal_definitions">Type-2 grammars:<a href="https://en.wikipedia.org/wiki/Context-free_grammar#Formal_definitions">Context-free grammar formal definitions</a><a class="headerlink" href="#type-2_grammarscontext-free_grammar_formal_definitions" title="Permanent link">#</a></h2>
+<p>A context-free grammar <em>G</em> is defined by the 4-<a href="https://en.wikipedia.org/wiki/Tuple">tuple</a>: </p>
+<p>$ G=(V,\Sigma ,R,S) $ where</p>
+<ol>
+<li>
+<p><em>V</em> is a finite set; each element $ v\in V $ is called <em>a nonterminal character</em> or a <em>variable</em>. Each variable represents a different type of phrase or clause in the sentence. Variables are also sometimes called syntactic categories. Each variable defines a sub-language of the language defined by <em>G</em>.</p>
+</li>
+<li>
+<p>Σ is a finite set of <em>terminal</em>s, disjoint from <em>V</em>, which make up the actual content of the sentence. The set of terminals is the alphabet of the language defined by the grammar <em>G</em>.</p>
+</li>
+<li>
+<p><em>R</em> is a finite <strong>relation</strong> from <em>V</em> to $ (V\cup \Sigma )^{<em>} $, where the asterisk represents the <a href="https://en.wikipedia.org/wiki/Kleene_star">Kleene star</a> operation. The members of </em>R<em> are called the </em>(rewrite) rule<em>s or </em>production<em>s of the grammar. (also commonly symbolized by a </em>P*)</p>
+</li>
+</ol>
+<blockquote>
+<p>NOTE: See also</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Formal_grammar#The_syntax_of_grammars">production rule</a> </li>
+<li><a href="https://en.wikipedia.org/wiki/Rewriting">rewriting</a></li>
+</ul>
+</blockquote>
+<ol>
+<li><em>S</em> is the start variable (or start symbol), used to represent the whole sentence (or program). It must be an element of <em>V</em>.</li>
+</ol>
+<h3 id="production_rule_notation">Production rule notation<a class="headerlink" href="#production_rule_notation" title="Permanent link">#</a></h3>
+<p>A <a href="https://en.wikipedia.org/wiki/Formal_grammar#The_syntax_of_grammars">production rule</a> in <em>R</em> is formalized mathematically as a pair $ (\alpha ,\beta )\in R $, where $ \alpha \in V $ is a nonterminal and $ \beta \in (V\cup \Sigma )^{<em>} $ is a <a href="https://en.wikipedia.org/wiki/String_(computer_science)">string</a> of variables and/or terminals; rather than using <a href="https://en.wikipedia.org/wiki/Ordered_pair">ordered pair</a> notation, production rules are usually written using an arrow operator with </em>α<em> as its left hand side and </em>β* as its right hand side: $ \alpha \rightarrow \beta $.</p>
+<p>It is allowed for <em>β</em> to be the <a href="https://en.wikipedia.org/wiki/Empty_string">empty string</a>, and in this case it is customary to denote it by ε. The form $ \alpha \rightarrow \varepsilon $ is called an <em>ε</em>-production. </p>
+<p>It is common to list all right-hand sides for the same left-hand side on the same line, using | (the <a href="https://en.wikipedia.org/wiki/Pipe_symbol">pipe symbol</a>) to separate them. Rules $ \alpha \rightarrow \beta <em>{1} $ and $ \alpha \rightarrow \beta </em>{2} $ can hence be written as $ \alpha \rightarrow \beta <em>{1}\mid \beta </em>{2} $. In this case, $ \beta <em>{1} $ and $ \beta </em>{2} $ is called the first and second alternative, respectively.</p>
+<h3 id="rule_application">Rule application<a class="headerlink" href="#rule_application" title="Permanent link">#</a></h3>
+<p>For any strings $ u,v\in (V\cup \Sigma )^{<em>} $, we say </em>u<em> directly yields </em>v<em>, written as $ u\Rightarrow v\, $, if $ \exists (\alpha ,\beta )\in R $ with $ \alpha \in V $ and $ u_{1},u_{2}\in (V\cup \Sigma )^{</em>} $ such that $ u\,=u_{1}\alpha u_{2} $ and $ v\,=u_{1}\beta u_{2} $. Thus, <em>v</em> is a result of applying the rule $ (\alpha ,\beta ) $ to <em>u</em>.</p>
+<h3 id="repetitive_rule_application">Repetitive rule application<a class="headerlink" href="#repetitive_rule_application" title="Permanent link">#</a></h3>
+<p>For any strings $ u,v\in (V\cup \Sigma )^{<em>}, $ we say </em>u<em> <strong>yields</strong> </em>v<em>, written as $ u{\stackrel {</em>}{\Rightarrow }}v $ (or $ u\Rightarrow \Rightarrow v\, $ in some textbooks), if $ \exists k\geq 1\,\exists \,u_{1},\cdots ,u_{k}\in (V\cup \Sigma )^{<em>} $ such that $ u=\,u_{1}\Rightarrow u_{2}\Rightarrow \cdots \Rightarrow u_{k}\,=v $. In this case, if $ k\geq 2 $ (i.e., $ u\neq v $), the relation $ u{\stackrel {+}{\Rightarrow }}v $ holds. In other words, $ ({\stackrel {</em>}{\Rightarrow }}) $ and $ ({\stackrel {+}{\Rightarrow }}) $ are the <a href="https://en.wikipedia.org/wiki/Reflexive_transitive_closure">reflexive transitive closure</a> (allowing a word to yield itself) and the <a href="https://en.wikipedia.org/wiki/Transitive_closure">transitive closure</a> (requiring at least one step) of $ (\Rightarrow ) $, respectively.</p>
+<h3 id="context-free_language">Context-free language<a class="headerlink" href="#context-free_language" title="Permanent link">#</a></h3>
+<p>The language of a grammar $ G=(V,\Sigma ,R,S) $ is the set</p>
+<p>$ L(G)={w\in \Sigma ^{<em>}:S{\stackrel {</em>}{\Rightarrow }}w} $</p>
+<p>A language <em>L</em> is said to be a context-free language (CFL), if there exists a CFG <em>G</em>, such that $ L\,=\,L(G) $.</p>
+<p><a href="https://en.wikipedia.org/wiki/Pushdown_automaton#PDA_and_context-free_languages">Non-deterministic pushdown automata</a> recognize exactly the context-free languages.</p>
+<h3 id="_4">对比分析<a class="headerlink" href="#_4" title="Permanent link">#</a></h3>
+<p><a href="https://en.wikipedia.org/wiki/Context-free_grammar">Context-free grammar</a> 的restriction在于</p>
+<blockquote>
+<p>The left-hand side of the production rule is always <strong>a</strong> <a href="https://en.wikipedia.org/wiki/Nonterminal">nonterminal</a> symbol. This means that the symbol does not appear in the resulting formal language. </p>
+</blockquote>
+<p>在type 1 grammar中，对产生式的左部中<a href="https://en.wikipedia.org/wiki/Nonterminal">nonterminal</a> symbol的个数并没有限制。</p>
+<h2 id="type-3_grammarsregular_grammar_formal_definition">Type-3 grammars:<a href="https://en.wikipedia.org/wiki/Regular_grammar#Strictly_regular_grammars">Regular grammar formal definition</a><a class="headerlink" href="#type-3_grammarsregular_grammar_formal_definition" title="Permanent link">#</a></h2>
+<p>A <strong>right regular grammar</strong> (also called <a href="https://en.wikipedia.org/wiki/Linear_Grammar#Right-Linear_Grammars">right linear grammar</a>) is a <a href="https://en.wikipedia.org/wiki/Formal_grammar">formal grammar</a> (<em>N</em>, Σ, <em>P</em>, <em>S</em>) such that all the <a href="https://en.wikipedia.org/wiki/Production_(computer_science)">production rules</a> in <em>P</em> are of one of the following forms:</p>
+<ol>
+<li><em>A</em> → <em>a</em>, where <em>A</em> is a <a href="https://en.wikipedia.org/wiki/Terminal_and_nonterminal_symbols">non-terminal</a> in <em>N</em> and <em>a</em> is a terminal in Σ</li>
+<li><em>A</em> → <em>aB</em>, where <em>A</em> and <em>B</em> are non-terminals in <em>N</em> and <em>a</em> is in Σ</li>
+<li><em>A</em> → ε, where <em>A</em> is in <em>N</em> and ε denotes the <a href="https://en.wikipedia.org/wiki/Empty_string">empty string</a>, i.e. the string of length 0.</li>
+</ol>
+<p>In a <strong>left regular grammar</strong> (also called <a href="https://en.wikipedia.org/wiki/Linear_Grammar#Left-Linear_Grammars">left linear grammar</a>), all rules obey the forms</p>
+<ol>
+<li><em>A</em> → <em>a</em>, where <em>A</em> is a non-terminal in <em>N</em> and <em>a</em> is a terminal in Σ</li>
+<li><em>A</em> → <em>Ba</em>, where <em>A</em> and <em>B</em> are in <em>N</em> and <em>a</em> is in Σ</li>
+<li><em>A</em> → ε, where <em>A</em> is in <em>N</em> and ε is the empty string.</li>
+</ol>
+<p>A <strong>regular grammar</strong> is a left <strong>or</strong> right regular grammar.</p>
+<p>Some textbooks and articles disallow empty production rules, and assume that the empty string is not present in languages.</p>
+<h3 id="_5">对比分析<a class="headerlink" href="#_5" title="Permanent link">#</a></h3>
+<p>与Type-2 grammars相比，Type-3 grammars的限制在于产生式右侧的non-terminal：</p>
+<ul>
+<li>产生式的右侧最多只能够有一个non-terminal</li>
+<li>产生式右侧的non-terminal只能够在最左侧或最右侧</li>
+</ul>
+<p>显然，与Type-2 grammars相比，由于Type-3 grammar的production的右侧只能够有一个non-terminal，所以在按照它的production进行rewrite（扩展）的时候，只能够向一个方向进行扩展，所以最终的扩展结果只能够是一个线性的结构，所以它是<a href="https://en.wikipedia.org/wiki/Linear_grammar">linear grammar</a>。而Type-2 grammar的production的右侧可以有多个non-terminal，所以在按照它的production进行rewrite（扩展）的时候，能够向多个方向进行扩展，所以最终的扩展结果是一个树形的结构，所以它不是<a href="https://en.wikipedia.org/wiki/Linear_grammar">linear grammar</a>。</p>
+<blockquote>
+<p>NOTE: 描述的结构</p>
+</blockquote>
+<h2 id="_6">总结<a class="headerlink" href="#_6" title="Permanent link">#</a></h2>
+<p>上述所有grammar的production都可以支持递归，即都可以是<a href="https://en.wikipedia.org/wiki/Recursive_grammar">recursive grammar</a>。</p>
+<blockquote>
+<p>NOTE: 描述的递归性</p>
+</blockquote>
+<p>在<a href="https://en.wikipedia.org/wiki/Recursively_enumerable_language">Recursively enumerable language</a>中有这样的描述：</p>
+<blockquote>
+<p>All <a href="https://en.wikipedia.org/wiki/Regular_language">regular</a>, <a href="https://en.wikipedia.org/wiki/Context-free_language">context-free</a>, <a href="https://en.wikipedia.org/wiki/Context-sensitive_language">context-sensitive</a> and <a href="https://en.wikipedia.org/wiki/Recursive_language">recursive</a> languages are recursively enumerable.</p>
+</blockquote>
+<h1 id="by_automaton">对比分析By automaton<a class="headerlink" href="#by_automaton" title="Permanent link">#</a></h1>
+<p>CFG的 automaton是pushdown automaton，我们知道pushdown automaton本质上来说就是stack，CFG本质上来说表示的是hierarchy结构/树形结构。</p>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../wikipedia-Production(computer-science)/" title="Production" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Production
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../Type-0/wikipedia-Recursively-enumerable-language/" title="Recursively-enumerable-language" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Recursively-enumerable-language
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/application.808e90bb.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../../.."}})</script>
+      
+    
+  </body>
+</html>
