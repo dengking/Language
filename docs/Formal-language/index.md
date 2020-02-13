@@ -1,6 +1,6 @@
 # 关于本章
 
-本章节，首先以[description-and-language](./description-and-language.md)这篇文章作为开头，引出[Formal language](https://en.wikipedia.org/wiki/Formal_language)， 然后对它进行详细的分析。维基百科的[Formal language](https://en.wikipedia.org/wiki/Formal_language)内容是非常好的（全面，深入浅出），需要仔细阅读。
+本章节，首先以[Description-and-language](./Description-and-language.md)这篇文章作为开头，引出[Formal language](https://en.wikipedia.org/wiki/Formal_language)， 然后对它进行详细的分析。维基百科的[Formal language](https://en.wikipedia.org/wiki/Formal_language)内容是非常好的（全面，深入浅出），需要仔细阅读。
 
 首先说明formal language，formal grammar，automata，Chomsky hierarchy等基本概念，建立理论框架。
 
