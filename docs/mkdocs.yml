@@ -1,4 +1,5 @@
 nav:
     - Home: index.md
-    - Introduction: Introduction
-    - Theory-framework: Theory-framework
+    - Primer: Primer.md
+    - Formal-language: Formal-language
+    - Theory-of-computation: Theory-of-computation

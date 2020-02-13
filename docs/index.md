@@ -1,6 +1,4 @@
-[TOC]
-
-# 前言
+# 关于本项目
 
 出于如下原因我创建了这个项目：
 
@@ -21,7 +19,7 @@
 
 
 
-# 学习计划--从入门到精通
+## 学习计划--从入门到精通
 
 [Formal language](https://en.wikipedia.org/wiki/Formal_language)所涉及的理论较多，并且大多数都是比较抽象的，刚开始学习（尤其对于缺乏使用programming language的人来说）可能会感觉比较吃力，以下是觉得比较好的学习计划：
 
@@ -33,9 +31,9 @@
 
 
 
-# Theory Framework
+## Theory Framework
 
-## [Language](https://en.wikipedia.org/wiki/Language)
+### [Language](https://en.wikipedia.org/wiki/Language)
 
 对语言的一种分类方法：
 
@@ -48,7 +46,7 @@
 >
 > - [Formal language](https://en.wikipedia.org/wiki/Formal_language)不是[natural language](https://en.wikipedia.org/wiki/Natural_language) 
 
-## [Formal language](https://en.wikipedia.org/wiki/Formal_language)
+### [Formal language](https://en.wikipedia.org/wiki/Formal_language)
 
 提及[formal language](https://en.wikipedia.org/wiki/Formal_language)，就得请出[Noam Chomsky](https://en.wikipedia.org/wiki/Noam_Chomsky)，因为下面的理论框架是由他所建立的，该theory framework的是按照[Chomsky hierarchy](https://en.wikipedia.org/wiki/Chomsky_hierarchy)来进行组织的：
 
@@ -73,16 +71,17 @@ Each category of languages, except those marked by a `*`, is a [proper subset](h
 
 
 
-# 目录结构说明
+## 目录结构说明
 
 本工程就是按照[学习计划--从入门到精通](#学习计划--从入门到精通)章节所描述的思路组织的：
 
-- introduction：入门
-- theory-framework：理论框架
+- Primer：入门读物
+- Formal-language：描述形式语言相关内容
+- Theory-of-computation： 描述计算理论相关内容
 
 
 
-# Cinderella Book VS Dragon Book
+## Cinderella Book VS Dragon Book
 
 [Introduction to Automata and Language Theory(aka ***Cinderella Book***)](http://infolab.stanford.edu/~ullman/ialc.html)是该领域的经典书籍。
 

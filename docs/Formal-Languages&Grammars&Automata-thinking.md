@@ -1,5 +1,3 @@
-[TOC]
-
 # application of state machine
 
 ## [uses for state machines [closed\]](https://stackoverflow.com/questions/255797/uses-for-state-machines)
