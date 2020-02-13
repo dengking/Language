@@ -1,4 +1,4 @@
-[TOC]
+
 
 
 
@@ -11,3 +11,9 @@ In [computer science](https://en.wikipedia.org/wiki/Computer_science), a **parsi
 Unlike CFGs, PEGs cannot be [ambiguous](https://en.wikipedia.org/wiki/Ambiguous_grammar); if a string parses, it has exactly one valid [parse tree](https://en.wikipedia.org/wiki/Parse_tree). It is conjectured that there exist context-free languages that cannot be recognized by a PEG, but this is not yet proven.[[1\]](https://en.wikipedia.org/wiki/Parsing_expression_grammar#cite_note-For04-1) PEGs are well-suited to parsing computer languages (and artificial human languages such as [Lojban](https://en.wikipedia.org/wiki/Lojban)), but not [natural languages](https://en.wikipedia.org/wiki/Natural_language) where the performance of PEG algorithms is comparable to general CFG algorithms such as the [Earley algorithm](https://en.wikipedia.org/wiki/Earley_algorithm).
 
 > NOTE: [Python3.8+](https://docs.python.org/3/reference/grammar.html) use PEG to describe its grammar.
+
+
+
+## See also
+
+[The Packrat Parsing and Parsing Expression Grammars Page](https://bford.info/packrat/)
