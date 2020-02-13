@@ -41,7 +41,7 @@ nav:
           - Regex-Engine: Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/Regular-expression/Regex-Engine.md
 - Theory-of-computation:
   - index: Theory-of-computation/index.md
-  - Theory-of-computation: Theory-of-computation/wikipedia-Theory-of-computation.md
+  - Theory-of-computation: Theory-of-computation/Theory-of-computation.md
 plugins:
 - search
 repo_url: https://github.com/dengking/automata-and-formal-language
