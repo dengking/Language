@@ -1,6 +1,7 @@
 nav:
     - Introduction: index.md
     - Description-and-language: Description-and-language.md
+    - Formal-and-formal-langugae: Formal-and-formal-langugae.md
     - Language: wikipedia-Language.md
     - Formal-language: wikipedia-Formal-language.md
     - Formal-system: wikipedia-Formal-system.md

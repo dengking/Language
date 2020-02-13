@@ -1,21 +1,23 @@
+# Formal and formal language
 
+Formal在computer science中有着非常重要的地位，计算机科学家门围绕着它创建了很多理论。
 
-# Formal，计算机科学的基石
+## Formal
 
-## Examples of formal 
+所以我们需要首先搞清楚它的含义。下面我们先通过一些例子来认识formal，然后再来进行总结。
 
-### example 1
+### Examples of formal 
+
+#### example 1
 
 [Deep Learning](http://www.deeplearningbook.org/front_matter.pdf)的Chapter 1 Introduction的如下描述：
 
 > In the early days of artificial intelligence, the field rapidly tackled and solved problems that are intellectually difficult for human beings but relatively straightforward for computers—problems that can be described by a list of **formal**, mathematical rules. The true challenge to artificial intelligence proved to be solving the tasks that are easy for people to perform but hard for people to describe
 > **formally**—problems that we solve **intuitively**, that feel automatic, like recognizing spoken words or faces in images.
 
-formal-》fixed problem
+可以使用“formal， mathematical rules“描述的问题，具备着固定的rule，所以使用computer program是非常任意实现的。而与它相反的一类问题，是无法使用rule进行描述的，这类问题，在上面这段话中使用”intuitive“来表示，解决这类问题的方法是AI。
 
-intuitive-》AI
-
-### example 2
+#### example 2
 
 [Deep Learning](http://www.deeplearningbook.org/front_matter.pdf)的Chapter 5.1 Learning Algorithms的如下描述：
 
@@ -25,11 +27,15 @@ formal language-》 formal definition
 
 natural language-》intuitive description
 
-### example 3
+#### examples
 
 Examples of formal description
 
 https://dictionary.cambridge.org/example/english/formal-description
+
+> In this section and the next, we turn our attention to providing a more formal description of the underlying type system.
+
+
 
 ## 什么是formal？
 
@@ -40,6 +46,14 @@ https://dictionary.cambridge.org/example/english/formal-description
 ### 从词源说起
 
 https://simple.wikipedia.org/wiki/Formal
+
+> **Formal** is a word used to describe anything that has form or [structure](https://simple.wikipedia.org/wiki/Structure). So it is something which is used or done in accordance with [rules](https://simple.wikipedia.org/wiki/Rule) or [ceremonies](https://simple.wikipedia.org/wiki/Ceremony).
+
+上面这句中的form其实就可以理解为rule。
+
+> In [mathematics](https://simple.wikipedia.org/wiki/Mathematics), formal [logic](https://simple.wikipedia.org/wiki/Logic) is a way of thinking about mathematics questions using strict rules.
+
+
 
 https://www.yourdictionary.com/formal
 
@@ -53,10 +67,30 @@ https://www.yourdictionary.com/formal
 
 这三个学科中的formal是密切相关的。
 
+## Formalism 
+
 文章[Formalism (philosophy)](https://en.wikipedia.org/wiki/Formalism_(philosophy)), [Formalism (philosophy of mathematics)](https://en.wikipedia.org/wiki/Formalism_(philosophy_of_mathematics))将formal描述为一种科学的思想，显然它从更高的哲学的角度来概括formal，我觉得以它作为掌握formal的入口是非常好的，因为科学总数遵循相同的哲学思想，或者说哲学指导着科学。
 
+## Formal language
+
+显然，这个词由formal来进行修饰，所以它肯定是具备前面所描述的formal的性质的：即有固定规则。所以对于这种语言，只要想computer描述清楚它的规则，那么computer就可以“读懂”它，即这种语言是machine-readable的。
 
 
-## 思考：描述与人工智能
+
+## Formal definition
+
+使用formal language来描述的definition就是formal definition。
+
+
+
+## Formal language的优势
+
+Formal language的优势在于它的formal，即有固定的rule。在逻辑学，rule对于的是推导规则，所以formal language是可以进行推导。
+
+
+
+
+
+## 思考：Formal与人工智能
 
 deep learning book的chapter one
