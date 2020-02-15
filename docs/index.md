@@ -38,9 +38,9 @@
 对语言的一种分类方法：
 
 - [Constructed language](https://en.wikipedia.org/wiki/Constructed_language)
-  - [Formal language](https://en.wikipedia.org/wiki/Formal_language)
-    - [Programming language](https://en.wikipedia.org/wiki/Programming_language)
 - [Natural languages](https://en.wikipedia.org/wiki/Natural_language) 
+- [Formal language](https://en.wikipedia.org/wiki/Formal_language)
+  - [Programming language](https://en.wikipedia.org/wiki/Programming_language)
 
 > Note: 上诉分类所传达的含义有：
 >

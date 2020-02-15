@@ -73,9 +73,9 @@ https://www.yourdictionary.com/formal
 
 ## Formal language
 
-显然，这个词由formal来进行修饰，所以它肯定是具备前面所描述的formal的性质的：即有固定规则。所以对于这种语言，只要想computer描述清楚它的规则，那么computer就可以“读懂”它，即这种语言是machine-readable的。
+显然，这个词由formal来进行修饰，所以它肯定是具备前面所描述的formal的性质的：即有固定规则，就[formal language](https://en.wikipedia.org/wiki/Formal_language)而言，它的formal是源于它的[grammar](https://en.wikipedia.org/wiki/Grammar)上，它的语法是[formal grammar](https://en.wikipedia.org/wiki/Formal_grammar)，这种语法的规则是固定的。所以对于这种语言，只要向computer描述清楚它的grammar，那么computer就可以“读懂”它，即这种语言是machine-readable的。
 
-
+关于formal language的machine readable，可以参见：https://en.wikipedia.org/wiki/Semantic_Web
 
 ## Formal definition
 

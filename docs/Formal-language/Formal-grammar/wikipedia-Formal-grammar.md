@@ -1,5 +1,3 @@
-[TOC]
-
 # [Formal grammar](https://en.wikipedia.org/wiki/Formal_grammar)
 
 In [formal language theory](https://en.wikipedia.org/wiki/Formal_language), a **grammar** (when the context is not given, often called a **formal grammar** for clarity) is a set of [production rules](https://en.wikipedia.org/wiki/Production_(computer_science)) for [strings](https://en.wikipedia.org/wiki/String_(computer_science)) in a [formal language](https://en.wikipedia.org/wiki/Formal_language). The rules describe how to form strings from the language's [alphabet](https://en.wikipedia.org/wiki/Alphabet_(computer_science)) that are valid according to the language's [syntax](https://en.wikipedia.org/wiki/Syntax_(programming_languages)). A grammar does not describe the [meaning of the strings](https://en.wikipedia.org/wiki/Semantics) or what can be done with them in whatever context—only their form.

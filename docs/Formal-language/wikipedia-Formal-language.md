@@ -1,5 +1,3 @@
-[TOC]
-
 # [Formal language](https://en.wikipedia.org/wiki/Formal_language)
 
 In [mathematics](https://en.wikipedia.org/wiki/Mathematics), [computer science](https://en.wikipedia.org/wiki/Computer_science), and [linguistics](https://en.wikipedia.org/wiki/Linguistics), a **formal language** consists of [words](https://en.wikipedia.org/wiki/String_(computer_science)) whose [letters](https://en.wikipedia.org/wiki/Symbol_(formal)) are taken from an [alphabet](https://en.wikipedia.org/wiki/Alphabet_(computer_science)) and are [well-formed](https://en.wikipedia.org/wiki/Well-formedness) according to a specific set of rules. 
@@ -133,60 +131,3 @@ The study of interpretations of formal languages is called [formal semantics](ht
 > This diagram shows the [syntactic](https://en.wikipedia.org/wiki/Syntax_(logic)) divisions within a [formal system](https://en.wikipedia.org/wiki/Formal_system). [Strings of symbols](https://en.wikipedia.org/wiki/String_(computer_science)) may be broadly divided into nonsense and [well-formed formulas](https://en.wikipedia.org/wiki/Well-formed_formula). The set of well-formed formulas is divided into [theorems](https://en.wikipedia.org/wiki/Theorem) and non-theorems.
 
 
-
-# 梳理
-
-## [Formal system](https://en.wikipedia.org/wiki/Formal_system) and formal language
-
-下面这段摘自[Formal systems](https://en.wikipedia.org/wiki/Formation_rule#Formal_systems)
-
-> A *formal system* (also called a *logical calculus*, or a *logical system*) consists of a formal language together with a [deductive apparatus](https://en.wikipedia.org/wiki/Deductive_apparatus) (also called a *deductive system*). The deductive apparatus may consist of a set of [transformation rules](https://en.wikipedia.org/wiki/Transformation_rule) (also called *inference rules*) or a set of [axioms](https://en.wikipedia.org/wiki/Axiom), or have both. A formal system is used to [derive](https://en.wikipedia.org/wiki/Proof_theory)(推导) one expression from one or more other expressions. Propositional and predicate calculi are examples of formal systems.
-
-[Formal grammars](https://en.wikipedia.org/wiki/Formal_grammar)相当于 [deductive apparatus](https://en.wikipedia.org/wiki/Deductive_apparatus)。
-
-
-
-## 从[Mathematical logic](https://en.wikipedia.org/wiki/Mathematical_logic)的角度来看[Formal grammars](https://en.wikipedia.org/wiki/Formal_grammar)
-
-如果从[Mathematical logic](https://en.wikipedia.org/wiki/Mathematical_logic)的逻辑推导的角度来看待[Formal grammars](https://en.wikipedia.org/wiki/Formal_grammar)的话，[formal grammars](https://en.wikipedia.org/wiki/Formal_grammar)的很多内容就变得非常容易理解：
-
-- [formal grammars](https://en.wikipedia.org/wiki/Formal_grammar)本质上就是[推导规则](https://en.wikipedia.org/wiki/Formation_rule)
-
-下面总结了formal grammar中的一些概念和mathematical logic中的一些概念之间的对应关系，如下：
-
-| [Formal grammar](https://en.wikipedia.org/wiki/Formal_grammar) | [Mathematical logic](https://en.wikipedia.org/wiki/Mathematical_logic) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [Production rule](https://en.wikipedia.org/wiki/Production_(computer_science)) | [Formation rule](https://en.wikipedia.org/wiki/Formation_rule)、[Rule of inference](https://en.wikipedia.org/wiki/Rule_of_inference)、[Rewriting](https://en.wikipedia.org/wiki/Rewriting) |
-
-上述对应关系的含义是：如果从[Mathematical logic](https://en.wikipedia.org/wiki/Mathematical_logic)来看待[Production rule](https://en.wikipedia.org/wiki/Production_(computer_science))的话，它就相当于是[Formation rule](https://en.wikipedia.org/wiki/Formation_rule)、[Rule of inference](https://en.wikipedia.org/wiki/Rule_of_inference)、[Rewriting](https://en.wikipedia.org/wiki/Rewriting)。
-
-按照公式进行推导从另外一个角度来看其实是重写，不断地进行替换，感觉数理逻辑本质上就是这个东西。从这个角度来看，parsing的过程其实就是不断的推导的过程，不断的重写的过程。由于可能的推导格式是非常多的，所以需要不断地进行尝试，这个过程其实就是[search](https://en.wikipedia.org/wiki/Search_algorithm)、[backtracking](https://en.wikipedia.org/wiki/Backtracking)，所以从这个角度来看，[parsing](https://en.wikipedia.org/wiki/Parsing)所做的工作其实就是推导加search。自顶向下其实所对应的是正向推导，自底向上其实所对应的就是方向推导。
-
-> NOTE: 在龙书的4.2.3 Derivations有这样的描述：
->
-> The construction of a parse tree can be made precise by taking a **derivational view**, in which productions are treated as **rewriting rules**. Beginning with the start symbol, each rewriting step replaces a nonterminal by the body of one of its productions. This derivational view corresponds to the top-down construction of a parse tree, but the precision afforded by derivations will be especially helpful when bottom-up parsing is discussed. As we shall see, bottom-up parsing is related to a class of derivations known as "rightmost" derivations, in which the rightmost nonterminal is rewritten at each step.
-
-上面的这些内容给我的启发是：不同的学科对同一事物的命名可能不同，但是它们本质上所描述的是同一事物。
-
-其实上述所有这些讨论，本质上都是属于[Logic](https://en.wikipedia.org/wiki/Logic)学的范轴，推导（[inference](https://en.wikipedia.org/wiki/Inference)）就属于逻辑学的范轴。
-
-[Set theory](https://en.wikipedia.org/wiki/Set_theory)是数学的基石所在，很多其他数学学科都是建立在它的基础之上。
-
-
-
-## [Automata theory](https://en.wikipedia.org/wiki/Automata_theory)和[Formal language](https://en.wikipedia.org/wiki/Formal_language)
-
-在上述[Language-specification formalisms](#Language-specification formalisms)章节就对[Automata theory](https://en.wikipedia.org/wiki/Automata_theory)和[Formal language](https://en.wikipedia.org/wiki/Formal_language)之间的关系进行了分析。
-
-[Chomsky hierarchy](https://en.wikipedia.org/wiki/Chomsky_hierarchy)将[Automata theory](https://en.wikipedia.org/wiki/Automata_theory)和[formal language](https://en.wikipedia.org/wiki/Formal_language)进行了关联和对应。需要注意的是，[Automata theory](https://en.wikipedia.org/wiki/Automata_theory)在其他领域有着非常广泛的应用。
-
-
-
-## [Turing machine](https://en.wikipedia.org/wiki/Turing_machine) and [Mathematical logic](https://en.wikipedia.org/wiki/Mathematical_logic)
-
-在第一段的NOTE中就对两者进行了分析。
-
-除此之外，下面文章也是值得阅读的：
-
-- [Automated theorem proving](https://en.wikipedia.org/wiki/Automated_theorem_proving)
-- [Formal methods](https://en.wikipedia.org/wiki/Formal_methods) 

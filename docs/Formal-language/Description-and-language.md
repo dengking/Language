@@ -87,9 +87,11 @@ see also：
 
 ### 语言的递归性
 
-像CFG就具备递归性，有[recursive grammar](https://en.wikipedia.org/wiki/Recursive_grammar)的概念。关于描述的递归性在[Production(computer-science)](./Formal-grammar/wikipedia-Production(computer-science).md)、[Chomsky-hierarchy](./Formal-grammar/Chomsky-hierarchy/wikipedia-Chomsky-hierarchy.md)中有专门的描述。
+像CFG就具备递归性，有[recursive grammar](https://en.wikipedia.org/wiki/Recursive_grammar)的概念。关于语言的递归性在[Production(computer-science)](./Formal-grammar/wikipedia-Production(computer-science).md)、[Chomsky-hierarchy](./Formal-grammar/Chomsky-hierarchy/wikipedia-Chomsky-hierarchy.md)中有专门的描述。
 
+See also:
 
+- [Recursive language](https://en.wikipedia.org/wiki/Recursive_language)
 
 ### human-readable and machine-readable 
 
@@ -113,8 +115,4 @@ see also：
 本章所要研究的就是[formal language](https://en.wikipedia.org/wiki/Well-formed_formula)，它相较于[自然语言](https://en.wikipedia.org/wiki/Natural_language)，有着诸多优势，其中一个优势就是 machine-readable，所以这也是它吸引计算机科学家的一个原因。在下篇文章对其进行详细讨论。
 
 
-
-## 关于语言的一些问题
-
-语言的expressive power。
 
