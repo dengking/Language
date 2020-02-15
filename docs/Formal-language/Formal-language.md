@@ -1,5 +1,7 @@
 # [Formal language](https://en.wikipedia.org/wiki/Formal_language)
 
+> NOTE: 充分理解本文的前提是对[Mathematical logic](https://en.wikipedia.org/wiki/Mathematical_logic)有基本的认知，参见上一章节。
+
 In [mathematics](https://en.wikipedia.org/wiki/Mathematics), [computer science](https://en.wikipedia.org/wiki/Computer_science), and [linguistics](https://en.wikipedia.org/wiki/Linguistics), a **formal language** consists of [words](https://en.wikipedia.org/wiki/String_(computer_science)) whose [letters](https://en.wikipedia.org/wiki/Symbol_(formal)) are taken from an [alphabet](https://en.wikipedia.org/wiki/Alphabet_(computer_science)) and are [well-formed](https://en.wikipedia.org/wiki/Well-formedness) according to a specific set of rules. 
 
 The [alphabet](https://en.wikipedia.org/wiki/Alphabet_(computer_science)) of a formal language consist of symbols, letters, or tokens that concatenate into strings of the language. Each string concatenated from symbols of this alphabet is called a **word**, and the words that belong to a particular formal language are sometimes called *well-formed words* or *[well-formed formulas](https://en.wikipedia.org/wiki/Well-formed_formula)*. A formal language is often defined by means of a [formal grammar](https://en.wikipedia.org/wiki/Formal_grammar) such as a [regular grammar](https://en.wikipedia.org/wiki/Regular_grammar) or [context-free grammar](https://en.wikipedia.org/wiki/Context-free_grammar), which consists of its [formation rules](https://en.wikipedia.org/wiki/Formation_rule). 
@@ -12,7 +14,7 @@ In [computational complexity theory](https://en.wikipedia.org/wiki/Computational
 
 In [logic](https://en.wikipedia.org/wiki/Logic) and the [foundations of mathematics](https://en.wikipedia.org/wiki/Foundations_of_mathematics), formal languages are used to represent the syntax of [axiomatic systems](https://en.wikipedia.org/wiki/Axiomatic_system), and [mathematical formalism](https://en.wikipedia.org/wiki/Formalism_(mathematics)) is the philosophy that all of mathematics can be reduced to the syntactic manipulation of formal languages in this way. 
 
-> NOTE: 上面这段话的第一句话揭示了**formal language**和 [logic](https://en.wikipedia.org/wiki/Logic) 之间的关系。
+> NOTE: 上面这段话的第一句话揭示了 **formal language** 和 [logic](https://en.wikipedia.org/wiki/Logic) 之间的关系。
 
 > NOTE: 最后一段话的意思是：[mathematical formalism](https://en.wikipedia.org/wiki/Formalism_(mathematics))的思想是：所有的数学都可以通过这种方式简化为formal language的syntactic manipulation。浏览了一下这篇文章，发现[theory of computation](https://en.wikipedia.org/wiki/Theory_of_computation)中的很多课题都源于这个思想，比如[Turing machine](https://en.wikipedia.org/wiki/Turing_machine)。
 
@@ -80,23 +82,7 @@ Surprisingly often, the answer to these decision problems is "it cannot be done 
 
 
 
-## Operations on languages
-
-Certain operations on languages are common. This includes the standard set operations, such as union, intersection, and complement. Another class of operation is the element-wise application of string operations.
-
-Examples: suppose $ L_{1} $ and $ L_{2} $ are languages over some common alphabet $ \Sigma $.
-
-- The *[concatenation](https://en.wikipedia.org/wiki/Concatenation)* $ L_{1}\cdot L_{2} $ consists of all strings of the form $ vw $ where $ v $ is a string from $ L_{1} $ and $ w $ is a string from $ L_{2} $.
-- The *intersection* $ L_{1}\cap L_{2} $ of $ L_{1} $ and $ L_{2} $ consists of all strings that are contained in both languages
-- The *complement* $ \neg L_{1} $ of $ L_{1} $ with respect to $ \Sigma $ consists of all strings over $ \Sigma $ that are not in $ L_{1} $.
-- The [Kleene star](https://en.wikipedia.org/wiki/Kleene_star): the language consisting of all words that are concatenations of zero or more words in the original language;
-- Reversal:
-  - Let *ε* be the empty word, then $ \varepsilon ^{R}=\varepsilon $, and
-  - for each non-empty word $ w=\sigma _{1}\cdots \sigma _{n} $ (where $ \sigma _{1},\ldots ,\sigma _{n} $are elements of some alphabet), let $ w^{R}=\sigma _{n}\cdots \sigma _{1} $,
-  - then for a formal language $ L $, $ L^{R}=\{w^{R}\mid w\in L\} $.
-- [String homomorphism](https://en.wikipedia.org/wiki/String_homomorphism)
-
-Such [string operations](https://en.wikipedia.org/wiki/String_operations) are used to investigate [closure properties](https://en.wikipedia.org/wiki/Closure_(mathematics)) of classes of languages. A class of languages is closed under a particular operation when the operation, applied to languages in the class, always produces a language in the same class again. For instance, the [context-free languages](https://en.wikipedia.org/wiki/Context-free_language) are known to be closed under union, concatenation, and intersection with [regular languages](https://en.wikipedia.org/wiki/Regular_language), but not closed under intersection or complement. The theory of [trios](https://en.wikipedia.org/wiki/Cone_(formal_languages)) and [abstract families of languages](https://en.wikipedia.org/wiki/Abstract_family_of_languages) studies the most common closure properties of language families in their own right.
+## [Operations on languages](https://en.wikipedia.org/wiki/Formal_language#Operations_on_languages)
 
 
 
@@ -106,28 +92,6 @@ Such [string operations](https://en.wikipedia.org/wiki/String_operations) are us
 
 *Main articles:* [Compiler compiler](https://en.wikipedia.org/wiki/Compiler_compiler) and [Syntax (programming languages)](https://en.wikipedia.org/wiki/Syntax_(programming_languages))
 
-### Formal theories, systems, and proofs
-
-*Main articles:* [Theory (mathematical logic)](https://en.wikipedia.org/wiki/Theory_(mathematical_logic)) and [Formal system](https://en.wikipedia.org/wiki/Formal_system)
-
-In [mathematical logic](https://en.wikipedia.org/wiki/Mathematical_logic), a *formal theory* is a set of [sentences](https://en.wikipedia.org/wiki/Sentence_(mathematical_logic)) expressed in a **formal language**.
-
-A *formal system* (also called a *logical calculus*, or a *logical system*) consists of a **formal language** together with a [deductive apparatus](https://en.wikipedia.org/wiki/Deductive_apparatus) (also called a *deductive system*). The deductive apparatus may consist of a set of [transformation rules](https://en.wikipedia.org/wiki/Transformation_rule), which may be interpreted as valid rules of inference, or a set of [axioms](https://en.wikipedia.org/wiki/Axiom), or have both. A formal system is used to [derive](https://en.wikipedia.org/wiki/Proof_theory) one expression from one or more other expressions. Although a formal language can be identified with its formulas, a formal system cannot be likewise identified by its theorems. Two formal systems $ {\mathcal {FS}} $ and $ {\mathcal {FS'}} $ may have all the same theorems and yet differ in some significant proof-theoretic way (a formula A may be a syntactic consequence of a formula B in one but not another for instance).
-
-A *formal proof* or *derivation* is a finite sequence of well-formed formulas (which may be interpreted as sentences, or [propositions](https://en.wikipedia.org/wiki/Proposition)) each of which is an axiom or follows from the preceding formulas in the sequence by a [rule of inference](https://en.wikipedia.org/wiki/Rule_of_inference). The last sentence in the sequence is a theorem of a formal system. Formal proofs are useful because their theorems can be interpreted as true propositions.
-
-#### Interpretations and models
-
-*Main articles:* [Formal semantics (logic)](https://en.wikipedia.org/wiki/Formal_semantics_(logic)), [Interpretation (logic)](https://en.wikipedia.org/wiki/Interpretation_(logic)) and [Model theory](https://en.wikipedia.org/wiki/Model_theory)
-
-Formal languages are entirely syntactic in nature but may be given [semantics](https://en.wikipedia.org/wiki/Semantics) that give meaning to the elements of the language. For instance, in mathematical [logic](https://en.wikipedia.org/wiki/Logic), the set of possible formulas of a particular logic is a formal language, and an [interpretation](https://en.wikipedia.org/wiki/Interpretation_(logic)) assigns a meaning to each of the formulas—usually, a [truth value](https://en.wikipedia.org/wiki/Truth_value).
-
-The study of interpretations of formal languages is called [formal semantics](https://en.wikipedia.org/wiki/Formal_semantics_(logic)). In mathematical logic, this is often done in terms of [model theory](https://en.wikipedia.org/wiki/Model_theory). In model theory, the terms that occur in a formula are interpreted as objects within [mathematical structures](https://en.wikipedia.org/wiki/Structure_(mathematical_logic)), and fixed compositional interpretation rules determine how the truth value of the formula can be derived from the interpretation of its terms; a *model* for a formula is an interpretation of terms such that the formula becomes true.
-
-> ![img](https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Formal_languages.svg/300px-Formal_languages.svg.png)
->
-> 
->
-> This diagram shows the [syntactic](https://en.wikipedia.org/wiki/Syntax_(logic)) divisions within a [formal system](https://en.wikipedia.org/wiki/Formal_system). [Strings of symbols](https://en.wikipedia.org/wiki/String_(computer_science)) may be broadly divided into nonsense and [well-formed formulas](https://en.wikipedia.org/wiki/Well-formed_formula). The set of well-formed formulas is divided into [theorems](https://en.wikipedia.org/wiki/Theorem) and non-theorems.
+### [Formal theories, systems, and proofs](https://en.wikipedia.org/wiki/Formal_language#Formal_theories,_systems,_and_proofs)
 
 

@@ -1,28 +1,30 @@
 # 梳理
 
-在语言学
+## Generating VS parsing
 
-目前我们所接触的[formal grammars](https://en.wikipedia.org/wiki/Formal_grammar)属于[Generative grammar](https://en.wikipedia.org/wiki/Generative_grammar)，这个流派的观点
+我们已经知道[formal grammars](https://en.wikipedia.org/wiki/Formal_grammar)是[generative grammar](https://en.wikipedia.org/wiki/Generative_grammar)。
 
-## [Formal system](https://en.wikipedia.org/wiki/Formal_system) and formal language
+[Generative grammar](https://en.wikipedia.org/wiki/Generative_grammar)：
 
-下面这段摘自[Formal systems](https://en.wikipedia.org/wiki/Formation_rule#Formal_systems)
+> generative grammar considers [grammar](https://en.wikipedia.org/wiki/Grammar) as a system of rules that generates exactly those combinations of words that form grammatical sentences in a given language
 
-> A *formal system* (also called a *logical calculus*, or a *logical system*) consists of a formal language together with a [deductive apparatus](https://en.wikipedia.org/wiki/Deductive_apparatus) (also called a *deductive system*). The deductive apparatus may consist of a set of [transformation rules](https://en.wikipedia.org/wiki/Transformation_rule) (also called *inference rules*) or a set of [axioms](https://en.wikipedia.org/wiki/Axiom), or have both. A formal system is used to [derive](https://en.wikipedia.org/wiki/Proof_theory)(推导) one expression from one or more other expressions. Propositional and predicate calculi are examples of formal systems.
+上述所描述的是generating过程，即给定grammar，**生成**sentence in a given language，这个过程其实是不断地使用grammar rule来进行推导的。
 
-[Formal grammars](https://en.wikipedia.org/wiki/Formal_grammar)相当于 [deductive apparatus](https://en.wikipedia.org/wiki/Deductive_apparatus)。
+它的反问题是：给定sentence，判断它是否符合这个语言的grammar。这就是[parsing](https://en.wikipedia.org/wiki/Parsing)。
+
+通过上面的分析可以看出，generating和[parsing](https://en.wikipedia.org/wiki/Parsing)互为反过程。
+
+
 
 
 
 ## 从[Mathematical logic](https://en.wikipedia.org/wiki/Mathematical_logic)的角度来看[Formal grammars](https://en.wikipedia.org/wiki/Formal_grammar)
 
-如果从[Mathematical logic](https://en.wikipedia.org/wiki/Mathematical_logic)的逻辑推导的角度来看待[Formal grammars](https://en.wikipedia.org/wiki/Formal_grammar)的话，[formal grammars](https://en.wikipedia.org/wiki/Formal_grammar)的很多内容就变得非常容易理解：
-
-- [formal grammars](https://en.wikipedia.org/wiki/Formal_grammar)本质上就是[推导规则](https://en.wikipedia.org/wiki/Formation_rule)
+如果从[Mathematical logic](https://en.wikipedia.org/wiki/Mathematical_logic)的逻辑推导的角度来看待[Formal grammars](https://en.wikipedia.org/wiki/Formal_grammar)的话，[formal grammars](https://en.wikipedia.org/wiki/Formal_grammar)的很多内容就变得非常容易理解：[formal grammars](https://en.wikipedia.org/wiki/Formal_grammar)可以看做是一个[formal system](https://en.wikipedia.org/wiki/Formal_system)。
 
 下面总结了formal grammar中的一些概念和mathematical logic中的一些概念之间的对应关系，如下：
 
-| [Formal grammar](https://en.wikipedia.org/wiki/Formal_grammar) | [Mathematical logic](https://en.wikipedia.org/wiki/Mathematical_logic) |
+| [Formal grammar](https://en.wikipedia.org/wiki/Formal_grammar)的概念 | [Mathematical logic](https://en.wikipedia.org/wiki/Mathematical_logic)的概念 |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [Production rule](https://en.wikipedia.org/wiki/Production_(computer_science)) | [Formation rule](https://en.wikipedia.org/wiki/Formation_rule)、[Rule of inference](https://en.wikipedia.org/wiki/Rule_of_inference)、[Rewriting](https://en.wikipedia.org/wiki/Rewriting) |
 
@@ -38,13 +40,21 @@
 
 其实上述所有这些讨论，本质上都是属于[Logic](https://en.wikipedia.org/wiki/Logic)学的范轴，推导（[inference](https://en.wikipedia.org/wiki/Inference)）就属于逻辑学的范轴。
 
-[Set theory](https://en.wikipedia.org/wiki/Set_theory)是数学的基石所在，很多其他数学学科都是建立在它的基础之上。
+
+
+## [Formal system](https://en.wikipedia.org/wiki/Formal_system) and formal language
+
+下面这段摘自[Formal systems](https://en.wikipedia.org/wiki/Formation_rule#Formal_systems)
+
+> A *formal system* (also called a *logical calculus*, or a *logical system*) consists of a formal language together with a [deductive apparatus](https://en.wikipedia.org/wiki/Deductive_apparatus) (also called a *deductive system*). The deductive apparatus may consist of a set of [transformation rules](https://en.wikipedia.org/wiki/Transformation_rule) (also called *inference rules*) or a set of [axioms](https://en.wikipedia.org/wiki/Axiom), or have both. A formal system is used to [derive](https://en.wikipedia.org/wiki/Proof_theory)(推导) one expression from one or more other expressions. Propositional and predicate calculi are examples of formal systems.
+
+[Formal grammars](https://en.wikipedia.org/wiki/Formal_grammar) 相当于 [deductive apparatus](https://en.wikipedia.org/wiki/Deductive_apparatus)。
+
+
 
 
 
 ## [Automata theory](https://en.wikipedia.org/wiki/Automata_theory)和[Formal language](https://en.wikipedia.org/wiki/Formal_language)
-
-在上述[Language-specification formalisms](#Language-specification formalisms)章节就对[Automata theory](https://en.wikipedia.org/wiki/Automata_theory)和[Formal language](https://en.wikipedia.org/wiki/Formal_language)之间的关系进行了分析。
 
 [Chomsky hierarchy](https://en.wikipedia.org/wiki/Chomsky_hierarchy)将[Automata theory](https://en.wikipedia.org/wiki/Automata_theory)和[formal language](https://en.wikipedia.org/wiki/Formal_language)进行了关联和对应。需要注意的是，[Automata theory](https://en.wikipedia.org/wiki/Automata_theory)在其他领域有着非常广泛的应用。
 
@@ -59,6 +69,3 @@
 - [Automated theorem proving](https://en.wikipedia.org/wiki/Automated_theorem_proving)
 - [Formal methods](https://en.wikipedia.org/wiki/Formal_methods) 
 
-
-
-## 草稿
