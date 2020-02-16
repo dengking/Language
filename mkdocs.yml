@@ -8,13 +8,14 @@ markdown_extensions:
 nav:
 - Home: index.md
 - Primer: Primer.md
+- Mathematical-logic:
+  - Introduction: Mathematical-logic/index.md
 - Formal-language:
   - Introduction: Formal-language/index.md
   - Description-and-language: Formal-language/Description-and-language.md
   - Formal-and-formal-langugae: Formal-language/Formal-and-formal-langugae.md
-  - Language: Formal-language/wikipedia-Language.md
-  - Formal-language: Formal-language/wikipedia-Formal-language.md
-  - Formal-system: Formal-language/wikipedia-Formal-system.md
+  - Language-and-grammar: Formal-language/Language-and-grammar.md
+  - Formal-language: Formal-language/Formal-language.md
   - Formal-grammar:
     - Formal-grammar: Formal-language/Formal-grammar/wikipedia-Formal-grammar.md
     - Production: Formal-language/Formal-grammar/wikipedia-Production(computer-science).md
@@ -39,6 +40,8 @@ nav:
           - Regular-expression: Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/Regular-expression/wikipedia-Regular-expression.md
           - Thompson's-construction: Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/Regular-expression/wikipedia-Thompson's-construction.md
           - Regex-Engine: Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/Regular-expression/Regex-Engine.md
+    - Parsing-Expression-Grammars:
+      - Parsing-expression-grammar: Formal-language/Formal-grammar/Parsing-Expression-Grammars/Parsing-expression-grammar.md
 - Theory-of-computation:
   - index: Theory-of-computation/index.md
   - Theory-of-computation: Theory-of-computation/Theory-of-computation.md
