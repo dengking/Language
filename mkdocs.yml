@@ -1,5 +1,6 @@
 nav:
     - Home: index.md
     - Primer: Primer.md
+    - Mathematical-logic: Mathematical-logic
     - Formal-language: Formal-language
     - Theory-of-computation: Theory-of-computation
