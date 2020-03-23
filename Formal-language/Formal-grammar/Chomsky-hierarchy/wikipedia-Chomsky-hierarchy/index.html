@@ -1063,14 +1063,14 @@
 <td align="center"><a href="https://en.wikipedia.org/wiki/Context-sensitive_grammar">Context-sensitive</a></td>
 <td align="center"><a href="https://en.wikipedia.org/wiki/Linear_bounded_automaton">Linear-bounded non-deterministic Turing machine</a></td>
 <td align="center">$ \alpha A\beta \rightarrow \alpha \gamma \beta $</td>
-<td align="center">$ L={a^{n}b^{n}c^{n}</td>
+<td align="center">$ L={a<sup>{n}b</sup>{n}c^{n}</td>
 </tr>
 <tr>
 <td align="center">Type-2</td>
 <td align="center"><a href="https://en.wikipedia.org/wiki/Context-free_grammar">Context-free</a></td>
 <td align="center">Non-deterministic <a href="https://en.wikipedia.org/wiki/Pushdown_automaton">pushdown automaton</a></td>
 <td align="center">$ A\rightarrow \alpha $</td>
-<td align="center">$ L={a^{n}b^{n}</td>
+<td align="center">$ L={a<sup>{n}b</sup>{n}</td>
 </tr>
 <tr>
 <td align="center">Type-3</td>
@@ -1121,16 +1121,16 @@
 <p>和其他的grammar production相比，它的unrestriction体现在：</p>
 <ul>
 <li>
-<p>$\alpha$可以为terminal、non-terminal</p>
+<p><span><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span>可以为terminal、non-terminal</p>
 </li>
 <li>
-<p>$\beta$可以为empty string</p>
+<p><span><span class="MathJax_Preview">\beta</span><script type="math/tex">\beta</script></span>可以为empty string</p>
 </li>
 </ul>
 <h2 id="type-1_grammarscontext-sensitive_grammar_formal_definition">Type-1 grammars:<a href="https://en.wikipedia.org/wiki/Context-sensitive_grammar#Formal_definition">Context-sensitive grammar formal definition</a><a class="headerlink" href="#type-1_grammarscontext-sensitive_grammar_formal_definition" title="Permanent link">#</a></h2>
 <p>A <a href="https://en.wikipedia.org/wiki/Formal_grammar">formal grammar</a> <em>G</em> = (<em>N</em>, Σ, <em>P</em>, <em>S</em>), where <em>N</em> is a set of nonterminal symbols, Σ is a set of terminal symbols, <em>P</em> is a set of production rules, and <em>S</em> is the <a href="https://en.wikipedia.org/wiki/Start_symbol_(formal_languages)">start symbol</a>, is <strong>context-sensitive</strong> if all rules in <em>P</em> are of the form</p>
-<p>α<em>A</em>β → αγβ</p>
-<p>where <em>A</em> ∈ <em>N</em>, α,β ∈ (<em>N</em>∪Σ)<em>  and γ ∈ (</em>N*∪Σ)+. </p>
+<p>α*A*β → αγβ</p>
+<p>where <em>A</em> ∈ <em>N</em>, α,β ∈ (<em>N</em>∪Σ)*  and γ ∈ (<em>N</em>∪Σ)+. </p>
 <p>上述<code>*</code>和<code>+</code>都是使用的正则表达式的概念。</p>
 <h3 id="_3">对比分析<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
 <p>和<a href="https://en.wikipedia.org/wiki/Unrestricted_grammar">unrestricted grammar</a> production相比，它的restriction在于：</p>
@@ -1147,10 +1147,10 @@
 <p><em>V</em> is a finite set; each element $ v\in V $ is called <em>a nonterminal character</em> or a <em>variable</em>. Each variable represents a different type of phrase or clause in the sentence. Variables are also sometimes called syntactic categories. Each variable defines a sub-language of the language defined by <em>G</em>.</p>
 </li>
 <li>
-<p>Σ is a finite set of <em>terminal</em>s, disjoint from <em>V</em>, which make up the actual content of the sentence. The set of terminals is the alphabet of the language defined by the grammar <em>G</em>.</p>
+<p>Σ is a finite set of <em>terminal*s, disjoint from *V</em>, which make up the actual content of the sentence. The set of terminals is the alphabet of the language defined by the grammar <em>G</em>.</p>
 </li>
 <li>
-<p><em>R</em> is a finite <strong>relation</strong> from <em>V</em> to $ (V\cup \Sigma )^{<em>} $, where the asterisk represents the <a href="https://en.wikipedia.org/wiki/Kleene_star">Kleene star</a> operation. The members of </em>R<em> are called the </em>(rewrite) rule<em>s or </em>production<em>s of the grammar. (also commonly symbolized by a </em>P*)</p>
+<p><em>R</em> is a finite <strong>relation</strong> from <em>V</em> to $ (V\cup \Sigma )^{<em>} $, where the asterisk represents the <a href="https://en.wikipedia.org/wiki/Kleene_star">Kleene star</a> operation. The members of *R</em> are called the <em>(rewrite) rule*s or *production*s of the grammar. (also commonly symbolized by a *P</em>)</p>
 </li>
 </ol>
 <blockquote>
@@ -1164,13 +1164,13 @@
 <li><em>S</em> is the start variable (or start symbol), used to represent the whole sentence (or program). It must be an element of <em>V</em>.</li>
 </ol>
 <h3 id="production_rule_notation">Production rule notation<a class="headerlink" href="#production_rule_notation" title="Permanent link">#</a></h3>
-<p>A <a href="https://en.wikipedia.org/wiki/Formal_grammar#The_syntax_of_grammars">production rule</a> in <em>R</em> is formalized mathematically as a pair $ (\alpha ,\beta )\in R $, where $ \alpha \in V $ is a nonterminal and $ \beta \in (V\cup \Sigma )^{<em>} $ is a <a href="https://en.wikipedia.org/wiki/String_(computer_science)">string</a> of variables and/or terminals; rather than using <a href="https://en.wikipedia.org/wiki/Ordered_pair">ordered pair</a> notation, production rules are usually written using an arrow operator with </em>α<em> as its left hand side and </em>β* as its right hand side: $ \alpha \rightarrow \beta $.</p>
+<p>A <a href="https://en.wikipedia.org/wiki/Formal_grammar#The_syntax_of_grammars">production rule</a> in <em>R</em> is formalized mathematically as a pair $ (\alpha ,\beta )\in R $, where $ \alpha \in V $ is a nonterminal and $ \beta \in (V\cup \Sigma )^{<em>} $ is a <a href="https://en.wikipedia.org/wiki/String_(computer_science)">string</a> of variables and/or terminals; rather than using <a href="https://en.wikipedia.org/wiki/Ordered_pair">ordered pair</a> notation, production rules are usually written using an arrow operator with *α</em> as its left hand side and <em>β</em> as its right hand side: $ \alpha \rightarrow \beta $.</p>
 <p>It is allowed for <em>β</em> to be the <a href="https://en.wikipedia.org/wiki/Empty_string">empty string</a>, and in this case it is customary to denote it by ε. The form $ \alpha \rightarrow \varepsilon $ is called an <em>ε</em>-production. </p>
-<p>It is common to list all right-hand sides for the same left-hand side on the same line, using | (the <a href="https://en.wikipedia.org/wiki/Pipe_symbol">pipe symbol</a>) to separate them. Rules $ \alpha \rightarrow \beta <em>{1} $ and $ \alpha \rightarrow \beta </em>{2} $ can hence be written as $ \alpha \rightarrow \beta <em>{1}\mid \beta </em>{2} $. In this case, $ \beta <em>{1} $ and $ \beta </em>{2} $ is called the first and second alternative, respectively.</p>
+<p>It is common to list all right-hand sides for the same left-hand side on the same line, using | (the <a href="https://en.wikipedia.org/wiki/Pipe_symbol">pipe symbol</a>) to separate them. Rules $ \alpha \rightarrow \beta _{1} $ and $ \alpha \rightarrow \beta _{2} $ can hence be written as $ \alpha \rightarrow \beta _{1}\mid \beta _{2} $. In this case, $ \beta _{1} $ and $ \beta _{2} $ is called the first and second alternative, respectively.</p>
 <h3 id="rule_application">Rule application<a class="headerlink" href="#rule_application" title="Permanent link">#</a></h3>
-<p>For any strings $ u,v\in (V\cup \Sigma )^{<em>} $, we say </em>u<em> directly yields </em>v<em>, written as $ u\Rightarrow v\, $, if $ \exists (\alpha ,\beta )\in R $ with $ \alpha \in V $ and $ u_{1},u_{2}\in (V\cup \Sigma )^{</em>} $ such that $ u\,=u_{1}\alpha u_{2} $ and $ v\,=u_{1}\beta u_{2} $. Thus, <em>v</em> is a result of applying the rule $ (\alpha ,\beta ) $ to <em>u</em>.</p>
+<p>For any strings $ u,v\in (V\cup \Sigma )^{<em>} $, we say *u</em> directly yields <em>v</em>, written as $ u\Rightarrow v\, $, if $ \exists (\alpha ,\beta )\in R $ with $ \alpha \in V $ and $ u_{1},u_{2}\in (V\cup \Sigma )^{<em>} $ such that $ u\,=u_{1}\alpha u_{2} $ and $ v\,=u_{1}\beta u_{2} $. Thus, *v</em> is a result of applying the rule $ (\alpha ,\beta ) $ to <em>u</em>.</p>
 <h3 id="repetitive_rule_application">Repetitive rule application<a class="headerlink" href="#repetitive_rule_application" title="Permanent link">#</a></h3>
-<p>For any strings $ u,v\in (V\cup \Sigma )^{<em>}, $ we say </em>u<em> <strong>yields</strong> </em>v<em>, written as $ u{\stackrel {</em>}{\Rightarrow }}v $ (or $ u\Rightarrow \Rightarrow v\, $ in some textbooks), if $ \exists k\geq 1\,\exists \,u_{1},\cdots ,u_{k}\in (V\cup \Sigma )^{<em>} $ such that $ u=\,u_{1}\Rightarrow u_{2}\Rightarrow \cdots \Rightarrow u_{k}\,=v $. In this case, if $ k\geq 2 $ (i.e., $ u\neq v $), the relation $ u{\stackrel {+}{\Rightarrow }}v $ holds. In other words, $ ({\stackrel {</em>}{\Rightarrow }}) $ and $ ({\stackrel {+}{\Rightarrow }}) $ are the <a href="https://en.wikipedia.org/wiki/Reflexive_transitive_closure">reflexive transitive closure</a> (allowing a word to yield itself) and the <a href="https://en.wikipedia.org/wiki/Transitive_closure">transitive closure</a> (requiring at least one step) of $ (\Rightarrow ) $, respectively.</p>
+<p>For any strings $ u,v\in (V\cup \Sigma )^{<em>}, $ we say *u</em> <strong>yields</strong> <em>v</em>, written as $ u{\stackrel {<em>}{\Rightarrow }}v $ (or $ u\Rightarrow \Rightarrow v\, $ in some textbooks), if $ \exists k\geq 1\,\exists \,u_{1},\cdots ,u_{k}\in (V\cup \Sigma )^{</em>} $ such that $ u=\,u_{1}\Rightarrow u_{2}\Rightarrow \cdots \Rightarrow u_{k}\,=v $. In this case, if $ k\geq 2 $ (i.e., $ u\neq v $), the relation $ u{\stackrel {+}{\Rightarrow }}v $ holds. In other words, $ ({\stackrel {*}{\Rightarrow }}) $ and $ ({\stackrel {+}{\Rightarrow }}) $ are the <a href="https://en.wikipedia.org/wiki/Reflexive_transitive_closure">reflexive transitive closure</a> (allowing a word to yield itself) and the <a href="https://en.wikipedia.org/wiki/Transitive_closure">transitive closure</a> (requiring at least one step) of $ (\Rightarrow ) $, respectively.</p>
 <h3 id="context-free_language">Context-free language<a class="headerlink" href="#context-free_language" title="Permanent link">#</a></h3>
 <p>The language of a grammar $ G=(V,\Sigma ,R,S) $ is the set</p>
 <p>$ L(G)={w\in \Sigma ^{<em>}:S{\stackrel {</em>}{\Rightarrow }}w} $</p>
