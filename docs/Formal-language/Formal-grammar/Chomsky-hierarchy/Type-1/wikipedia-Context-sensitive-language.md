@@ -1,4 +1,4 @@
-[TOC]
+
 
 # [Context-sensitive language](https://en.wikipedia.org/wiki/Context-sensitive_language)
 

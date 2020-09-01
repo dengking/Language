@@ -1,7 +1,3 @@
-[TOC]
-
-
-
 # [Finite-state machine](https://en.wikipedia.org/wiki/Finite-state_machine)
 
 > TIPS: In Chinese, [Finite-state machine](https://en.wikipedia.org/wiki/Finite-state_machine) means 有穷自动机
