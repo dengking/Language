@@ -14,10 +14,8 @@
 这个项目是对[语言](https://en.wikipedia.org/wiki/Language)相关的理论的一个梳理，它主要作为如下项目所涉及的理论的总结：
 
 - [compiler-principle](https://github.com/dengking/compiler-principle)
-- [compiler-principle-in-action](https://github.com/dengking/compiler-principle-in-action)
-- [Natural-Language-Processing-with-Python](https://github.com/dengking/Natural-Language-Processing-with-Python)
 
-
+  
 
 ## 学习计划--从入门到精通
 

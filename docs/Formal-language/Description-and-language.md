@@ -32,7 +32,11 @@
 
 #### [Interface description language](https://en.wikipedia.org/wiki/Interface_description_language)
 
-human-readable、machine-readable
+human-readable、machine-readable。下面是一些example:
+
+1) Thrift interface description language[¶](https://thrift.apache.org/docs/idl.html#thrift-interface-description-language)
+
+2) protobuf
 
 #### [Markup language](https://en.wikipedia.org/wiki/Markup_language)
 
