@@ -1,5 +1,6 @@
 nav:
     - Home: index.md
+    - Language: Language
     - Primer: Primer.md
     - Mathematical-logic: Mathematical-logic
     - Formal-language: Formal-language
