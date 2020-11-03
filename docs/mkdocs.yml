@@ -1,7 +1,7 @@
 nav:
     - Home: index.md
     - Language: Language
-    - Primer: Primer.md
+    - Grammar: Grammar
     - Mathematical-logic: Mathematical-logic
     - Formal-language: Formal-language
     - Theory-of-computation: Theory-of-computation
