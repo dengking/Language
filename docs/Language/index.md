@@ -63,24 +63,68 @@ See also:
 
 
 
+## 不同语言有着各自的优势
 
+[English](https://en.wikipedia.org/wiki/England) mathematician [R.L.E. Schwarzenberger](https://en.wikipedia.org/wiki/Rolph_Ludwig_Edward_Schwarzenberger) 的这番言论（参见上一节）向我们揭示了：不同的语言有着各自的优势，即有的语言是非常适合于描述某一类事物（或者问题）的，或者说，使用不同的语言来描述相同的问题，使用这种语言更加地便利，更加易于理解，而有的语言则可能比较繁琐且不利于理解，也就是对这类问题而已，这种语言更加地**expressive**。正如它所总结的这个例子，自然语言显然更加适合于表达情感，数学语言更加适合于进行严格地证明。
 
-## Classification of language
-
-在wikipedia [Language](https://en.wikipedia.org/wiki/Language) 中给出 了language的简单分类方法: 
-
-1) [Constructed language](https://en.wikipedia.org/wiki/Constructed_language) 人造语言
-
-2) [Natural languages](https://en.wikipedia.org/wiki/Natural_language) 自然语言
-
-3) [Formal language](https://en.wikipedia.org/wiki/Formal_language) 形式语言
-
-[Programming language](https://en.wikipedia.org/wiki/Programming_language) 编程语言，它是一种 formal language。后面会对它进行详细介绍。
-
-需要注意的是: [Formal language](https://en.wikipedia.org/wiki/Formal_language) 不是 [natural language](https://en.wikipedia.org/wiki/Natural_language) 。
+我们知道，目前已经有非常多的programming language了，维基百科的[List of programming languages](https://en.wikipedia.org/wiki/List_of_programming_languages)中，已经收录了约700中programming language，所以，我们有必要分析一下不同的programming language的各自的优势。关于此，参见工程[programming-language](https://dengking.github.io/programming-language/)的文章Expressive of programming language。
 
 
 
-## 形式语言
+## 语言的expressive power
 
-科学需要严谨的、准确的描述方式，所以它使用的语言不同于人类说话时使用的[自然语言](https://en.wikipedia.org/wiki/Natural_language)，在科学中，往往使用的一种叫做 [formal language](https://en.wikipedia.org/wiki/Well-formed_formula) 的语言，这类语言有着诸多优良的特性，它是很多学科的基础。它相较于[自然语言](https://en.wikipedia.org/wiki/Natural_language)，有着诸多优势，其中一个优势就是 machine-readable，所以这也是它吸引计算机科学家的一个原因。在下章将对其进行详细讨论。
+> Mathematics can communicate a range of meanings that is as wide as (although different from) that of a **natural language**.
+
+这段话向我们传达了这样的含义：不同的语言 所能够描述的meaning的范围 是不同的。下面我们使用集合的观点来描述这个含义：如果我们将语言“所能够描述的meaning”放到一个集合中，把这个集合称为 meaning set，那么不同语言的meaning set的大小是不同的。使用我们的自然语言来描述就是：有的语言能够描述的范围更大、有的语言无法描述另外一个语言所表达的。这就是本节标题中的“expressive power”的含义。
+
+关于expressive power，参见：
+
+- 维基百科[Expressive power](https://en.wikipedia.org/wiki/Expressive_power_(computer_science))
+- 维基百科[Combinatory categorial grammar](https://en.wikipedia.org/wiki/Combinatory_categorial_grammar) （其中提及了expressive power）
+
+
+
+## 如何来进行描述/如何选择语言？
+
+如何来进行描述？作为一个software engineer，这是需要我们不断地进行思考的问题，下面是我的一些经验: 
+
+### 使用不同的学科的语言来进行描述
+
+通过前面的内容，我们应该已经对语言有了更加宽泛的认识了。不同的学科创建了各自的理论体系（创建了概念、规则等），这就形成了该学科的特有的**语言**，这就形成了对于同一个事物，各个学科都可以使用自己的语言来对它进行描述，这就好比对于“苹果”，中文、英文、法文有着各自的描述方式。
+
+拥有这样的认知是非常重要的，比如，当我们在阅读维基百科的一些文章的时候，常常会碰到的一种情况是某某概念，数学中怎么描述、计算机科学中怎么描述、语言学中怎么描述。
+
+拥有这样的认知对于软件工程师尤其重要，正如在本文开头做说的：
+
+> 我们所做的很多工作，就是将人们使用[natural language](https://en.wikipedia.org/wiki/Natural_language)、[language of mathematics](https://en.wikipedia.org/wiki/Language_of_mathematics)等语言的描述，转换为[programming language](https://en.wikipedia.org/wiki/Programming_language)的描述
+
+
+
+**Example: 使用不同的描述语言来描述MLP:**
+
+典型的例子就是对于MLP，对于同一个结构，可以使用不同的语言来进行描述。可以使用**graph**、**math expression**来进行描述，在文章 zhihu [如何直观地解释 backpropagation 算法？ - Anonymous的回答 - 知乎](https://www.zhihu.com/question/27239198/answer/89853077 ) 中有如下描述：
+
+> 多层神经网络本质上是一个多层复合函数，数学是一门简洁但是含义丰富的原因，简单的公式，但是能够表达强大的结构
+
+
+
+### Programming model and programming paradigm
+
+在不同领域，有着适合于该领域问题的问题的描述方式，这就是所谓的programming model、programming paradigm。
+
+关于programming model，参见工程programming-language的`Theory\Programming-model`章节。
+
+关于programming paradigm，参见工程programming-language的`Theory\Programming-paradigm`章节。
+
+
+
+### 使用更加抽象的语言
+
+典型的例子就是C++ iterator、C++ range。iterator是一种非常强大的抽象的描述方式，可以抽象地描述container、stream。
+
+### 使用适合于问题的语言
+
+比如使用DSL；
+
+比如创造适合于该领域的语言，JavaScript就是这样的一个例子；
+

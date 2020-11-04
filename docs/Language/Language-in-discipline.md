@@ -47,40 +47,7 @@ human-readable、machine-readable，比如:
 
 ## 描述结构的语言
 
-如何来描述structure？科学家们已经回答了这个问题，下面是一些案例: 
-
-### Abstract syntax description language(ADSL)
-
-在论文 [The Zephyr Abstract Syntax Description Language](https://www.cs.princeton.edu/research/techreps/TR-554-97) 中有这样的总结：
-
-> Regular expressions describe lexical structures  of programming languages.
->
-> Context free grammars describe syntactic structures of programming languages .
->
-> ASDL describes the [abstract syntax](https://en.wikipedia.org/wiki/Abstract_syntax)  of compiler intermediate representations (IRs) and other tree-like data
-> structures.
-
-
-
-### [Algebraic data types](https://en.wikipedia.org/wiki/Algebraic_data_type)
-
-
-
-
-
-### 语言学中的描述结构的语言
-
-在语言学中，[grammar](https://en.wikipedia.org/wiki/Grammar)来描述语言的结构，[formal language](https://en.wikipedia.org/wiki/Well-formed_formula)的grammar是[formal grammar](https://en.wikipedia.org/wiki/Formal_grammar)，比如[context free grammar](https://en.wikipedia.org/wiki/Context-free_grammar)。[Production (computer science)](https://en.wikipedia.org/wiki/Production_(computer_science))常常用来表示[context free grammar](https://en.wikipedia.org/wiki/Context-free_grammar)。
-
-
-
-### See also
-
-在我的工程[data-structure](https://github.com/dengking/data-structure)给出了各种数据结构的描述方式，下面给出链接：
-
-- https://github.com/dengking/data-structure/blob/master/docs/tree/representing-trees.md
-
-
+参见`Language\Language-and-computation\Language-for-structure`章节。
 
 ## Compiler中的语言
 

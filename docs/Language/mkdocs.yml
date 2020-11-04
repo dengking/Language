@@ -1,6 +1,6 @@
 nav:
     - Introduction: index.md
+    - Classification: Classification
+    - Language-and-computation: Language-and-computation
     - Language-in-discipline: Language-in-discipline.md
-    - GPL-and-DSL: GPL-and-DSL.md
-    - Official-and-dialect: Official-and-dialect.md
     
