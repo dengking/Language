@@ -175,3 +175,223 @@ The expression problem isn't new, and has likely been with us since the early da
 It's fairly certain that the name *expression problem* comes from [an email](http://homepages.inf.ed.ac.uk/wadler/papers/expression/expression.txt) sent by [Philip Wadler](https://en.wikipedia.org/wiki/Philip_Wadler) to a mailing list deailing with adding generics to Java (this was back in the 1990s).
 
 In that email, Wadler points to the paper ["Synthesizing Object-Oriented and Functional Design to Promote Re-Use"](https://cs.brown.edu/~sk/Publications/Papers/Published/kff-synth-fp-oo/) by Krishnamurthi, Felleisen and Friedman as an earlier work describing the problem and proposed solutions. This is a great paper and I highly recommend reading it. Krishnamurthi et.al., in their references, point to papers from as early as 1975 describing variations of the problem in Algol.
+
+> NOTE: 这篇论文收录在了 `Expression-oriented-programming\Expression-problem\Synthesizing-Object-Oriented-and-Functional-Design-to-Promote-Re-Use` 章节中。
+
+## Flipping(翻转) the matrix with the visitor pattern
+
+It's possible to kinda(一点儿) solve (read on to understand why I say "kinda") the **expression problem** in **object-oriented languages**; first, we have to look at how we can flip the problem on its side using the **visitor pattern**. The **visitor pattern** is very common for this kind of problems, and for a good reason. It lets us reformulate(再形式化表示) our code in a way that makes it easier to change in some dimensions (though harder in others).
+
+For the C++ sample shown above, rewriting it using the visitor pattern means adding a new "visitor" interface:
+
+```C++
+class ExprVisitor
+{
+public:
+	virtual void VisitConstant(const Constant &c) = 0;
+	virtual void VisitBinaryPlus(const BinaryPlus &bp) = 0;
+};
+
+```
+
+And changing the `Expr` interface to be:
+
+```C++
+class Expr
+{
+public:
+	virtual void Accept(ExprVisitor *visitor) const = 0;
+};
+
+```
+
+Now expression types defer(推迟) the actual computation to the visitor, as follows:
+
+```C++
+class Constant: public Expr
+{
+public:
+	Constant(double value) :
+					value_(value)
+	{
+	}
+
+	void Accept(ExprVisitor *visitor) const
+	{
+		visitor->VisitConstant(*this);
+	}
+
+	double GetValue() const
+	{
+		return value_;
+	}
+
+private:
+	double value_;
+};
+
+// ... similarly, BinaryPlus would have
+//
+//    void Accept(ExprVisitor* visitor) const {
+//      visitor->VisitBinaryPlus(*this);
+//    }
+//
+// ... etc.
+
+```
+
+### Evaluator visitor
+
+A sample visitor for evaluation would be [[2\]](https://eli.thegreenplace.net/2016/the-expression-problem-and-its-solutions/#id8):
+
+```C++
+class Evaluator: public ExprVisitor
+{
+public:
+	double GetValueForExpr(const Expr &e)
+	{
+		return value_map_[&e];
+	}
+
+	void VisitConstant(const Constant &c)
+	{
+		value_map_[&c] = c.GetValue();
+	}
+
+	void VisitBinaryPlus(const BinaryPlus &bp)
+	{
+		bp.GetLhs().Accept(this);
+		bp.GetRhs().Accept(this);
+		value_map_[&bp] = value_map_[&(bp.GetLhs())] + value_map_[&(bp.GetRhs())];
+	}
+
+private:
+	std::map<const Expr*, double> value_map_;
+};
+
+```
+
+### Problem
+
+It should be obvious that for a given set of data types, adding new visitors is easy and doesn't require modifying any other code. On the other hand, adding new types is problematic since it means we have to update the `ExprVisitor` interface with a new abstract method, and consequently update all the visitors to implement it.
+
+So it seems that we've just turned the expression problem on its side: we're using an OOP language, but now it's hard to add types and easy to add ops, just like in the functional approach. I find it extremely interesting that we can do this. In my eyes this highlights the power of different abstractions and paradigms, and how they enable us to rethink a problem in a completely different light.
+
+So we haven't solved anything yet; we've just changed the nature of the problem we're facing. Worry not - this is just a stepping stone to an actual solution.
+
+## Extending the visitor pattern
+
+The following is code excerpts from a C++ solution that follows the **extended visitor pattern** proposed by Krishnamurthi et. al. in their paper; I strongly suggest reading the paper (particularly section 3) if you want to understand this code on a deep level. A complete code sample in C++ that compiles and runs is [available here](https://github.com/eliben/code-for-blog/blob/master/2016/expression-problem/c%2B%2B/visitor-extended.cpp).
+
+Adding new **visitors** (ops) with the **visitor pattern** is easy. Our challenge is to add a new *type* without upheaving too much existing code. Let's see how it's done.
+
+### Evaluator visitor
+
+One small design change that we should make to the original visitor pattern is use `virtual` inheritance for `Evaluator`, for reasons that will soon become obvious:
+
+```C++
+class Evaluator: virtual public ExprVisitor
+{
+	// .. the rest is the same
+};
+
+```
+
+### Add a new type 
+
+Now we're going to add a new type - `FunctionCall`:
+
+```c++
+// This is the new ("extended") expression we're adding.
+class FunctionCall: public Expr
+{
+public:
+	FunctionCall(const std::string &name, const Expr &argument) :
+					name_(name), argument_(argument)
+	{
+	}
+
+	void Accept(ExprVisitor *visitor) const
+	{
+		ExprVisitorWithFunctionCall *v = dynamic_cast<ExprVisitorWithFunctionCall*>(visitor);
+		if (v == nullptr)
+		{
+			std::cerr << "Fatal: visitor is not ExprVisitorWithFunctionCall\n";
+			exit(1);
+		}
+		v->VisitFunctionCall(*this);
+	}
+
+private:
+	std::string name_;
+	const Expr &argument_;
+};
+
+```
+
+### New evaluator visitor
+
+Since we don't want to modify the existing visitors, we create a new one, extending `Evaluator` for function calls. But first, we need to extend the `ExprVisitor` interface to support the new type:
+
+```C++
+class ExprVisitorWithFunctionCall: virtual public ExprVisitor
+{
+public:
+	virtual void VisitFunctionCall(const FunctionCall &fc) = 0;
+};
+
+```
+
+Finally, we write the new evaluator, which extends `Evaluator` and supports the new type:
+
+```c++
+class EvaluatorWithFunctionCall: public ExprVisitorWithFunctionCall, public Evaluator
+{
+public:
+	void VisitFunctionCall(const FunctionCall &fc)
+	{
+		std::cout << "Visiting FunctionCall!!\n";
+	}
+};
+
+```
+
+> NOTE: 
+>
+> 继承 `Evaluator` 的目的是: inherits all functionality from `Evaluator`
+>
+> 继承 `ExprVisitorWithFunctionCall` 的目的是: implements the `ExprVisitorWithFunctionCall` interface
+
+**Multiple inheritance**, **virtual inheritance**, **dynamic type checking**... that's pretty hard-core C++ we have to use here, but there's no choice. Unfortunately, **multiple inheritance** is the only way C++ lets us express the idea that a class implements some interface while at the same time deriving functionality from another class. What we want to have here is an evaluator (`EvaluatorWithFunctionCall`) that inherits all functionality from `Evaluator`, and also implements the `ExprVisitorWithFunctionCall` interface. In Java, we could say something like:
+
+```java
+class EvaluatorWithFunctionCall extends Evaluator implements ExprVisitor {
+  // ...
+}
+```
+
+But in C++ **virtual multiple inheritance** is the tool we have. The virtual part of the inheritance is essential here for the compiler to figure out that the `ExprVisitor` base underlying both `Evaluator` and `ExprVisitorWithFunctionCall` is the same and should only appear once in `EvaluatorWithFunctionCall`. Without virtual, the compiler would complain that `EvaluatorWithFunctionCall` doesn't implement the `ExprVisitor` interface.
+
+This is a solution, alright. We kinda added a new type `FunctionCall` and can now visit it without changing existing code (assuming the virtual inheritance was built into the design from the start to anticipate this approach). Here I am using this "kinda" word again... it's time to explain why.
+
+This approach has multiple flaws, in my opinion:
+
+1 Note the `dynamic_cast` in `FunctionCall::Accept`. It's fairly ugly that we're forced to mix in dynamic checks into this code, which should supposedly rely on static typing and the compiler. But it's just a sign of a larger problem.
+
+2 If we have an instance of an `Evaluator`, it will no longer work on the whole extended expression tree since it has no understanding of `FunctionCall`. It's easy to say that all new evaluators should rather be `EvaluatorWithFunctionCall`, but we don't always control this. What about code that was already written? What about `Evaluator`s created in third-party or library code which we have no control of?
+
+3 The virtual inheritance is not the only provision we have to build into the design to support this pattern. Some visitors would need to create new, recursive visitors to process complex expressions. But we can't anticipate in advance which dynamic type of visitor needs to be created. Therefore, the visitor interface should also accept a "visitor factory" which extended visitors will supply. I know this sounds complicated, and I don't want to spend more time on this here - but the Krishnamurthi paper addresses this issue extensively in section 3.4
+
+4 Finally, the solution is unwieldy for realistic applications. Adding one new type looks manageable; what about adding 15 new types, gradually over time? Imagine the horrible zoo of `ExprVisitor` extensions and dynamic checks this would lead to.
+
+Yeah, programming is hard. I could go on and on about the limitations of classical OOP and how they surface in this example [[3\]](https://eli.thegreenplace.net/2016/the-expression-problem-and-its-solutions/#id9). Instead, I'll just present how the expression problem can be solved in a language that supports multiple dispatch and separates the defintion of methods from the bodies of types they act upon.
+
+## Solving the expression problem in Clojure
+
+There are a number of ways the expression problem as displayed in this article can be solved in Clojure using the language's built-in features. Let's start with the simplest one - multi-methods.
+
+## Is multiple dispatch necessary to cleanly solve the expression problem?
+
+## Another Clojure solution - using protocols
+
+## Small interfaces are extensibility-friendly
