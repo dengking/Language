@@ -4,6 +4,16 @@
 
 > If we don't control the `Shape` base class at all, we're in real trouble. This is an instance of the [expression problem](https://en.wikipedia.org/wiki/Expression_problem). I'll have more to say about the expression problem in a future post, but for now the Wikipedia link will have to do. 
 
+## stackoverflow [What is the 'expression problem'?](https://stackoverflow.com/questions/3596366/what-is-the-expression-problem)
+
+[A](https://stackoverflow.com/a/3776140)
+
+Watch [this lecture](http://channel9.msdn.com/shows/Going+Deep/C9-Lectures-Dr-Ralf-Laemmel-Advanced-Functional-Programming-The-Expression-Problem/).
+
+The idea is that your program is a combination of a **datatype** and **operations** over it. The problem asks for an implementation that allows to add new cases of the type and new operations without the need for recompilation of the old modules and keeping static type safety(no casts or runtime type checks).
+
+It's interesting to notice that in **functional programming languages** it's easy to add new operations, but hard to add cases to the **datatype**. While in an OO language it's the other way round. This is one of the big conceptual differences between the two programming paradigms.
+
 ## wikipedia [Expression problem](https://en.wikipedia.org/wiki/Expression_problem)
 
 The **expression problem** is a term used in discussing strengths and weaknesses of various [programming paradigms](https://en.wikipedia.org/wiki/Programming_paradigms) and [programming languages](https://en.wikipedia.org/wiki/Programming_languages).
