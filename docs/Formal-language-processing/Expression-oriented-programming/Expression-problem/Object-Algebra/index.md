@@ -19,3 +19,6 @@ If you have a solution for the **expression problem** in your favourite language
 ### Background: The Expression Problem
 
 ### Requirements for a solution
+
+### Solutions using Object Algebras
+
