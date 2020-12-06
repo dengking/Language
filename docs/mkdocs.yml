@@ -2,5 +2,6 @@ nav:
     - Home: index.md
     - Language: Language
     - Formal-language: Formal-language
+    - Formal-language-processing: Formal-language-processing
     - Mathematical-logic: Mathematical-logic
     
