@@ -8,7 +8,7 @@
 
 3) [Formal language](https://en.wikipedia.org/wiki/Formal_language) 形式语言
 
-[Programming language](https://en.wikipedia.org/wiki/Programming_language) 编程语言，它是一种 formal language。后面会对它进行详细介绍。
+[Programming language](https://en.wikipedia.org/wiki/Programming_language) 即"编程语言"，它是一种 formal language。后面会对它进行详细介绍。
 
 需要注意的是: [Formal language](https://en.wikipedia.org/wiki/Formal_language) 不是 [natural language](https://en.wikipedia.org/wiki/Natural_language) 。
 

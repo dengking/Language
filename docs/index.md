@@ -1,4 +1,4 @@
-# 关于本项目
+# 关于本工程
 
 出于如下原因我创建了这个项目：
 
@@ -14,4 +14,13 @@
 
 
 
-作为software engineer，我们不仅仅需要会使用language，还需要掌握如何设计language。
+作为software engineer，我们不仅仅需要会使用programming language，还需要掌握如何设计programming language、computation of language。
+
+主要内容如下:
+
+| 章节            | 主要内容                  |
+| --------------- | ------------------------- |
+| Language        | 描述language相关的内容    |
+| Formal language | 对formal language进行描述 |
+|                 |                           |
+

@@ -70,13 +70,21 @@ Each category of languages, except those marked by a `*`, is a [proper subset](h
 
 
 
+## 入门读物
+
+入门读物推荐：
+
+- [Formal Languages, Grammars, and Automata](http://www.sti.uniurb.it/aldini/publications/lfga.pdf)
+
+除此之外，推荐阅读如下巨著：
+
+- [Introduction to Automata and Language Theory(aka ***Cinderella Book***)](http://infolab.stanford.edu/~ullman/ialc.html)
+
 ### Cinderella Book VS Dragon Book
 
 [Introduction to Automata and Language Theory(aka ***Cinderella Book***)](http://infolab.stanford.edu/~ullman/ialc.html)是该领域的经典书籍。
 
 [Introduction to Automata and Language Theory(aka ***Cinderella Book***)](http://infolab.stanford.edu/~ullman/ialc.html)和[Compilers: Principles, Techniques, and Tools (aka "***Dragon Book***")](http://en.wikipedia.org/wiki/Compilers:_Principles,_Techniques,_and_Tools)中的内容其实是紧密关联的，这不仅仅是因为Jeffrey D.Ullman参与了这两本书的编写，而是因为programming language是一种formal language，而Cinderella Book和Dragon Book其实都是在讲述和formal language相关的内容，当然，这些内容仅仅书中的一部分。Cinderella Book专注于讲述automata and language theory，而dragon book的内容则可以分为两个部分front end和back end，显然front end所讲述的内容就和automata and language theory紧密相关了。
-
-
 
 ## draft
 
@@ -84,3 +92,4 @@ Each category of languages, except those marked by a `*`, is a [proper subset](h
 
 - 维基百科: [Automata theory](https://en.wikipedia.org/wiki/Automata_theory) : [formal languages](https://en.wikipedia.org/wiki/Formal_language) **and** [formal grammars](https://en.wikipedia.org/wiki/Formal_grammar)
 - [Introduction to Automata and Language Theory(aka ***Cinderella Book***)](http://infolab.stanford.edu/~ullman/ialc.html)
+

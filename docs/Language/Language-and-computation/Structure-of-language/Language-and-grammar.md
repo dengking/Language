@@ -17,6 +17,10 @@
 
 ## Grammar
 
+在[语言学](https://en.wikipedia.org/wiki/Linguistics)中，使用[**grammar**](https://en.wikipedia.org/wiki/Grammar)来描述语言的结构。只有知道了language的structure，才能够对其进行计算。
+
+
+
 语言学家很早就发现了语言也是有结构的，他们使用[Grammar](https://en.wikipedia.org/wiki/Grammar)来描述语言的结构。
 
 在维基百科[Grammar](https://en.wikipedia.org/wiki/Grammar)中总结了关于grammar的[Theoretical frameworks](https://en.wikipedia.org/wiki/Grammar)，如果使用我们的中国话来理解的是，它们是不同的学说或流派，本文重点关注那些基于"innate "[universal grammar](https://en.wikipedia.org/wiki/Universal_grammar)" " 思想的流派，这个思想是由 [Noam Chomsky](https://en.wikipedia.org/wiki/Noam_Chomsky)提出，该思想的核心：

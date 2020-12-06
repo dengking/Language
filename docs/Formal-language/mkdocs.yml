@@ -1,8 +1,7 @@
 nav:
     - Introduction: index.md
-    - Description-and-language: Description-and-language.md
     - Formal-and-formal-langugae: Formal-and-formal-langugae.md
-    - Language-and-grammar: Language-and-grammar.md
     - Formal-language: Formal-language.md
-    - Summary-of-theory: Summary-of-theory.md
+    - Intermediate-language: Intermediate-language
     - Formal-grammar: Formal-grammar
+    - Summary-of-theory: Summary-of-theory.md
