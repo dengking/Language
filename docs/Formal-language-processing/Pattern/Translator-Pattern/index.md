@@ -10,7 +10,7 @@
 
 See [FunctionalPatternSystemForObjectOrientedDesign](https://wiki.c2.com/?FunctionalPatternSystemForObjectOrientedDesign)
 
-## 问题描述
+### 问题描述
 
 Often objects are organized into complex data structures such as trees or graphs in order to represent a system of relationships between the objects. Many times one of these structures will be useful in more than one context. For instance an abstract syntax tree would be useful in either a compiler or a pretty printer. In these cases the behavior of the structure and its components is extrinsic(非固有的、外在的) rather than intrinsic(固有的、本质的). That is to say that the behavior of each object in the structure has more to do with how the object is viewed by the **context** than with the nature of the object itself. When this situation occurs the symptoms(症状) include: 
 
@@ -28,7 +28,7 @@ Ordinarily it is impossible to remedy(纠正、补救) this problem without viol
 >
 > 2、"Ordinarily it is impossible to remedy(纠正、补救) this problem without violating the [OpenClosedPrinciple](https://wiki.c2.com/?OpenClosedPrinciple) because the definition of each object must change in response to its use in a new context."，让我想到了expression problem。
 
-## 解决方案: translation 
+### 解决方案: translation 
 
 **Therefore:**
 
@@ -42,7 +42,7 @@ Define a recursive traversal of the structure starting from some root node. Defi
 
 **Resulting context:**
 
-### Advantages
+#### Advantages
 
 This two-part process has several advantages.
 
@@ -58,7 +58,7 @@ This two-part process has several advantages.
 
 6、The use of  [ExternalPolymorphism](https://wiki.c2.com/?ExternalPolymorphism) makes it easy to add new functions as needed without disturbing existing classes.
 
-### Disadvantages
+#### Disadvantages
 
 There are of course disadvantages:
 
@@ -79,3 +79,5 @@ There may be an answer in the detailed discussion in the thesis. See [ObjectFunc
 
 
 Compare with: [VisitorPattern](https://wiki.c2.com/?VisitorPattern)
+
+## stackoverflow [Translator Pattern](https://stackoverflow.com/questions/1949708/translator-pattern)
