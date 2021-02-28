@@ -28,16 +28,29 @@ markdown_extensions:
 - pymdownx.tilde
 nav:
 - Home: index.md
-- Primer: Primer.md
-- Mathematical-logic:
-  - Introduction: Mathematical-logic/index.md
+- Language:
+  - Introduction: Language/index.md
+  - Classification:
+    - Introduction: Language/Classification/index.md
+    - GPL-and-DSL: Language/Classification/GPL-and-DSL.md
+    - Official-and-dialect: Language/Classification/Official-and-dialect.md
+  - Language-and-computation:
+    - Introduction: Language/Language-and-computation/index.md
+    - Language-for-structure:
+      - Introduction: Language/Language-and-computation/Language-for-structure/index.md
+    - Structure-of-language:
+      - Grammar: Language/Language-and-computation/Structure-of-language/Language-and-grammar.md
+  - Language-in-discipline: Language/Language-in-discipline.md
+  - Expressive-power:
+    - Introduction: Language/Expressive-power/index.md
+  - Language-agnostic:
+    - Introduction: Language/Language-agnostic/index.md
 - Formal-language:
   - Introduction: Formal-language/index.md
-  - Description-and-language: Formal-language/Description-and-language.md
   - Formal-and-formal-langugae: Formal-language/Formal-and-formal-langugae.md
-  - Language-and-grammar: Formal-language/Language-and-grammar.md
   - Formal-language: Formal-language/Formal-language.md
-  - Summary-of-theory: Formal-language/Summary-of-theory.md
+  - Intermediate-language:
+    - Introduction: Formal-language/Intermediate-language/index.md
   - Formal-grammar:
     - Formal-grammar: Formal-language/Formal-grammar/wikipedia-Formal-grammar.md
     - Production: Formal-language/Formal-grammar/wikipedia-Production(computer-science).md
@@ -64,9 +77,54 @@ nav:
           - Regex-Engine: Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/Regular-expression/Regex-Engine.md
     - Parsing-Expression-Grammars:
       - Parsing-expression-grammar: Formal-language/Formal-grammar/Parsing-Expression-Grammars/Parsing-expression-grammar.md
-- Theory-of-computation:
-  - index: Theory-of-computation/index.md
-  - Theory-of-computation: Theory-of-computation/Theory-of-computation.md
+  - Summary-of-theory: Formal-language/Summary-of-theory.md
+- Formal-language-processing:
+  - Introduction: Formal-language-processing/index.md
+  - Formal-language-processor:
+    - Introduction: Formal-language-processing/Formal-language-processor/index.md
+  - Computer-algebra:
+    - Introduction: Formal-language-processing/Computer-algebra/index.md
+  - Expression-oriented-programming:
+    - Introduction: Formal-language-processing/Expression-oriented-programming/index.md
+    - Expression-oriented-programming-language: Formal-language-processing/Expression-oriented-programming/Expression-oriented-programming-language.md
+    - Programming-paradigm:
+      - Functional-programming:
+        - Functional-programming: Formal-language-processing/Expression-oriented-programming/Programming-paradigm/Functional-programming/index.md
+        - Pure-function: Formal-language-processing/Expression-oriented-programming/Programming-paradigm/Functional-programming/Pure-function.md
+        - Higher-order-function:
+          - Introduction: Formal-language-processing/Expression-oriented-programming/Programming-paradigm/Functional-programming/Higher-order-function/index.md
+          - Fold: Formal-language-processing/Expression-oriented-programming/Programming-paradigm/Functional-programming/Higher-order-function/Fold.md
+          - Map: Formal-language-processing/Expression-oriented-programming/Programming-paradigm/Functional-programming/Higher-order-function/Map.md
+        - First-class-function: Formal-language-processing/Expression-oriented-programming/Programming-paradigm/Functional-programming/First-class-function.md
+      - Symbolic-programming:
+        - Introduction: Formal-language-processing/Expression-oriented-programming/Programming-paradigm/Symbolic-programming/index.md
+    - Lisp:
+      - Introduction: Formal-language-processing/Expression-oriented-programming/Lisp/index.md
+      - Clojure:
+        - Introduction: Formal-language-processing/Expression-oriented-programming/Lisp/Clojure/index.md
+      - Scheme:
+        - Introduction: Formal-language-processing/Expression-oriented-programming/Lisp/Scheme/index.md
+    - Expression-problem:
+      - Introduction: Formal-language-processing/Expression-oriented-programming/Expression-problem/index.md
+      - Extended-visitor-pattern:
+        - Introduction: Formal-language-processing/Expression-oriented-programming/Expression-problem/Extended-visitor-pattern/index.md
+        - eli.thegreenplace-The-Expression-Problem-and-its-solutions:
+          - Introduction: Formal-language-processing/Expression-oriented-programming/Expression-problem/Extended-visitor-pattern/eli.thegreenplace-The-Expression-Problem-and-its-solutions/index.md
+        - Synthesizing-Object-Oriented-and-Functional-Design-to-Promote-Re-Use:
+          - Introduction: Formal-language-processing/Expression-oriented-programming/Expression-problem/Extended-visitor-pattern/Synthesizing-Object-Oriented-and-Functional-Design-to-Promote-Re-Use/index.md
+      - Object-Algebra:
+        - Introduction: Formal-language-processing/Expression-oriented-programming/Expression-problem/Object-Algebra/index.md
+  - Pattern:
+    - Introduction: Formal-language-processing/Pattern/index.md
+    - Composite-pattern:
+      - Introduction: Formal-language-processing/Pattern/Composite-pattern/index.md
+    - Interpreter-pattern:
+      - Introduction: Formal-language-processing/Pattern/Interpreter-pattern/index.md
+    - Translator-Pattern:
+      - Introduction: Formal-language-processing/Pattern/Translator-Pattern/index.md
+- Mathematical-logic:
+  - Introduction: Mathematical-logic/index.md
+  - Propositional-calculus: Mathematical-logic/Propositional-calculus.md
 plugins:
 - search
 repo_url: https://github.com/dengking/automata-and-formal-language
