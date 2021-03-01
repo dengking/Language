@@ -1,0 +1,2802 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Project documentation with Markdown.">
+      
+      
+      
+        <meta name="author" content="DengKing">
+      
+      
+        <link rel="canonical" href="https://dengking.github.io/Language/Formal-language-processing/Expression-oriented-programming/Expression-problem/Extended-visitor-pattern/eli.thegreenplace-The-Expression-Problem-and-its-solutions/">
+      
+      <link rel="shortcut icon" href="../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.3">
+    
+    
+      
+        <title>Introduction - Language</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.1655a90d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../../../css/extra.css">
+    
+    
+      
+        
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-27795084-5","mkdocs.org"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#elithegreenplace#the#expression#problem#and#its#solutions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://dengking.github.io/Language" title="Language" class="md-header__button md-logo" aria-label="Language">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Language
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introduction
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/dengking/Language" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://dengking.github.io/Language" title="Language" class="md-nav__button md-logo" aria-label="Language">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Language
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/dengking/Language" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Language
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Language" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Language
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Language/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      <label class="md-nav__link" for="__nav_2_2">
+        Classification
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Classification" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Classification
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Language/Classification/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Language/Classification/GPL-and-DSL/" class="md-nav__link">
+        GPL-and-DSL
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Language/Classification/Official-and-dialect/" class="md-nav__link">
+        Official-and-dialect
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      <label class="md-nav__link" for="__nav_2_3">
+        Language-and-computation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Language-and-computation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Language-and-computation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Language/Language-and-computation/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_2" type="checkbox" id="__nav_2_3_2" >
+      
+      <label class="md-nav__link" for="__nav_2_3_2">
+        Language-for-structure
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Language-for-structure" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Language-for-structure
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Language/Language-and-computation/Language-for-structure/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_3" type="checkbox" id="__nav_2_3_3" >
+      
+      <label class="md-nav__link" for="__nav_2_3_3">
+        Structure-of-language
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Structure-of-language" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Structure-of-language
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Language/Language-and-computation/Structure-of-language/Language-and-grammar/" class="md-nav__link">
+        Grammar
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Language/Language-in-discipline/" class="md-nav__link">
+        Language-in-discipline
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
+      
+      <label class="md-nav__link" for="__nav_2_5">
+        Expressive-power
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Expressive-power" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Expressive-power
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Language/Expressive-power/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" >
+      
+      <label class="md-nav__link" for="__nav_2_6">
+        Language-agnostic
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Language-agnostic" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          Language-agnostic
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Language/Language-agnostic/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Formal-language
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Formal-language" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Formal-language
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Formal-language/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Formal-language/Formal-and-formal-langugae/" class="md-nav__link">
+        Formal-and-formal-langugae
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Formal-language/Formal-language/" class="md-nav__link">
+        Formal-language
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      <label class="md-nav__link" for="__nav_3_4">
+        Intermediate-language
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Intermediate-language" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Intermediate-language
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Formal-language/Intermediate-language/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+      
+      <label class="md-nav__link" for="__nav_3_5">
+        Formal-grammar
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Formal-grammar" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Formal-grammar
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Formal-language/Formal-grammar/wikipedia-Formal-grammar/" class="md-nav__link">
+        Formal-grammar
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Formal-language/Formal-grammar/wikipedia-Production%28computer-science%29/" class="md-nav__link">
+        Production
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5_3" type="checkbox" id="__nav_3_5_3" >
+      
+      <label class="md-nav__link" for="__nav_3_5_3">
+        Chomsky-hierarchy
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Chomsky-hierarchy" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Chomsky-hierarchy
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Formal-language/Formal-grammar/Chomsky-hierarchy/wikipedia-Chomsky-hierarchy/" class="md-nav__link">
+        Chomsky-hierarchy
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5_3_2" type="checkbox" id="__nav_3_5_3_2" >
+      
+      <label class="md-nav__link" for="__nav_3_5_3_2">
+        Type-0
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Type-0" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_5_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Type-0
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Formal-language/Formal-grammar/Chomsky-hierarchy/Type-0/wikipedia-Recursively-enumerable-language/" class="md-nav__link">
+        Recursively-enumerable-language
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5_3_2_2" type="checkbox" id="__nav_3_5_3_2_2" >
+      
+      <label class="md-nav__link" for="__nav_3_5_3_2_2">
+        Turinig-machine
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Turinig-machine" data-md-level="5">
+        <label class="md-nav__title" for="__nav_3_5_3_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Turinig-machine
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Formal-language/Formal-grammar/Chomsky-hierarchy/Type-0/Turinig-machine/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Formal-language/Formal-grammar/Chomsky-hierarchy/Type-0/Turinig-machine/What-is-a-Turing-machine/" class="md-nav__link">
+        What-is-a-Turing-machine
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Formal-language/Formal-grammar/Chomsky-hierarchy/Type-0/Turinig-machine/Turing-machine/" class="md-nav__link">
+        Turing-machine
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Formal-language/Formal-grammar/Chomsky-hierarchy/Type-0/Turinig-machine/wikipedia-Turing-machine/" class="md-nav__link">
+        wikipedia-Turing-machine
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5_3_3" type="checkbox" id="__nav_3_5_3_3" >
+      
+      <label class="md-nav__link" for="__nav_3_5_3_3">
+        Type-1
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Type-1" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_5_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Type-1
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Formal-language/Formal-grammar/Chomsky-hierarchy/Type-1/wikipedia-Context-sensitive-language/" class="md-nav__link">
+        Context-sensitive-language
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5_3_4" type="checkbox" id="__nav_3_5_3_4" >
+      
+      <label class="md-nav__link" for="__nav_3_5_3_4">
+        Type-2
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Type-2" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_5_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Type-2
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Formal-language/Formal-grammar/Chomsky-hierarchy/Type-2/wikipedia-Context-free-language/" class="md-nav__link">
+        Context-free-language
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Formal-language/Formal-grammar/Chomsky-hierarchy/Type-2/Automaton/" class="md-nav__link">
+        Automaton
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5_3_5" type="checkbox" id="__nav_3_5_3_5" >
+      
+      <label class="md-nav__link" for="__nav_3_5_3_5">
+        Type-3
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Type-3" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_5_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Type-3
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/wikipedia-Regular-language/" class="md-nav__link">
+        Regular-language
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/Automaton/" class="md-nav__link">
+        Automaton
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5_3_5_3" type="checkbox" id="__nav_3_5_3_5_3" >
+      
+      <label class="md-nav__link" for="__nav_3_5_3_5_3">
+        Regular-expression
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Regular-expression" data-md-level="5">
+        <label class="md-nav__title" for="__nav_3_5_3_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Regular-expression
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/Regular-expression/wikipedia-Regular-expression/" class="md-nav__link">
+        Regular-expression
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/Regular-expression/wikipedia-Thompson%27s-construction/" class="md-nav__link">
+        Thompson's-construction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/Regular-expression/Regex-Engine/" class="md-nav__link">
+        Regex-Engine
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5_4" type="checkbox" id="__nav_3_5_4" >
+      
+      <label class="md-nav__link" for="__nav_3_5_4">
+        Parsing-Expression-Grammars
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Parsing-Expression-Grammars" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Parsing-Expression-Grammars
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Formal-language/Formal-grammar/Parsing-Expression-Grammars/Parsing-expression-grammar/" class="md-nav__link">
+        Parsing-expression-grammar
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Formal-language/Summary-of-theory/" class="md-nav__link">
+        Summary-of-theory
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        Formal-language-processing
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Formal-language-processing" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Formal-language-processing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      <label class="md-nav__link" for="__nav_4_2">
+        Formal-language-processor
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Formal-language-processor" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Formal-language-processor
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Formal-language-processor/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      <label class="md-nav__link" for="__nav_4_3">
+        Computer-algebra
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Computer-algebra" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Computer-algebra
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Computer-algebra/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4_4">
+        Expression-oriented-programming
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Expression-oriented-programming" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Expression-oriented-programming
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Expression-oriented-programming-language/" class="md-nav__link">
+        Expression-oriented-programming-language
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4_3" type="checkbox" id="__nav_4_4_3" >
+      
+      <label class="md-nav__link" for="__nav_4_4_3">
+        Programming-paradigm
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Programming-paradigm" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Programming-paradigm
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4_3_1" type="checkbox" id="__nav_4_4_3_1" >
+      
+      <label class="md-nav__link" for="__nav_4_4_3_1">
+        Functional-programming
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Functional-programming" data-md-level="4">
+        <label class="md-nav__title" for="__nav_4_4_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Functional-programming
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming-paradigm/Functional-programming/" class="md-nav__link">
+        Functional-programming
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming-paradigm/Functional-programming/Pure-function/" class="md-nav__link">
+        Pure-function
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4_3_1_3" type="checkbox" id="__nav_4_4_3_1_3" >
+      
+      <label class="md-nav__link" for="__nav_4_4_3_1_3">
+        Higher-order-function
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Higher-order-function" data-md-level="5">
+        <label class="md-nav__title" for="__nav_4_4_3_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Higher-order-function
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming-paradigm/Functional-programming/Higher-order-function/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming-paradigm/Functional-programming/Higher-order-function/Fold/" class="md-nav__link">
+        Fold
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming-paradigm/Functional-programming/Higher-order-function/Map/" class="md-nav__link">
+        Map
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming-paradigm/Functional-programming/First-class-function/" class="md-nav__link">
+        First-class-function
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4_3_2" type="checkbox" id="__nav_4_4_3_2" >
+      
+      <label class="md-nav__link" for="__nav_4_4_3_2">
+        Symbolic-programming
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Symbolic-programming" data-md-level="4">
+        <label class="md-nav__title" for="__nav_4_4_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Symbolic-programming
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Programming-paradigm/Symbolic-programming/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4_4" type="checkbox" id="__nav_4_4_4" >
+      
+      <label class="md-nav__link" for="__nav_4_4_4">
+        Lisp
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Lisp" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Lisp
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Lisp/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4_4_2" type="checkbox" id="__nav_4_4_4_2" >
+      
+      <label class="md-nav__link" for="__nav_4_4_4_2">
+        Clojure
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Clojure" data-md-level="4">
+        <label class="md-nav__title" for="__nav_4_4_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Clojure
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Lisp/Clojure/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4_4_3" type="checkbox" id="__nav_4_4_4_3" >
+      
+      <label class="md-nav__link" for="__nav_4_4_4_3">
+        Scheme
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Scheme" data-md-level="4">
+        <label class="md-nav__title" for="__nav_4_4_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Scheme
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Lisp/Scheme/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4_5" type="checkbox" id="__nav_4_4_5" checked>
+      
+      <label class="md-nav__link" for="__nav_4_4_5">
+        Expression-problem
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Expression-problem" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Expression-problem
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4_5_2" type="checkbox" id="__nav_4_4_5_2" checked>
+      
+      <label class="md-nav__link" for="__nav_4_4_5_2">
+        Extended-visitor-pattern
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Extended-visitor-pattern" data-md-level="4">
+        <label class="md-nav__title" for="__nav_4_4_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Extended-visitor-pattern
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4_5_2_2" type="checkbox" id="__nav_4_4_5_2_2" checked>
+      
+      <label class="md-nav__link" for="__nav_4_4_5_2_2">
+        eli.thegreenplace-The-Expression-Problem-and-its-solutions
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="eli.thegreenplace-The-Expression-Problem-and-its-solutions" data-md-level="5">
+        <label class="md-nav__title" for="__nav_4_4_5_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          eli.thegreenplace-The-Expression-Problem-and-its-solutions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Introduction
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Introduction
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#problem#statement" class="md-nav__link">
+    Problem statement
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a#motivating#example" class="md-nav__link">
+    A motivating example
+  </a>
+  
+    <nav class="md-nav" aria-label="A motivating example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#class#expr" class="md-nav__link">
+    class Expr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class#constant" class="md-nav__link">
+    class Constant
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class#binaryplus" class="md-nav__link">
+    class BinaryPlus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding#new#operations" class="md-nav__link">
+    Adding new operations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expression#problem#in#oop" class="md-nav__link">
+    Expression problem in OOP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the#expression#problem#in#functional#programming" class="md-nav__link">
+    The expression problem in functional programming
+  </a>
+  
+    <nav class="md-nav" aria-label="The expression problem in functional programming">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#oop#vs#fp" class="md-nav__link">
+    OOP VS FP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding#new#operations_1" class="md-nav__link">
+    Adding new operations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add#a#new#type" class="md-nav__link">
+    Add a new type
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the#expression#problem#matrix" class="md-nav__link">
+    The expression problem matrix
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a#historical#perspective" class="md-nav__link">
+    A historical perspective
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flipping#the#matrix#with#the#visitor#pattern" class="md-nav__link">
+    Flipping(翻转) the matrix with the visitor pattern
+  </a>
+  
+    <nav class="md-nav" aria-label="Flipping(翻转) the matrix with the visitor pattern">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evaluator#visitor" class="md-nav__link">
+    Evaluator visitor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem" class="md-nav__link">
+    Problem
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extending#the#visitor#pattern" class="md-nav__link">
+    Extending the visitor pattern
+  </a>
+  
+    <nav class="md-nav" aria-label="Extending the visitor pattern">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evaluator#visitor_1" class="md-nav__link">
+    Evaluator visitor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add#a#new#type_1" class="md-nav__link">
+    Add a new type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new#evaluator#visitor" class="md-nav__link">
+    New evaluator visitor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solving#the#expression#problem#in#clojure" class="md-nav__link">
+    Solving the expression problem in Clojure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#is#multiple#dispatch#necessary#to#cleanly#solve#the#expression#problem" class="md-nav__link">
+    Is multiple dispatch necessary to cleanly solve the expression problem?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#another#clojure#solution#-#using#protocols" class="md-nav__link">
+    Another Clojure solution - using protocols
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#small#interfaces#are#extensibility-friendly" class="md-nav__link">
+    Small interfaces are extensibility-friendly
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4_5_2_3" type="checkbox" id="__nav_4_4_5_2_3" >
+      
+      <label class="md-nav__link" for="__nav_4_4_5_2_3">
+        Synthesizing-Object-Oriented-and-Functional-Design-to-Promote-Re-Use
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Synthesizing-Object-Oriented-and-Functional-Design-to-Promote-Re-Use" data-md-level="5">
+        <label class="md-nav__title" for="__nav_4_4_5_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Synthesizing-Object-Oriented-and-Functional-Design-to-Promote-Re-Use
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Synthesizing-Object-Oriented-and-Functional-Design-to-Promote-Re-Use/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4_5_3" type="checkbox" id="__nav_4_4_5_3" >
+      
+      <label class="md-nav__link" for="__nav_4_4_5_3">
+        Object-Algebra
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Object-Algebra" data-md-level="4">
+        <label class="md-nav__title" for="__nav_4_4_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Object-Algebra
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Object-Algebra/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
+      
+      <label class="md-nav__link" for="__nav_4_5">
+        Pattern
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Pattern" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Pattern
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Pattern/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5_2" type="checkbox" id="__nav_4_5_2" >
+      
+      <label class="md-nav__link" for="__nav_4_5_2">
+        Composite-pattern
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Composite-pattern" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Composite-pattern
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Pattern/Composite-pattern/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5_3" type="checkbox" id="__nav_4_5_3" >
+      
+      <label class="md-nav__link" for="__nav_4_5_3">
+        Interpreter-pattern
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Interpreter-pattern" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Interpreter-pattern
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Pattern/Interpreter-pattern/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5_4" type="checkbox" id="__nav_4_5_4" >
+      
+      <label class="md-nav__link" for="__nav_4_5_4">
+        Translator-Pattern
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Translator-Pattern" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Translator-Pattern
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Pattern/Translator-Pattern/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Mathematical-logic
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Mathematical-logic" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Mathematical-logic
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Mathematical-logic/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Mathematical-logic/Propositional-calculus/" class="md-nav__link">
+        Propositional-calculus
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#problem#statement" class="md-nav__link">
+    Problem statement
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a#motivating#example" class="md-nav__link">
+    A motivating example
+  </a>
+  
+    <nav class="md-nav" aria-label="A motivating example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#class#expr" class="md-nav__link">
+    class Expr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class#constant" class="md-nav__link">
+    class Constant
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class#binaryplus" class="md-nav__link">
+    class BinaryPlus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding#new#operations" class="md-nav__link">
+    Adding new operations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expression#problem#in#oop" class="md-nav__link">
+    Expression problem in OOP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the#expression#problem#in#functional#programming" class="md-nav__link">
+    The expression problem in functional programming
+  </a>
+  
+    <nav class="md-nav" aria-label="The expression problem in functional programming">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#oop#vs#fp" class="md-nav__link">
+    OOP VS FP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding#new#operations_1" class="md-nav__link">
+    Adding new operations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add#a#new#type" class="md-nav__link">
+    Add a new type
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the#expression#problem#matrix" class="md-nav__link">
+    The expression problem matrix
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a#historical#perspective" class="md-nav__link">
+    A historical perspective
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flipping#the#matrix#with#the#visitor#pattern" class="md-nav__link">
+    Flipping(翻转) the matrix with the visitor pattern
+  </a>
+  
+    <nav class="md-nav" aria-label="Flipping(翻转) the matrix with the visitor pattern">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evaluator#visitor" class="md-nav__link">
+    Evaluator visitor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem" class="md-nav__link">
+    Problem
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extending#the#visitor#pattern" class="md-nav__link">
+    Extending the visitor pattern
+  </a>
+  
+    <nav class="md-nav" aria-label="Extending the visitor pattern">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evaluator#visitor_1" class="md-nav__link">
+    Evaluator visitor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add#a#new#type_1" class="md-nav__link">
+    Add a new type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new#evaluator#visitor" class="md-nav__link">
+    New evaluator visitor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solving#the#expression#problem#in#clojure" class="md-nav__link">
+    Solving the expression problem in Clojure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#is#multiple#dispatch#necessary#to#cleanly#solve#the#expression#problem" class="md-nav__link">
+    Is multiple dispatch necessary to cleanly solve the expression problem?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#another#clojure#solution#-#using#protocols" class="md-nav__link">
+    Another Clojure solution - using protocols
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#small#interfaces#are#extensibility-friendly" class="md-nav__link">
+    Small interfaces are extensibility-friendly
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="elithegreenplace#the#expression#problem#and#its#solutions">eli.thegreenplace <a href="https://eli.thegreenplace.net/2016/the-expression-problem-and-its-solutions/">The Expression Problem and its solutions</a></h1>
+<p>The craft(技巧) of programming is almost universally concerned with different types of data and operations/algorithms that act on this data [<a href="https://eli.thegreenplace.net/2016/the-expression-problem-and-its-solutions/#id7">1]</a>. Therefore, it's hardly surprising that designing <strong>abstractions</strong> for data types and operations has been on the mind of software engineers and programming-language designers since... forever.</p>
+<h2 id="problem#statement">Problem statement</h2>
+<blockquote>
+<p>NOTE: 问题描述: </p>
+<p>1 添加new type</p>
+<p>2 添加new operation</p>
+<p>3 without changing existing code</p>
+</blockquote>
+<p>Here is a quick <strong>problem statement</strong>.</p>
+<p>Imagine that we have a set of <strong>data types</strong> and a set of <strong>operations</strong> that act on these types. Sometimes we need to add more <strong>operations</strong> and make sure they work properly on all types; sometimes we need to add more <strong>types</strong> and make sure all operations work properly on them. Sometimes, however, we need to add both - and herein lies the problem. Most of the mainstream programming languages don't provide good tools to <strong>add both new types and new operations to an existing system without having to change existing code</strong>. This is called the "<strong>expression problem</strong>". Studying the problem and its possible solutions gives great insight into the fundamental differences between <strong>object-oriented</strong> and <strong>functional programming</strong> and well as concepts like <strong>interfaces</strong> and <strong>multiple dispatch</strong>.</p>
+<h2 id="a#motivating#example">A motivating example</h2>
+<p>As is my wont, my example comes from the world of compilers and interpreters. </p>
+<p>Imagine we're designing a simple expression evaluator. Following the standard <a href="http://eli.thegreenplace.net/2016/on-the-composite-and-interpreter-design-patterns">interpreter design pattern</a>, we have a tree structure consisting of expressions, with some operations we can do on such trees. In C++ we'd have an interface every node in the expression tree would have to implement:</p>
+<h3 id="class#expr"><code>class Expr</code></h3>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp"></span>
+<span class="k">class</span> <span class="nc">Expr</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="k">virtual</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">ToString</span><span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <span class="kt">double</span> <span class="n">Eval</span><span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>This interface shows that we currently have two operations we can do on expression trees - evaluate them and query for their string representations. A typical leaf node expression:</p>
+<h3 id="class#constant"><code>class Constant</code></h3>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Constant</span><span class="o">:</span> <span class="k">public</span> <span class="n">Expr</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">Constant</span><span class="p">(</span><span class="kt">double</span> <span class="n">value</span><span class="p">)</span> <span class="o">:</span>
+                    <span class="n">value_</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="p">{</span>
+    <span class="p">}</span>
+
+    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">ToString</span><span class="p">()</span> <span class="k">const</span>
+    <span class="p">{</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">ostringstream</span> <span class="n">ss</span><span class="p">;</span>
+        <span class="n">ss</span> <span class="o">&lt;&lt;</span> <span class="n">value_</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">ss</span><span class="p">.</span><span class="n">str</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="kt">double</span> <span class="n">Eval</span><span class="p">()</span> <span class="k">const</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">value_</span><span class="p">;</span>
+    <span class="p">}</span>
+
+<span class="k">private</span><span class="o">:</span>
+    <span class="kt">double</span> <span class="n">value_</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>And a typical composite expression:</p>
+<h3 id="class#binaryplus"><code>class BinaryPlus</code></h3>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">BinaryPlus</span><span class="o">:</span> <span class="k">public</span> <span class="n">Expr</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">BinaryPlus</span><span class="p">(</span><span class="k">const</span> <span class="n">Expr</span> <span class="o">&amp;</span><span class="n">lhs</span><span class="p">,</span> <span class="k">const</span> <span class="n">Expr</span> <span class="o">&amp;</span><span class="n">rhs</span><span class="p">)</span> <span class="o">:</span>
+                    <span class="n">lhs_</span><span class="p">(</span><span class="n">lhs</span><span class="p">),</span> <span class="n">rhs_</span><span class="p">(</span><span class="n">rhs</span><span class="p">)</span>
+    <span class="p">{</span>
+    <span class="p">}</span>
+
+    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">ToString</span><span class="p">()</span> <span class="k">const</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">lhs_</span><span class="p">.</span><span class="n">ToString</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot; + &quot;</span> <span class="o">+</span> <span class="n">rhs_</span><span class="p">.</span><span class="n">ToString</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="kt">double</span> <span class="n">Eval</span><span class="p">()</span> <span class="k">const</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">lhs_</span><span class="p">.</span><span class="n">Eval</span><span class="p">()</span> <span class="o">+</span> <span class="n">rhs_</span><span class="p">.</span><span class="n">Eval</span><span class="p">();</span>
+    <span class="p">}</span>
+
+<span class="k">private</span><span class="o">:</span>
+    <span class="k">const</span> <span class="n">Expr</span> <span class="o">&amp;</span><span class="n">lhs_</span><span class="p">;</span>
+    <span class="k">const</span> <span class="n">Expr</span> <span class="o">&amp;</span><span class="n">rhs_</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>Until now, it's all fairly basic stuff. How extensible is this design? Let's see... if we want to add new expression types ("variable reference", "function call" etc.), that's pretty easy. We just define additional classes inheriting from <code>Expr</code> and implement the <code>Expr</code> interface (<code>ToString</code> and <code>Eval</code>).</p>
+<h3 id="adding#new#operations">Adding new operations</h3>
+<p>However, what happens if we want to add new <em>operations</em> that can be applied to <strong>expression trees</strong>? Right now we have <code>Eval</code> and <code>ToString</code>, but we may want additional operations like "type check" or "serialize" or "compile to machine code" or whatever.</p>
+<p>It turns out that adding new operations isn't as easy as adding new types. We'd have to change the <code>Expr</code> interface, and consequently change every existing expression type to support the new method(s). If we don't control the original code or it's hard to change it for other reasons, we're in trouble.</p>
+<h3 id="expression#problem#in#oop">Expression problem in OOP</h3>
+<p>In other words, we'd have to violate the venerable(珍贵的) <em>open-closed principle</em>, one of the <a href="https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)">main principles of object-oriented design</a>, defined as:</p>
+<blockquote>
+<p>software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification</p>
+</blockquote>
+<p>The problem we're hitting here is called the <em>expression problem</em>, and the example above shows how it applies to object-oriented programming.</p>
+<p>Interestingly, the expression problem bites(咬伤) <strong>functional programming</strong> languages as well. Let's see how.</p>
+<h2 id="the#expression#problem#in#functional#programming">The expression problem in functional programming</h2>
+<p><strong>Update 2018-02-05:</strong> <a href="http://eli.thegreenplace.net/2018/more-thoughts-on-the-expression-problem-in-haskell/">a new post</a> discusses the problem and its solutions in Haskell in more depth.</p>
+<h3 id="oop#vs#fp">OOP VS FP</h3>
+<p>Object-oriented approaches tend to collect functionality in <strong>objects</strong> (types). Functional languages cut the cake from a different angle, usually preferring types as thin data containers, collecting most functionality in <strong>functions</strong> (operations) that act upon them. Functional languages don't escape the expression problem - it just manifests there in a different way.</p>
+<blockquote>
+<p>NOTE: 上面这一段描述了OOP 和 FP之间的差异</p>
+</blockquote>
+<p>To demonstrate this, let's see how the expression evaluator / stringifier looks in Haskell. Haskell is a good poster child for functional programming since its pattern matching on types makes such code especially succinct:</p>
+<div class="highlight"><pre><span></span><code><span class="kr">module</span> <span class="nn">Expressions</span> <span class="kr">where</span>
+
+<span class="kr">data</span> <span class="kt">Expr</span> <span class="ow">=</span> <span class="kt">Constant</span> <span class="kt">Double</span>
+          <span class="o">|</span> <span class="kt">BinaryPlus</span> <span class="kt">Expr</span> <span class="kt">Expr</span>
+
+<span class="nf">stringify</span> <span class="ow">::</span> <span class="kt">Expr</span> <span class="ow">-&gt;</span> <span class="kt">String</span>
+<span class="nf">stringify</span> <span class="p">(</span><span class="kt">Constant</span> <span class="n">c</span><span class="p">)</span> <span class="ow">=</span> <span class="n">show</span> <span class="n">c</span>
+<span class="nf">stringify</span> <span class="p">(</span><span class="kt">BinaryPlus</span> <span class="n">lhs</span> <span class="n">rhs</span><span class="p">)</span> <span class="ow">=</span> <span class="n">stringify</span> <span class="n">lhs</span>
+                                <span class="o">++</span> <span class="s">&quot; + &quot;</span>
+                                <span class="o">++</span> <span class="n">stringify</span> <span class="n">rhs</span>
+
+<span class="nf">evaluate</span> <span class="ow">::</span> <span class="kt">Expr</span> <span class="ow">-&gt;</span> <span class="kt">Double</span>
+<span class="nf">evaluate</span> <span class="p">(</span><span class="kt">Constant</span> <span class="n">c</span><span class="p">)</span> <span class="ow">=</span> <span class="n">c</span>
+<span class="nf">evaluate</span> <span class="p">(</span><span class="kt">BinaryPlus</span> <span class="n">lhs</span> <span class="n">rhs</span><span class="p">)</span> <span class="ow">=</span> <span class="n">evaluate</span> <span class="n">lhs</span> <span class="o">+</span> <span class="n">evaluate</span> <span class="n">rhs</span>
+</code></pre></div>
+<h3 id="adding#new#operations_1">Adding new operations</h3>
+<p>Now let's say we want to add a <strong>new operation</strong> - type checking. We simply have to add a new function <code>typecheck</code> and define how it behaves for all known kinds of expressions. No need to modify existing code.</p>
+<h3 id="add#a#new#type">Add a new type</h3>
+<p>On the other hand, if we want to add a <strong>new type</strong> (like "function call"), we get into trouble. We now have to modify all existing functions to handle this new type. So we hit exactly the same problem, albeit(尽管) from a different angle.</p>
+<h2 id="the#expression#problem#matrix">The expression problem matrix</h2>
+<p>A visual representation of the <strong>expression problem</strong> can be helpful to appreciate how it applies to OOP and FP in different ways, and how a potential solution would look.</p>
+<p>The following 2-D table (a "matrix") has types in its rows and operations in its columns. A matrix cell <code>row, col</code> is checked when the operation <code>col</code> is implemented for type <code>row</code>:</p>
+<p><img alt="" src="expr-problem-matrix.png" /></p>
+<p>In object-oriented languages, it's easy to add new types but difficult to add new operations:</p>
+<p><img alt="" src="expr-problem-oop.png" /></p>
+<p>Whereas in functional languages, it's easy to add new operations but difficult to add new types:</p>
+<p><img alt="" src="expr-problem-fp.png" /></p>
+<h2 id="a#historical#perspective">A historical perspective</h2>
+<p>The expression problem isn't new, and has likely been with us since the early days; it pops its head as soon as programs reach some not-too-high level of complexity.</p>
+<p>It's fairly certain that the name <em>expression problem</em> comes from <a href="http://homepages.inf.ed.ac.uk/wadler/papers/expression/expression.txt">an email</a> sent by <a href="https://en.wikipedia.org/wiki/Philip_Wadler">Philip Wadler</a> to a mailing list deailing with adding generics to Java (this was back in the 1990s).</p>
+<p>In that email, Wadler points to the paper <a href="https://cs.brown.edu/~sk/Publications/Papers/Published/kff-synth-fp-oo/">"Synthesizing Object-Oriented and Functional Design to Promote Re-Use"</a> by Krishnamurthi, Felleisen and Friedman as an earlier work describing the problem and proposed solutions. This is a great paper and I highly recommend reading it. Krishnamurthi et.al., in their references, point to papers from as early as 1975 describing variations of the problem in Algol.</p>
+<blockquote>
+<p>NOTE: 这篇论文收录在了 <code>Expression-oriented-programming\Expression-problem\Synthesizing-Object-Oriented-and-Functional-Design-to-Promote-Re-Use</code> 章节中。</p>
+</blockquote>
+<h2 id="flipping#the#matrix#with#the#visitor#pattern">Flipping(翻转) the matrix with the visitor pattern</h2>
+<p>It's possible to kinda(一点儿) solve (read on to understand why I say "kinda") the <strong>expression problem</strong> in <strong>object-oriented languages</strong>; first, we have to look at how we can flip the problem on its side using the <strong>visitor pattern</strong>. The <strong>visitor pattern</strong> is very common for this kind of problems, and for a good reason. It lets us reformulate(再形式化表示) our code in a way that makes it easier to change in some dimensions (though harder in others).</p>
+<p>For the C++ sample shown above, rewriting it using the visitor pattern means adding a new "visitor" interface:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ExprVisitor</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="k">virtual</span> <span class="kt">void</span> <span class="n">VisitConstant</span><span class="p">(</span><span class="k">const</span> <span class="n">Constant</span> <span class="o">&amp;</span><span class="n">c</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">virtual</span> <span class="kt">void</span> <span class="n">VisitBinaryPlus</span><span class="p">(</span><span class="k">const</span> <span class="n">BinaryPlus</span> <span class="o">&amp;</span><span class="n">bp</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>And changing the <code>Expr</code> interface to be:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Expr</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="k">virtual</span> <span class="kt">void</span> <span class="n">Accept</span><span class="p">(</span><span class="n">ExprVisitor</span> <span class="o">*</span><span class="n">visitor</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>Now expression types defer(推迟) the actual computation to the visitor, as follows:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Constant</span><span class="o">:</span> <span class="k">public</span> <span class="n">Expr</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">Constant</span><span class="p">(</span><span class="kt">double</span> <span class="n">value</span><span class="p">)</span> <span class="o">:</span>
+                    <span class="n">value_</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="p">{</span>
+    <span class="p">}</span>
+
+    <span class="kt">void</span> <span class="n">Accept</span><span class="p">(</span><span class="n">ExprVisitor</span> <span class="o">*</span><span class="n">visitor</span><span class="p">)</span> <span class="k">const</span>
+    <span class="p">{</span>
+        <span class="n">visitor</span><span class="o">-&gt;</span><span class="n">VisitConstant</span><span class="p">(</span><span class="o">*</span><span class="k">this</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kt">double</span> <span class="n">GetValue</span><span class="p">()</span> <span class="k">const</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">value_</span><span class="p">;</span>
+    <span class="p">}</span>
+
+<span class="k">private</span><span class="o">:</span>
+    <span class="kt">double</span> <span class="n">value_</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="c1">// ... similarly, BinaryPlus would have</span>
+<span class="c1">//</span>
+<span class="c1">//    void Accept(ExprVisitor* visitor) const {</span>
+<span class="c1">//      visitor-&gt;VisitBinaryPlus(*this);</span>
+<span class="c1">//    }</span>
+<span class="c1">//</span>
+<span class="c1">// ... etc.</span>
+</code></pre></div>
+<h3 id="evaluator#visitor">Evaluator visitor</h3>
+<p>A sample visitor for evaluation would be [<a href="https://eli.thegreenplace.net/2016/the-expression-problem-and-its-solutions/#id8">2]</a>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Evaluator</span><span class="o">:</span> <span class="k">public</span> <span class="n">ExprVisitor</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="kt">double</span> <span class="n">GetValueForExpr</span><span class="p">(</span><span class="k">const</span> <span class="n">Expr</span> <span class="o">&amp;</span><span class="n">e</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">value_map_</span><span class="p">[</span><span class="o">&amp;</span><span class="n">e</span><span class="p">];</span>
+    <span class="p">}</span>
+
+    <span class="kt">void</span> <span class="n">VisitConstant</span><span class="p">(</span><span class="k">const</span> <span class="n">Constant</span> <span class="o">&amp;</span><span class="n">c</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">value_map_</span><span class="p">[</span><span class="o">&amp;</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">c</span><span class="p">.</span><span class="n">GetValue</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="kt">void</span> <span class="n">VisitBinaryPlus</span><span class="p">(</span><span class="k">const</span> <span class="n">BinaryPlus</span> <span class="o">&amp;</span><span class="n">bp</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">bp</span><span class="p">.</span><span class="n">GetLhs</span><span class="p">().</span><span class="n">Accept</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+        <span class="n">bp</span><span class="p">.</span><span class="n">GetRhs</span><span class="p">().</span><span class="n">Accept</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+        <span class="n">value_map_</span><span class="p">[</span><span class="o">&amp;</span><span class="n">bp</span><span class="p">]</span> <span class="o">=</span> <span class="n">value_map_</span><span class="p">[</span><span class="o">&amp;</span><span class="p">(</span><span class="n">bp</span><span class="p">.</span><span class="n">GetLhs</span><span class="p">())]</span> <span class="o">+</span> <span class="n">value_map_</span><span class="p">[</span><span class="o">&amp;</span><span class="p">(</span><span class="n">bp</span><span class="p">.</span><span class="n">GetRhs</span><span class="p">())];</span>
+    <span class="p">}</span>
+
+<span class="k">private</span><span class="o">:</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="k">const</span> <span class="n">Expr</span><span class="o">*</span><span class="p">,</span> <span class="kt">double</span><span class="o">&gt;</span> <span class="n">value_map_</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div>
+<h3 id="problem">Problem</h3>
+<p>It should be obvious that for a given set of data types, adding new visitors is easy and doesn't require modifying any other code. On the other hand, adding new types is problematic since it means we have to update the <code>ExprVisitor</code> interface with a new abstract method, and consequently update all the visitors to implement it.</p>
+<p>So it seems that we've just turned the expression problem on its side: we're using an OOP language, but now it's hard to add types and easy to add ops, just like in the functional approach. I find it extremely interesting that we can do this. In my eyes this highlights the power of different abstractions and paradigms, and how they enable us to rethink a problem in a completely different light.</p>
+<p>So we haven't solved anything yet; we've just changed the nature of the problem we're facing. Worry not - this is just a stepping stone to an actual solution.</p>
+<h2 id="extending#the#visitor#pattern">Extending the visitor pattern</h2>
+<p>The following is code excerpts from a C++ solution that follows the <strong>extended visitor pattern</strong> proposed by Krishnamurthi et. al. in their paper; I strongly suggest reading the paper (particularly section 3) if you want to understand this code on a deep level. A complete code sample in C++ that compiles and runs is <a href="https://github.com/eliben/code-for-blog/blob/master/2016/expression-problem/c%2B%2B/visitor-extended.cpp">available here</a>.</p>
+<p>Adding new <strong>visitors</strong> (ops) with the <strong>visitor pattern</strong> is easy. Our challenge is to add a new <em>type</em> without upheaving too much existing code. Let's see how it's done.</p>
+<h3 id="evaluator#visitor_1">Evaluator visitor</h3>
+<p>One small design change that we should make to the original visitor pattern is use <code>virtual</code> inheritance for <code>Evaluator</code>, for reasons that will soon become obvious:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Evaluator</span><span class="o">:</span> <span class="k">virtual</span> <span class="k">public</span> <span class="n">ExprVisitor</span>
+<span class="p">{</span>
+    <span class="c1">// .. the rest is the same</span>
+<span class="p">};</span>
+</code></pre></div>
+<h3 id="add#a#new#type_1">Add a new type</h3>
+<p>Now we're going to add a new type - <code>FunctionCall</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// This is the new (&quot;extended&quot;) expression we&#39;re adding.</span>
+<span class="k">class</span> <span class="nc">FunctionCall</span><span class="o">:</span> <span class="k">public</span> <span class="n">Expr</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">FunctionCall</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="n">Expr</span> <span class="o">&amp;</span><span class="n">argument</span><span class="p">)</span> <span class="o">:</span>
+                    <span class="n">name_</span><span class="p">(</span><span class="n">name</span><span class="p">),</span> <span class="n">argument_</span><span class="p">(</span><span class="n">argument</span><span class="p">)</span>
+    <span class="p">{</span>
+    <span class="p">}</span>
+
+    <span class="kt">void</span> <span class="n">Accept</span><span class="p">(</span><span class="n">ExprVisitor</span> <span class="o">*</span><span class="n">visitor</span><span class="p">)</span> <span class="k">const</span>
+    <span class="p">{</span>
+        <span class="n">ExprVisitorWithFunctionCall</span> <span class="o">*</span><span class="n">v</span> <span class="o">=</span> <span class="k">dynamic_cast</span><span class="o">&lt;</span><span class="n">ExprVisitorWithFunctionCall</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">visitor</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">v</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">std</span><span class="o">::</span><span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Fatal: visitor is not ExprVisitorWithFunctionCall</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+            <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">v</span><span class="o">-&gt;</span><span class="n">VisitFunctionCall</span><span class="p">(</span><span class="o">*</span><span class="k">this</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="k">private</span><span class="o">:</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name_</span><span class="p">;</span>
+    <span class="k">const</span> <span class="n">Expr</span> <span class="o">&amp;</span><span class="n">argument_</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div>
+<h3 id="new#evaluator#visitor">New evaluator visitor</h3>
+<p>Since we don't want to modify the existing visitors, we create a new one, extending <code>Evaluator</code> for function calls. But first, we need to extend the <code>ExprVisitor</code> interface to support the new type:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ExprVisitorWithFunctionCall</span><span class="o">:</span> <span class="k">virtual</span> <span class="k">public</span> <span class="n">ExprVisitor</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="k">virtual</span> <span class="kt">void</span> <span class="n">VisitFunctionCall</span><span class="p">(</span><span class="k">const</span> <span class="n">FunctionCall</span> <span class="o">&amp;</span><span class="n">fc</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>Finally, we write the new evaluator, which extends <code>Evaluator</code> and supports the new type:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">EvaluatorWithFunctionCall</span><span class="o">:</span> <span class="k">public</span> <span class="n">ExprVisitorWithFunctionCall</span><span class="p">,</span> <span class="k">public</span> <span class="n">Evaluator</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="kt">void</span> <span class="n">VisitFunctionCall</span><span class="p">(</span><span class="k">const</span> <span class="n">FunctionCall</span> <span class="o">&amp;</span><span class="n">fc</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Visiting FunctionCall!!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div>
+<blockquote>
+<p>NOTE: </p>
+<p>继承 <code>Evaluator</code> 的目的是: inherits all functionality from <code>Evaluator</code></p>
+<p>继承 <code>ExprVisitorWithFunctionCall</code> 的目的是: implements the <code>ExprVisitorWithFunctionCall</code> interface</p>
+</blockquote>
+<p><strong>Multiple inheritance</strong>, <strong>virtual inheritance</strong>, <strong>dynamic type checking</strong>... that's pretty hard-core C++ we have to use here, but there's no choice. Unfortunately, <strong>multiple inheritance</strong> is the only way C++ lets us express the idea that a class implements some interface while at the same time deriving functionality from another class. What we want to have here is an evaluator (<code>EvaluatorWithFunctionCall</code>) that inherits all functionality from <code>Evaluator</code>, and also implements the <code>ExprVisitorWithFunctionCall</code> interface. In Java, we could say something like:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">EvaluatorWithFunctionCall</span> <span class="kd">extends</span> <span class="n">Evaluator</span> <span class="kd">implements</span> <span class="n">ExprVisitor</span> <span class="p">{</span>
+  <span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>But in C++ <strong>virtual multiple inheritance</strong> is the tool we have. The virtual part of the inheritance is essential here for the compiler to figure out that the <code>ExprVisitor</code> base underlying both <code>Evaluator</code> and <code>ExprVisitorWithFunctionCall</code> is the same and should only appear once in <code>EvaluatorWithFunctionCall</code>. Without virtual, the compiler would complain that <code>EvaluatorWithFunctionCall</code> doesn't implement the <code>ExprVisitor</code> interface.</p>
+<p>This is a solution, alright. We kinda added a new type <code>FunctionCall</code> and can now visit it without changing existing code (assuming the virtual inheritance was built into the design from the start to anticipate this approach). Here I am using this "kinda" word again... it's time to explain why.</p>
+<p>This approach has multiple flaws, in my opinion:</p>
+<p>1 Note the <code>dynamic_cast</code> in <code>FunctionCall::Accept</code>. It's fairly ugly that we're forced to mix in dynamic checks into this code, which should supposedly rely on static typing and the compiler. But it's just a sign of a larger problem.</p>
+<p>2 If we have an instance of an <code>Evaluator</code>, it will no longer work on the whole extended expression tree since it has no understanding of <code>FunctionCall</code>. It's easy to say that all new evaluators should rather be <code>EvaluatorWithFunctionCall</code>, but we don't always control this. What about code that was already written? What about <code>Evaluator</code>s created in third-party or library code which we have no control of?</p>
+<p>3 The virtual inheritance is not the only provision we have to build into the design to support this pattern. Some visitors would need to create new, recursive visitors to process complex expressions. But we can't anticipate in advance which dynamic type of visitor needs to be created. Therefore, the visitor interface should also accept a "visitor factory" which extended visitors will supply. I know this sounds complicated, and I don't want to spend more time on this here - but the Krishnamurthi paper addresses this issue extensively in section 3.4</p>
+<p>4 Finally, the solution is unwieldy for realistic applications. Adding one new type looks manageable; what about adding 15 new types, gradually over time? Imagine the horrible zoo of <code>ExprVisitor</code> extensions and dynamic checks this would lead to.</p>
+<p>Yeah, programming is hard. I could go on and on about the limitations of classical OOP and how they surface in this example [<a href="https://eli.thegreenplace.net/2016/the-expression-problem-and-its-solutions/#id9">3]</a>. Instead, I'll just present how the expression problem can be solved in a language that supports multiple dispatch and separates the defintion of methods from the bodies of types they act upon.</p>
+<h2 id="solving#the#expression#problem#in#clojure">Solving the expression problem in Clojure</h2>
+<p>There are a number of ways the expression problem as displayed in this article can be solved in Clojure using the language's built-in features. Let's start with the simplest one - multi-methods.</p>
+<h2 id="is#multiple#dispatch#necessary#to#cleanly#solve#the#expression#problem">Is multiple dispatch necessary to cleanly solve the expression problem?</h2>
+<h2 id="another#clojure#solution#-#using#protocols">Another Clojure solution - using protocols</h2>
+<h2 id="small#interfaces#are#extensibility-friendly">Small interfaces are extensibility-friendly</h2>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Introduction
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../Synthesizing-Object-Oriented-and-Functional-Design-to-Promote-Re-Use/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Introduction
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.ca5457b8.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

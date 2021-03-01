@@ -1,0 +1,2279 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Project documentation with Markdown.">
+      
+      
+      
+        <meta name="author" content="DengKing">
+      
+      
+        <link rel="canonical" href="https://dengking.github.io/Language/Formal-language-processing/Expression-oriented-programming/Symbol-expression/Symbolic-programming/">
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.3">
+    
+    
+      
+        <title>Symbolic programming - Language</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.1655a90d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../../css/extra.css">
+    
+    
+      
+        
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-27795084-5","mkdocs.org"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#symbolic#programming" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://dengking.github.io/Language" title="Language" class="md-header__button md-logo" aria-label="Language">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Language
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Symbolic programming
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/dengking/Language" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://dengking.github.io/Language" title="Language" class="md-nav__button md-logo" aria-label="Language">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Language
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/dengking/Language" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Language
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Language" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Language
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Language/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      <label class="md-nav__link" for="__nav_2_2">
+        Classification
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Classification" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Classification
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Language/Classification/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Language/Classification/GPL-and-DSL/" class="md-nav__link">
+        GPL-and-DSL
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Language/Classification/Official-and-dialect/" class="md-nav__link">
+        Official-and-dialect
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      <label class="md-nav__link" for="__nav_2_3">
+        Language-and-computation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Language-and-computation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Language-and-computation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Language/Language-and-computation/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_2" type="checkbox" id="__nav_2_3_2" >
+      
+      <label class="md-nav__link" for="__nav_2_3_2">
+        Language-for-structure
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Language-for-structure" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Language-for-structure
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Language/Language-and-computation/Language-for-structure/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_3" type="checkbox" id="__nav_2_3_3" >
+      
+      <label class="md-nav__link" for="__nav_2_3_3">
+        Structure-of-language
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Structure-of-language" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Structure-of-language
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Language/Language-and-computation/Structure-of-language/Language-and-grammar/" class="md-nav__link">
+        Grammar
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Language/Language-in-discipline/" class="md-nav__link">
+        Language-in-discipline
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
+      
+      <label class="md-nav__link" for="__nav_2_5">
+        Expressive-power
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Expressive-power" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Expressive-power
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Language/Expressive-power/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" >
+      
+      <label class="md-nav__link" for="__nav_2_6">
+        Language-agnostic
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Language-agnostic" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          Language-agnostic
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Language/Language-agnostic/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Formal-language
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Formal-language" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Formal-language
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Formal-language/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Formal-language/Formal-and-formal-langugae/" class="md-nav__link">
+        Formal-and-formal-langugae
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Formal-language/Formal-language/" class="md-nav__link">
+        Formal-language
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      <label class="md-nav__link" for="__nav_3_4">
+        Intermediate-language
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Intermediate-language" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Intermediate-language
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Formal-language/Intermediate-language/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+      
+      <label class="md-nav__link" for="__nav_3_5">
+        Formal-grammar
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Formal-grammar" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Formal-grammar
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Formal-language/Formal-grammar/wikipedia-Formal-grammar/" class="md-nav__link">
+        Formal-grammar
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Formal-language/Formal-grammar/wikipedia-Production%28computer-science%29/" class="md-nav__link">
+        Production
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5_3" type="checkbox" id="__nav_3_5_3" >
+      
+      <label class="md-nav__link" for="__nav_3_5_3">
+        Chomsky-hierarchy
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Chomsky-hierarchy" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Chomsky-hierarchy
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Formal-language/Formal-grammar/Chomsky-hierarchy/wikipedia-Chomsky-hierarchy/" class="md-nav__link">
+        Chomsky-hierarchy
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5_3_2" type="checkbox" id="__nav_3_5_3_2" >
+      
+      <label class="md-nav__link" for="__nav_3_5_3_2">
+        Type-0
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Type-0" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_5_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Type-0
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Formal-language/Formal-grammar/Chomsky-hierarchy/Type-0/wikipedia-Recursively-enumerable-language/" class="md-nav__link">
+        Recursively-enumerable-language
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5_3_2_2" type="checkbox" id="__nav_3_5_3_2_2" >
+      
+      <label class="md-nav__link" for="__nav_3_5_3_2_2">
+        Turinig-machine
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Turinig-machine" data-md-level="5">
+        <label class="md-nav__title" for="__nav_3_5_3_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Turinig-machine
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Formal-language/Formal-grammar/Chomsky-hierarchy/Type-0/Turinig-machine/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Formal-language/Formal-grammar/Chomsky-hierarchy/Type-0/Turinig-machine/What-is-a-Turing-machine/" class="md-nav__link">
+        What-is-a-Turing-machine
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Formal-language/Formal-grammar/Chomsky-hierarchy/Type-0/Turinig-machine/Turing-machine/" class="md-nav__link">
+        Turing-machine
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Formal-language/Formal-grammar/Chomsky-hierarchy/Type-0/Turinig-machine/wikipedia-Turing-machine/" class="md-nav__link">
+        wikipedia-Turing-machine
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5_3_3" type="checkbox" id="__nav_3_5_3_3" >
+      
+      <label class="md-nav__link" for="__nav_3_5_3_3">
+        Type-1
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Type-1" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_5_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Type-1
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Formal-language/Formal-grammar/Chomsky-hierarchy/Type-1/wikipedia-Context-sensitive-language/" class="md-nav__link">
+        Context-sensitive-language
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5_3_4" type="checkbox" id="__nav_3_5_3_4" >
+      
+      <label class="md-nav__link" for="__nav_3_5_3_4">
+        Type-2
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Type-2" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_5_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Type-2
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Formal-language/Formal-grammar/Chomsky-hierarchy/Type-2/wikipedia-Context-free-language/" class="md-nav__link">
+        Context-free-language
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Formal-language/Formal-grammar/Chomsky-hierarchy/Type-2/Automaton/" class="md-nav__link">
+        Automaton
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5_3_5" type="checkbox" id="__nav_3_5_3_5" >
+      
+      <label class="md-nav__link" for="__nav_3_5_3_5">
+        Type-3
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Type-3" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_5_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Type-3
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/wikipedia-Regular-language/" class="md-nav__link">
+        Regular-language
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/Automaton/" class="md-nav__link">
+        Automaton
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5_3_5_3" type="checkbox" id="__nav_3_5_3_5_3" >
+      
+      <label class="md-nav__link" for="__nav_3_5_3_5_3">
+        Regular-expression
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Regular-expression" data-md-level="5">
+        <label class="md-nav__title" for="__nav_3_5_3_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Regular-expression
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/Regular-expression/wikipedia-Regular-expression/" class="md-nav__link">
+        Regular-expression
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/Regular-expression/wikipedia-Thompson%27s-construction/" class="md-nav__link">
+        Thompson's-construction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/Regular-expression/Regex-Engine/" class="md-nav__link">
+        Regex-Engine
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5_4" type="checkbox" id="__nav_3_5_4" >
+      
+      <label class="md-nav__link" for="__nav_3_5_4">
+        Parsing-Expression-Grammars
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Parsing-Expression-Grammars" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Parsing-Expression-Grammars
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Formal-language/Formal-grammar/Parsing-Expression-Grammars/Parsing-expression-grammar/" class="md-nav__link">
+        Parsing-expression-grammar
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Formal-language/Summary-of-theory/" class="md-nav__link">
+        Summary-of-theory
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Formal-language-processing
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Formal-language-processing" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Formal-language-processing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      <label class="md-nav__link" for="__nav_4_2">
+        Formal-language-processor
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Formal-language-processor" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Formal-language-processor
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Formal-language-processor/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      <label class="md-nav__link" for="__nav_4_3">
+        Computer-algebra
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Computer-algebra" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Computer-algebra
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Computer-algebra/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      <label class="md-nav__link" for="__nav_4_4">
+        Expression-oriented-programming
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Expression-oriented-programming" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Expression-oriented-programming
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Expression-oriented-programming-language/" class="md-nav__link">
+        Expression-oriented-programming-language
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4_3" type="checkbox" id="__nav_4_4_3" >
+      
+      <label class="md-nav__link" for="__nav_4_4_3">
+        Programming-paradigm
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Programming-paradigm" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Programming-paradigm
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4_3_1" type="checkbox" id="__nav_4_4_3_1" >
+      
+      <label class="md-nav__link" for="__nav_4_4_3_1">
+        Functional-programming
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Functional-programming" data-md-level="4">
+        <label class="md-nav__title" for="__nav_4_4_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Functional-programming
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programming-paradigm/Functional-programming/" class="md-nav__link">
+        Functional-programming
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programming-paradigm/Functional-programming/Pure-function/" class="md-nav__link">
+        Pure-function
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4_3_1_3" type="checkbox" id="__nav_4_4_3_1_3" >
+      
+      <label class="md-nav__link" for="__nav_4_4_3_1_3">
+        Higher-order-function
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Higher-order-function" data-md-level="5">
+        <label class="md-nav__title" for="__nav_4_4_3_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Higher-order-function
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programming-paradigm/Functional-programming/Higher-order-function/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programming-paradigm/Functional-programming/Higher-order-function/Fold/" class="md-nav__link">
+        Fold
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programming-paradigm/Functional-programming/Higher-order-function/Map/" class="md-nav__link">
+        Map
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programming-paradigm/Functional-programming/First-class-function/" class="md-nav__link">
+        First-class-function
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4_3_2" type="checkbox" id="__nav_4_4_3_2" >
+      
+      <label class="md-nav__link" for="__nav_4_4_3_2">
+        Symbolic-programming
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Symbolic-programming" data-md-level="4">
+        <label class="md-nav__title" for="__nav_4_4_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Symbolic-programming
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programming-paradigm/Symbolic-programming/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4_4" type="checkbox" id="__nav_4_4_4" >
+      
+      <label class="md-nav__link" for="__nav_4_4_4">
+        Lisp
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Lisp" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Lisp
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lisp/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4_4_2" type="checkbox" id="__nav_4_4_4_2" >
+      
+      <label class="md-nav__link" for="__nav_4_4_4_2">
+        Clojure
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Clojure" data-md-level="4">
+        <label class="md-nav__title" for="__nav_4_4_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Clojure
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lisp/Clojure/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4_4_3" type="checkbox" id="__nav_4_4_4_3" >
+      
+      <label class="md-nav__link" for="__nav_4_4_4_3">
+        Scheme
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Scheme" data-md-level="4">
+        <label class="md-nav__title" for="__nav_4_4_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Scheme
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lisp/Scheme/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4_5" type="checkbox" id="__nav_4_4_5" >
+      
+      <label class="md-nav__link" for="__nav_4_4_5">
+        Expression-problem
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Expression-problem" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Expression-problem
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Expression-problem/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4_5_2" type="checkbox" id="__nav_4_4_5_2" >
+      
+      <label class="md-nav__link" for="__nav_4_4_5_2">
+        Extended-visitor-pattern
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Extended-visitor-pattern" data-md-level="4">
+        <label class="md-nav__title" for="__nav_4_4_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Extended-visitor-pattern
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Expression-problem/Extended-visitor-pattern/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4_5_2_2" type="checkbox" id="__nav_4_4_5_2_2" >
+      
+      <label class="md-nav__link" for="__nav_4_4_5_2_2">
+        eli.thegreenplace-The-Expression-Problem-and-its-solutions
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="eli.thegreenplace-The-Expression-Problem-and-its-solutions" data-md-level="5">
+        <label class="md-nav__title" for="__nav_4_4_5_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          eli.thegreenplace-The-Expression-Problem-and-its-solutions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Expression-problem/Extended-visitor-pattern/eli.thegreenplace-The-Expression-Problem-and-its-solutions/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4_5_2_3" type="checkbox" id="__nav_4_4_5_2_3" >
+      
+      <label class="md-nav__link" for="__nav_4_4_5_2_3">
+        Synthesizing-Object-Oriented-and-Functional-Design-to-Promote-Re-Use
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Synthesizing-Object-Oriented-and-Functional-Design-to-Promote-Re-Use" data-md-level="5">
+        <label class="md-nav__title" for="__nav_4_4_5_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Synthesizing-Object-Oriented-and-Functional-Design-to-Promote-Re-Use
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Expression-problem/Extended-visitor-pattern/Synthesizing-Object-Oriented-and-Functional-Design-to-Promote-Re-Use/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4_5_3" type="checkbox" id="__nav_4_4_5_3" >
+      
+      <label class="md-nav__link" for="__nav_4_4_5_3">
+        Object-Algebra
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Object-Algebra" data-md-level="4">
+        <label class="md-nav__title" for="__nav_4_4_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Object-Algebra
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Expression-problem/Object-Algebra/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
+      
+      <label class="md-nav__link" for="__nav_4_5">
+        Pattern
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Pattern" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Pattern
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Pattern/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5_2" type="checkbox" id="__nav_4_5_2" >
+      
+      <label class="md-nav__link" for="__nav_4_5_2">
+        Composite-pattern
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Composite-pattern" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Composite-pattern
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Pattern/Composite-pattern/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5_3" type="checkbox" id="__nav_4_5_3" >
+      
+      <label class="md-nav__link" for="__nav_4_5_3">
+        Interpreter-pattern
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Interpreter-pattern" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Interpreter-pattern
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Pattern/Interpreter-pattern/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5_4" type="checkbox" id="__nav_4_5_4" >
+      
+      <label class="md-nav__link" for="__nav_4_5_4">
+        Translator-Pattern
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Translator-Pattern" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Translator-Pattern
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Pattern/Translator-Pattern/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Mathematical-logic
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Mathematical-logic" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Mathematical-logic
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Mathematical-logic/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Mathematical-logic/Propositional-calculus/" class="md-nav__link">
+        Propositional-calculus
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#wolfram#symbolic#programming#computationally#active#language" class="md-nav__link">
+    wolfram Symbolic Programming: Computationally Active Language
+  </a>
+  
+    <nav class="md-nav" aria-label="wolfram Symbolic Programming: Computationally Active Language">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#symbols#the#atoms#of#language" class="md-nav__link">
+    Symbols: The Atoms of Language
+  </a>
+  
+    <nav class="md-nav" aria-label="Symbols: The Atoms of Language">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#symbol#vs#variable" class="md-nav__link">
+    symbol VS variable
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#symbolic#expressions#combining#symbols#into#meaning" class="md-nav__link">
+    Symbolic Expressions: Combining Symbols into Meaning
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#computation#the#transformation#of#meaning" class="md-nav__link">
+    Computation: The Transformation of Meaning
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#representing#and#interacting#with#meaning" class="md-nav__link">
+    Representing and Interacting with Meaning
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#todo" class="md-nav__link">
+    TODO
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#symbolic#programming#and#formal#grammar" class="md-nav__link">
+    Symbolic programming and formal grammar
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application#computer#algebra" class="md-nav__link">
+    Application: Computer algebra
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="symbolic#programming">Symbolic programming</h1>
+<p>在学习deep learning的时候，其中描述了symbolic programing，因此，启发了我需要对symbolic programming进行总结。</p>
+<p>wolfram是采用symbolic programming paradigm的一种programming language，所以，我们结合wolfram <a href="https://blog.wolfram.com/2007/06/15/symbolic-programming-computationally-active-language/">Symbolic Programming: Computationally Active Language</a> 来理解symbolic programming。</p>
+<h2 id="wolfram#symbolic#programming#computationally#active#language">wolfram <a href="https://blog.wolfram.com/2007/06/15/symbolic-programming-computationally-active-language/">Symbolic Programming: Computationally Active Language</a></h2>
+<blockquote>
+<p>NOTE: 这篇文章的作者从一个非常高、抽象的层次对symbolic programming进行了描述。wolfram是一种programming language，它是支持symbolic programming的。</p>
+</blockquote>
+<p>In this blog and elsewhere, you’ll often see the statement that some advanced <a href="http://www.wolfram.com/mathematica/">Mathematica</a> feature is just another application of <a href="http://reference.wolfram.com/mathematica/guide/LanguageOverview.html">symbolic programming</a>. It’s the kind of idea that seems too powerful to explain in a single blog post, yet simple enough that I am tempted to try. So, here goes.</p>
+<blockquote>
+<p>翻译: 在本博客和其他地方，您将经常看到这样的说法:某些高级Mathematica特性只是symbolic programming的另一个应用。这种想法似乎过于强大以至于无法在一篇博客文章中解释清楚，但却足够简单，让我忍不住去尝试一下。</p>
+</blockquote>
+<p><strong>Symbolic programming</strong> is based on the concept of recasting(重铸) core features of <strong>human language</strong> into a <strong>computationally active form</strong>.</p>
+<blockquote>
+<p>翻译: 符号编程是基于如下概念: 将人类语言的核心特性重铸为计算活动的形式。在后面将它称为"human-language-oriented programming language"即"面向人类语言的编程语言"。</p>
+<p>NOTE: 那上述**computationally active form**是什么form呢？在"Computation: The Transformation of Meaning"章节中会对此进行说明。</p>
+</blockquote>
+<p>What does it mean to have a human-language-oriented programming language?</p>
+<blockquote>
+<p>翻译: 拥有一种面向人类语言的编程语言意味着什么?</p>
+</blockquote>
+<p>Our cognitive model of computation is typically a three-stage process: </p>
+<p>1) describing the computation; </p>
+<p>2) executing that description; and </p>
+<p>3) outputting the results.</p>
+<p>The “language” part of most programming languages begins and ends with stage one. <strong>Linguistic structures</strong> are erected(建立) to describe the program. But the execution of the program is typically oriented around an entirely different system of types and objects; and likewise, the program’s output structure tends to resemble nothing particularly language-like.</p>
+<p><strong>Symbolic programming</strong> uses <strong>linguistic structures</strong> as the foundation of all aspects of <strong>computation</strong>. From a computation’s description, to how the computation executes, to how humans interface with the results, the exact same basic <strong>tree structure</strong> is used throughout.</p>
+<p>This is a powerful <strong>unification</strong>(统一), making possible many useful computations that in other systems range from cumbersome to practically impossible. We’ll see examples along the way, but let me first describe what these linguistic structures actually are.</p>
+<blockquote>
+<p>翻译: 这是一个强大的统一，使得许多有用的计算成为可能，而这些计算在其他系统中从繁琐到几乎不可能。
+我们会看到一些例子，但让我先描述一下这些语言结构到底是什么。</p>
+<p>下面的岁上面三段话的内容的理解、分析: </p>
+<p>第一段话和第二段话对比了other programming language和programming language using symbolic programming: 作者认为它们之间主要差异是: </p>
+<p><strong>Symbolic programming</strong> 的 model of computation 都是基于它的  <strong>linguistic structures</strong>，它采用的是**unification**(统一)的方式；<strong>Symbolic programming</strong> 的 model of computation 其实也非常强大，也能够实现非常多的computation，在第三段话中，对此进行了描述。</p>
+<p>other programming language则不是采用的**unification**(统一)的方式，它们的execution of the program不是基于它们的**Linguistic structures**。结合C来理解上面这段话: C program是需要符合一定的**linguistic structure**的，C program需要经过compiler的翻译，转换为instruction的方式来由CPU执行，显然C program的执行与C program的linguistic structure是不一致的。</p>
+<p>在 stackoverflow <a href="https://stackoverflow.com/questions/4430998/mathematica-what-is-symbolic-programming">Mathematica: what is symbolic programming?</a> # <a href="https://stackoverflow.com/a/4435720">A</a> 中对**Symbolic programming** 的 model of computation 也有着相关的解释: </p>
+<blockquote>
+<p>I would characterize a symbolic programming environment as one in which the expressions used to represent program text also happen to be the primary data structure. As a result, it becomes very easy to build abstractions upon abstractions since data can easily be transformed into code and vice versa.</p>
+</blockquote>
+<p>当今，programming language的  <strong>linguistic structure</strong> 都是采用的tree structure。</p>
+</blockquote>
+<h3 id="symbols#the#atoms#of#language">Symbols: The Atoms of Language</h3>
+<blockquote>
+<p>翻译: 符号:语言的原子</p>
+</blockquote>
+<p><strong>Symbols</strong> are the basic <strong>atoms</strong> of language and also of <strong>symbolic programming</strong>. The point of <strong>symbols</strong> is to have distinct pieces of notation—be they words or mathematical functions or musical notes—which are then assigned an <strong>interpretation</strong> within the overall system.</p>
+<blockquote>
+<p>翻译: 符号是语言的基本原子，也是符号编程的基本原子。符号的意义在它能够有不同的notation——无论是单词、数学函数还是音符——然后在整个系统中被分配解释。</p>
+<p>直白的意思是: symbol其实是一种指代，它能够指代的事物的范围是非常广泛的，比如这段话中所列举的: word、mathematical function，至于symbol所指代的内容，需要后续进行赋值，这就是最后一段话的含义。在deep learning中，一般将symbol称为placeholder，比如:</p>
+<p>1) mxnet <a href="https://mxnet.apache.org/versions/master/api/architecture/program_model">Deep Learning Programming Paradigm</a>:</p>
+<blockquote>
+<p>We define the abstract function in terms of <strong>placeholder</strong> values</p>
+</blockquote>
+<p>2) TensorFlow</p>
+<p>后面会对symbol的含义、作用进行更加全面的描述。</p>
+</blockquote>
+<h4 id="symbol#vs#variable">symbol VS variable</h4>
+<blockquote>
+<p>NOTE: 两者的核心差别在于: variable需要提前定义才能够使用，而symbol不需要定义就可以直接使用。</p>
+</blockquote>
+<p>In programming, the defining feature of <strong>symbols</strong> is that they can stand for themselves. This is in contrast to <strong>variables</strong>, which must stand for some other value or be considered an error. For instance, JavaScript cannot perform the operation <code>x + x</code> unless <code>x</code> has a value:</p>
+<p><img alt="&gt;&gt;&gt; x | x is not defined | &gt;&gt;&gt; x+x | x is not defined" src="https://blog.wolfram.com/images/kovas/CompLang1a.gif" /></p>
+<p>while <strong>Mathematica</strong> has no trouble:</p>
+<p><img alt="In[1]:= x + x | Out[1]= 2 x" src="https://blog.wolfram.com/images/kovas/CompLang2.gif" /></p>
+<p>By existing simply as distinct entities, <strong>symbols</strong> serve as lightweight carriers of meaning. They are inert（惰性的、lazy）, but can acquire meaning through combination with other symbols. For example the symbol for <a href="https://reference.wolfram.com/language/ref/Pi.html"><code>Pi</code></a> is generically just another symbol, but when it appears “within” the symbol <a href="https://reference.wolfram.com/language/ref/N.html"><code>N</code></a>, it takes on its special numerical meaning:</p>
+<p><img alt="pic" src="https://blog.wolfram.com/images/kovas/CompLang3.gif" /></p>
+<p>Because Mathematica manipulates things abstractly, it is able to do more-precise computation than some other systems. As the above example makes clear, symbols are only the building blocks: the real action is with the arrangements of symbols.</p>
+<blockquote>
+<p>NOTE: arrangements of symbols其实就是前面一直强调的structure，就是下面这段话中描述的Symbolic Expression。</p>
+</blockquote>
+<h3 id="symbolic#expressions#combining#symbols#into#meaning">Symbolic Expressions: Combining Symbols into Meaning</h3>
+<blockquote>
+<p>NOTE: 本节标题中，所谓的"meaning"，其实是semantic。</p>
+</blockquote>
+<p>An English phrase is built of subphrases. A mathematical formula is built of subformulas. A musical score is built of bars, which contain notes. A web page layout is built from sublayouts. When humans want to communicate nontrivial structures, they use hierarchical nesting.</p>
+<blockquote>
+<p>NOTE: 关于nesting关系，参见工程discrete的<code>Relation-structure-computation\Model\Nesting-relation-model</code>章节</p>
+</blockquote>
+<p>Across different languages and domains, these structures, or trees, take many syntactic forms. However, they can always be reduced to very simple data structures known as <strong>symbolic expressions</strong>. <strong>Symbolic expressions</strong> simply capture the concept of arranging symbols into <strong>trees</strong>. Here are a few trees built from the symbol “e”:</p>
+<p><img alt="pic" src="https://blog.wolfram.com/images/kovas/CompLang4.gif" /></p>
+<p>Like the symbols themselves, trees of symbols may simply exist, without a need to correspond to something else:</p>
+<p><img alt="In[4]:= e[e] | Out[4]= e[e]" src="https://blog.wolfram.com/images/kovas/CompLang5.gif" /></p>
+<p><strong>Symbolic expressions</strong> are the fabric from which we construct meaning. Different tree structures correspond to different meanings.</p>
+<blockquote>
+<p>NOTE: 这段话其实是对本节标题的解释，上面这段话的意思是:</p>
+<p>在symbolic programming中，我们会使用 <strong>symbolic expression</strong> ，通过 <strong>symbolic expression</strong> ，我们实现了 "construct meaning"。不同的 <strong>symbolic expression</strong> 有着不同的 tree structure，从而表达不同的 meaning。</p>
+</blockquote>
+<p>A tree with symbols like <a href="https://reference.wolfram.com/language/ref/Plus.html"><code>Plus</code></a> and <a href="https://reference.wolfram.com/language/ref/Power.html"><code>Power</code></a> may represent an arithmetic expression, while the symbol <a href="https://reference.wolfram.com/language/ref/SetterBar.html"><code>SetterBar</code></a> can be combined with a subtree indicating the current selection and a list of possible alternatives:</p>
+<p><img alt="pic" src="https://blog.wolfram.com/images/kovas/CompLang6b.gif" /></p>
+<p>Everything in <strong>Mathematica</strong> is ultimately represented using this <strong>uniform simple structure</strong>. At the formal level, it ensures a degree of <strong>structural compatibility</strong> across all parts of the far-flung(广泛的) system. It also provides a system for introducing your own lightweight yet sophisticated structures.</p>
+<p><a href="https://reference.wolfram.com/language/tutorial/PureFunctions.html">Pure functions</a>, for example, are the original killer apps for lightweight structures of this vein. In Mathematica, they can be represented with <a href="https://reference.wolfram.com/language/ref/Function.html"><code>Function</code></a>, but let’s roll our own using other generic primitives:</p>
+<div class="highlight"><pre><span></span><code><span class="n">MyPureFunction</span><span class="p">[</span><span class="nv">var_</span><span class="p">,</span><span class="w"> </span><span class="nv">expr_</span><span class="p">][</span><span class="nv">arg_</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">expr</span><span class="w"> </span><span class="o">/.</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">arg</span><span class="w"></span>
+</code></pre></div>
+<p>Let’s describe a function that adds 1 to its argument, and attach it to the symbol <code>f</code>. Notice the structure stays inert(惰性), and therefore can be passed around as data:</p>
+<p><img alt="In[6]:= f = MyPureFunction[x, x + 1] | Out[6]= MyPureFunction[x, 1 + x]" src="https://blog.wolfram.com/images/kovas/CompLang6c.gif" /></p>
+<p>When brought into contact with an <strong>argument</strong>, the definition fires.</p>
+<p><img alt="In[7]:= f[a] | Out[7]= 1 + a" src="https://blog.wolfram.com/images/kovas/CompLang6d.gif" /></p>
+<p>In <strong>symbolic programming</strong>, it is commonplace（司空见惯的） for a programmer to create <strong>abstractions</strong> that in another language would have required a modification of the core specification. This is the beauty of language: that creating new concepts does not require inventing new atomic “types” of things—only new arrangements of structure.</p>
+<blockquote>
+<p>NOTE: 上面这段话的含义是: 在其它的programming language中，创建新的abstraction需要modification of the core specification，但是在**symbolic programming**中并不需要，它只需要new arrangement of structure。</p>
+</blockquote>
+<h3 id="computation#the#transformation#of#meaning">Computation: The Transformation of Meaning</h3>
+<p>The most important and unique aspect of <strong>symbolic programming</strong> is that these tree structures can be made <strong>computationally active</strong>. They don’t just describe things—they actually execute.</p>
+<p>The basic idea is that because <strong>meaning</strong> is encoded by <strong>structure</strong>, <strong>computation</strong>—the transformation of one <strong>meaning</strong> into another—corresponds to the transformation of one structure into another.</p>
+<p>For instance, position 1 in the <code>SetterBar</code> expression represents the current selection. By modifying the tree at that position, we modify the meaning of the expression as a whole:</p>
+<p><img alt="In[8]:= ReplacePart[a b  c, 1-&gt;b] | Out[8]= a b c | In[9]:= a b c // InputForm | Out[9]/InputForm= SetterBar[b, {a, b, c}]" src="https://blog.wolfram.com/images/kovas/CompLang7.gif" /></p>
+<p>A computation begins and ends with unique, domain-specific structures. The process of computation, however, is executed using extremely general methods that are exactly the same across domains:</p>
+<p><img alt="" src="https://blog.wolfram.com/images/kovas/CompLang8.gif" /></p>
+<p>So, <strong>computation</strong> proceeds by very generic <strong>tree transformations</strong>. Rather conveniently, trees are also how we specify the computations themselves.</p>
+<blockquote>
+<p>NOTE: computation、representation都是基于tree的，这就是在本文前面所提出的核心思想。</p>
+</blockquote>
+<p>This reduces the process of computation into a linguistic puzzle: using trees to describe how other trees should transform and intersect. Not only does this allow computational primitives to have an immediate and clear meaning, it also allows the process of language design to proceed organically as regularities in these tree structures are discovered and abstracted.</p>
+<h3 id="representing#and#interacting#with#meaning">Representing and Interacting with Meaning</h3>
+<p>Symbolic programming’s comprehensive emphasis on meaning allows a unique perspective on input, output and the whole interaction cycle between human and machine computation.</p>
+<p>The basic idea is that symbolic expressions are the canonical, abstract containers of meaning. Given a symbolic expression, its meaning can then be embodied in a number of useful ways.</p>
+<p>For example, the expression <code>Plus[2,2]</code> is rendered as <code>2+2</code>. And <code>Graphics[Rectangle[]]</code> renders as:</p>
+<p><img alt="Rectangle" src="https://blog.wolfram.com/images/kovas/CompLang9.gif" /></p>
+<p>And it works similarly for all sorts of domain-specific mathematics notation, documents and even <a href="https://reference.wolfram.com/language/ref/Sound.html">sound</a> and <a href="https://reference.wolfram.com/language/Music/tutorial/Music.html">music</a> primitives.</p>
+<p>On their own, these are useful representations. But the fact that they are still really the same underlying expression leads to a powerful consequence: human computation and programmatic computation become structurally equivalent.</p>
+<p>If I interactively create a <a href="https://reference.wolfram.com/language/ref/Disk.html"><code>Disk</code></a> using a drawing palette:</p>
+<p><img alt="Disk with drawing palette" src="https://blog.wolfram.com/images/kovas/CompLang10.gif" /></p>
+<p>its underlying data structure is the same as it would be if I had typed in the code, or if it had been generated by a program:</p>
+<p><img alt="InputForm for disk" src="https://blog.wolfram.com/images/kovas/CompLang11.gif" />
+<code>Graphics[Disk[{0.49, 0.49}, {0.35, 0.35}],ImageSize -&gt; {36.335, Automatic},PlotRange -&gt; {{0, 1}, {0, 1}}]</code></p>
+<p>Completely different representations—in this case text and graphics—are immediately and transparently compatible, because in the end they are all just <a href="https://reference.wolfram.com/language/guide/Expressions.html">expressions</a>. Here we have some “zero-overhead” code to color just the disks of a <a href="https://reference.wolfram.com/language/ref/Graphics.html">graphic</a>:</p>
+<p><img alt="ColorDisks[x_] := x /. {y_Disk -&gt; {Blue, y}}" src="https://blog.wolfram.com/images/kovas/CompLang12.gif" /></p>
+<p><img alt="ColorDisks function using graphics of Rectangle and Disk" src="https://blog.wolfram.com/images/kovas/CompLang13.gif" /></p>
+<p>The equivalence between these representations, and between human and programmatically generated structures, opens the door to exceptionally powerful ways of interacting with computation. It is the basis of Mathematica’s <a href="http://www.wolfram.com/mathematica/newin6/content/DynamicInteractivity/">dynamic interactivity</a> framework.</p>
+<p>The implications, however, go much further than that. Symbolic programming is the first abstraction that can uniformly span all three stages of computation, from specification to execution to output, and as a result it can leverage each aspect against the others.</p>
+<p>Programs can be created by traditional programming, by the programs themselves or by interaction with what is considered output. The process of computation can be equivalently executed by the user or by the machine. Output is simply exposing a window into a piece of a (possibly running) program.</p>
+<p>It’s pretty impressive that so many useful consequences can flow from the simple idea of <strong>symbolic programming</strong>: fitting computation to language, rather than the other way around.</p>
+<h2 id="todo">TODO</h2>
+<p>1) utexas <a href="https://www.cs.utexas.edu/~novak/cs378.html">CS 378: Symbolic Programming</a></p>
+<p>已经将**Lecture Note**下载到本地了。</p>
+<p>2) ybrikman <a href="https://www.ybrikman.com/writing/2014/04/09/six-programming-paradigms-that-will/">Six programming paradigms that will change how you think about coding</a>#Symbolic programming</p>
+<p>3) stackoverflow <a href="https://stackoverflow.com/questions/4430998/mathematica-what-is-symbolic-programming">Mathematica: what is symbolic programming?</a></p>
+<p>4) wikipedia <a href="https://en.wikipedia.org/wiki/Symbolic_programming">Symbolic programming</a> and wikipedia <a href="https://en.wikipedia.org/wiki/Symbolic_language_(programming)">Symbolic language (programming)</a></p>
+<h2 id="symbolic#programming#and#formal#grammar">Symbolic programming and formal grammar</h2>
+<p>Symbolic programming 和 formal grammar都是基于nesting关系构建的。</p>
+<p>本质上它们都是expression。</p>
+<h2 id="application#computer#algebra">Application: Computer algebra</h2>
+<p>Symbolic programming的一个重要application就是mathematics，本节对此进行梳理。</p>
+<p>关于Computer algebra，参见工程discrete的<code>Relation-structure-computation\Computation\Computer-algebra</code>章节，或者wikipedia <a href="https://en.wikipedia.org/wiki/Computer_algebra">Computer algebra</a>。</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.ca5457b8.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

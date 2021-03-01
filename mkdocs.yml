@@ -1,6 +1,7 @@
 nav:
     - Home: index.md
-    - Primer: Primer.md
-    - Mathematical-logic: Mathematical-logic
+    - Language: Language
     - Formal-language: Formal-language
-    - Theory-of-computation: Theory-of-computation
+    - Formal-language-processing: Formal-language-processing
+    - Mathematical-logic: Mathematical-logic
+    
