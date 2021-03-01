@@ -1,10 +1,14 @@
 edit_uri: ''
 extra_css:
 - css/extra.css
+extra_javascript:
+- https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML
+google_analytics:
+- UA-27795084-5
+- mkdocs.org
 markdown_extensions:
 - toc:
-    permalink: '#'
-    separator: _
+    separator: '#'
 - admonition
 - def_list
 - mdx_gh_links:
@@ -16,8 +20,6 @@ markdown_extensions:
 - pymdownx.caret
 - pymdownx.critic
 - pymdownx.details
-- pymdownx.emoji:
-    emoji_generator: '!!python/name:pymdownx.emoji.to_svg'
 - pymdownx.inlinehilite
 - pymdownx.magiclink
 - pymdownx.mark
@@ -127,10 +129,10 @@ nav:
   - Propositional-calculus: Mathematical-logic/Propositional-calculus.md
 plugins:
 - search
-repo_url: https://github.com/dengking/automata-and-formal-language
+repo_url: https://github.com/dengking/Language
 site_author: DengKing
 site_description: Project documentation with Markdown.
-site_name: automata-and-formal-language
-site_url: https://dengking.github.io/automata-and-formal-language
+site_name: Language
+site_url: https://dengking.github.io/Language
 theme:
   name: material
