@@ -90,6 +90,7 @@ nav:
     - Introduction: Formal-language-processing/Expression-oriented-programming/index.md
     - Expression-oriented-programming-language: Formal-language-processing/Expression-oriented-programming/Expression-oriented-programming-language.md
     - Programming-paradigm:
+      - Introduction: Formal-language-processing/Expression-oriented-programming/Programming-paradigm/index.md
       - Functional-programming:
         - Functional-programming: Formal-language-processing/Expression-oriented-programming/Programming-paradigm/Functional-programming/index.md
         - Pure-function: Formal-language-processing/Expression-oriented-programming/Programming-paradigm/Functional-programming/Pure-function.md
@@ -106,6 +107,9 @@ nav:
         - Introduction: Formal-language-processing/Expression-oriented-programming/Lisp/Clojure/index.md
       - Scheme:
         - Introduction: Formal-language-processing/Expression-oriented-programming/Lisp/Scheme/index.md
+      - OOP:
+        - Common-Lisp-Object-System:
+          - Introduction: Formal-language-processing/Expression-oriented-programming/Lisp/OOP/Common-Lisp-Object-System/index.md
     - Expression-problem:
       - Introduction: Formal-language-processing/Expression-oriented-programming/Expression-problem/index.md
       - Extended-visitor-pattern:
