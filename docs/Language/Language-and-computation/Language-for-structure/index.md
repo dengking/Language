@@ -8,7 +8,7 @@ symbol expression，在工程programming-language的`Expression-oriented-languag
 
 下面是一些案例: 
 
-## Abstract syntax description language(ADSL)
+## Abstract syntax description language(ASDL)
 
 在论文 [The Zephyr Abstract Syntax Description Language](https://www.cs.princeton.edu/research/techreps/TR-554-97) 中有这样的总结：
 
