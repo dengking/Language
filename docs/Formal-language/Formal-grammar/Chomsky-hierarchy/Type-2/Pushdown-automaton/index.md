@@ -1,4 +1,4 @@
-# [Pushdown automaton](https://en.wikipedia.org/wiki/Pushdown_automaton)
+# wikipedia [Pushdown automaton](https://en.wikipedia.org/wiki/Pushdown_automaton)
 
 In the [theory of computation](https://en.wikipedia.org/wiki/Theory_of_computation), a branch of [theoretical computer science](https://en.wikipedia.org/wiki/Theoretical_computer_science), a **pushdown automaton** (**PDA**) is a type of [automaton](https://en.wikipedia.org/wiki/Automata_theory) that employs a [stack](https://en.wikipedia.org/wiki/Stack_(data_structure)).
 

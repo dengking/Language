@@ -1,4 +1,4 @@
-# [Formal language](https://en.wikipedia.org/wiki/Formal_language)
+# wikipedia [Formal language](https://en.wikipedia.org/wiki/Formal_language)
 
 > NOTE: 充分理解本文的前提是对[Mathematical logic](https://en.wikipedia.org/wiki/Mathematical_logic)有基本的认知，参见上一章节。
 
@@ -93,5 +93,4 @@ Surprisingly often, the answer to these decision problems is "it cannot be done 
 *Main articles:* [Compiler compiler](https://en.wikipedia.org/wiki/Compiler_compiler) and [Syntax (programming languages)](https://en.wikipedia.org/wiki/Syntax_(programming_languages))
 
 ### [Formal theories, systems, and proofs](https://en.wikipedia.org/wiki/Formal_language#Formal_theories,_systems,_and_proofs)
-
 
