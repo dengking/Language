@@ -1,6 +1,0 @@
-nav:
-    - Introduction: index.md
-    ########## 函数式编程##########
-    - Functional-programming: Functional-programming
-    - Symbolic-programming: Symbolic-programming
-    
