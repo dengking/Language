@@ -10,7 +10,13 @@ In [computer programming](https://en.wanweibaike.com/wiki-Computer_programming),
 
 > NOTE: 
 >
-> 1、"expression tree and 括号-Nested parentheses"
+> 一、"expression tree and 括号-Nested parentheses"
+>
+> 二、关于S-expression的一些非常好的例子，参见:
+>
+> a、cs.unm [11 S-expressions, the Syntax of Lisp](https://www.cs.unm.edu/~luger/ai-final2/LISP/CH%2011_S-expressions,%20The%20Syntax%20of%20Lisp.pdf)
+>
+> 
 
 ## Symbol expression in computer science
 
