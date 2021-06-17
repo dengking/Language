@@ -40,6 +40,12 @@ nav:
     - Introduction: Language/Language-and-computation/index.md
     - Language-for-structure:
       - Introduction: Language/Language-and-computation/Language-for-structure/index.md
+      - Zephyr-ASDL:
+        - Introduction: Language/Language-and-computation/Language-for-structure/Zephyr-ASDL/index.md
+        - thegreenplace-Using-ASDL-to-describe-ASTs-in-compilers:
+          - Introduction: Language/Language-and-computation/Language-for-structure/Zephyr-ASDL/thegreenplace-Using-ASDL-to-describe-ASTs-in-compilers/index.md
+        - paper-The-Zephyr-Abstract-Syntax-Description-Language:
+          - Introduction: Language/Language-and-computation/Language-for-structure/Zephyr-ASDL/paper-The-Zephyr-Abstract-Syntax-Description-Language/index.md
     - Structure-of-language:
       - Grammar: Language/Language-and-computation/Structure-of-language/Language-and-grammar.md
   - Language-in-discipline: Language/Language-in-discipline.md
@@ -49,77 +55,37 @@ nav:
     - Introduction: Language/Language-agnostic/index.md
 - Formal-language:
   - Introduction: Formal-language/index.md
-  - Formal-and-formal-langugae: Formal-language/Formal-and-formal-langugae.md
-  - Formal-language: Formal-language/Formal-language.md
+  - Formal-and-formal-langugae:
+    - Introduction: Formal-language/Formal-and-formal-langugae/index.md
+  - wikipedia-Formal-language:
+    - Introduction: Formal-language/wikipedia-Formal-language/index.md
   - Intermediate-language:
     - Introduction: Formal-language/Intermediate-language/index.md
   - Formal-grammar:
-    - Formal-grammar: Formal-language/Formal-grammar/wikipedia-Formal-grammar.md
-    - Production: Formal-language/Formal-grammar/wikipedia-Production(computer-science).md
+    - Formal-grammar:
+      - Introduction: Formal-language/Formal-grammar/wikipedia-Formal-grammar/index.md
+    - Production:
+      - Introduction: Formal-language/Formal-grammar/Production(computer-science)/index.md
     - Chomsky-hierarchy:
       - Chomsky-hierarchy: Formal-language/Formal-grammar/Chomsky-hierarchy/wikipedia-Chomsky-hierarchy.md
       - Type-0:
         - Recursively-enumerable-language: Formal-language/Formal-grammar/Chomsky-hierarchy/Type-0/wikipedia-Recursively-enumerable-language.md
-        - Turinig-machine:
-          - Introduction: Formal-language/Formal-grammar/Chomsky-hierarchy/Type-0/Turinig-machine/index.md
-          - What-is-a-Turing-machine: Formal-language/Formal-grammar/Chomsky-hierarchy/Type-0/Turinig-machine/What-is-a-Turing-machine.md
-          - Turing-machine: Formal-language/Formal-grammar/Chomsky-hierarchy/Type-0/Turinig-machine/Turing-machine.md
-          - wikipedia-Turing-machine: Formal-language/Formal-grammar/Chomsky-hierarchy/Type-0/Turinig-machine/wikipedia-Turing-machine.md
       - Type-1:
         - Context-sensitive-language: Formal-language/Formal-grammar/Chomsky-hierarchy/Type-1/wikipedia-Context-sensitive-language.md
       - Type-2:
-        - Context-free-language: Formal-language/Formal-grammar/Chomsky-hierarchy/Type-2/wikipedia-Context-free-language.md
-        - Automaton: Formal-language/Formal-grammar/Chomsky-hierarchy/Type-2/Automaton.md
+        - Context-free-language: Formal-language/Formal-grammar/Chomsky-hierarchy/Type-2/Context-free-language.md
+        - Pushdown-automaton:
+          - Introduction: Formal-language/Formal-grammar/Chomsky-hierarchy/Type-2/Pushdown-automaton/index.md
       - Type-3:
-        - Regular-language: Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/wikipedia-Regular-language.md
-        - Automaton: Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/Automaton.md
-        - Regular-expression:
-          - Regular-expression: Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/Regular-expression/wikipedia-Regular-expression.md
-          - Thompson's-construction: Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/Regular-expression/wikipedia-Thompson's-construction.md
-          - Regex-Engine: Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/Regular-expression/Regex-Engine.md
+        - Introduction: Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/index.md
     - Parsing-Expression-Grammars:
-      - Parsing-expression-grammar: Formal-language/Formal-grammar/Parsing-Expression-Grammars/Parsing-expression-grammar.md
-  - Summary-of-theory: Formal-language/Summary-of-theory.md
+      - Introduction: Formal-language/Formal-grammar/Parsing-Expression-Grammars/index.md
+  - Summary-of-theory:
+    - Introduction: Formal-language/Summary-of-theory/index.md
 - Formal-language-processing:
   - Introduction: Formal-language-processing/index.md
   - Formal-language-processor:
     - Introduction: Formal-language-processing/Formal-language-processor/index.md
-  - Computer-algebra:
-    - Introduction: Formal-language-processing/Computer-algebra/index.md
-  - Expression-oriented-programming:
-    - Introduction: Formal-language-processing/Expression-oriented-programming/index.md
-    - Expression-oriented-programming-language: Formal-language-processing/Expression-oriented-programming/Expression-oriented-programming-language.md
-    - Programming-paradigm:
-      - Introduction: Formal-language-processing/Expression-oriented-programming/Programming-paradigm/index.md
-      - Functional-programming:
-        - Functional-programming: Formal-language-processing/Expression-oriented-programming/Programming-paradigm/Functional-programming/index.md
-        - Pure-function: Formal-language-processing/Expression-oriented-programming/Programming-paradigm/Functional-programming/Pure-function.md
-        - Higher-order-function:
-          - Introduction: Formal-language-processing/Expression-oriented-programming/Programming-paradigm/Functional-programming/Higher-order-function/index.md
-          - Fold: Formal-language-processing/Expression-oriented-programming/Programming-paradigm/Functional-programming/Higher-order-function/Fold.md
-          - Map: Formal-language-processing/Expression-oriented-programming/Programming-paradigm/Functional-programming/Higher-order-function/Map.md
-        - First-class-function: Formal-language-processing/Expression-oriented-programming/Programming-paradigm/Functional-programming/First-class-function.md
-      - Symbolic-programming:
-        - Introduction: Formal-language-processing/Expression-oriented-programming/Programming-paradigm/Symbolic-programming/index.md
-    - Lisp:
-      - Introduction: Formal-language-processing/Expression-oriented-programming/Lisp/index.md
-      - Clojure:
-        - Introduction: Formal-language-processing/Expression-oriented-programming/Lisp/Clojure/index.md
-      - Scheme:
-        - Introduction: Formal-language-processing/Expression-oriented-programming/Lisp/Scheme/index.md
-      - OOP:
-        - Common-Lisp-Object-System:
-          - Introduction: Formal-language-processing/Expression-oriented-programming/Lisp/OOP/Common-Lisp-Object-System/index.md
-    - Expression-problem:
-      - Introduction: Formal-language-processing/Expression-oriented-programming/Expression-problem/index.md
-      - Extended-visitor-pattern:
-        - Introduction: Formal-language-processing/Expression-oriented-programming/Expression-problem/Extended-visitor-pattern/index.md
-        - eli.thegreenplace-The-Expression-Problem-and-its-solutions:
-          - Introduction: Formal-language-processing/Expression-oriented-programming/Expression-problem/Extended-visitor-pattern/eli.thegreenplace-The-Expression-Problem-and-its-solutions/index.md
-        - Synthesizing-Object-Oriented-and-Functional-Design-to-Promote-Re-Use:
-          - Introduction: Formal-language-processing/Expression-oriented-programming/Expression-problem/Extended-visitor-pattern/Synthesizing-Object-Oriented-and-Functional-Design-to-Promote-Re-Use/index.md
-      - Object-Algebra:
-        - Introduction: Formal-language-processing/Expression-oriented-programming/Expression-problem/Object-Algebra/index.md
   - Pattern:
     - Introduction: Formal-language-processing/Pattern/index.md
     - Composite-pattern:
@@ -131,6 +97,38 @@ nav:
 - Mathematical-logic:
   - Introduction: Mathematical-logic/index.md
   - Propositional-calculus: Mathematical-logic/Propositional-calculus.md
+- Symbolic-computation:
+  - Introduction: Symbolic-computation/index.md
+  - What-is-symbol:
+    - Introduction: Symbolic-computation/What-is-symbol/index.md
+  - Symbolic-computation:
+    - Introduction: Symbolic-computation/Symbolic-computation/index.md
+    - Course-risc-Studying-Symbolic-Computation:
+      - Introduction: Symbolic-computation/Symbolic-computation/Course-risc-Studying-Symbolic-Computation/index.md
+  - Symbolic-programming:
+    - Introduction: Symbolic-computation/Symbolic-programming/index.md
+    - Course-utexas-CS-378-Symbolic-Programming:
+      - Introduction: Symbolic-computation/Symbolic-programming/Course-utexas-CS-378-Symbolic-Programming/index.md
+  - Symbol-expression:
+    - Introduction: Symbolic-computation/Symbol-expression/index.md
+  - Expression-oriented-language:
+    - Introduction: Symbolic-computation/Expression-oriented-language/index.md
+  - Expression-problem:
+    - Introduction: Symbolic-computation/Expression-problem/index.md
+    - Extended-visitor-pattern:
+      - Introduction: Symbolic-computation/Expression-problem/Extended-visitor-pattern/index.md
+      - eli.thegreenplace-The-Expression-Problem-and-its-solutions:
+        - Introduction: Symbolic-computation/Expression-problem/Extended-visitor-pattern/eli.thegreenplace-The-Expression-Problem-and-its-solutions/index.md
+      - Synthesizing-Object-Oriented-and-Functional-Design-to-Promote-Re-Use:
+        - Introduction: Symbolic-computation/Expression-problem/Extended-visitor-pattern/Synthesizing-Object-Oriented-and-Functional-Design-to-Promote-Re-Use/index.md
+    - Object-Algebra:
+      - Introduction: Symbolic-computation/Expression-problem/Object-Algebra/index.md
+  - Computer-algebra:
+    - Introduction: Symbolic-computation/Computer-algebra/index.md
+- LaTeX:
+  - Introduction: LaTeX/index.md
+  - LaTeX-under:
+    - Introduction: LaTeX/LaTeX-under/index.md
 plugins:
 - search
 repo_url: https://github.com/dengking/Language
