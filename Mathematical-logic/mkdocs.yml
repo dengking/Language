@@ -1,3 +1,4 @@
 nav:
     - Introduction: index.md
     - Propositional-calculus: Propositional-calculus.md
+    - Axiom-schema: Axiom-schema.md
