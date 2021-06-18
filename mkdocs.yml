@@ -116,12 +116,12 @@ nav:
     - Introduction: Symbolic-computation/What-is-symbol/index.md
   - Symbolic-computation:
     - Introduction: Symbolic-computation/Symbolic-computation/index.md
-    - Course-risc-Studying-Symbolic-Computation:
-      - Introduction: Symbolic-computation/Symbolic-computation/Course-risc-Studying-Symbolic-Computation/index.md
+    - risc-Studying-Symbolic-Computation:
+      - Introduction: Symbolic-computation/Symbolic-computation/risc-Studying-Symbolic-Computation/index.md
   - Symbolic-programming:
     - Introduction: Symbolic-computation/Symbolic-programming/index.md
-    - Course-utexas-CS-378-Symbolic-Programming:
-      - Introduction: Symbolic-computation/Symbolic-programming/Course-utexas-CS-378-Symbolic-Programming/index.md
+    - utexas-CS-378-Symbolic-Programming:
+      - Introduction: Symbolic-computation/Symbolic-programming/utexas-CS-378-Symbolic-Programming/index.md
   - Symbol-expression:
     - Introduction: Symbolic-computation/Symbol-expression/index.md
   - Expression-oriented-language:
