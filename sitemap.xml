@@ -28,6 +28,18 @@
      <lastmod>2021-06-18</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
+     <loc>https://dengking.github.io/Language/Language/Language-and-computation/Language-for-structure/Zephyr-ASDL/</loc>
+     <lastmod>2021-06-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://dengking.github.io/Language/Language/Language-and-computation/Language-for-structure/Zephyr-ASDL/thegreenplace-Using-ASDL-to-describe-ASTs-in-compilers/</loc>
+     <lastmod>2021-06-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://dengking.github.io/Language/Language/Language-and-computation/Language-for-structure/Zephyr-ASDL/paper-The-Zephyr-Abstract-Syntax-Description-Language/</loc>
+     <lastmod>2021-06-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
      <loc>https://dengking.github.io/Language/Language/Language-and-computation/Structure-of-language/Language-and-grammar/</loc>
      <lastmod>2021-06-18</lastmod>
      <changefreq>daily</changefreq>
@@ -48,7 +60,23 @@
      <lastmod>2021-06-18</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
+     <loc>https://dengking.github.io/Language/Formal-language/Formal-and-formal-langugae/</loc>
+     <lastmod>2021-06-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://dengking.github.io/Language/Formal-language/wikipedia-Formal-language/</loc>
+     <lastmod>2021-06-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
      <loc>https://dengking.github.io/Language/Formal-language/Intermediate-language/</loc>
+     <lastmod>2021-06-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://dengking.github.io/Language/Formal-language/Formal-grammar/wikipedia-Formal-grammar/</loc>
+     <lastmod>2021-06-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://dengking.github.io/Language/Formal-language/Formal-grammar/Production%28computer-science%29/</loc>
      <lastmod>2021-06-18</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -61,6 +89,26 @@
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://dengking.github.io/Language/Formal-language/Formal-grammar/Chomsky-hierarchy/Type-1/wikipedia-Context-sensitive-language/</loc>
+     <lastmod>2021-06-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://dengking.github.io/Language/Formal-language/Formal-grammar/Chomsky-hierarchy/Type-2/Context-free-language/</loc>
+     <lastmod>2021-06-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://dengking.github.io/Language/Formal-language/Formal-grammar/Chomsky-hierarchy/Type-2/Pushdown-automaton/</loc>
+     <lastmod>2021-06-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://dengking.github.io/Language/Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/</loc>
+     <lastmod>2021-06-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://dengking.github.io/Language/Formal-language/Formal-grammar/Parsing-Expression-Grammars/</loc>
+     <lastmod>2021-06-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://dengking.github.io/Language/Formal-language/Summary-of-theory/</loc>
      <lastmod>2021-06-18</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -93,6 +141,62 @@
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://dengking.github.io/Language/Mathematical-logic/Propositional-calculus/</loc>
+     <lastmod>2021-06-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://dengking.github.io/Language/Symbolic-computation/</loc>
+     <lastmod>2021-06-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://dengking.github.io/Language/Symbolic-computation/What-is-symbol/</loc>
+     <lastmod>2021-06-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://dengking.github.io/Language/Symbolic-computation/Symbolic-computation/</loc>
+     <lastmod>2021-06-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://dengking.github.io/Language/Symbolic-computation/Symbolic-programming/</loc>
+     <lastmod>2021-06-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://dengking.github.io/Language/Symbolic-computation/Symbol-expression/</loc>
+     <lastmod>2021-06-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://dengking.github.io/Language/Symbolic-computation/Expression-oriented-language/</loc>
+     <lastmod>2021-06-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://dengking.github.io/Language/Symbolic-computation/Expression-problem/</loc>
+     <lastmod>2021-06-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://dengking.github.io/Language/Symbolic-computation/Expression-problem/Extended-visitor-pattern/</loc>
+     <lastmod>2021-06-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://dengking.github.io/Language/Symbolic-computation/Expression-problem/Extended-visitor-pattern/eli.thegreenplace-The-Expression-Problem-and-its-solutions/</loc>
+     <lastmod>2021-06-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://dengking.github.io/Language/Symbolic-computation/Expression-problem/Extended-visitor-pattern/Synthesizing-Object-Oriented-and-Functional-Design-to-Promote-Re-Use/</loc>
+     <lastmod>2021-06-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://dengking.github.io/Language/Symbolic-computation/Expression-problem/Object-Algebra/</loc>
+     <lastmod>2021-06-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://dengking.github.io/Language/Symbolic-computation/Computer-algebra/</loc>
+     <lastmod>2021-06-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://dengking.github.io/Language/LaTeX/</loc>
+     <lastmod>2021-06-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://dengking.github.io/Language/LaTeX/LaTeX-under/</loc>
      <lastmod>2021-06-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
