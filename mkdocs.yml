@@ -34,8 +34,11 @@ nav:
   - Introduction: Language/index.md
   - Classification:
     - Introduction: Language/Classification/index.md
+    - Domain-specific_language:
+      - Introduction: Language/Classification/Domain-specific_language/index.md
     - GPL-and-DSL: Language/Classification/GPL-and-DSL.md
     - Official-and-dialect: Language/Classification/Official-and-dialect.md
+    - Host-and-embeded-and-meta: Language/Classification/Host-and-embeded-and-meta.md
   - Language-and-computation:
     - Introduction: Language/Language-and-computation/index.md
     - Language-for-structure:
@@ -78,6 +81,8 @@ nav:
           - Introduction: Formal-language/Formal-grammar/Chomsky-hierarchy/Type-2/Pushdown-automaton/index.md
       - Type-3:
         - Introduction: Formal-language/Formal-grammar/Chomsky-hierarchy/Type-3/index.md
+      - "\u5BF9\u6BD4\u5206\u6790": "Formal-language/Formal-grammar/Chomsky-hierarchy/\u5BF9\
+          \u6BD4\u5206\u6790.md"
     - Parsing-Expression-Grammars:
       - Introduction: Formal-language/Formal-grammar/Parsing-Expression-Grammars/index.md
   - Summary-of-theory:
@@ -94,9 +99,17 @@ nav:
       - Introduction: Formal-language-processing/Pattern/Interpreter-pattern/index.md
     - Translator-Pattern:
       - Introduction: Formal-language-processing/Pattern/Translator-Pattern/index.md
+- Regular-language:
+  - Introduction: Regular-language/index.md
+  - Regular-expression:
+    - Regular-expression: Regular-language/Regular-expression/wikipedia-Regular-expression.md
+    - Thompson's-construction: Regular-language/Regular-expression/wikipedia-Thompson's-construction.md
+    - Regex-Engine: Regular-language/Regular-expression/Regex-Engine.md
+    - Powerset-construction: Regular-language/Regular-expression/wikipedia-Powerset-construction.md
 - Mathematical-logic:
   - Introduction: Mathematical-logic/index.md
   - Propositional-calculus: Mathematical-logic/Propositional-calculus.md
+  - Axiom-schema: Mathematical-logic/Axiom-schema.md
 - Symbolic-computation:
   - Introduction: Symbolic-computation/index.md
   - What-is-symbol:
