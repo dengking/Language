@@ -1,5 +1,5 @@
 nav:
-    - Formal-grammar: wikipedia-Formal-grammar.md
-    - Production: wikipedia-Production(computer-science).md
+    - Formal-grammar: wikipedia-Formal-grammar
+    - Production: Production(computer-science)
     - Chomsky-hierarchy: Chomsky-hierarchy
     - Parsing-Expression-Grammars: Parsing-Expression-Grammars

@@ -4,4 +4,5 @@ nav:
     - Formal-language: Formal-language
     - Formal-language-processing: Formal-language-processing
     - Mathematical-logic: Mathematical-logic
-    
+    - Symbolic-computation: Symbolic-computation
+    - LaTeX: LaTeX

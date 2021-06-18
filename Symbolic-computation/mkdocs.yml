@@ -1,0 +1,11 @@
+nav:
+    - Introduction: index.md
+    - What-is-symbol: What-is-symbol
+    - Symbolic-computation: Symbolic-computation
+    - Symbolic-programming: Symbolic-programming
+    - Symbol-expression: Symbol-expression
+    - Programming-paradigm: Programming-paradigm
+    - Expression-oriented-language: Expression-oriented-language
+
+    - Expression-problem: Expression-problem
+    - Computer-algebra: Computer-algebra

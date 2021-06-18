@@ -1,4 +1,4 @@
 nav:
-    - Regular-language: wikipedia-Regular-language.md
+    - Introduction: index.md
     - Automaton: Automaton.md
     - Regular-expression: Regular-expression

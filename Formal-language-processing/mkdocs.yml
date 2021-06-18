@@ -1,7 +1,5 @@
 nav:
     - Introduction: index.md
     - Formal-language-processor: Formal-language-processor
-    - Computer-algebra: Computer-algebra
-    - Expression-oriented-programming: Expression-oriented-programming
     - Pattern: Pattern
     
