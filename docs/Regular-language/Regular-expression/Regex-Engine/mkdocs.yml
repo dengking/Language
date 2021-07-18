@@ -1,0 +1,4 @@
+nav:
+    - Introduction: index.md
+    - Thompson's-construction: Thompson's-construction    
+    - Powerset-construction: Powerset-construction

@@ -1,6 +1,6 @@
 nav:
     - Introduction: index.md
-    - Domain-specific_language: Domain-specific_language
+    - Domain-specific-language: Domain-specific-language
     - GPL-and-DSL: GPL-and-DSL.md
     - Official-and-dialect: Official-and-dialect.md
     - Host-and-embeded-and-meta: Host-and-embeded-and-meta.md
