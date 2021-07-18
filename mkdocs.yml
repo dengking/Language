@@ -34,8 +34,10 @@ nav:
   - Introduction: Language/index.md
   - Classification:
     - Introduction: Language/Classification/index.md
-    - Domain-specific_language:
-      - Introduction: Language/Classification/Domain-specific_language/index.md
+    - Domain-specific-language:
+      - Introduction: Language/Classification/Domain-specific-language/index.md
+      - martinfowler-Domain-Specific-Languages:
+        - Introduction: Language/Classification/Domain-specific-language/martinfowler-Domain-Specific-Languages/index.md
     - GPL-and-DSL: Language/Classification/GPL-and-DSL.md
     - Official-and-dialect: Language/Classification/Official-and-dialect.md
     - Host-and-embeded-and-meta: Language/Classification/Host-and-embeded-and-meta.md
@@ -102,10 +104,13 @@ nav:
 - Regular-language:
   - Introduction: Regular-language/index.md
   - Regular-expression:
-    - Regular-expression: Regular-language/Regular-expression/wikipedia-Regular-expression.md
-    - Thompson's-construction: Regular-language/Regular-expression/wikipedia-Thompson's-construction.md
-    - Regex-Engine: Regular-language/Regular-expression/Regex-Engine.md
-    - Powerset-construction: Regular-language/Regular-expression/wikipedia-Powerset-construction.md
+    - Introduction: Regular-language/Regular-expression/index.md
+    - Regex-Engine:
+      - Introduction: Regular-language/Regular-expression/Regex-Engine/index.md
+      - Thompson's-construction:
+        - Introduction: Regular-language/Regular-expression/Regex-Engine/Thompson's-construction/index.md
+      - Powerset-construction:
+        - Introduction: Regular-language/Regular-expression/Regex-Engine/Powerset-construction/index.md
 - Mathematical-logic:
   - Introduction: Mathematical-logic/index.md
   - Propositional-calculus: Mathematical-logic/Propositional-calculus.md
@@ -142,6 +147,8 @@ nav:
   - Introduction: LaTeX/index.md
   - LaTeX-under:
     - Introduction: LaTeX/LaTeX-under/index.md
+- Dyck-language:
+  - Introduction: Dyck-language/index.md
 plugins:
 - search
 repo_url: https://github.com/dengking/Language
