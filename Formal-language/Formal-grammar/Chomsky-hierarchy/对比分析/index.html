@@ -20,7 +20,7 @@
     
     
       
-        <title>对比分析 - Language</title>
+        <title>Introduction - Language</title>
       
     
     
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              对比分析
+              Introduction
             
           </span>
         </div>
@@ -1021,8 +1021,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../wikipedia-Chomsky-hierarchy/" class="md-nav__link">
-        Chomsky-hierarchy
+      <a href="../" class="md-nav__link">
+        Introduction
       </a>
     </li>
   
@@ -1229,6 +1229,29 @@
     
   
   
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5_3_6" type="checkbox" id="__nav_3_5_3_6" checked>
+      
+      <label class="md-nav__link" for="__nav_3_5_3_6">
+        对比分析
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="对比分析" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_5_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          对比分析
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
@@ -1237,12 +1260,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          对比分析
+          Introduction
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        对比分析
+        Introduction
       </a>
       
         
@@ -1384,6 +1407,12 @@
   
 </nav>
       
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -2849,15 +2878,9 @@
 <h2 id="type-2#grammarscontext-free#grammar#formal#definitions">Type-2 grammars:<a href="https://en.wikipedia.org/wiki/Context-free_grammar#Formal_definitions">Context-free grammar formal definitions</a></h2>
 <p>A context-free grammar <em>G</em> is defined by the 4-<a href="https://en.wikipedia.org/wiki/Tuple">tuple</a>: </p>
 <p>$ G=(V,\Sigma ,R,S) $ where</p>
-<ol>
-<li>
-<p><em>V</em> is a finite set; each element $ v\in V $ is called <em>a nonterminal character</em> or a <em>variable</em>. Each variable represents a different type of phrase or clause in the sentence. Variables are also sometimes called syntactic categories. Each variable defines a sub-language of the language defined by <em>G</em>.</p>
-</li>
-<li>
-<p>Σ is a finite set of <em>terminal*s, disjoint from *V</em>, which make up the actual content of the sentence. The set of terminals is the alphabet of the language defined by the grammar <em>G</em>.</p>
-</li>
-<li>
-<p><em>R</em> is a finite <strong>relation</strong> from <em>V</em> to $ (V\cup \Sigma )^{<em>} $, where the asterisk represents the <a href="https://en.wikipedia.org/wiki/Kleene_star">Kleene star</a> operation. The members of *R</em> are called the <em>(rewrite) rule*s or *production*s of the grammar. (also commonly symbolized by a *P</em>)</p>
+<p>1、<em>V</em> is a finite set; each element $ v\in V $ is called <em>a nonterminal character</em> or a <em>variable</em>. Each variable represents a different type of phrase or clause in the sentence. Variables are also sometimes called syntactic categories. Each variable defines a sub-language of the language defined by <em>G</em>.</p>
+<p>2、Σ is a finite set of <em>terminal*s, disjoint from *V</em>, which make up the actual content of the sentence. The set of terminals is the alphabet of the language defined by the grammar <em>G</em>.</p>
+<p>3、<em>R</em> is a finite <strong>relation</strong> from <em>V</em> to $ (V\cup \Sigma )^{<em>} $, where the asterisk represents the <a href="https://en.wikipedia.org/wiki/Kleene_star">Kleene star</a> operation. The members of *R</em> are called the <em>(rewrite) rule*s or *production*s of the grammar. (also commonly symbolized by a *P</em>)</p>
 <blockquote>
 <p>NOTE: See also</p>
 <ul>
@@ -2865,11 +2888,7 @@
 <li><a href="https://en.wikipedia.org/wiki/Rewriting">rewriting</a></li>
 </ul>
 </blockquote>
-</li>
-<li>
-<p><em>S</em> is the start variable (or start symbol), used to represent the whole sentence (or program). It must be an element of <em>V</em>.</p>
-</li>
-</ol>
+<p>4、<em>S</em> is the start variable (or start symbol), used to represent the whole sentence (or program). It must be an element of <em>V</em>.</p>
 <h3 id="production#rule#notation">Production rule notation</h3>
 <p>A <a href="https://en.wikipedia.org/wiki/Formal_grammar#The_syntax_of_grammars">production rule</a> in <em>R</em> is formalized mathematically as a pair $ (\alpha ,\beta )\in R $, where $ \alpha \in V $ is a nonterminal and $ \beta \in (V\cup \Sigma )^{<em>} $ is a <a href="https://en.wikipedia.org/wiki/String_(computer_science)">string</a> of variables and/or terminals; rather than using <a href="https://en.wikipedia.org/wiki/Ordered_pair">ordered pair</a> notation, production rules are usually written using an arrow operator with *α</em> as its left hand side and <em>β</em> as its right hand side: $ \alpha \rightarrow \beta $.</p>
 <p>It is allowed for <em>β</em> to be the <a href="https://en.wikipedia.org/wiki/Empty_string">empty string</a>, and in this case it is customary to denote it by ε. The form $ \alpha \rightarrow \varepsilon $ is called an <em>ε</em>-production. </p>

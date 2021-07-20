@@ -1,7 +1,7 @@
 nav:
-    - Chomsky-hierarchy: wikipedia-Chomsky-hierarchy.md
+    - Introduction: index.md
     - Type-0: Type-0
     - Type-1: Type-1
     - Type-2: Type-2
     - Type-3: Type-3
-    - 对比分析: 对比分析.md
+    - 对比分析: 对比分析
