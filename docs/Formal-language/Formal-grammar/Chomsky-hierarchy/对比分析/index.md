@@ -1,5 +1,3 @@
-
-
 # 对比分析
 
 Type-0 grammars又叫做[unrestricted grammar](https://en.wikipedia.org/wiki/Unrestricted_grammar)，从它的名字可以看出，它是unrestricted的，即
@@ -49,18 +47,18 @@ A context-free grammar *G* is defined by the 4-[tuple](https://en.wikipedia.org/
 
 $ G=(V,\Sigma ,R,S) $ where
 
-1. *V* is a finite set; each element $ v\in V $ is called *a nonterminal character* or a *variable*. Each variable represents a different type of phrase or clause in the sentence. Variables are also sometimes called syntactic categories. Each variable defines a sub-language of the language defined by *G*.
+1、*V* is a finite set; each element $ v\in V $ is called *a nonterminal character* or a *variable*. Each variable represents a different type of phrase or clause in the sentence. Variables are also sometimes called syntactic categories. Each variable defines a sub-language of the language defined by *G*.
 
-2. Σ is a finite set of *terminal*s, disjoint from *V*, which make up the actual content of the sentence. The set of terminals is the alphabet of the language defined by the grammar *G*.
+2、Σ is a finite set of *terminal*s, disjoint from *V*, which make up the actual content of the sentence. The set of terminals is the alphabet of the language defined by the grammar *G*.
 
-3. *R* is a finite **relation** from *V* to $ (V\cup \Sigma )^{*} $, where the asterisk represents the [Kleene star](https://en.wikipedia.org/wiki/Kleene_star) operation. The members of *R* are called the *(rewrite) rule*s or *production*s of the grammar. (also commonly symbolized by a *P*)
+3、*R* is a finite **relation** from *V* to $ (V\cup \Sigma )^{*} $, where the asterisk represents the [Kleene star](https://en.wikipedia.org/wiki/Kleene_star) operation. The members of *R* are called the *(rewrite) rule*s or *production*s of the grammar. (also commonly symbolized by a *P*)
 
-    > NOTE: See also
-    >
-    > -  [production rule](https://en.wikipedia.org/wiki/Formal_grammar#The_syntax_of_grammars) 
-    > -  [rewriting](https://en.wikipedia.org/wiki/Rewriting)
+> NOTE: See also
+>
+> -  [production rule](https://en.wikipedia.org/wiki/Formal_grammar#The_syntax_of_grammars) 
+> -  [rewriting](https://en.wikipedia.org/wiki/Rewriting)
 
-4. *S* is the start variable (or start symbol), used to represent the whole sentence (or program). It must be an element of *V*.
+4、*S* is the start variable (or start symbol), used to represent the whole sentence (or program). It must be an element of *V*.
 
 
 
