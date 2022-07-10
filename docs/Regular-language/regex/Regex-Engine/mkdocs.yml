@@ -1,4 +1,5 @@
 nav:
     - Introduction: index.md
+    - Stephen-Cole-Kleene: Stephen-Cole-Kleene
     - Thompson's-construction: Thompson's-construction    
     - Powerset-construction: Powerset-construction
