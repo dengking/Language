@@ -1,5 +1,8 @@
 nav:
     - Introduction: index.md
-    - Python-regex: Python-regex
-    - Notepad-regex: Notepad-regex
+    - Capitalize-upper-lower: Capitalize-upper-lower
+    - Stock-code: Stock-code
+    - Percentage: Percentage
+    - CamelCase&under_score_case&snake-case: CamelCase&under_score_case&snake-case
+    
     
