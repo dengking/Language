@@ -1,4 +1,5 @@
 nav:
     - Introduction: index.md
     - Python-regex: Python-regex
+    - Notepad-regex: Notepad-regex
     
