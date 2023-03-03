@@ -26,3 +26,19 @@ You can use any regular expression inside the **lookahead** (but not lookbehind,
 Lookbehind has the same effect, but works backwards. It tells the regex engine to temporarily step backwards in the string, to check if the text inside the lookbehind can be matched there. `(?<!a)b` matches a “b” that is not preceded by an “a”, using negative lookbehind. It doesn’t match `cab`, but matches the `b` (and only the `b`) in `bed` or `debt`. `(?<=a)b` (positive lookbehind) matches the `b` (and only the `b`) in `cab`, but does not match `bed` or `debt`.
 
 The construct for positive lookbehind is `(?<=text)`: a pair of parentheses, with the opening parenthesis followed by a question mark, “less than” symbol, and an equals sign. Negative lookbehind is written as `(?<!text)`, using an exclamation point instead of an equals sign.
+
+
+
+## See also
+
+stackoverflow [Difference between ?:, ?! and ?=](https://stackoverflow.com/questions/10804732/difference-between-and)
+
+[A](https://stackoverflow.com/a/10804791)
+
+- `?:` is for non capturing group
+- `?=` is for positive look ahead
+- `?!` is for negative look ahead
+- `?<=` is for positive look behind
+- `?<!` is for negative look behind
+
+Please check [Lookahead and Lookbehind Zero-Length Assertions](https://www.regular-expressions.info/lookaround.html) for very good tutorial and examples on lookahead in regular expressions.
