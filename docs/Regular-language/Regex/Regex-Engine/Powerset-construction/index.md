@@ -2,8 +2,6 @@
 
 
 
-
-
 ## wikipedia [Powerset construction](https://en.wikipedia.org/wiki/Powerset_construction)
 
 In the [theory of computation](https://en.wikipedia.org/wiki/Theory_of_computation) and [automata theory](https://en.wikipedia.org/wiki/Automata_theory), the **powerset construction** or **subset construction** is a standard method for [converting](https://en.wikipedia.org/wiki/Automata_construction) a [nondeterministic finite automaton](https://en.wikipedia.org/wiki/Nondeterministic_finite_automaton) (NFA) into a [deterministic finite automaton](https://en.wikipedia.org/wiki/Deterministic_finite_automaton) (DFA) which recognizes the same [formal language](https://en.wikipedia.org/wiki/Formal_language). It is important in theory because it establishes that NFAs, despite their additional flexibility, are unable to recognize any language that cannot be recognized by some DFA. It is also important in practice for converting easier-to-construct NFAs into more efficiently executable DFAs. However, if the NFA has *n* states, the resulting DFA may have up to $2^n$ states, an exponentially larger number, which sometimes makes the construction impractical for large NFAs.
