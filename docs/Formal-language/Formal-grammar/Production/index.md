@@ -1,8 +1,12 @@
-[TOC]
 
-# [Production (computer science)](https://en.wikipedia.org/wiki/Production_(computer_science))
+
+# Production
 
 基本上所有的formal grammar都是使用的production来进行描述，所以对production进行分析是有一定必要的。
+
+## wikipedia [Production (computer science)](https://en.wikipedia.org/wiki/Production_(computer_science))
+
+
 
 ## 产生式的递归性
 
@@ -24,10 +28,9 @@
 
 
 
-
-
-
-
-# [Backus–Naur form](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form)
+## BNF
 
 BNF本质上也是一种产生式
+
+### wikipedia [Backus–Naur form](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form)
+

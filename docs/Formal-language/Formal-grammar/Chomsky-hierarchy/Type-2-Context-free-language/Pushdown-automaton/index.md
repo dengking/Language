@@ -1,4 +1,20 @@
-# wikipedia [Pushdown automaton](https://en.wikipedia.org/wiki/Pushdown_automaton)
+# Pushdown automaton
+
+中文翻译做: "下推自动机"
+
+---
+
+> References: 
+>
+> [zhihu-[笔记]下推自动机](https://zhuanlan.zhihu.com/p/669440520) (通俗易懂)
+>
+> [baike-下推自动机](https://baike.baidu.com/item/%E4%B8%8B%E6%8E%A8%E8%87%AA%E5%8A%A8%E6%9C%BA/10988477?fr=ge_ala) 
+
+---
+
+
+
+## wikipedia [Pushdown automaton](https://en.wikipedia.org/wiki/Pushdown_automaton)
 
 In the [theory of computation](https://en.wikipedia.org/wiki/Theory_of_computation), a branch of [theoretical computer science](https://en.wikipedia.org/wiki/Theoretical_computer_science), a **pushdown automaton** (**PDA**) is a type of [automaton](https://en.wikipedia.org/wiki/Automata_theory) that employs a [stack](https://en.wikipedia.org/wiki/Stack_(data_structure)).
 
@@ -6,7 +22,7 @@ In the [theory of computation](https://en.wikipedia.org/wiki/Theory_of_computati
 
 The term "pushdown" refers to the fact that the [stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)) can be regarded as being "pushed down" like a tray dispenser at a cafeteria, since the operations never work on elements other than the top element. A **stack automaton**, by contrast, does allow access to and operations on deeper elements. Stack automata can recognize a strictly larger set of languages than pushdown automata.[[1\]](https://en.wikipedia.org/wiki/Pushdown_automaton#cite_note-Hopcroft.Ullman.1967-1) A [nested stack automaton](https://en.wikipedia.org/wiki/Nested_stack_automaton) allows full access, and also allows stacked values to be entire sub-stacks rather than just single finite symbols.
 
-## Informal description
+### Informal description
 
 A [finite state machine](https://en.wikipedia.org/wiki/Finite_state_machine) just looks at the **input signal** and the **current state**: it has no stack to work with. It chooses a new state, the result of following the transition. A **pushdown automaton (PDA)** differs from a finite state machine in two ways:
 
@@ -25,5 +41,7 @@ Put together: Given an input symbol, current state, and stack symbol, the automa
 
 > A diagram of a pushdown automaton
 
-## [Deterministic pushdown automaton](https://en.wikipedia.org/wiki/Deterministic_pushdown_automaton)
+
+
+## wikipedia [Deterministic pushdown automaton](https://en.wikipedia.org/wiki/Deterministic_pushdown_automaton)
 
