@@ -1,10 +1,8 @@
 nav:
     - Home: index.md
     - Language: Language
-    - Formal-language: Formal-language
-    - Formal-language-processing: Formal-language-processing
-    - Regular-language: Regular-language    
     - Mathematical-logic: Mathematical-logic
     - Symbolic-computation: Symbolic-computation
     - LaTeX: LaTeX
     - Dyck-language: Dyck-language
+    
