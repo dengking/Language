@@ -1,8 +1,6 @@
 nav:
     - Home: index.md
     - Language: Language
-    - Mathematical-logic: Mathematical-logic
     - Symbolic-computation: Symbolic-computation
     - LaTeX: LaTeX
-    - Dyck-language: Dyck-language
     
