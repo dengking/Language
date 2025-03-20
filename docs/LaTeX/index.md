@@ -1,6 +1,6 @@
 # LaTeX
 
-## Keep left justifying 
+## Keep left justifying
 
 Sure! If you want to left-justify three formulas in LaTeX, you can use several methods. Here are three common approaches:
 
@@ -88,8 +88,6 @@ C_n = \frac{(2n)!}{(n+1)!n!}
 
 Each of these methods will left-align your equations. Choose the one that best fits your document's formatting needs.
 
-
-
 If you want to left-justify and number multiple equations in LaTeX, you can use the `align` environment from the `amsmath` package. This environment allows you to align equations at specific points and automatically numbers each row.
 
 Here is an example of how to left-justify and number three equations:
@@ -112,10 +110,12 @@ C_n &= \frac{(2n)!}{(n+1)!n!}
 ### Explanation:
 
 1. **Document Class and Package**:
+   
    - `\documentclass{article}`: Specifies the document class.
    - `\usepackage{amsmath}`: Imports the `amsmath` package, which provides the `align` environment.
 
 2. **Align Environment**:
+   
    - `\begin{align} ... \end{align}`: The `align` environment is used to align multiple equations.
    - `&`: The ampersand `&` is used to specify the alignment point. In this case, it aligns the equations at the equals sign `=`.
    - Each equation is written on a new line, and LaTeX automatically numbers each line.
@@ -130,8 +130,6 @@ The output will be three left-justified equations, each with its own number:
 
 This method ensures that your equations are neatly aligned and numbered, making them easy to read and reference.
 
-
-
 ## Represent Z
 
 In LaTeX, you can represent the set of integers, commonly denoted by \( \mathbb{Z} \), using the `amsmath` package. The `amsmath` package provides a convenient way to use blackboard bold characters, which are often used to denote sets like the integers, real numbers, and complex numbers.
@@ -141,11 +139,13 @@ Here is how you can represent \( \mathbb{Z} \) in LaTeX:
 ### Using `amsmath` and `amssymb` Packages
 
 1. **Document Class and Packages**:
+   
    - `\documentclass{article}`: Specifies the document class.
    - `\usepackage{amsmath}`: Imports the `amsmath` package.
    - `\usepackage{amssymb}`: Imports the `amssymb` package, which provides the `\mathbb` command.
 
 2. **Using `\mathbb{Z}`**:
+   
    - `\mathbb{Z}`: Represents the set of integers.
 
 Here is a complete example:
